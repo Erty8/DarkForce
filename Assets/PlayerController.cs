@@ -19,19 +19,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButton(1))
         {
             SetTargetPosition();
         }
-       if (moving)
-        {
-            Move();
-        }
+       
         
     }
     void FixedUpdate()
     {
-        
+        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+        if (moving)
+        {
+            Move();
+        }
     }
     void SetTargetPosition()
     {
