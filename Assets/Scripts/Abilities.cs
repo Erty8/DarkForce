@@ -13,11 +13,22 @@ public class Abilities : MonoBehaviour
     bool isCooldown1 = false;
     public KeyCode ability1;
 
+    Vector3 position;
+    public Canvas abilityCanvas;
+    public Image skillshot;
+    public Transform player;
+
+
     [Header("Ability 2")]
     public Image abilityImage2;
     public float cooldown2 = 3f;
     bool isCooldown2 = false;
     public KeyCode ability2;
+
+    public Image targetCircle;
+    public Image rangeCircle;
+    private Vector3 posUp;
+    public float maxAbilitytoDistance;
 
 
     [Header("Ability 3")]
@@ -34,6 +45,10 @@ public class Abilities : MonoBehaviour
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
+        skillshot.enabled = false;
+        targetCircle.enabled = false;
+        rangeCircle.enabled = false;
+        
         
     }
 
@@ -47,6 +62,8 @@ public class Abilities : MonoBehaviour
 
     void Ability1()
     {
+
+        // cooldown system
         if (Input.GetKey(ability1) && isCooldown1 == false)
         {
             Debug.Log("Used ability 1");
