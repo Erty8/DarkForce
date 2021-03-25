@@ -53,6 +53,7 @@ public class Abilities : MonoBehaviour
         
         
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -68,7 +69,7 @@ public class Abilities : MonoBehaviour
         {
             position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
-
+        //ability 2 pos
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             if(hit.collider.gameObject != this.gameObject)
@@ -99,7 +100,7 @@ public class Abilities : MonoBehaviour
             targetCircle.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
-            isCooldown1 = true;
+            
             abilityImage1.fillAmount = 1;
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
@@ -122,18 +123,24 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability2) && isCooldown2 == false)
         {
-            skillshot.GetComponent<Image>().enabled = false;
+            
             targetCircle.GetComponent<Image>().enabled = true;
             rangeCircle.GetComponent<Image>().enabled = true;
+            skillshot.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 2");
+            
+            abilityImage2.fillAmount = 1;
+        }
+        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
+        {
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
         }
         if (isCooldown2)
         {
             abilityImage2.fillAmount -= 1 / cooldown2 * Time.deltaTime;
-            targetCircle.GetComponent<Image>().enabled = true;
-            rangeCircle.GetComponent<Image>().enabled = true;
+            targetCircle.GetComponent<Image>().enabled = false;
+            rangeCircle.GetComponent<Image>().enabled = false;
             if (abilityImage2.fillAmount <= 0)
             {
                 abilityImage2.fillAmount = 0;
@@ -146,7 +153,7 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability3) && isCooldown3 == false)
         {
-            Debug.Log("Used ability 2");
+            Debug.Log("Used ability 3");
             isCooldown3 = true;
             abilityImage3.fillAmount = 1;
         }
