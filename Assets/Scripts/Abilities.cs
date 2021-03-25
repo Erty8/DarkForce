@@ -12,6 +12,8 @@ public class Abilities : MonoBehaviour
     public float cooldown1 = 3f;
     bool isCooldown1 = false;
     public KeyCode ability1;
+    public Transform ability1Transform;
+    public GameObject ability1object;
 
     Vector3 position;
     public Canvas ability1Canvas;
@@ -30,6 +32,8 @@ public class Abilities : MonoBehaviour
     public Image rangeCircle;
     private Vector3 posUp;
     public float maxAbilitytoDistance;
+    public Transform ability2Transform;
+    public GameObject ability2object;
 
 
     [Header("Ability 3")]
@@ -105,6 +109,7 @@ public class Abilities : MonoBehaviour
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
+            Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(90, 0, Quaternion.identity.z));
             isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }
@@ -133,6 +138,7 @@ public class Abilities : MonoBehaviour
         }
         if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
+            Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
         }
