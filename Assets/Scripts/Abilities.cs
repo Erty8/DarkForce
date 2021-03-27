@@ -113,6 +113,11 @@ public class Abilities : MonoBehaviour
             isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }
+        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1))
+        {
+            abilityImage1.fillAmount = 0;
+            skillshot.GetComponent<Image>().enabled = false;
+        }
         if (isCooldown1)
         {
             abilityImage1.fillAmount -= 1 / cooldown1 * Time.deltaTime;
@@ -141,6 +146,11 @@ public class Abilities : MonoBehaviour
             Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
+        }
+        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(1))
+        {
+            abilityImage2.fillAmount = 0;
+            targetCircle.GetComponent<Image>().enabled = false;
         }
         if (isCooldown2)
         {
