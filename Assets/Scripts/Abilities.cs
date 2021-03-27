@@ -57,10 +57,7 @@ public class Abilities : MonoBehaviour
         
         
     }
-    
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Ability1();
         Ability2();
@@ -76,7 +73,7 @@ public class Abilities : MonoBehaviour
         //ability 2 pos
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            if(hit.collider.gameObject != this.gameObject)
+            if (hit.collider.gameObject != this.gameObject)
             {
                 posUp = new Vector3(hit.point.x, 10f, hit.point.z);
                 position = hit.point;
@@ -92,6 +89,15 @@ public class Abilities : MonoBehaviour
         distance = Mathf.Min(distance, maxAbilitytoDistance);
         var newHitPos = transform.position + hitPosDir * distance;
         ability2Canvas.transform.position = (newHitPos);
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        
+        
     }
 
     void Ability1()
