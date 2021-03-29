@@ -6,6 +6,9 @@ public class Projectile : MonoBehaviour
 {
     //Rigidbody projectilePhycs;
     public float speed;
+    Vector3 castVector;
+    //public GameObject player;
+    //public GameObject castPos;
     void Start()
     {
         //projectilePhycs = GetComponent<Rigidbody>();
@@ -16,6 +19,11 @@ public class Projectile : MonoBehaviour
    
     void FixedUpdate()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * speed);
+       
+        //var posVector = player.transform.position;
+        //var castPoint = castPos.transform.position;
+        //castVector = (castPoint - posVector);
+        transform.Translate(transform.forward* Time.deltaTime * speed);
+        //transform.Translate(castVector* Time.deltaTime * speed);
     }
 }

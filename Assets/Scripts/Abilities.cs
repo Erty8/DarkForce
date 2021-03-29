@@ -14,6 +14,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability1;
     public Transform ability1Transform;
     public GameObject ability1object;
+    
 
     Vector3 position;
     public Canvas ability1Canvas;
@@ -115,11 +116,13 @@ public class Abilities : MonoBehaviour
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
-            Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(90, 0, Quaternion.identity.z));
+            //GameObject projectileObject = Instantiate(ability1object);
+            //projectileObject.transform.position = ability1Transform.transform.position;
+            Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
             isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }
-        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1))
+        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1)||Input.GetKey(ability2))
         {
             abilityImage1.fillAmount = 0;
             skillshot.GetComponent<Image>().enabled = false;
