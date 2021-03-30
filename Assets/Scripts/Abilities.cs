@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Abilities : MonoBehaviour
 {
     // Written by ertugrul
-
+    RaycastHit hit;
+    Movement moveScript;
     [Header ("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 3f;
@@ -14,6 +15,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability1;
     public Transform ability1Transform;
     public GameObject ability1object;
+    PlayerController pControl;
     
 
     Vector3 position;
@@ -54,6 +56,7 @@ public class Abilities : MonoBehaviour
         skillshot.GetComponent<Image>().enabled = false;
         targetCircle.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
+        pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         
         
         
@@ -116,9 +119,28 @@ public class Abilities : MonoBehaviour
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
+            pControl.SetTurnPosition();
+            pControl.turn();
+            //PlayerController.turn();
+            /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                Debug.Log(hit);
+                PlayerController.targetPosition = hit.point;
+                //this.transform.LookAt(targetPosition);
+                PlayerController.lookAtTarget = new Vector3(PlayerController.targetPosition.x - transform.position.x, transform.position.y, PlayerController.targetPosition.z - transform.position.z);
+                PlayerController.playerRot = Quaternion.LookRotation(PlayerController.lookAtTarget);
+                //moving = true;
+            }*/
+            /*Quaternion rotationtoLookat = Quaternion.LookRotation(position - transform.position);
+            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationtoLookat.eulerAngles.y, ref moveScript.rotateVelocity, 0);
+            transform.eulerAngles = new Vector3(0, rotationY, 0);
+            moveScript.agent.SetDestination(transform.position);
+            moveScript.agent.stoppingDistance = 0;*/
             //GameObject projectileObject = Instantiate(ability1object);
             //projectileObject.transform.position = ability1Transform.transform.position;
-            Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
+            //Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
             isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Vector3 targetPosition;
-    Vector3 lookAtTarget;
-    Quaternion playerRot;
+    public Vector3 targetPosition;
+    public Vector3 lookAtTarget;
+    public Quaternion playerRot;
     public float rotSpeed = 1f;
     public float moveSpeed = 10f;
+    public float rotateVelocity;
     bool moving = false;
 
     // stop rotating
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
             Move();
         }
     }
-    void SetTargetPosition()
+    public void SetTargetPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -48,6 +49,20 @@ public class PlayerController : MonoBehaviour
             moving = true;
         }
     }
+    public void SetTurnPosition()
+    {
+        moving = false;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100))
+        {
+            targetPosition = hit.point;
+            //this.transform.LookAt(targetPosition);
+            lookAtTarget = new Vector3(targetPosition.x - transform.position.x, transform.position.y, targetPosition.z - transform.position.z);
+            playerRot = Quaternion.LookRotation(lookAtTarget);
+            moving = false;
+        }
+    }
     void Move()
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, playerRot, rotSpeed * Time.deltaTime);
@@ -58,5 +73,26 @@ public class PlayerController : MonoBehaviour
             moving = false;
                 }
         }
-   
+    public void turn()
+    {
+        StartCoroutine(turning());
+        /*transform.rotation = Quaternion.Slerp(transform.rotation, playerRot, rotSpeed * Time.deltaTime);
+        moveSpeed = 0f;
+        if (transform.rotation == playerRot)
+        {
+            moveSpeed = 6f;
+        }*/
+    }
+    IEnumerator turning()
+    {
+        rotSpeed = 7f;
+        transform.rotation = Quaternion.Slerp(transform.rotation, playerRot, rotSpeed * Time.deltaTime);
+        //moveSpeed = 0f;
+        yield return new WaitForSeconds(0.3f);
+        //moveSpeed = 6f;
+        rotSpeed = 5f;
+
+
+    }
+
 }
