@@ -121,18 +121,7 @@ public class Abilities : MonoBehaviour
         {
             pControl.SetTurnPosition();
             pControl.turn();
-            //PlayerController.turn();
-            /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                Debug.Log(hit);
-                PlayerController.targetPosition = hit.point;
-                //this.transform.LookAt(targetPosition);
-                PlayerController.lookAtTarget = new Vector3(PlayerController.targetPosition.x - transform.position.x, transform.position.y, PlayerController.targetPosition.z - transform.position.z);
-                PlayerController.playerRot = Quaternion.LookRotation(PlayerController.lookAtTarget);
-                //moving = true;
-            }*/
+            Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
             /*Quaternion rotationtoLookat = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationtoLookat.eulerAngles.y, ref moveScript.rotateVelocity, 0);
             transform.eulerAngles = new Vector3(0, rotationY, 0);
