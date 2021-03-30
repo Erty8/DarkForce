@@ -23,10 +23,14 @@ public class InputTargeting : MonoBehaviour
         {
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
             {
-                if(hit.collider.gameObject.GetComponent<Targetable>().enemyType == Targetable.EnemyType.Cube)
+                if(hit.collider.GetComponent<Targetable>() != null)
                 {
-                    selectedHero.GetComponent<Attacking>().targetedEnemy = hit.collider.gameObject;
+                    if (hit.collider.gameObject.GetComponent<Targetable>().enemyType == Targetable.EnemyType.Cube)
+                    {
+                        selectedHero.GetComponent<Attacking>().targetedEnemy = hit.collider.gameObject;
+                    }
                 }
+                    
             }
 
             else if(hit.collider.gameObject.GetComponent<Targetable>() == null)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Targetable : MonoBehaviour
 {
     
-    public enum EnemyType { Cube };
+    public enum EnemyType { Cube }
     public EnemyType enemyType;
     
     // Start is called before the first frame update
