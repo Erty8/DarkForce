@@ -8,6 +8,7 @@ public class Abilities : MonoBehaviour
     // Written by ertugrul
     RaycastHit hit;
     Movement moveScript;
+    public Animator anim;
     [Header ("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 3f;
@@ -50,6 +51,9 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        moveScript = GetComponent<Movement>();
+        
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
@@ -58,8 +62,7 @@ public class Abilities : MonoBehaviour
         rangeCircle.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         
-        
-        
+           
     }
     void FixedUpdate()
     {
@@ -119,9 +122,22 @@ public class Abilities : MonoBehaviour
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
-            pControl.SetTurnPosition();
-            pControl.turn();
+            //pControl.SetTurnPosition();
+            //pControl.turn();
+            
+            Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
+            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
+            ref moveScript.rotateVelocity, 0);
+
+            transform.eulerAngles = new Vector3(0, rotationY, 0);
+
+            moveScript.agent.SetDestination(transform.position);
+            moveScript.agent.stoppingDistance = 0;
+            StartCoroutine(animateFireball());
             Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+
+            isCooldown1 = true;
+            abilityImage1.fillAmount = 1;
             /*Quaternion rotationtoLookat = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationtoLookat.eulerAngles.y, ref moveScript.rotateVelocity, 0);
             transform.eulerAngles = new Vector3(0, rotationY, 0);
@@ -130,8 +146,7 @@ public class Abilities : MonoBehaviour
             //GameObject projectileObject = Instantiate(ability1object);
             //projectileObject.transform.position = ability1Transform.transform.position;
             //Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
-            isCooldown1 = true;
-            abilityImage1.fillAmount = 1;
+
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1)||Input.GetKey(ability2))
         {
@@ -202,5 +217,15 @@ public class Abilities : MonoBehaviour
                 isCooldown3 = false;
             }
         }
+    }
+    IEnumerator animateFireball()
+    {
+        Debug.Log("animated");
+        //canSkillshot = false;
+        anim.SetBool("Fireball", true);
+
+        yield return new WaitForSeconds(1f);
+
+        anim.SetBool("Fireball", false);
     }
 }
