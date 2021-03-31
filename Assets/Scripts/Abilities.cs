@@ -134,7 +134,7 @@ public class Abilities : MonoBehaviour
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;
             StartCoroutine(animateFireball());
-            Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
             isCooldown1 = true;
             abilityImage1.fillAmount = 1;
@@ -227,5 +227,9 @@ public class Abilities : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         anim.SetBool("Fireball", false);
+    }
+    public void castFireball()
+    {
+        Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
     }
 }
