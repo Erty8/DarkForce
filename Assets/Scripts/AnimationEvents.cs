@@ -23,6 +23,10 @@ public class AnimationEvents : MonoBehaviour
     {
         abilityScript.castFireball();
     }
+    void castShatter()
+    {
+        abilityScript.castShatter();
+    }
     void leftFoot()
     {
         audioSource.clip = leftFootClip;

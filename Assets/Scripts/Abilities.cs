@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Abilities : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Abilities : MonoBehaviour
     RaycastHit hit;
     Movement moveScript;
     public Animator anim;
+    public NavMeshAgent agent;
     [Header ("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 3f;
@@ -37,7 +39,9 @@ public class Abilities : MonoBehaviour
     private Vector3 posUp;
     public float maxAbilitytoDistance;
     public Transform ability2Transform;
+    public GameObject emptyTransform;
     public GameObject ability2object;
+    
 
 
     [Header("Ability 3")]
@@ -51,7 +55,7 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
         
         abilityImage1.fillAmount = 0;
@@ -178,7 +182,18 @@ public class Abilities : MonoBehaviour
         }
         if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
-            Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
+            emptyTransform.transform.position = ability2Transform.transform.position;
+    
+            //Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
+            Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
+            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
+            ref moveScript.rotateVelocity, 0);
+
+            transform.eulerAngles = new Vector3(0, rotationY, 0);
+
+            moveScript.agent.SetDestination(transform.position);
+            moveScript.agent.stoppingDistance = 0;
+            StartCoroutine(animateShatter());
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
         }
@@ -220,7 +235,7 @@ public class Abilities : MonoBehaviour
     }
     IEnumerator animateFireball()
     {
-        Debug.Log("animated");
+        Debug.Log("animated fireball");
         //canSkillshot = false;
         anim.SetBool("Fireball", true);
 
@@ -228,8 +243,22 @@ public class Abilities : MonoBehaviour
 
         anim.SetBool("Fireball", false);
     }
+    IEnumerator animateShatter()
+    {
+        Debug.Log("animated shatter");
+        //canSkillshot = false;
+        anim.SetBool("Shatter", true);
+
+        yield return new WaitForSeconds(1f);
+
+        anim.SetBool("Shatter", false);
+    }
     public void castFireball()
     {
         Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+    }
+    public void castShatter()
+    {
+        Instantiate(ability2object, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
     }
 }
