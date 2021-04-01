@@ -50,6 +50,7 @@ public class Abilities : MonoBehaviour
     public float cooldown3 = 3f;
     bool isCooldown3 = false;
     public KeyCode ability3;
+    public GameObject iceShield;
 
 
 
@@ -223,6 +224,7 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability3) && isCooldown3 == false)
         {
             Debug.Log("Used ability 3");
+            StartCoroutine(castIceShield());
             isCooldown3 = true;
             abilityImage3.fillAmount = 1;
         }
@@ -259,6 +261,13 @@ public class Abilities : MonoBehaviour
         //moveScript.agent.speed = oldSpeed;
         //Debug.Log(moveScript.agent.speed);
     }
+    IEnumerator castIceShield()
+    {
+        iceShield.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        iceShield.gameObject.SetActive(false);
+
+    }
     public void castFireball()
     {
         Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
@@ -267,4 +276,6 @@ public class Abilities : MonoBehaviour
     {
         Instantiate(ability2object, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
     }
+    
+
 }
