@@ -10,7 +10,8 @@ public class Abilities : MonoBehaviour
     RaycastHit hit;
     Movement moveScript;
     public Animator anim;
-    public NavMeshAgent agent;
+    //public NavMeshAgent agent;
+    float oldSpeed;
     [Header ("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 3f;
@@ -57,8 +58,9 @@ public class Abilities : MonoBehaviour
     {
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
-        
-        abilityImage1.fillAmount = 0;
+        oldSpeed = moveScript.agent.speed;
+
+         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
         skillshot.GetComponent<Image>().enabled = false;
@@ -132,11 +134,11 @@ public class Abilities : MonoBehaviour
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);
-
             transform.eulerAngles = new Vector3(0, rotationY, 0);
 
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;
+            
             StartCoroutine(animateFireball());
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
@@ -193,6 +195,7 @@ public class Abilities : MonoBehaviour
 
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;
+            //moveScript.agent.speed = 0;
             StartCoroutine(animateShatter());
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
@@ -239,9 +242,10 @@ public class Abilities : MonoBehaviour
         //canSkillshot = false;
         anim.SetBool("Fireball", true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.4f);
 
         anim.SetBool("Fireball", false);
+        
     }
     IEnumerator animateShatter()
     {
@@ -249,9 +253,11 @@ public class Abilities : MonoBehaviour
         //canSkillshot = false;
         anim.SetBool("Shatter", true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         anim.SetBool("Shatter", false);
+        //moveScript.agent.speed = oldSpeed;
+        //Debug.Log(moveScript.agent.speed);
     }
     public void castFireball()
     {

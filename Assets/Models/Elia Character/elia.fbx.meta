@@ -68,7 +68,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.57305557
+      - time: 0.54180557
         functionName: castFireball
         data: 
         objectReferenceParameter: {instanceID: 0}
