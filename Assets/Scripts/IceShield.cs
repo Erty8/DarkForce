@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class IceShield : MonoBehaviour
 {
+    public float dmgPerSec = 1f;
     bool damageCd = false;
+    public static List<GameObject> enemies = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -14,25 +16,49 @@ public class IceShield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void OnTriggerStay(Collider col)
-    {
-        if (col.gameObject.tag == "Enemy")
+        if (enemies.Count != 0)
         {
             if (damageCd == false)
             {
-                StartCoroutine(damageEnemy());
+                StartCoroutine(damageEnemies());
             }
-            //InvokeRepeating("damageEnemy", 0.2f, 2f);
-            // do whatever the lava does to the player such as reduce player health or shield
         }
     }
-    IEnumerator damageEnemy()
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            enemies.Add(col.gameObject);
+        }
+       
+    }
+    /*void OnTriggerStay(Collider col)
+    {
+        foreach (GameObject currentEnemy in enemies)
+        {
+            //Debug.Log(enemies.Count);
+            if (enemies.Count!=0)
+            {
+                if (damageCd == false)
+                {
+                    StartCoroutine(damageEnemies());
+                }
+            }
+        }
+               
+    }*/
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            enemies.Remove(col.gameObject);
+        }
+    }
+    IEnumerator damageEnemies()
     {
         damageCd = true;
         Debug.Log("damaged");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(dmgPerSec);
         damageCd = false;
     }
 

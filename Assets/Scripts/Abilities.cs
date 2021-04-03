@@ -51,6 +51,7 @@ public class Abilities : MonoBehaviour
     bool isCooldown3 = false;
     public KeyCode ability3;
     public GameObject iceShield;
+    IceShield shieldScript;
 
 
 
@@ -59,9 +60,10 @@ public class Abilities : MonoBehaviour
     {
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
+        shieldScript = GetComponent<IceShield>();
         oldSpeed = moveScript.agent.speed;
 
-         abilityImage1.fillAmount = 0;
+        abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
         skillshot.GetComponent<Image>().enabled = false;
@@ -109,7 +111,11 @@ public class Abilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy==false)
+        {
+            IceShield.enemies.Clear();
+            Debug.Log(IceShield.enemies.Count);
+        }
         
         
     }
@@ -264,7 +270,7 @@ public class Abilities : MonoBehaviour
     IEnumerator castIceShield()
     {
         iceShield.gameObject.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         iceShield.gameObject.SetActive(false);
 
     }
