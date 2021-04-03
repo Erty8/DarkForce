@@ -70,6 +70,7 @@ public class Abilities : MonoBehaviour
         targetCircle.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        shieldScript = iceShield.gameObject.GetComponent<IceShield>();
         
            
     }
@@ -114,7 +115,8 @@ public class Abilities : MonoBehaviour
         if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy==false)
         {
             IceShield.enemies.Clear();
-            Debug.Log(IceShield.enemies.Count);
+            shieldScript.damageCd = false;
+            //Debug.Log(IceShield.enemies.Count);
         }
         
         
