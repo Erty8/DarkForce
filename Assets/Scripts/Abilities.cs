@@ -41,7 +41,8 @@ public class Abilities : MonoBehaviour
     public float maxAbilitytoDistance;
     public Transform ability2Transform;
     public GameObject emptyTransform;
-    public GameObject ability2object;
+    public GameObject shatterObject;
+    Shatter shatterScript;
     
 
 
@@ -61,6 +62,7 @@ public class Abilities : MonoBehaviour
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
         shieldScript = GetComponent<IceShield>();
+        shatterScript = GetComponent<Shatter>();
         oldSpeed = moveScript.agent.speed;
 
         abilityImage1.fillAmount = 0;
@@ -118,8 +120,13 @@ public class Abilities : MonoBehaviour
             shieldScript.damageCd = false;
             //Debug.Log(IceShield.enemies.Count);
         }
-        
-        
+        if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy == false)
+        {
+            IceShield.enemies.Clear();
+            shieldScript.damageCd = false;
+            //Debug.Log(IceShield.enemies.Count);
+        }
+
     }
 
     void Ability1()
@@ -282,7 +289,7 @@ public class Abilities : MonoBehaviour
     }
     public void castShatter()
     {
-        Instantiate(ability2object, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
     }
     
 

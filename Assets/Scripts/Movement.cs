@@ -28,13 +28,18 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (anim.GetFloat("Speed") <= 0.1f)
+        {
+            //Debug.Log(anim.GetFloat("Speed"));
+            anim.SetBool("Moving", false);
+            //Debug.Log("stop");
+        }
         /*if (Vector3.Distance(attackingtScript.targetedEnemy.transform.position , this.transform.position)
             < attackingtScript.attackRange)
         {
             Debug.Log("Enemy in range");
         }*/
-        if(attackingtScript.targetedEnemy != null)
+        if (attackingtScript.targetedEnemy != null)
         {
             if(attackingtScript.targetedEnemy.GetComponent<Attacking>() != null)
             {
@@ -71,6 +76,7 @@ public class Movement : MonoBehaviour
     {
         RaycastHit hit;
         anim.SetBool("Moving", true);
+        Debug.Log(anim.GetFloat("Speed"));
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
         {
@@ -85,12 +91,16 @@ public class Movement : MonoBehaviour
                     rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
 
                 transform.eulerAngles = new Vector3(0, rotationY, 0);
+                //Invoke("movingFalse", 0.5f);
+                
             }
 
         }
-        else
-        {
-            anim.SetBool("Moving", false);
-        }
+       
+    }
+    void movingFalse()
+    {
+        anim.SetBool("Moving", false);
+        
     }
 }

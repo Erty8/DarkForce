@@ -997,7 +997,7 @@ MonoBehaviour:
   maxAbilitytoDistance: 25
   ability2Transform: {fileID: 596299090448510840}
   emptyTransform: {fileID: 76874607}
-  ability2object: {fileID: 4094184751663109620, guid: 5c4982fd2f0aef4409ddd75603d8e52d, type: 3}
+  shatterObject: {fileID: 4094184751663109620, guid: 5c4982fd2f0aef4409ddd75603d8e52d, type: 3}
   abilityImage3: {fileID: 1998926179822854775}
   cooldown3: 5
   ability3: 101
@@ -1007,6 +1007,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
   m_PrefabInstance: {fileID: 1879755762851303585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1855380421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855380420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!4 &1855380425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1879755763918292093, guid: 5648984259483654a96bd7c875cbd823, type: 3}
@@ -1233,6 +1246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgPerSec: 1
+  damageCd: 0
+  shieldDamage: 20
 --- !u!137 &40076294472266354
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4559,7 +4574,7 @@ MonoBehaviour:
   maxAbilitytoDistance: 5.5
   ability2Transform: {fileID: 0}
   emptyTransform: {fileID: 0}
-  ability2object: {fileID: 0}
+  shatterObject: {fileID: 0}
   abilityImage3: {fileID: 1998926181316239809}
   cooldown3: 3
   ability3: 101

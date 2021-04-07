@@ -22,5 +22,6 @@ public class PlayerAnimator : MonoBehaviour
     {
         float speed = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
+        
     }
 }
