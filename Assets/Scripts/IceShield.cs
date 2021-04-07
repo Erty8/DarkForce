@@ -63,7 +63,7 @@ public class IceShield : MonoBehaviour
     {
        foreach(GameObject gameObject in enemies)
         {
-            gameObject.GetComponent<CombatScript>().takeDamage(shieldDamage);
+            gameObject.GetComponent<EnemyCombatScript>().takeDamage(shieldDamage);
         }
         Debug.Log(enemies.Count);
         damageCd = true;

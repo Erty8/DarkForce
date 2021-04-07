@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Animator anim;
+    PlayerAnimator animatorScript;
+    
 
     public float rotateSpeedMovement;
     public float rotateVelocity;
@@ -23,16 +25,21 @@ public class Movement : MonoBehaviour
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         attackingtScript = GetComponent<Attacking>();
+        animatorScript = GetComponent<PlayerAnimator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (anim.GetFloat("Speed") <= 0.1f)
+        if (animatorScript.speedVal ==0)
         {
             //Debug.Log(anim.GetFloat("Speed"));
             anim.SetBool("Moving", false);
             //Debug.Log("stop");
+        }
+        else
+        {
+            anim.SetBool("Moving", true);
         }
         /*if (Vector3.Distance(attackingtScript.targetedEnemy.transform.position , this.transform.position)
             < attackingtScript.attackRange)
@@ -75,8 +82,8 @@ public class Movement : MonoBehaviour
     public void move()
     {
         RaycastHit hit;
-        anim.SetBool("Moving", true);
-        Debug.Log(anim.GetFloat("Speed"));
+        //anim.SetBool("Moving", true);
+        //Debug.Log(anim.GetFloat("Speed"));
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
         {
@@ -98,9 +105,5 @@ public class Movement : MonoBehaviour
         }
        
     }
-    void movingFalse()
-    {
-        anim.SetBool("Moving", false);
-        
-    }
+
 }

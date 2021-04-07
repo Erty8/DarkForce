@@ -8,6 +8,8 @@ public class PlayerAnimator : MonoBehaviour
 
     NavMeshAgent agent;
     public Animator anim;
+    public float speed;
+    public float speedVal;
 
     float motionSmoothTime = .1f;
 
@@ -20,8 +22,11 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = agent.velocity.magnitude / agent.speed;
+        speed = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
-        
+        speedVal = speed * motionSmoothTime * Time.deltaTime;
+        //Debug.Log(speedVal);
+
+
     }
 }

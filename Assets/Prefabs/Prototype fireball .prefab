@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1729651801896249425}
   - component: {fileID: 1729651801896249421}
   - component: {fileID: 3783721409100631162}
+  - component: {fileID: 3711138502489395032}
   m_Layer: 0
   m_Name: 'Prototype fireball '
   m_TagString: Untagged
@@ -92,7 +93,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729651801896249426}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -173,3 +174,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3711138502489395032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729651801896249426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3f26ca318d40a4e900f0533a6a35c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgPerSec: 5
+  damageCd: 0
+  fireballDamage: 20

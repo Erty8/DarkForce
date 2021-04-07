@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shatter : MonoBehaviour
+public class Fireball : MonoBehaviour
 {
-    public float dmgPerSec = 3f;
+    public float dmgPerSec = 5f;
     public bool damageCd = false;
-    public float shatterDamage = 50f;
+    public float fireballDamage = 20f;
+    public float fireballtimeDamage = 5f;
+    public float dmgforSeconds = 5f;
     public static List<GameObject> enemies = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -19,23 +21,26 @@ public class Shatter : MonoBehaviour
     {
         if (enemies.Count != 0)
         {
+            //Debug.Log(damageCd);
 
             if (damageCd == false)
             {
-                StartCoroutine(damageEnemies());
+                //StartCoroutine(damageEnemies());
             }
         }
     }
     private void OnTriggerEnter(Collider col)
     {
+        
         if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false)
         {
-            enemies.Add(col.gameObject);
-            //Debug.Log(enemies.Count);
+            col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(fireballDamage);
+            col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage,dmgforSeconds,1f);
+            Destroy(gameObject);
         }
 
     }
-    
+  
     void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "Enemy")
@@ -47,9 +52,9 @@ public class Shatter : MonoBehaviour
     {
         foreach (GameObject gameObject in enemies)
         {
-            gameObject.GetComponent<EnemyCombatScript>().takeDamage(shatterDamage);
+            gameObject.GetComponent<EnemyCombatScript>().takeDamage(fireballDamage);
         }
-
+        Debug.Log(enemies.Count);
         damageCd = true;
         Debug.Log("damaged");
         yield return new WaitForSeconds(dmgPerSec);
