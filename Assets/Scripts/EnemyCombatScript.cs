@@ -10,7 +10,7 @@ public class EnemyCombatScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        enemySlider.maxValue = health;
     }
 
     // Update is called once per frame

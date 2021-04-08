@@ -28,6 +28,7 @@ public class InputTargeting : MonoBehaviour
                     if (hit.collider.gameObject.GetComponent<Targetable>().enemyType == Targetable.EnemyType.Cube)
                     {
                         selectedHero.GetComponent<Attacking>().targetedEnemy = hit.collider.gameObject;
+                        selectedHero.GetComponent<Attacking>().oldtargetedEnemy = hit.collider.gameObject;
                     }
                 }
                     
@@ -35,7 +36,12 @@ public class InputTargeting : MonoBehaviour
 
             else if(hit.collider.gameObject.GetComponent<Targetable>() == null)
             {
+                
+                
                 selectedHero.GetComponent<Attacking>().targetedEnemy = null;
+                
+                
+                
             }
         }
     }
