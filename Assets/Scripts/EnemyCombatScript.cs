@@ -7,6 +7,7 @@ public class EnemyCombatScript : MonoBehaviour
 {
     public Slider enemySlider;
     public float health = 100f;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,18 @@ public class EnemyCombatScript : MonoBehaviour
     void Update()
     {
         enemySlider.value = health;
+        
     }
     public void takeDamage(float x)
     {
         health -= x;
+        anim.SetBool("takeHit", true);
         Debug.Log(health);
         if (health <=0 )
         {
-            Destroy(gameObject);
+            anim.SetBool("death", true);
+            Invoke("destroy", 7f);
+            //Destroy(gameObject);
         }
     }
     public void takedamageoverTime(float x, float y, float z)
@@ -36,10 +41,16 @@ public class EnemyCombatScript : MonoBehaviour
         for (int i = 0; i < y; i++)
         {
             takeDamage(x);
+            
             Debug.Log("damage over time");
             yield return new WaitForSeconds(z);
+            
         }
         yield return null;
+    }
+    void destroy()
+    {
+        Destroy(gameObject);
     }
     
 }
