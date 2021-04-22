@@ -22,43 +22,43 @@ public class CameraRoam : MonoBehaviour
         //UP
         if(Input.mousePosition.y >= Screen.height - screenSizeThickness)
         {
-            //pos.x -= camSpeeed * Time.deltaTime;
+            pos.x += camSpeeed * Time.deltaTime;
 
 
             //TEST THIS
-            pos.z += camSpeeed * Time.deltaTime;
+            //pos.z += camSpeeed * Time.deltaTime;
         }
         //DOWN
         
         if (Input.mousePosition.y <= screenSizeThickness)
         {
-            //pos.x += camSpeeed * Time.deltaTime;
+            pos.x -= camSpeeed * Time.deltaTime;
 
 
             //TEST THIS
-            pos.z -= camSpeeed * Time.deltaTime;
+            //pos.z -= camSpeeed * Time.deltaTime;
         }
         
         //LEFT
         
         if (Input.mousePosition.x <= screenSizeThickness)
         {
-            //pos.z -= camSpeeed * Time.deltaTime;
+            pos.z += camSpeeed * Time.deltaTime;
 
 
             //TEST THIS
-            pos.x -= camSpeeed * Time.deltaTime;
+            //pos.x -= camSpeeed * Time.deltaTime;
         }
         
         //RIGHT
         
         if (Input.mousePosition.x >= Screen.height - screenSizeThickness)
         {
-            //pos.z += camSpeeed * Time.deltaTime;
+            pos.z -= camSpeeed * Time.deltaTime;
 
 
             //TEST THIS
-            pos.x += camSpeeed * Time.deltaTime;
+            //pos.x += camSpeeed * Time.deltaTime;
         }
         
         transform.position = pos;
