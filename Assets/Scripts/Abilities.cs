@@ -7,7 +7,9 @@ using UnityEngine.AI;
 public class Abilities : MonoBehaviour
 {
     // Written by ertugrul
-    RaycastHit hit;
+
+    //RaycastHit hit;
+    [SerializeField] private LayerMask layermask;
     Movement moveScript;
     public Animator anim;
     //public NavMeshAgent agent;
@@ -85,12 +87,12 @@ public class Abilities : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         //skillshot
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity,layermask))
         {
             position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
         //ability 2 pos
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity,layermask))
         {
             if (hit.collider.gameObject != this.gameObject)
             {

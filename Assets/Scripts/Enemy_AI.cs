@@ -8,6 +8,9 @@ public class Enemy_AI : MonoBehaviour
     public float attackCd;
     float step;
     public float rotSpeed = 4f;
+    public float abilityCD = 3f;
+    float abilityTimePassed;
+    public float abilityCastTime = 2f;
     Vector3 position;
     Vector3 targetPosition;
     Vector3 lookAtTarget;
@@ -37,7 +40,7 @@ public class Enemy_AI : MonoBehaviour
         
         lookAtTarget = new Vector3(targetPosition.x - transform.position.x, transform.position.y, targetPosition.z - transform.position.z);
         EnemyRot = Quaternion.LookRotation(lookAtTarget);
-        transform.rotation = Quaternion.Slerp(transform.rotation, EnemyRot, rotSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, EnemyRot, rotSpeed * Time.deltaTime);
     }
 
    
@@ -56,30 +59,46 @@ public class Enemy_AI : MonoBehaviour
                 closestEnemy = currentEnemy;
             }
         }
-        transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
+        //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
         Attack();
     }
     public void Attack()
     {
-        if (Vector3.Distance(transform.position, closestEnemy.transform.position) > 2f)
+        if (Vector3.Distance(transform.position, closestEnemy.transform.position) > 10f)
         {
-            speed = 2f;
-            transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
+            //speed = 2f;
+            //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
         }
+        
         else
         {
             speed = 0;
+            
             if (closestEnemy.tag == "Player")
             {
+                if ((Time.time - abilityTimePassed) > abilityCD)
+                {
+                    abilityTimePassed = Time.time;
+                    StartCoroutine(castAbility());
+                    //attack
+
+                }
                 if ((Time.time - attackCd) > 2f)
                 {
                     attackCd = Time.time;
                     //attack
 
-                    //Debug.Log(killed);
-
                 }
+                
             }
         }
+    }
+    IEnumerator castAbility()
+    {
+        yield return new WaitForSeconds(abilityCastTime);
+        Debug.Log("enemy ability casted");
+        //yield return new WaitForSeconds(abilityCD);
+        
+
     }
 }
