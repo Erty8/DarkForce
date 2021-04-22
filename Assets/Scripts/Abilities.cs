@@ -20,6 +20,7 @@ public class Abilities : MonoBehaviour
     bool isCooldown1 = false;
     public KeyCode ability1;
     public Transform ability1Transform;
+    public Transform emptyProjectileTransform;
     public GameObject ability1object;
     PlayerController pControl;
     
@@ -148,7 +149,8 @@ public class Abilities : MonoBehaviour
         {
             //pControl.SetTurnPosition();
             //pControl.turn();
-            
+            emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+            emptyProjectileTransform.transform.rotation = ability1Transform.transform.rotation;
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);

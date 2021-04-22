@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Enemy_AI : MonoBehaviour
 {
+    [SerializeField] GameObject spike;
+    [SerializeField] Transform spikeTransform;
+    [SerializeField] Animator anim;
+    public float spikeCount;
+    public float radius = 10f;
+    
     public float speed = 4f;
     public float attackCd;
     float step;
     public float rotSpeed = 4f;
-    public float abilityCD = 3f;
+    public float abilityCD = 10f;
     float abilityTimePassed;
     public float abilityCastTime = 2f;
     Vector3 position;
@@ -64,7 +70,7 @@ public class Enemy_AI : MonoBehaviour
     }
     public void Attack()
     {
-        if (Vector3.Distance(transform.position, closestEnemy.transform.position) > 10f)
+        if (Vector3.Distance(transform.position, closestEnemy.transform.position) > 30f)
         {
             //speed = 2f;
             //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
@@ -76,7 +82,7 @@ public class Enemy_AI : MonoBehaviour
             
             if (closestEnemy.tag == "Player")
             {
-                if ((Time.time - abilityTimePassed) > abilityCD)
+                if ((Time.time - abilityCD) > abilityTimePassed)
                 {
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
@@ -95,10 +101,22 @@ public class Enemy_AI : MonoBehaviour
     }
     IEnumerator castAbility()
     {
-        yield return new WaitForSeconds(abilityCastTime);
-        Debug.Log("enemy ability casted");
-        //yield return new WaitForSeconds(abilityCD);
+        anim.SetBool("ability", true);
         
+        Debug.Log("enemy ability casted");
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("ability", false);
+        yield return null;
+        //yield return new WaitForSeconds(abilityCD);
 
+    }
+    void spawnSpikes()
+    {
+        float angleStep = 360f / spikeCount;
+        //float angle = 0f;
+        for (int i = 0; i <= spikeCount - 1; i++)
+        {
+            //float projectileDirXposition = spikeTransform.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
+        }
     }
 }
