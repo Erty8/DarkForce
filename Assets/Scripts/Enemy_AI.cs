@@ -9,6 +9,7 @@ public class Enemy_AI : MonoBehaviour
     [SerializeField] Animator anim;
     public float spikeCount;
     public float radius = 10f;
+    bool canAbility = true;
     
     public float speed = 4f;
     public float attackCd;
@@ -82,10 +83,12 @@ public class Enemy_AI : MonoBehaviour
             
             if (closestEnemy.tag == "Player")
             {
-                if ((Time.time - abilityCD) > abilityTimePassed)
+                //if (canAbility) { StartCoroutine(castAbility()); }
+                if ((Time.time - abilityTimePassed) > abilityCD)
                 {
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
+                    Debug.Log("Routine");
                     //attack
 
                 }
@@ -102,11 +105,12 @@ public class Enemy_AI : MonoBehaviour
     IEnumerator castAbility()
     {
         anim.SetBool("ability", true);
-        
+        canAbility = false;
         Debug.Log("enemy ability casted");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         anim.SetBool("ability", false);
-        yield return null;
+        yield return new WaitForSeconds(abilityCD-1f);
+        canAbility = true;
         //yield return new WaitForSeconds(abilityCD);
 
     }
