@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class Enemy_AI : MonoBehaviour
 {
     [SerializeField] GameObject spike;
-    [SerializeField] Transform spikeTransform;
+    [SerializeField] Transform spike1Transform;
+    [SerializeField] Transform spike2Transform;
+    [SerializeField] Transform spike3Transform;
     [SerializeField] Animator anim;
     [SerializeField] Image attackRangeImage;
-    public float spikeCount;
+    public float spikeWaveCount = 3f;
+    public float timeBetweenSpikeWaves = 1f;
     public float radius = 10f;
     bool canAbility = true;
     
@@ -27,7 +30,7 @@ public class Enemy_AI : MonoBehaviour
     Vector3 targetPosition;
     Vector3 lookAtTarget;
     Quaternion EnemyRot;
-    GameObject closestEnemy = null;
+    [SerializeField] GameObject closestEnemy = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -135,7 +138,7 @@ public class Enemy_AI : MonoBehaviour
         //yield return new WaitForSeconds(abilityCD);
 
     }
-    void spawnSpikes()
+    /*void spawnSpikes()
     {
         float angleStep = 360f / spikeCount;
         //float angle = 0f;
@@ -143,7 +146,7 @@ public class Enemy_AI : MonoBehaviour
         {
             //float projectileDirXposition = spikeTransform.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
         }
-    }
+    }*/
     public void rangeIndicator()
     {
         attackRangeImage.rectTransform.sizeDelta = new Vector2(attackRange / 2, attackRange / 2);
@@ -152,5 +155,27 @@ public class Enemy_AI : MonoBehaviour
     {
         closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
         Debug.Log("Demon dealed " + attackDamage + " damage");
+    }
+    public void test()
+    {
+        Debug.Log("test");
+    }
+    public void castSpikes(float y, float z)
+    {
+        StartCoroutine(castspike(y, z));
+    }
+    IEnumerator castspike(float y, float z)
+    {
+        for (int i = 0; i < y; i++)
+        {
+            Instantiate(spike, spike1Transform.transform.position, spike1Transform.transform.rotation);
+            Instantiate(spike, spike2Transform.transform.position, spike2Transform.transform.rotation);
+            Instantiate(spike, spike3Transform.transform.position, spike3Transform.transform.rotation);
+
+            Debug.Log("enemy spikes launched");
+            yield return new WaitForSeconds(z);
+
+        }
+        yield return null;
     }
 }

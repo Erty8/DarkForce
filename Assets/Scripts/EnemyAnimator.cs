@@ -9,7 +9,7 @@ public class EnemyAnimator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        aiScript = gameObject.GetComponent<Enemy_AI>();
+        aiScript = gameObject.GetComponentInParent<Enemy_AI>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,11 @@ public class EnemyAnimator : MonoBehaviour
     }
     void attack()
     {
+        //aiScript.test();
         aiScript.dealDamage();
+    }
+    void spawnSpikes()
+    {
+        aiScript.castSpikes(aiScript.spikeWaveCount,aiScript.timeBetweenSpikeWaves);
     }
 }
