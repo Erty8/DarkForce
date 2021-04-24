@@ -9,19 +9,21 @@ public class Attacking : MonoBehaviour
     public enum HeroAttackType { Melee, Ranged, Versatile};
     public HeroAttackType heroAttackType;
 
+    [SerializeField] private Image attackRangeImage;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
     public float attackRange;
     public float attackDamage;
     public float attackSpeed = 1f;
     public float rotateSpeedForAttack;
-    bool damageCd;
+    bool damageCd = false;
 
     private Movement moveScript;
 
     public bool basicAtkIdle = false;
     public bool isHeroAlive;
     public bool performMeleeAttack = true;
+     
 
     
     // Start is called before the first frame update
@@ -43,7 +45,9 @@ public class Attacking : MonoBehaviour
         }
         if(targetedEnemy != null)
         {
-            if(Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position) > attackRange)
+            //distancetoEnemy = Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position);
+            if (Vector3.Distance(new Vector3 (gameObject.transform.position.x,0, gameObject.transform.position.z), new Vector3
+                (targetedEnemy.transform.position.x,0, targetedEnemy.transform.position.z)) > attackRange)
             {
                 targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
                 
@@ -56,13 +60,15 @@ public class Attacking : MonoBehaviour
 
                 transform.eulerAngles = new Vector3(0, rotationY, 0);
             }
-            if (Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position) <= attackRange)
+            if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) <= attackRange)
             {
                 
                 if (heroAttackType == HeroAttackType.Ranged)
                 {
                     if (damageCd == false)
                     {
+                        Debug.Log("Hero basic attack");
                         StartCoroutine(damageEnemies());
                     }
                 }
@@ -79,6 +85,7 @@ public class Attacking : MonoBehaviour
             }
             
         }
+        rangeIndicator();
         
         
     }
@@ -93,5 +100,9 @@ public class Attacking : MonoBehaviour
         yield return new WaitForSeconds(1/attackSpeed);
         damageCd = false;
 
+    }
+    void rangeIndicator()
+    {
+        attackRangeImage.rectTransform.sizeDelta = new Vector2(attackRange / 2, attackRange / 2);
     }
 }

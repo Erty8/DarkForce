@@ -7,7 +7,9 @@ using UnityEngine.AI;
 public class Abilities : MonoBehaviour
 {
     // Written by ertugrul
-    RaycastHit hit;
+
+    //RaycastHit hit;
+    [SerializeField] private LayerMask layermask;
     Movement moveScript;
     public Animator anim;
     //public NavMeshAgent agent;
@@ -18,6 +20,7 @@ public class Abilities : MonoBehaviour
     bool isCooldown1 = false;
     public KeyCode ability1;
     public Transform ability1Transform;
+    public Transform emptyProjectileTransform;
     public GameObject ability1object;
     PlayerController pControl;
     
@@ -85,12 +88,12 @@ public class Abilities : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         //skillshot
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity,layermask))
         {
             position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
         //ability 2 pos
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity,layermask))
         {
             if (hit.collider.gameObject != this.gameObject)
             {
@@ -146,7 +149,8 @@ public class Abilities : MonoBehaviour
         {
             //pControl.SetTurnPosition();
             //pControl.turn();
-            
+            emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+            emptyProjectileTransform.transform.rotation = ability1Transform.transform.rotation;
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);
