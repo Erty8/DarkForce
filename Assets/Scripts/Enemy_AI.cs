@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy_AI : MonoBehaviour
 {
     [SerializeField] GameObject spike;
     [SerializeField] Transform spikeTransform;
     [SerializeField] Animator anim;
+    [SerializeField] Image attackRangeImage;
     public float spikeCount;
     public float radius = 10f;
     bool canAbility = true;
     
     public float speed = 4f;
-    public float attackCd;
+    public float attackDamage = 10f;
+    public float attackCd = 5f;
+    float attacktimePassed;
+    public float attackRange = 25f;
     float step;
     public float rotSpeed = 4f;
     public float abilityCD = 10f;
@@ -26,7 +31,11 @@ public class Enemy_AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        attacktimePassed = -attackCd;
+        
         position = transform.position;
+        //attackRangeImage = gameobject.transform.Find("Range Canvas").transform.Find("Attack Range");
+        rangeIndicator();
     }
 
     protected void LateUpdate()
@@ -71,36 +80,36 @@ public class Enemy_AI : MonoBehaviour
     }
     public void Attack()
     {
-        if (Vector3.Distance(transform.position, closestEnemy.transform.position) > 30f)
-        {
-            //speed = 2f;
-            //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
-        }
         
-        else
+        if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
         {
-            speed = 0;
-            
+         
             if (closestEnemy.tag == "Player")
             {
                 //if (canAbility) { StartCoroutine(castAbility()); }
-                if ((Time.time - abilityTimePassed) > abilityCD)
+                if ((Time.time - attacktimePassed) > attackCd)
                 {
-                    abilityTimePassed = Time.time;
-                    StartCoroutine(castAbility());
-                    Debug.Log("Routine");
-                    //attack
-
-                }
-                if ((Time.time - attackCd) > 2f)
-                {
-                    attackCd = Time.time;
-                    //attack
+                    attacktimePassed = Time.time;
+                    Debug.Log("Enemy attacked");
+                    StartCoroutine(attackBool());
 
                 }
                 
+                else if ((Time.time - abilityTimePassed) > abilityCD)
+                {
+                    abilityTimePassed = Time.time;
+                    StartCoroutine(castAbility());
+                    
+                    
+
+                }
+                
+
+
             }
         }
+        else { anim.SetBool("attack", false); }
     }
     IEnumerator castAbility()
     {
@@ -114,6 +123,18 @@ public class Enemy_AI : MonoBehaviour
         //yield return new WaitForSeconds(abilityCD);
 
     }
+    IEnumerator attackBool()
+    {
+        anim.SetBool("attack", true);
+        
+        Debug.Log("enemy ability casted");
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("attack", false);
+        
+        
+        //yield return new WaitForSeconds(abilityCD);
+
+    }
     void spawnSpikes()
     {
         float angleStep = 360f / spikeCount;
@@ -122,5 +143,14 @@ public class Enemy_AI : MonoBehaviour
         {
             //float projectileDirXposition = spikeTransform.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
         }
+    }
+    public void rangeIndicator()
+    {
+        attackRangeImage.rectTransform.sizeDelta = new Vector2(attackRange / 2, attackRange / 2);
+    }
+    public void dealDamage()
+    {
+        closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+        Debug.Log("Demon dealed " + attackDamage + " damage");
     }
 }
