@@ -17,6 +17,8 @@ public class Attacking : MonoBehaviour
     public float attackSpeed = 1f;
     public float rotateSpeedForAttack;
     bool damageCd = false;
+    public bool attackOnSight;
+    GameObject closestEnemy;
 
     private Movement moveScript;
 
@@ -31,10 +33,40 @@ public class Attacking : MonoBehaviour
     {
         moveScript = GetComponent<Movement>();
     }
+    void FixedUpdate()
+    {
+        if (attackOnSight)
+        {
+            FindClosestEnemy();
+            if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
+            {
+                targetedEnemy = closestEnemy;
+                oldtargetedEnemy = closestEnemy;
+                Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z) - transform.position);
+                float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                    rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, moveScript.rotateSpeedMovement 
+                    * (Time.deltaTime * 5));
+
+                transform.eulerAngles = new Vector3(0, rotationY, 0);
+                moveScript.agent.SetDestination(targetedEnemy.transform.position);
+                moveScript.agent.stoppingDistance = attackRange;
+                
+            }
+        }
+        
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        if (targetedEnemy != null)
+        {
+            targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
+
+        }
         if (targetedEnemy == null)
         {
             if(oldtargetedEnemy!= null)
@@ -49,7 +81,7 @@ public class Attacking : MonoBehaviour
             if (Vector3.Distance(new Vector3 (gameObject.transform.position.x,0, gameObject.transform.position.z), new Vector3
                 (targetedEnemy.transform.position.x,0, targetedEnemy.transform.position.z)) > attackRange)
             {
-                targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
+                //targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
                 
                 moveScript.agent.SetDestination(targetedEnemy.transform.position);
                 moveScript.agent.stoppingDistance = attackRange;
@@ -104,5 +136,23 @@ public class Attacking : MonoBehaviour
     void rangeIndicator()
     {
         attackRangeImage.rectTransform.sizeDelta = new Vector2(attackRange / 2, attackRange / 2);
+    }
+    void FindClosestEnemy()
+    {
+        List<GameObject> enemies = new List<GameObject>();
+        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        float distanceToClosestEnemy = Mathf.Infinity;
+
+        foreach (GameObject currentEnemy in enemies)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
+            if (distanceToEnemy < distanceToClosestEnemy)
+            {
+                distanceToClosestEnemy = distanceToEnemy;
+                closestEnemy = currentEnemy;
+            }
+        }
+        //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
+        
     }
 }

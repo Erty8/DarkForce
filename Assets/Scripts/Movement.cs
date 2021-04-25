@@ -13,18 +13,19 @@ public class Movement : MonoBehaviour
     public float rotateSpeedMovement;
     public float rotateVelocity;
 
-    private Attacking attackingtScript;
+    private Attacking attackingScript;
     public KeyCode attackMove;
     Attacking attackScript;
     //public Canvas attackRangeCanvas;
     public Image attackRangeImage;
     bool attackMovebool = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
-        attackingtScript = GetComponent<Attacking>();
+        attackingScript = GetComponent<Attacking>();
         animatorScript = GetComponent<PlayerAnimator>();
     }
 
@@ -46,13 +47,13 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("Enemy in range");
         }*/
-        if (attackingtScript.targetedEnemy != null)
+        if (attackingScript.targetedEnemy != null)
         {
-            if(attackingtScript.targetedEnemy.GetComponent<Attacking>() != null)
+            if(attackingScript.targetedEnemy.GetComponent<Attacking>() != null)
             {
-                if (attackingtScript.targetedEnemy.GetComponent<Attacking>().isHeroAlive)
+                if (attackingScript.targetedEnemy.GetComponent<Attacking>().isHeroAlive)
                 {
-                    attackingtScript.targetedEnemy = null;
+                    attackingScript.targetedEnemy = null;
                 }
             }
 
@@ -75,6 +76,7 @@ public class Movement : MonoBehaviour
         {
             move();
             attackRangeImage.GetComponent<Image>().enabled = false;
+            attackingScript.attackOnSight = true;
             Debug.Log("attack move");
             attackMovebool = false;
         }
@@ -82,6 +84,7 @@ public class Movement : MonoBehaviour
     public void move()
     {
         RaycastHit hit;
+        attackingScript.attackOnSight = false;
         //anim.SetBool("Moving", true);
         //Debug.Log(anim.GetFloat("Speed"));
 
@@ -90,7 +93,7 @@ public class Movement : MonoBehaviour
             if (hit.collider.tag == "Floor")
             {
                 agent.SetDestination(hit.point);
-                attackingtScript.targetedEnemy = null;
+                attackingScript.targetedEnemy = null;
                 agent.stoppingDistance = 0;
 
                 Quaternion rotationToLookAt = Quaternion.LookRotation(hit.point - transform.position);
