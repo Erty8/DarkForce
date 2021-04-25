@@ -22,11 +22,11 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = agent.velocity.magnitude / agent.speed;
+        speed = new Vector3 (agent.velocity.x,0,agent.velocity.z).magnitude / agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;
         //Debug.Log(speedVal);
-
+        
 
     }
 }
