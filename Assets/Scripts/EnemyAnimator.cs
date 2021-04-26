@@ -31,4 +31,8 @@ public class EnemyAnimator : MonoBehaviour
     {
         aiScript.castSpikes(aiScript.spikeWaveCount,aiScript.timeBetweenSpikeWaves);
     }
+    void crash()
+    {
+        transform.parent.transform.Translate(0, 0, 20);
+    }
 }
