@@ -11,6 +11,7 @@ public class Enemy_AI : MonoBehaviour
     [SerializeField] Transform spike3Transform;
     [SerializeField] Animator anim;
     [SerializeField] Image attackRangeImage;
+    GameObject skillshotCanvas; 
     public float spikeWaveCount = 3f;
     public float timeBetweenSpikeWaves = 1f;
     public float radius = 10f;
@@ -37,6 +38,8 @@ public class Enemy_AI : MonoBehaviour
         attacktimePassed = -attackCd;
         
         position = transform.position;
+        skillshotCanvas = this.transform.Find("Skillshot Canvas").gameObject;
+        skillshotCanvas.SetActive(false);
         //attackRangeImage = gameobject.transform.Find("Range Canvas").transform.Find("Attack Range");
         rangeIndicator();
     }
@@ -166,6 +169,7 @@ public class Enemy_AI : MonoBehaviour
     }
     IEnumerator castspike(float y, float z)
     {
+        skillshotCanvas.gameObject.SetActive(true);
         for (int i = 0; i < y; i++)
         {
             Instantiate(spike, spike1Transform.transform.position, spike1Transform.transform.rotation);

@@ -4853,7 +4853,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 3042906588781563503}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -4871,8 +4871,9 @@ GameObject:
   - component: {fileID: 5522341707564092560}
   - component: {fileID: 2683309837160854108}
   - component: {fileID: 7175230555044887911}
+  - component: {fileID: -7217325351791307550}
   m_Layer: 0
-  m_Name: Prototype Area Spell 1 1
+  m_Name: Shatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4954,10 +4955,23 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 14144.698
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000047683717, y: 2072.359, z: -0.00000009536743}
 --- !u!114 &7175230555044887911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415506996766244876}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc33a639d3821489baf13546128c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &-7217325351791307550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4966,7 +4980,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6415506996766244876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29cc33a639d3821489baf13546128c32, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d00c7ea014d00408fca0011a2d93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  dmgPerSec: 3
+  damageCd: 0
+  shatterDamage: 50

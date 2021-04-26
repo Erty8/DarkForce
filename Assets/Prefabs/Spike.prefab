@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729651801896249426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26, y: 1, z: 4.25}
-  m_LocalScale: {x: 0.19654223, y: 0.040122133, z: 3.6073802}
+  m_LocalPosition: {x: -0.12074, y: 0.99726, z: 4.1478}
+  m_LocalScale: {x: 0.4418793, y: 0.061151993, z: 2.7518377}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,10 +95,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5322582
+  m_Height: 1.2692106
+  m_Direction: 2
+  m_Center: {x: -0.14611268, y: -0.012600852, z: 0.05828631}
 --- !u!114 &1729651801896249421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.3679245, g: 0.23543295, b: 0, a: 1}
   m_Intensity: 10
-  m_Range: 3
+  m_Range: 1.6911156
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -189,6 +189,4 @@ MonoBehaviour:
   dmgPerSec: 1
   spikeDamage: 10
   spikebleedDamage: 2
-  spikeWaveCount: 3
-  timeBetweenSpikeWaves: 1
   dmgforSeconds: 5
