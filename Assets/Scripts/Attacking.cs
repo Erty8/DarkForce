@@ -100,6 +100,13 @@ public class Attacking : MonoBehaviour
                 {
                     if (damageCd == false)
                     {
+                        moveScript.agent.SetDestination(targetedEnemy.transform.position);
+                        moveScript.agent.stoppingDistance = attackRange;
+                        Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z) - transform.position);
+                        float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                        rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
+                        transform.eulerAngles = new Vector3(0, rotationY, 0);
                         Debug.Log("Hero basic attack");
                         StartCoroutine(damageEnemies());
                     }

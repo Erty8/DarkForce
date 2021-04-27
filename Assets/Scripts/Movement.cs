@@ -15,7 +15,6 @@ public class Movement : MonoBehaviour
 
     private Attacking attackingScript;
     public KeyCode attackMove;
-    Attacking attackScript;
     //public Canvas attackRangeCanvas;
     public Image attackRangeImage;
     bool attackMovebool = false;

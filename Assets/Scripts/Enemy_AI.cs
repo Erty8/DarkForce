@@ -180,6 +180,7 @@ public class Enemy_AI : MonoBehaviour
             yield return new WaitForSeconds(z);
 
         }
+        skillshotCanvas.gameObject.SetActive(false);
         yield return null;
     }
 }
