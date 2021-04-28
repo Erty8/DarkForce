@@ -7,6 +7,7 @@ public class EnemyCombatScript : MonoBehaviour
 {
     public Slider enemySlider;
     public float health = 100f;
+    private bool canbeDamaged = true;
     float maxhealth;
     public Animator anim;
     // Start is called before the first frame update
@@ -27,13 +28,14 @@ public class EnemyCombatScript : MonoBehaviour
         health -= x;
         //anim.SetBool("takeHit", true);
         Debug.Log(health);
-        if (health <= maxhealth/2)
+        
+        if (health <= maxhealth/2 &&canbeDamaged)
         {
-            for (int i = 0; i < 1; i++)
-            {
-                anim.SetBool("takeHit", true);
-            }
+   
+            anim.SetBool("takeHit", true);
+            StartCoroutine(cannotbeDamaged());
             
+                     
         }
         if (health <=0 )
         {
@@ -57,6 +59,11 @@ public class EnemyCombatScript : MonoBehaviour
             
         }
         yield return null;
+    }
+    IEnumerator cannotbeDamaged()
+    {
+        yield return new WaitForSeconds(1f);
+        canbeDamaged = false;
     }
     void destroy()
     {

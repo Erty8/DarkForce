@@ -150,7 +150,7 @@ public class Abilities : MonoBehaviour
             //pControl.SetTurnPosition();
             //pControl.turn();
             emptyProjectileTransform.transform.position = ability1Transform.transform.position;
-            emptyProjectileTransform.transform.rotation = ability1Transform.transform.rotation;
+            emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);
