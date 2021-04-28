@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
     public KeyCode attackMove;
     //public Canvas attackRangeCanvas;
     public Image attackRangeImage;
-    bool attackMovebool = false;
+    public bool attackMovebool ;
     
 
     // Start is called before the first frame update

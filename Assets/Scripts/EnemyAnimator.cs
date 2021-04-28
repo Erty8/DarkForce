@@ -35,4 +35,8 @@ public class EnemyAnimator : MonoBehaviour
     {
         transform.parent.transform.Translate(0, 0, 20);
     }
+    void prepare()
+    {
+        aiScript.skillshotCanvas.SetActive(true);
+    }
 }

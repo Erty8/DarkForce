@@ -6,7 +6,9 @@ using UnityEngine.AI;
 public class Shatter : MonoBehaviour
 {
     public float dmgPerSec = 3f;
-    public float slowedSpeed = 5f;
+    public float slowedSpeed = 2f;
+    public float hardenTime = 1.5f;
+    private int unitCount = 0;
     private int speedIndex = 0;
     public bool damageCd = false;
     public float shatterDamage = 50f;
@@ -32,9 +34,14 @@ public class Shatter : MonoBehaviour
                 StartCoroutine(damageEnemies());
             }
         }
+        if (unitCount == 0)
+        {
+            StartCoroutine(harden());
+        }
     }
     private void OnTriggerEnter(Collider col)
     {
+        unitCount++;
         objects.Add(col.gameObject);
         if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false)
         {
@@ -49,7 +56,7 @@ public class Shatter : MonoBehaviour
             }
             
             //speeds.Insert(speedIndex, col.gameObject.GetComponent<NavMeshAgent>().speed);
-            col.gameObject.GetComponent<NavMeshAgent>().speed = slowedSpeed;
+            col.gameObject.GetComponent<NavMeshAgent>().speed = col.gameObject.GetComponent<NavMeshAgent>().speed/slowedSpeed;
         }
         
 
@@ -58,6 +65,7 @@ public class Shatter : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        unitCount--;
         if (col.gameObject.tag == "Enemy")
         {
             enemies.Remove(col.gameObject);
@@ -87,5 +95,13 @@ public class Shatter : MonoBehaviour
         yield return new WaitForSeconds(dmgPerSec);
         damageCd = false;
 
+    }
+    IEnumerator harden()
+    {
+        yield return new WaitForSeconds(hardenTime);
+        if (unitCount == 0)
+        {
+            gameObject.GetComponent<CapsuleCollider>().isTrigger = false;
+        }
     }
 }
