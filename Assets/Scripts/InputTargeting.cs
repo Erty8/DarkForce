@@ -9,9 +9,10 @@ public class InputTargeting : MonoBehaviour
     public bool heroPlayer;
     RaycastHit hit;
     Movement movementScript;
-    bool attackmovebool;
-    
-    
+    bool attackMovebool;
+    public KeyCode attackMovekey;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,14 @@ public class InputTargeting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(movementScript.attackMovebool);
+        if (Input.GetKey(attackMovekey))
+        {
+            attackMovebool = true;
+            
+
+        }
+
+        //Debug.Log(Input.GetMouseButtonDown(0));
         if (Input.GetMouseButtonDown(1))
         {
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
@@ -49,10 +57,10 @@ public class InputTargeting : MonoBehaviour
                 
             }
         }
-        if (movementScript.attackMovebool)
+        if (attackMovebool &&Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButton(0))
-            {
+            
+                Debug.Log("attack move target");
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
                 {
                     if (hit.collider.GetComponent<Targetable>() != null)
@@ -65,7 +73,8 @@ public class InputTargeting : MonoBehaviour
                     }
 
                 }
-            }
+            attackMovebool = false;
+            
         }
     }
 }

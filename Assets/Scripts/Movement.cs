@@ -8,16 +8,17 @@ public class Movement : MonoBehaviour
     public NavMeshAgent agent;
     public Animator anim;
     PlayerAnimator animatorScript;
+    InputTargeting inputScript;
     
 
     public float rotateSpeedMovement;
     public float rotateVelocity;
 
     private Attacking attackingScript;
-    public KeyCode attackMove;
+    [SerializeField] public KeyCode attackMove;
     //public Canvas attackRangeCanvas;
     public Image attackRangeImage;
-    public bool attackMovebool ;
+    public static bool attackMovebool ;
     
 
     // Start is called before the first frame update
@@ -26,6 +27,8 @@ public class Movement : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         attackingScript = GetComponent<Attacking>();
         animatorScript = GetComponent<PlayerAnimator>();
+        inputScript = GetComponent<InputTargeting>();
+        inputScript.attackMovekey = attackMove;
     }
 
     // Update is called once per frame
