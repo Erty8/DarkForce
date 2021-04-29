@@ -23,7 +23,7 @@ public class PlayerCombat : MonoBehaviour
     public void takeDamage(float x)
     {
         health -= x;
-        Debug.Log(health);
+        //Debug.Log(health);
         if (health <=0 )
         {
             //anim.SetBool("death", true);

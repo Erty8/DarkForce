@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     //Rigidbody projectilePhycs;
     public float speed;
+    public float destroyTime;
     Vector3 castVector;
     //public GameObject player;
     //public GameObject castPos;

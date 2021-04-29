@@ -133,7 +133,7 @@ public class Enemy_AI : MonoBehaviour
     {
         anim.SetBool("attack", true);
         
-        Debug.Log("enemy ability casted");
+        
         yield return new WaitForSeconds(2f);
         anim.SetBool("attack", false);
         
