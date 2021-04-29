@@ -27,6 +27,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;
         //Debug.Log(speedVal);
+       
         
 
     }

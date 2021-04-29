@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6737992347177474720}
   - component: {fileID: 1459068916571853661}
   - component: {fileID: 23238433604189550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DustStorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4774,7 +4774,7 @@ GameObject:
   - component: {fileID: 316962770479722117}
   - component: {fileID: 7594555777448505647}
   - component: {fileID: 7940616988093171828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4873,7 +4873,7 @@ GameObject:
   - component: {fileID: 7175230555044887911}
   - component: {fileID: -7217325351791307550}
   - component: {fileID: 744169450179031427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

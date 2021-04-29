@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
 
     public float rotateSpeedMovement;
     public float rotateVelocity;
+    bool fixVelocity = true;
 
     private Attacking attackingScript;
     [SerializeField] public KeyCode attackMove;
@@ -34,6 +35,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (anim.GetBool("Moving")== false && !Input.anyKey&&fixVelocity)
+        {
+            StartCoroutine(velocityFix());
+        }*/
         if (animatorScript.speedVal ==0)
         {
             //Debug.Log(anim.GetFloat("Speed"));
@@ -110,5 +115,32 @@ public class Movement : MonoBehaviour
         }
        
     }
-
+    private void OnCollisionExit(Collision collision)
+    {
+        StartCoroutine(collisionFix());
+    }
+    IEnumerator velocityFix()
+    {
+        fixVelocity = false;
+        //agent.updateRotation = false;
+        yield return new WaitForSeconds(1);
+        Debug.Log("fix");
+        float speed = new Vector3(agent.velocity.x, 0, agent.velocity.z).magnitude / agent.speed;
+        if (speed <= 0.5)
+        {
+            agent.velocity = new Vector3(0, 0, 0);
+            //agent.updateRotation = true;
+        }
+        fixVelocity = true;
+    }
+    IEnumerator collisionFix()
+    {
+        
+        GetComponent<Rigidbody>().isKinematic = true;
+        //agent.updateRotation = false;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Rigidbody>().isKinematic = false;
+        Debug.Log("collision fix");
+        
+    }
 }
