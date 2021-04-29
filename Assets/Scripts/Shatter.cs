@@ -11,8 +11,11 @@ public class Shatter : MonoBehaviour
     private int unitCount = 0;
     private int speedIndex = 0;
     public bool damageCd = false;
+    bool hardened = false;
+    bool noDamage = false;
     public float shatterDamage = 50f;
     public static List<GameObject> enemies = new List<GameObject>();
+    public static List<GameObject> damagedEnemies = new List<GameObject>();
     public static List<GameObject> objects = new List<GameObject>();
     //public static List<float> speeds = new List<float>();
     Dictionary<GameObject,float> speeds = new Dictionary<GameObject,float>();
@@ -20,16 +23,17 @@ public class Shatter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(noDamageroutine());
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.time);
         if (enemies.Count != 0)
         {
-
-            if (damageCd == false)
+            
+            if (damageCd == false&&!hardened&&!noDamage)
             {
                 StartCoroutine(damageEnemies());
             }
@@ -87,7 +91,12 @@ public class Shatter : MonoBehaviour
     {
         foreach (GameObject gameObject in enemies)
         {
-            gameObject.GetComponent<EnemyCombatScript>().takeDamage(shatterDamage);
+            if (!damagedEnemies.Contains(gameObject)) 
+            {
+                gameObject.GetComponent<EnemyCombatScript>().takeDamage(shatterDamage);
+                damagedEnemies.Add(gameObject);
+            }
+            
         }
 
         damageCd = true;
@@ -102,6 +111,12 @@ public class Shatter : MonoBehaviour
         if (unitCount == 0)
         {
             gameObject.GetComponent<CapsuleCollider>().isTrigger = false;
+            hardened = true;
         }
+    }
+    IEnumerator noDamageroutine()
+    {
+        yield return new WaitForSeconds(1);
+        noDamage = true;
     }
 }

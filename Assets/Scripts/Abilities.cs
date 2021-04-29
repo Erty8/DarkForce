@@ -149,8 +149,7 @@ public class Abilities : MonoBehaviour
         {
             //pControl.SetTurnPosition();
             //pControl.turn();
-            emptyProjectileTransform.transform.position = ability1Transform.transform.position;
-            emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
+            StartCoroutine(projectileTransform());
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);
@@ -287,9 +286,17 @@ public class Abilities : MonoBehaviour
         iceShield.gameObject.SetActive(false);
 
     }
+    IEnumerator projectileTransform()
+    {
+        
+        yield return new WaitForSeconds(0.3f);
+        emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+        emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
+
+    }
     public void castFireball()
     {
-        Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+        Instantiate(ability1object, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
     }
     public void castShatter()
     {
