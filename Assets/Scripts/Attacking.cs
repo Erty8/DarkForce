@@ -107,6 +107,7 @@ public class Attacking : MonoBehaviour
                         float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
                     rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
                         transform.eulerAngles = new Vector3(0, rotationY, 0);
+                        //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToLookAt, rotateSpeedForAttack * Time.deltaTime);
                         Debug.Log("Hero basic attack");
                         StartCoroutine(damageEnemies());
                     }
