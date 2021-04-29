@@ -103,7 +103,8 @@ public class Movement : MonoBehaviour
                 attackingScript.targetedEnemy = null;
                 agent.stoppingDistance = 0;
 
-                Quaternion rotationToLookAt = Quaternion.LookRotation(hit.point - transform.position);
+                Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3(hit.point.x,0,hit.point.z) 
+                    - transform.position);
                 float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
                     rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
 
