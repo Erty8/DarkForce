@@ -14,6 +14,7 @@ public class Abilities : MonoBehaviour
     public Animator anim;
     //public NavMeshAgent agent;
     float oldSpeed;
+
     [Header ("Ability 1")]
     public Image abilityImage1;
     public float cooldown1 = 3f;
@@ -21,7 +22,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability1;
     public Transform ability1Transform;
     public Transform emptyProjectileTransform;
-    public GameObject ability1object;
+    public GameObject fireballObject;
     PlayerController pControl;
     
 
@@ -57,6 +58,21 @@ public class Abilities : MonoBehaviour
     public GameObject iceShield;
     IceShield shieldScript;
 
+    [Header("Ability 4")]
+    public Image abilityImage4;
+    public Image ultimateSkillshot;
+    public float cooldown4 = 3f;
+    bool isCooldown4 = false;
+    public KeyCode ability4;
+    public GameObject ultimateObject;
+    public Transform ultimateTransform;
+    public Transform emptyUltimateTransform;
+    Vector3 ultimatePosition;
+    public Canvas ultimateCanvas;
+    
+
+
+
 
 
     // Start is called before the first frame update
@@ -71,9 +87,11 @@ public class Abilities : MonoBehaviour
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
+        abilityImage4.fillAmount = 0;
         skillshot.GetComponent<Image>().enabled = false;
         targetCircle.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
+        ultimateSkillshot.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         shieldScript = iceShield.gameObject.GetComponent<IceShield>();
         
@@ -84,6 +102,7 @@ public class Abilities : MonoBehaviour
         Ability1();
         Ability2();
         Ability3();
+        ultimate();
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -105,6 +124,7 @@ public class Abilities : MonoBehaviour
         Quaternion transRot = Quaternion.LookRotation(position - player.transform.position);
         transRot.eulerAngles = new Vector3(0, transRot.eulerAngles.y, transRot.eulerAngles.z);
         ability1Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
+        ultimateCanvas.transform.rotation = Quaternion.Lerp(transRot, ultimateCanvas.transform.rotation, 0f);
         //ability2 input
         var hitPosDir = (hit.point - transform.position).normalized;
         float distance = Vector3.Distance(hit.point, transform.position);
@@ -256,6 +276,55 @@ public class Abilities : MonoBehaviour
             }
         }
     }
+    void ultimate()
+    {
+
+        // cooldown system
+        if (Input.GetKey(ability4) && isCooldown4 == false)
+        {
+            ultimateSkillshot.GetComponent<Image>().enabled = true;
+            skillshot.GetComponent<Image>().enabled = true;
+            targetCircle.GetComponent<Image>().enabled = false;
+            rangeCircle.GetComponent<Image>().enabled = false;
+            Debug.Log("Used ability 1");
+
+            abilityImage4.fillAmount = 1;
+        }
+        if (ultimateSkillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
+        {
+            
+            StartCoroutine(projectileTransform());
+            Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
+            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
+            ref moveScript.rotateVelocity, 0);
+            transform.eulerAngles = new Vector3(0, rotationY, 0);
+
+            moveScript.agent.SetDestination(transform.position);
+            moveScript.agent.stoppingDistance = 0;
+
+            StartCoroutine(animateUltimate());
+            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+
+            isCooldown1 = true;
+            abilityImage4.fillAmount = 1;
+           
+        }
+        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1) || Input.GetKey(ability1) || Input.GetKey(ability2))
+        {
+            abilityImage4.fillAmount = 0;
+            ultimateSkillshot.GetComponent<Image>().enabled = false;
+        }
+        if (isCooldown4)
+        {
+            abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
+            ultimateSkillshot.GetComponent<Image>().enabled = false;
+            if (abilityImage4.fillAmount <= 0)
+            {
+                abilityImage4.fillAmount = 0;
+                isCooldown4 = false;
+            }
+        }
+    }
     IEnumerator animateFireball()
     {
         Debug.Log("animated fireball");
@@ -279,6 +348,17 @@ public class Abilities : MonoBehaviour
         //moveScript.agent.speed = oldSpeed;
         //Debug.Log(moveScript.agent.speed);
     }
+    IEnumerator animateUltimate()
+    {
+        Debug.Log("animated ultimate");
+        //canSkillshot = false;
+        anim.SetBool("Ultimate", true);
+
+        yield return new WaitForSeconds(0.4f);
+
+        anim.SetBool("Ultimate", false);
+
+    }
     IEnumerator castIceShield()
     {
         iceShield.gameObject.SetActive(true);
@@ -296,7 +376,7 @@ public class Abilities : MonoBehaviour
     }
     public void castFireball()
     {
-        Instantiate(ability1object, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
+        Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
     }
     public void castShatter()
     {

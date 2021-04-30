@@ -1,0 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ultimate : MonoBehaviour
+{
+    float dmgPerSec = 5f;
+    public bool damageCd = false;
+    public float damage = 50f;
+    public static List<GameObject> enemies = new List<GameObject>();
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (enemies.Count != 0)
+        {
+            //Debug.Log(damageCd);
+
+            if (damageCd == false)
+            {
+                //StartCoroutine(damageEnemies());
+            }
+        }
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+
+        if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false)
+        {
+            col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(damage);
+            
+        }
+
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            enemies.Remove(col.gameObject);
+        }
+    }
+    IEnumerator damageEnemies()
+    {
+        foreach (GameObject gameObject in enemies)
+        {
+            gameObject.GetComponent<EnemyCombatScript>().takeDamage(damage);
+        }
+        Debug.Log(enemies.Count);
+        damageCd = true;
+        Debug.Log("damaged");
+        yield return new WaitForSeconds(dmgPerSec);
+        damageCd = false;
+
+    }
+}
