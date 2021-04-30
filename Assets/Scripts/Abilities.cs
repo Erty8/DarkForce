@@ -70,7 +70,12 @@ public class Abilities : MonoBehaviour
     Vector3 ultimatePosition;
     public Canvas ultimateCanvas;
     bool ultimatebool;
+    bool teleport = false;
+    bool ultRefresh;
     public float cooldownAfterSeconds = 10f;
+    public float waitbetweenUltimates = 1f;
+    float ultimateCountdown ;
+    int ultimateIndex = 0;
     
 
 
@@ -96,8 +101,10 @@ public class Abilities : MonoBehaviour
         ultimateSkillshot.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         shieldScript = iceShield.gameObject.GetComponent<IceShield>();
-        
-           
+        ultimateCountdown = cooldownAfterSeconds;
+
+
+
     }
     void FixedUpdate()
     {
@@ -147,16 +154,29 @@ public class Abilities : MonoBehaviour
         }
         if (GameObject.Find(ultimateObject.name + "(Clone)") != null)
         {
+            teleport = true;
+            
             Debug.Log("can teleport");
             if (Input.GetKey(ability4))
             {
+                
+                ultimateSkillshot.GetComponent<Image>().enabled = false;
+                
                 transform.position = 
                     new Vector3(GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.x,transform.position.y, GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.z);
                 //moveScript.agent.velocity = new Vector3(0, 0, 0);
                 moveScript.agent.SetDestination(transform.position);
                 moveScript.agent.stoppingDistance = 0;
                 Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
+                StartCoroutine(teleportEnd());
+                ultRefresh = true;
+                
             }
+            
+        }
+        if (ultRefresh&&ultimateIndex<3)
+        {
+            abilityImage4.fillAmount -= 1 / waitbetweenUltimates * Time.deltaTime;
         }
 
 
@@ -290,7 +310,7 @@ public class Abilities : MonoBehaviour
     {
 
         // cooldown system
-        if (Input.GetKey(ability4) && isCooldown4 == false)
+        if (Input.GetKey(ability4) && isCooldown4 == false&& teleport ==false)
         {
             ultimateSkillshot.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
@@ -313,12 +333,13 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = true;
             StartCoroutine(animateFireball());
+            ultimateCD();
+            ultimateIndex++;
+            ultimateCountdown += cooldownAfterSeconds;
             
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
-            isCooldown4 = true;
-            abilityImage4.fillAmount = 1;
-           
+                      
         }
         if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1) || Input.GetKey(ability1) || Input.GetKey(ability2))
         {
@@ -334,6 +355,12 @@ public class Abilities : MonoBehaviour
                 abilityImage4.fillAmount = 0;
                 isCooldown4 = false;
             }
+        }
+        if (ultimateIndex == 3)
+        {
+            isCooldown4 = true;
+            abilityImage4.fillAmount = 1;
+            ultimateIndex = 0;
         }
     }
     IEnumerator animateFireball()
@@ -393,6 +420,14 @@ public class Abilities : MonoBehaviour
         
 
     }
+    IEnumerator teleportEnd()
+    {
+
+        yield return new WaitForSeconds(waitbetweenUltimates);
+        teleport = false;
+        ultRefresh = false;
+
+    }
     public void castFireball()
     {
         if (!ultimatebool) 
@@ -409,6 +444,15 @@ public class Abilities : MonoBehaviour
     {
         Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
     }
-    
+    void ultimateCD()
+    {
+        ultimateCountdown -= Time.deltaTime;
+        if (ultimateCountdown == 0)
+        {
+            isCooldown4 = true;
+            abilityImage4.fillAmount = 1;
+        }
+    }
+   
 
 }

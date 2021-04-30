@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3300,12 +3300,14 @@ MonoBehaviour:
   iceShield: {fileID: 2062947728}
   abilityImage4: {fileID: 1220359118}
   ultimateSkillshot: {fileID: 343102435}
-  cooldown4: 5
+  cooldown4: 10
   ability4: 114
   ultimateObject: {fileID: 1729651801896249426, guid: 98f9af6493a6a3741b5d3207142477ac, type: 3}
   ultimateTransform: {fileID: 596299092302077654}
   emptyUltimateTransform: {fileID: 1560296260}
   ultimateCanvas: {fileID: 400509830}
+  cooldownAfterSeconds: 10
+  waitbetweenUltimates: 1
 --- !u!1 &1855380420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
@@ -7928,6 +7930,8 @@ MonoBehaviour:
   ultimateTransform: {fileID: 0}
   emptyUltimateTransform: {fileID: 0}
   ultimateCanvas: {fileID: 0}
+  cooldownAfterSeconds: 10
+  waitbetweenUltimates: 1
 --- !u!1 &1998926181642603093
 GameObject:
   m_ObjectHideFlags: 0
