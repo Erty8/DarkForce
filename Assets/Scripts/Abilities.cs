@@ -69,6 +69,7 @@ public class Abilities : MonoBehaviour
     public Transform emptyUltimateTransform;
     Vector3 ultimatePosition;
     public Canvas ultimateCanvas;
+    bool ultimatebool;
     
 
 
@@ -143,12 +144,20 @@ public class Abilities : MonoBehaviour
             shieldScript.damageCd = false;
             //Debug.Log(IceShield.enemies.Count);
         }
-        if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy == false)
+        if (GameObject.Find(ultimateObject.name + "(Clone)") != null)
         {
-            IceShield.enemies.Clear();
-            shieldScript.damageCd = false;
-            //Debug.Log(IceShield.enemies.Count);
+            Debug.Log("can teleport");
+            if (Input.GetKey(ability4))
+            {
+                transform.position = 
+                    new Vector3(GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.x,transform.position.y, GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.z);
+                //moveScript.agent.velocity = new Vector3(0, 0, 0);
+                moveScript.agent.SetDestination(transform.position);
+                moveScript.agent.stoppingDistance = 0;
+                Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
+            }
         }
+
 
     }
 
@@ -177,7 +186,7 @@ public class Abilities : MonoBehaviour
 
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;
-            
+            ultimatebool = false;
             StartCoroutine(animateFireball());
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
@@ -283,7 +292,7 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability4) && isCooldown4 == false)
         {
             ultimateSkillshot.GetComponent<Image>().enabled = true;
-            skillshot.GetComponent<Image>().enabled = true;
+            skillshot.GetComponent<Image>().enabled = false;
             targetCircle.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
@@ -292,7 +301,7 @@ public class Abilities : MonoBehaviour
         }
         if (ultimateSkillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
-            
+            ultimateSkillshot.GetComponent<Image>().enabled = false;
             StartCoroutine(projectileTransform());
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
@@ -301,11 +310,12 @@ public class Abilities : MonoBehaviour
 
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;
-
-            StartCoroutine(animateUltimate());
+            ultimatebool = true;
+            StartCoroutine(animateFireball());
+            
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
-            isCooldown1 = true;
+            isCooldown4 = true;
             abilityImage4.fillAmount = 1;
            
         }
@@ -376,7 +386,15 @@ public class Abilities : MonoBehaviour
     }
     public void castFireball()
     {
-        Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
+        if (!ultimatebool) 
+        { 
+            Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation); 
+        }
+        else
+        {
+            Instantiate(ultimateObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
+        }
+        
     }
     public void castShatter()
     {
