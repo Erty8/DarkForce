@@ -70,6 +70,7 @@ public class Abilities : MonoBehaviour
     Vector3 ultimatePosition;
     public Canvas ultimateCanvas;
     bool ultimatebool;
+    public float cooldownAfterSeconds = 10f;
     
 
 
@@ -382,6 +383,14 @@ public class Abilities : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         emptyProjectileTransform.transform.position = ability1Transform.transform.position;
         emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
+
+    }
+    IEnumerator ultimateCooldown()
+    {
+
+        yield return new WaitForSeconds(cooldownAfterSeconds);
+        
+        
 
     }
     public void castFireball()
