@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'tr' Physical Memory: 16315 MB
+OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'tr' Physical Memory: 7549 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\Unity\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,421 +15,43 @@ C:/Users/ertug/Documents/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54641
+50088
 Successfully changed project path to: C:/Users/ertug/Documents/GitHub/DarkForce
 C:/Users/ertug/Documents/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 57.49 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 43.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/ertug/Documents/GitHub/DarkForce/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
     Vendor:   
-    VRAM:     8171 MB
-    Driver:   27.20.15003.1004
+    VRAM:     3962 MB
+    Driver:   27.21.14.6611
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003179 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001810 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.07 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 38.32 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.424 seconds
+- Completed reload, in  1.023 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002291 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.165 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1671 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.1 MB.
-System memory in use after: 98.8 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2136.
-Total: 2.724000 ms (FindLiveObjects: 0.344300 ms CreateObjectMapping: 0.080200 ms MarkObjects: 1.892500 ms  DeleteObjects: 0.386900 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/Spike.prefab
-  artifactKey: Guid(a5ba5019f0627f548ae825a052cf059f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Spike.prefab using Guid(a5ba5019f0627f548ae825a052cf059f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94a54451acc9adc5e83aa47bbdeb059') in 0.138411 seconds
-  Import took 0.142295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Prefabs/Prototype fireball .prefab
-  artifactKey: Guid(5d63e822ba4951b4faab4d06c42603ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Prototype fireball .prefab using Guid(5d63e822ba4951b4faab4d06c42603ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a585e3e6e4a67d3f22062373885e039f') in 0.051973 seconds
-  Import took 0.054959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Prefabs/Prototype Area Spell.prefab
-  artifactKey: Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Prototype Area Spell.prefab using Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1fcabd3da60febf487600f71af6e36') in 0.051513 seconds
-  Import took 0.054556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/Prefabs/Shatter.prefab
-  artifactKey: Guid(e3640c356cfaf7d47ad4705abcf9c026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Shatter.prefab using Guid(e3640c356cfaf7d47ad4705abcf9c026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3179da881097294786e54253a79e5bdf') in 0.027075 seconds
-  Import took 0.030127 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Prefabs/Ultimate object.prefab
-  artifactKey: Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Ultimate object.prefab using Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1afb5213a23fc87641215044a87e2459') in 0.180876 seconds
-  Import took 0.184598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.773542 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51dce960189777bb3775683a76ebb22e') in 0.018377 seconds
-  Import took 0.022157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 433.013478 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ee878e04e8a459585d55031c3c95e2d') in 0.003995 seconds
-  Import took 0.007856 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001663 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.001 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.0 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2149.
-Total: 2.315600 ms (FindLiveObjects: 0.210800 ms CreateObjectMapping: 0.043200 ms MarkObjects: 1.717900 ms  DeleteObjects: 0.342600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001558 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.953 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2152.
-Total: 2.605900 ms (FindLiveObjects: 0.252200 ms CreateObjectMapping: 0.046400 ms MarkObjects: 1.898700 ms  DeleteObjects: 0.406900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 317.619030 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f686e6b570abf668474da2e9ee45720d') in 0.006602 seconds
-  Import took 0.009716 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002038 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.989 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.0 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2155.
-Total: 2.392400 ms (FindLiveObjects: 0.308300 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.620600 ms  DeleteObjects: 0.413900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 160.343242 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886eecbba88d3f8b1857d5987cbae221') in 0.008864 seconds
-  Import took 0.011772 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002230 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.963 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2158.
-Total: 2.585800 ms (FindLiveObjects: 0.254200 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.841600 ms  DeleteObjects: 0.441500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 331.290414 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9ca478b5a9629ed699aa179a956e74') in 0.006636 seconds
-  Import took 0.009969 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001713 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.979 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2161.
-Total: 3.238900 ms (FindLiveObjects: 0.323800 ms CreateObjectMapping: 0.062800 ms MarkObjects: 2.406800 ms  DeleteObjects: 0.442900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 215.353480 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ff8b34d5c466d349a7eb8ada3ab66c') in 0.006553 seconds
-  Import took 0.010752 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001610 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.980 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2164.
-Total: 2.463500 ms (FindLiveObjects: 0.300300 ms CreateObjectMapping: 0.065600 ms MarkObjects: 1.652600 ms  DeleteObjects: 0.443300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 142.740494 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc3c66408d5569df465a249ce3962be') in 0.009146 seconds
-  Import took 0.013635 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002392 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.947 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2167.
-Total: 2.388800 ms (FindLiveObjects: 0.260900 ms CreateObjectMapping: 0.044700 ms MarkObjects: 1.639000 ms  DeleteObjects: 0.442500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001945 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.974 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2170.
-Total: 3.583900 ms (FindLiveObjects: 0.804000 ms CreateObjectMapping: 0.108000 ms MarkObjects: 2.124600 ms  DeleteObjects: 0.545800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001599 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.970 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2173.
-Total: 2.451500 ms (FindLiveObjects: 0.291000 ms CreateObjectMapping: 0.055600 ms MarkObjects: 1.635000 ms  DeleteObjects: 0.468500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 203.889342 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eecaa6ea91dce59b539b249963b2477') in 0.006192 seconds
-  Import took 0.010549 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002111 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.946 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2176.
-Total: 2.862000 ms (FindLiveObjects: 0.322700 ms CreateObjectMapping: 0.056900 ms MarkObjects: 1.965700 ms  DeleteObjects: 0.515400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 298.066299 seconds.
-  path: Assets/Scripts/Abilities.cs
-  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d5d117f4890f2ab181d5f507a89de2') in 0.009038 seconds
-  Import took 0.013809 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001698 seconds.
+Registered in 0.001200 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
@@ -438,246 +60,160 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.947 seconds
+- Completed reload, in  0.895 seconds
 Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2179.
-Total: 2.562200 ms (FindLiveObjects: 0.293000 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.766500 ms  DeleteObjects: 0.445300 ms)
-
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001926 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.964 seconds
-Platform modules already initialized, skipping
+Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
+Unloading 1671 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 171.0 MB.
+System memory in use after: 170.7 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2182.
-Total: 2.365700 ms (FindLiveObjects: 0.242400 ms CreateObjectMapping: 0.045100 ms MarkObjects: 1.625400 ms  DeleteObjects: 0.451500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001746 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.981 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2185.
-Total: 2.889300 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.059000 ms MarkObjects: 1.990400 ms  DeleteObjects: 0.542800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001586 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.978 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2188.
-Total: 2.597700 ms (FindLiveObjects: 0.308200 ms CreateObjectMapping: 0.057300 ms MarkObjects: 1.705700 ms  DeleteObjects: 0.525300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001756 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.966 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2191.
-Total: 2.922800 ms (FindLiveObjects: 0.315900 ms CreateObjectMapping: 0.043500 ms MarkObjects: 2.031000 ms  DeleteObjects: 0.531000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001719 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.986 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2194.
-Total: 2.796900 ms (FindLiveObjects: 0.297000 ms CreateObjectMapping: 0.057600 ms MarkObjects: 1.971300 ms  DeleteObjects: 0.469700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001929 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.967 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.1 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2197.
-Total: 3.311100 ms (FindLiveObjects: 0.624800 ms CreateObjectMapping: 0.104500 ms MarkObjects: 2.108900 ms  DeleteObjects: 0.471200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001588 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.009 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.2 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2200.
-Total: 2.564500 ms (FindLiveObjects: 0.254100 ms CreateObjectMapping: 0.043100 ms MarkObjects: 1.740100 ms  DeleteObjects: 0.525700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001672 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.011 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.2 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2203.
-Total: 3.053000 ms (FindLiveObjects: 0.302000 ms CreateObjectMapping: 0.067300 ms MarkObjects: 2.105900 ms  DeleteObjects: 0.576200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001640 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.942 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.2 MB.
-System memory in use after: 97.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2206.
-Total: 2.634900 ms (FindLiveObjects: 0.348300 ms CreateObjectMapping: 0.044800 ms MarkObjects: 1.742200 ms  DeleteObjects: 0.498400 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2142.
+Total: 3.420700 ms (FindLiveObjects: 0.388600 ms CreateObjectMapping: 0.086000 ms MarkObjects: 2.576300 ms  DeleteObjects: 0.367600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 934.113851 seconds.
-  path: Assets/Prefabs/Ultimate object.prefab
-  artifactKey: Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Ultimate object.prefab using Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47465bd495b337bff9a9593a53df0e42') in 0.071455 seconds
-  Import took 0.075394 seconds .
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63046087aaa2b9d47f25a7a0507bd37') in 0.037976 seconds
+  Import took 0.043069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 326.386647 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d404a98abfd8be84739973acec3cef9') in 0.007516 seconds
+  Import took 0.045283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.078844 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d404a98abfd8be84739973acec3cef9') in 0.002499 seconds
+  Import took 0.006191 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001634 seconds.
+Registered in 0.001257 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.787 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.7 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2145.
+Total: 2.690600 ms (FindLiveObjects: 0.297900 ms CreateObjectMapping: 0.076300 ms MarkObjects: 1.962800 ms  DeleteObjects: 0.351000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001616 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.750 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.7 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2148.
+Total: 3.273300 ms (FindLiveObjects: 0.409900 ms CreateObjectMapping: 0.112900 ms MarkObjects: 2.263700 ms  DeleteObjects: 0.484800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.271079 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84e75a56ca8b1102a4f27a91e48ce8a') in 0.007202 seconds
+  Import took 0.011259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.721551 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84e75a56ca8b1102a4f27a91e48ce8a') in 0.002549 seconds
+  Import took 0.005756 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001272 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.785 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.7 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2151.
+Total: 2.731700 ms (FindLiveObjects: 0.310600 ms CreateObjectMapping: 0.076000 ms MarkObjects: 1.922300 ms  DeleteObjects: 0.420400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.753 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.7 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2154.
+Total: 2.488900 ms (FindLiveObjects: 0.390900 ms CreateObjectMapping: 0.078900 ms MarkObjects: 1.665400 ms  DeleteObjects: 0.351700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001196 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
@@ -686,24 +222,280 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.996 seconds
+- Completed reload, in  0.748 seconds
 Platform modules already initialized, skipping
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.2 MB.
-System memory in use after: 98.0 MB.
+System memory in use before: 166.7 MB.
+System memory in use after: 166.5 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2210.
-Total: 2.885500 ms (FindLiveObjects: 0.275500 ms CreateObjectMapping: 0.057700 ms MarkObjects: 1.995900 ms  DeleteObjects: 0.555000 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2157.
+Total: 2.786600 ms (FindLiveObjects: 0.270700 ms CreateObjectMapping: 0.079900 ms MarkObjects: 2.035400 ms  DeleteObjects: 0.398600 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 6.362417 seconds.
-  path: Assets/Prefabs/Ultimate object.prefab
-  artifactKey: Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Ultimate object.prefab using Guid(98f9af6493a6a3741b5d3207142477ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d41dee32d9c1bdbce10c0a4afa82f7') in 0.067096 seconds
-  Import took 0.072653 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001253 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.756 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2160.
+Total: 2.020700 ms (FindLiveObjects: 0.211200 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.397600 ms  DeleteObjects: 0.369600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001217 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.744 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2163.
+Total: 3.335900 ms (FindLiveObjects: 0.338100 ms CreateObjectMapping: 0.104100 ms MarkObjects: 2.437000 ms  DeleteObjects: 0.454200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001161 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.759 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2166.
+Total: 2.615700 ms (FindLiveObjects: 0.341800 ms CreateObjectMapping: 0.088400 ms MarkObjects: 1.807800 ms  DeleteObjects: 0.376000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001109 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.727 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2169.
+Total: 4.819500 ms (FindLiveObjects: 0.765000 ms CreateObjectMapping: 0.126800 ms MarkObjects: 3.357400 ms  DeleteObjects: 0.564800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001155 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.743 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2172.
+Total: 2.392600 ms (FindLiveObjects: 0.336700 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.613500 ms  DeleteObjects: 0.390700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001295 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.773 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2175.
+Total: 3.571200 ms (FindLiveObjects: 0.275200 ms CreateObjectMapping: 0.079500 ms MarkObjects: 2.799100 ms  DeleteObjects: 0.415200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001151 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.779 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2178.
+Total: 2.576500 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.077200 ms MarkObjects: 1.766900 ms  DeleteObjects: 0.431700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001215 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.748 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2181.
+Total: 2.894300 ms (FindLiveObjects: 0.356700 ms CreateObjectMapping: 0.103100 ms MarkObjects: 2.034700 ms  DeleteObjects: 0.397800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001212 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.772 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2184.
+Total: 3.003700 ms (FindLiveObjects: 0.272500 ms CreateObjectMapping: 0.079800 ms MarkObjects: 2.229600 ms  DeleteObjects: 0.418900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001174 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.746 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2187.
+Total: 3.062900 ms (FindLiveObjects: 0.269500 ms CreateObjectMapping: 0.078700 ms MarkObjects: 2.289800 ms  DeleteObjects: 0.422700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001167 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.756 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1612 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.8 MB.
+System memory in use after: 166.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2190.
+Total: 2.766500 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.078300 ms MarkObjects: 1.980900 ms  DeleteObjects: 0.391000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
