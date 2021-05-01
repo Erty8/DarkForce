@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Enemy_AI : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Enemy_AI : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Image attackRangeImage;
     [SerializeField] public GameObject skillshotCanvas; 
+    [SerializeField] NavMeshAgent agent; 
     public float spikeWaveCount = 3f;
     public float timeBetweenSpikeWaves = 1f;
     public float radius = 10f;
@@ -27,11 +29,19 @@ public class Enemy_AI : MonoBehaviour
     public float abilityCD = 10f;
     float abilityTimePassed;
     public float abilityCastTime = 2f;
+    public float walkSpeed;
+    public float speedVal;
+    bool walkbool;
+
+    float motionSmoothTime = .1f;
+    float maxSpeed;
     Vector3 position;
     Vector3 targetPosition;
     Vector3 lookAtTarget;
     Quaternion EnemyRot;
     [SerializeField] GameObject closestEnemy = null;
+    public float rotateSpeedMovement;
+    public float rotateVelocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +52,7 @@ public class Enemy_AI : MonoBehaviour
         skillshotCanvas.SetActive(false);
         //attackRangeImage = gameobject.transform.Find("Range Canvas").transform.Find("Attack Range");
         rangeIndicator();
+        maxSpeed = agent.speed; 
     }
 
     protected void LateUpdate()
@@ -52,6 +63,10 @@ public class Enemy_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (walkbool)
+        {
+
+        }
         step = speed * Time.deltaTime;
         FindClosestEnemy();
         targetPosition = closestEnemy.transform.position;
@@ -90,7 +105,11 @@ public class Enemy_AI : MonoBehaviour
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
         {
-         
+            //walkbool = false;
+            agent.stoppingDistance = attackRange;
+            
+
+
             if (closestEnemy.tag == "Player")
             {
                 //if (canAbility) { StartCoroutine(castAbility()); }
@@ -99,6 +118,7 @@ public class Enemy_AI : MonoBehaviour
                     attacktimePassed = Time.time;
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
+                    walkbool = false;
 
                 }
                 
@@ -106,8 +126,9 @@ public class Enemy_AI : MonoBehaviour
                 {
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
-                    
-                    
+                    walkbool = false;
+
+
 
                 }
                 
@@ -115,7 +136,18 @@ public class Enemy_AI : MonoBehaviour
 
             }
         }
-        else { anim.SetBool("attack", false); }
+        else
+        {
+            if (walkbool)
+            {
+                agent.SetDestination(closestEnemy.transform.position);
+            }
+            
+        }
+        if (walkbool)
+        {
+            //agent.SetDestination(transform.position);
+        }
     }
     IEnumerator castAbility()
     {
@@ -123,6 +155,7 @@ public class Enemy_AI : MonoBehaviour
         canAbility = false;
         Debug.Log("enemy ability casted");
         yield return new WaitForSeconds(1f);
+        agent.SetDestination(transform.position);
         anim.SetBool("ability", false);
         yield return new WaitForSeconds(abilityCD-1f);
         canAbility = true;
@@ -138,6 +171,18 @@ public class Enemy_AI : MonoBehaviour
         anim.SetBool("attack", false);
         
         
+        //yield return new WaitForSeconds(abilityCD);
+
+    }
+    IEnumerator walkFalse()
+    {
+        anim.SetBool("attack", true);
+
+
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("attack", false);
+
+
         //yield return new WaitForSeconds(abilityCD);
 
     }
@@ -159,10 +204,7 @@ public class Enemy_AI : MonoBehaviour
         closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
         Debug.Log("Demon dealed " + attackDamage + " damage");
     }
-    public void test()
-    {
-        Debug.Log("test");
-    }
+   
     public void castSpikes(float y, float z)
     {
         StartCoroutine(castspike(y, z));
@@ -182,5 +224,15 @@ public class Enemy_AI : MonoBehaviour
         }
         skillshotCanvas.gameObject.SetActive(false);
         yield return null;
+    }
+    public void canWalk()
+    {
+        walkbool = true;
+        Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+               (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+        float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+    rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
+        transform.eulerAngles = new Vector3(0, rotationY, 0);
+        agent.SetDestination(transform.position);
     }
 }

@@ -84,7 +84,7 @@ public class Movement : MonoBehaviour
             move();
             attackRangeImage.GetComponent<Image>().enabled = false;
             attackingScript.attackOnSight = true;
-            Debug.Log("attack move");
+            //Debug.Log("attack move");
             attackMovebool = false;
         }
     }

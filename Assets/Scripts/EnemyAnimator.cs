@@ -27,6 +27,10 @@ public class EnemyAnimator : MonoBehaviour
         //aiScript.test();
         aiScript.dealDamage();
     }
+    void canWalk()
+    {
+        aiScript.canWalk();
+    }
     void spawnSpikes()
     {
         aiScript.castSpikes(aiScript.spikeWaveCount,aiScript.timeBetweenSpikeWaves);

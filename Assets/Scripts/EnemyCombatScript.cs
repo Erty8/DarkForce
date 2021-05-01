@@ -27,7 +27,7 @@ public class EnemyCombatScript : MonoBehaviour
     {
         health -= x;
         //anim.SetBool("takeHit", true);
-        Debug.Log(health);
+        //Debug.Log(health);
         
         if (health <= maxhealth/2 &&canbeDamaged)
         {

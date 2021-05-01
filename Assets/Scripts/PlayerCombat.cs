@@ -41,7 +41,7 @@ public class PlayerCombat : MonoBehaviour
         {
             takeDamage(x);
             
-            Debug.Log("damage over time");
+            //Debug.Log("damage over time");
             yield return new WaitForSeconds(z);
             
         }

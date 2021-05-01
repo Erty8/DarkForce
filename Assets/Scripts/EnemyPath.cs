@@ -9,7 +9,7 @@ public class EnemyPath : MonoBehaviour
     private Transform player;
     private float dist;
     public float detectRange;
-    
+
     [SerializeField]
     NavMeshAgent _agent;
     [SerializeField]
@@ -30,8 +30,12 @@ public class EnemyPath : MonoBehaviour
     bool _patrolForawrd;
     float _waitTimer;
 
+    public Animator anim;
+    public float speed;
+    public float speedVal;
+    public float motionSmoothTime = .1f;
 
-      
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,23 +43,26 @@ public class EnemyPath : MonoBehaviour
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        if(_patrolPoints != null && _patrolPoints.Count >= 2)
+        if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {
             _currentPatrolIndex = 0;
             SetDestination();
         }
 
-        
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
+        anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
+        speedVal = speed * motionSmoothTime * Time.deltaTime;
         //SetDestination();
         dist = Vector3.Distance(player.position, transform.position);
-        
-        if(dist <= detectRange)
+
+        if (dist <= detectRange)
         {
             Vector3 targetVector = player.position;
             _agent.SetDestination(targetVector);
@@ -92,19 +99,21 @@ public class EnemyPath : MonoBehaviour
 
             }
         }
-           
+
     }
 
     private void SetDestination()
     {
-        if(_patrolPoints != null)
+        if (_patrolPoints != null)
         {
             Vector3 targetVector = _patrolPoints[_currentPatrolIndex].transform.position;
             _agent.SetDestination(targetVector);
             _travelling = true;
+
         }
-        
-        
+
+
+
         //if (_destination != null)
         //{
         //    Vector3 targetVector = _destination.transform.position;
@@ -114,7 +123,7 @@ public class EnemyPath : MonoBehaviour
 
     private void ChangePatrolPoint()
     {
-        if(UnityEngine.Random.Range(0f, 1f) <= _switchProbablity)
+        if (UnityEngine.Random.Range(0f, 1f) <= _switchProbablity)
         {
             _patrolForawrd = !_patrolForawrd;
         }
@@ -126,10 +135,15 @@ public class EnemyPath : MonoBehaviour
 
         else
         {
-            if(--_currentPatrolIndex < 0)
+            if (--_currentPatrolIndex < 0)
             {
                 _currentPatrolIndex = _patrolPoints.Count - 1;
             }
         }
     }
+    public void speedcalc()
+    { speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
+        anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
+        speedVal = speed* motionSmoothTime * Time.deltaTime;
+}
 }

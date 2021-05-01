@@ -118,7 +118,7 @@ public class Attacking : MonoBehaviour
                         //moveScript.agent.stoppingDistance = 0;
                        
                         //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToLookAt, rotateSpeedForAttack * Time.deltaTime);
-                        Debug.Log("Hero basic attack");
+                        //Debug.Log("Hero basic attack");
                         StartCoroutine(damageEnemies());
                     }
                 }
