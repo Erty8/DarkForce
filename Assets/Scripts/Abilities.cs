@@ -156,7 +156,7 @@ public class Abilities : MonoBehaviour
         {
             teleport = true;
             
-            Debug.Log("can teleport");
+            //Debug.Log("can teleport");
             if (Input.GetKey(ability4))
             {
                 
@@ -169,7 +169,11 @@ public class Abilities : MonoBehaviour
                 moveScript.agent.stoppingDistance = 0;
                 Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
                 StartCoroutine(teleportEnd());
-                ultRefresh = true;
+                if (!isCooldown4)
+                {
+                    ultRefresh = true; 
+                }
+               
                 
             }
             
@@ -223,7 +227,8 @@ public class Abilities : MonoBehaviour
             //Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
 
         }
-        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1)||Input.GetKey(ability2))
+        if (skillshot.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
+            ||Input.GetKey(ability2) || Input.GetKey(ability3) || Input.GetKey(ability4)))
         {
             abilityImage1.fillAmount = 0;
             skillshot.GetComponent<Image>().enabled = false;
@@ -269,7 +274,8 @@ public class Abilities : MonoBehaviour
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
         }
-        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(1))
+        if (targetCircle.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
+            || Input.GetKey(ability1) || Input.GetKey(ability3) || Input.GetKey(ability4)))
         {
             abilityImage2.fillAmount = 0;
             targetCircle.GetComponent<Image>().enabled = false;
@@ -335,19 +341,22 @@ public class Abilities : MonoBehaviour
             StartCoroutine(animateFireball());
             ultimateCD();
             ultimateIndex++;
+            Debug.Log(ultimateIndex);
             ultimateCountdown += cooldownAfterSeconds;
             
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
 
                       
         }
-        if (skillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(1) || Input.GetKey(ability1) || Input.GetKey(ability2))
+        if (ultimateSkillshot.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
+            || Input.GetKey(ability2) || Input.GetKey(ability3) || Input.GetKey(ability1)))
         {
             abilityImage4.fillAmount = 0;
             ultimateSkillshot.GetComponent<Image>().enabled = false;
         }
         if (isCooldown4)
         {
+            Debug.Log("ultimate cooldown");
             abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
             ultimateSkillshot.GetComponent<Image>().enabled = false;
             if (abilityImage4.fillAmount <= 0)
@@ -360,7 +369,8 @@ public class Abilities : MonoBehaviour
         {
             isCooldown4 = true;
             abilityImage4.fillAmount = 1;
-            ultimateIndex = 0;
+            StartCoroutine(ultIndexreset());
+            //ultimateIndex = 0;
         }
     }
     IEnumerator animateFireball()
@@ -428,6 +438,13 @@ public class Abilities : MonoBehaviour
         ultRefresh = false;
 
     }
+    IEnumerator ultIndexreset()
+    {
+
+        yield return new WaitForSeconds(1f);
+        ultimateIndex = 0;
+
+    }
     public void castFireball()
     {
         if (!ultimatebool) 
@@ -447,6 +464,7 @@ public class Abilities : MonoBehaviour
     void ultimateCD()
     {
         ultimateCountdown -= Time.deltaTime;
+        Debug.Log(ultimateCountdown);
         if (ultimateCountdown == 0)
         {
             isCooldown4 = true;
