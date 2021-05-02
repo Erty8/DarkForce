@@ -3374,10 +3374,10 @@ MonoBehaviour:
   radius: 10
   speed: 4
   attackDamage: 10
-  attackCd: 5
-  attackRange: 20
+  attackCd: 2
+  attackRange: 25
   rotSpeed: 4
-  abilityCD: 50
+  abilityCD: 15
   abilityCastTime: 2
   walkSpeed: 0
   speedVal: 0

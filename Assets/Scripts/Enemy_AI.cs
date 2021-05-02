@@ -230,12 +230,14 @@ public class Enemy_AI : MonoBehaviour
     public void castSpikes(float y, float z)
     {
         StartCoroutine(castspike(y, z));
+        
     }
     IEnumerator castspike(float y, float z)
     {
         //skillshotCanvas.gameObject.SetActive(true);
         for (int i = 0; i < y; i++)
         {
+            walkbool = false;
             Instantiate(spike, spike1Transform.transform.position, spike1Transform.transform.rotation);
             Instantiate(spike, spike2Transform.transform.position, spike2Transform.transform.rotation);
             Instantiate(spike, spike3Transform.transform.position, spike3Transform.transform.rotation);

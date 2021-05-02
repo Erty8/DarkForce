@@ -231,7 +231,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9831512
+      - time: 0.9952724
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
