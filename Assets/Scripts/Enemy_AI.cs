@@ -18,6 +18,8 @@ public class Enemy_AI : MonoBehaviour
     public float timeBetweenSpikeWaves = 1f;
     public float radius = 10f;
     bool canAbility = true;
+    bool attackCooldown = false;
+    int attackRandomize;
     
     public float speed = 4f;
     public float attackDamage = 10f;
@@ -52,7 +54,8 @@ public class Enemy_AI : MonoBehaviour
         skillshotCanvas.SetActive(false);
         //attackRangeImage = gameobject.transform.Find("Range Canvas").transform.Find("Attack Range");
         rangeIndicator();
-        maxSpeed = agent.speed; 
+        maxSpeed = agent.speed;
+        StartCoroutine(randomizer());
     }
 
     protected void LateUpdate()
@@ -111,9 +114,7 @@ public class Enemy_AI : MonoBehaviour
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
         {
             //walkbool = false;
-            
-            
-
+                        
             if (closestEnemy.tag == "Player")
             {
                 agent.stoppingDistance = attackRange;
@@ -129,12 +130,13 @@ public class Enemy_AI : MonoBehaviour
                 //if (canAbility) { StartCoroutine(castAbility()); }
                 if ((Time.time - attacktimePassed) > attackCd)
                 {
+                    attackCooldown = false;
                     attacktimePassed = Time.time;
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
                     agent.SetDestination(transform.position);
                     walkbool = false;
-
+                    attackCooldown = true;
                 }
                 
                 else if ((Time.time - abilityTimePassed) > abilityCD)
@@ -142,9 +144,6 @@ public class Enemy_AI : MonoBehaviour
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
                     walkbool = false;
-
-
-
                 }
             }
         }
@@ -177,15 +176,25 @@ public class Enemy_AI : MonoBehaviour
     IEnumerator attackBool()
     {
         anim.SetBool("attack", true);
-        
-        
-        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => walkbool == true);
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
         {
             anim.SetBool("attack", false);
         }
+        //yield return new WaitUntil(() => attackCooldown == true);
+        anim.SetBool("attack", false);
 
+    }
+    IEnumerator randomizer()
+    {
+        yield return new WaitForSeconds(1);
+        attackRandomize = Random.Range(1, 3);
+        anim.SetInteger("random", attackRandomize);
+        //Debug.Log(attackRandomize);
+        StartCoroutine(randomizer());
     }
     IEnumerator walkFalse()
     {
