@@ -31,7 +31,7 @@ public class Enemy_AI : MonoBehaviour
     public float abilityCastTime = 2f;
     public float walkSpeed;
     public float speedVal;
-    bool walkbool;
+    public static bool walkbool = true;
 
     float motionSmoothTime = .1f;
     float maxSpeed;
@@ -70,6 +70,11 @@ public class Enemy_AI : MonoBehaviour
         step = speed * Time.deltaTime;
         FindClosestEnemy();
         targetPosition = closestEnemy.transform.position;
+        if (walkbool && (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange) )
+        {
+            anim.SetBool("attack", false);
+        }
     }
     void FixedUpdate()
     {
@@ -106,18 +111,28 @@ public class Enemy_AI : MonoBehaviour
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
         {
             //walkbool = false;
-            agent.stoppingDistance = attackRange;
             
-
+            
 
             if (closestEnemy.tag == "Player")
             {
+                agent.stoppingDistance = attackRange;
+                if (walkbool)
+                {
+                    Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+                   (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+                    float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
+                    transform.eulerAngles = new Vector3(0, rotationY, 0);
+                    agent.SetDestination(transform.position);
+                }
                 //if (canAbility) { StartCoroutine(castAbility()); }
                 if ((Time.time - attacktimePassed) > attackCd)
                 {
                     attacktimePassed = Time.time;
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
+                    agent.SetDestination(transform.position);
                     walkbool = false;
 
                 }
@@ -131,16 +146,13 @@ public class Enemy_AI : MonoBehaviour
 
 
                 }
-                
-
-
             }
         }
         else
         {
             if (walkbool)
             {
-                agent.SetDestination(closestEnemy.transform.position);
+                //agent.SetDestination(closestEnemy.transform.position);
             }
             
         }
@@ -167,11 +179,12 @@ public class Enemy_AI : MonoBehaviour
         anim.SetBool("attack", true);
         
         
-        yield return new WaitForSeconds(2f);
-        anim.SetBool("attack", false);
-        
-        
-        //yield return new WaitForSeconds(abilityCD);
+        yield return new WaitForSeconds(1f);
+        if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
+        {
+            anim.SetBool("attack", false);
+        }
 
     }
     IEnumerator walkFalse()
@@ -227,12 +240,6 @@ public class Enemy_AI : MonoBehaviour
     }
     public void canWalk()
     {
-        walkbool = true;
-        Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
-               (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
-        float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
-    rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
-        transform.eulerAngles = new Vector3(0, rotationY, 0);
-        agent.SetDestination(transform.position);
+        walkbool = true;        
     }
 }

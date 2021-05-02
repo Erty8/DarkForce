@@ -64,8 +64,11 @@ public class EnemyPath : MonoBehaviour
 
         if (dist <= detectRange)
         {
-            Vector3 targetVector = player.position;
-            _agent.SetDestination(targetVector);
+            if (Enemy_AI.walkbool) {
+                Vector3 targetVector = player.position;
+                _agent.SetDestination(targetVector);
+            }
+            
         }
         else
         {
