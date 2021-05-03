@@ -21,7 +21,12 @@ public class AnimationEvents : MonoBehaviour
     }
     void castFireball()
     {
+        //Abilities.projectileLaunch = true;
         abilityScript.castFireball();
+    }
+    void projectileReady()
+    {
+        Abilities.projectileLaunch = true;
     }
     void castShatter()
     {

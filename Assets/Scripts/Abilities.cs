@@ -14,6 +14,7 @@ public class Abilities : MonoBehaviour
     public Animator anim;
     //public NavMeshAgent agent;
     float oldSpeed;
+    public static bool projectileLaunch = false; 
 
     [Header ("Ability 1")]
     public Image abilityImage1;
@@ -414,14 +415,25 @@ public class Abilities : MonoBehaviour
         iceShield.gameObject.SetActive(false);
 
     }
+
+
     IEnumerator projectileTransform()
+    {
+        yield return new WaitUntil(() => projectileLaunch == true);
+        
+        emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+        emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
+        projectileLaunch = false;
+
+    }
+    /*IEnumerator projectileTransform()
     {
         
         yield return new WaitForSeconds(0.3f);
         emptyProjectileTransform.transform.position = ability1Transform.transform.position;
         emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
 
-    }
+    }*/
     IEnumerator ultimateCooldown()
     {
 
@@ -447,6 +459,7 @@ public class Abilities : MonoBehaviour
     }
     public void castFireball()
     {
+        //projectileLaunch = true;
         if (!ultimatebool) 
         { 
             Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation); 

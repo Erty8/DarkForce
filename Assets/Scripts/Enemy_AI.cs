@@ -34,6 +34,7 @@ public class Enemy_AI : MonoBehaviour
     public float walkSpeed;
     public float speedVal;
     public static bool walkbool = true;
+    public static bool rotatebool = true;
 
     float motionSmoothTime = .1f;
     float maxSpeed;
@@ -118,7 +119,7 @@ public class Enemy_AI : MonoBehaviour
             if (closestEnemy.tag == "Player")
             {
                 agent.stoppingDistance = attackRange;
-                if (walkbool)
+                if (rotatebool)
                 {
                     Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
                    (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
@@ -135,12 +136,14 @@ public class Enemy_AI : MonoBehaviour
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
                     agent.SetDestination(transform.position);
+                    rotatebool = false;
                     walkbool = false;
                     attackCooldown = true;
                 }
                 
                 else if ((Time.time - abilityTimePassed) > abilityCD)
                 {
+                    rotatebool = false;
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
                     walkbool = false;
@@ -176,21 +179,30 @@ public class Enemy_AI : MonoBehaviour
     IEnumerator attackBool()
     {
         anim.SetBool("attack", true);
+        
 
-        yield return new WaitForSeconds(1);
+        //
         yield return new WaitUntil(() => walkbool == true);
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
         {
+            anim.SetBool("continueAttack", false);
             anim.SetBool("attack", false);
         }
+        else
+        {
+            anim.SetBool("continueAttack", true);
+        }
         //yield return new WaitUntil(() => attackCooldown == true);
+        yield return new WaitForSeconds(3);
         anim.SetBool("attack", false);
+        anim.SetBool("continueAttack", false);
+        //anim.SetBool("attack", false);
 
     }
     IEnumerator randomizer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2.5f);
         attackRandomize = Random.Range(1, 3);
         anim.SetInteger("random", attackRandomize);
         //Debug.Log(attackRandomize);
@@ -252,5 +264,9 @@ public class Enemy_AI : MonoBehaviour
     public void canWalk()
     {
         walkbool = true;        
+    }
+    public void canRotate()
+    {
+        rotatebool = true;
     }
 }
