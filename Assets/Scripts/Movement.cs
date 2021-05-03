@@ -71,6 +71,7 @@ public class Movement : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             move();
+            anim.SetBool("Attack", false);
         }
 
         if (Input.GetKey(attackMove))
