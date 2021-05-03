@@ -15,11 +15,11 @@ C:/Users/Cemre/Documents/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53968
+59585
 Successfully changed project path to: C:/Users/Cemre/Documents/GitHub/DarkForce
 C:/Users/Cemre/Documents/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.99 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 36.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -36,24 +36,24 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002482 seconds.
+Registered in 0.002385 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 57.43 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 32.77 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.238 seconds
+- Completed reload, in  1.096 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001276 seconds.
+Registered in 0.001540 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -63,49 +63,1033 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.868 seconds
+- Completed reload, in  0.823 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1635 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.3 MB.
-System memory in use after: 95.0 MB.
+System memory in use before: 95.4 MB.
+System memory in use after: 95.1 MB.
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2095.
-Total: 2.281600 ms (FindLiveObjects: 0.292600 ms CreateObjectMapping: 0.099800 ms MarkObjects: 1.552500 ms  DeleteObjects: 0.335700 ms)
+Total: 2.067900 ms (FindLiveObjects: 0.186600 ms CreateObjectMapping: 0.079100 ms MarkObjects: 1.483400 ms  DeleteObjects: 0.317400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Ertugrul2.unity
-  artifactKey: Guid(8a5fe8e3ad02b4b49a04dd0ebff21144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Ertugrul2.unity using Guid(8a5fe8e3ad02b4b49a04dd0ebff21144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c3663bdde0843cbd0e56ce2c3016682') in 0.032972 seconds
-  Import took 0.036520 seconds .
+  path: Assets/Scenes
+  artifactKey: Guid(e8f481c9abd2a3a42ae42807208d4656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(e8f481c9abd2a3a42ae42807208d4656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828511bf32daac22f6599a9fa8a7001a') in 0.013930 seconds
+  Import took 0.016340 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.082964 seconds.
-  path: Assets/Scenes/Ertugrul2 1.unity
-  artifactKey: Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Ertugrul2 1.unity using Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c78eb18350539bfac44e40b225978b') in 0.006909 seconds
-  Import took 0.009335 seconds .
+  Time since last request: 0.574420 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(e8f481c9abd2a3a42ae42807208d4656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(e8f481c9abd2a3a42ae42807208d4656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828511bf32daac22f6599a9fa8a7001a') in 0.002587 seconds
+  Import took 0.006067 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.250230 seconds.
+  Time since last request: 6.057437 seconds.
+  path: Assets/Scenes/Open.unity
+  artifactKey: Guid(6172edd3f0b01c6458d29b8c0bb1a568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Open.unity using Guid(6172edd3f0b01c6458d29b8c0bb1a568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa645c03590656ddf8e4f06993761ec') in 0.014569 seconds
+  Import took 0.018030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010406 seconds.
+  path: Assets/Scenes/Open.unity
+  artifactKey: Guid(6172edd3f0b01c6458d29b8c0bb1a568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Open.unity using Guid(6172edd3f0b01c6458d29b8c0bb1a568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa645c03590656ddf8e4f06993761ec') in 0.003516 seconds
+  Import took 0.006415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.370237 seconds.
   path: Assets/Scenes/Cemre.unity
   artifactKey: Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Cemre.unity using Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c652f5dec24ec3b080cc690f3b3d959a') in 0.008368 seconds
-  Import took 0.010963 seconds .
+Start importing Assets/Scenes/Cemre.unity using Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a6df71facec1a6800af59d84b7fe5b8') in 0.008276 seconds
+  Import took 0.016696 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.406864 seconds.
-  path: Assets/Scenes/Baran1.unity
-  artifactKey: Guid(0d60297dc37127445bd93cba826ca774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Baran1.unity using Guid(0d60297dc37127445bd93cba826ca774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31bc291820f36b91f1bc1a8d269f0249') in 0.010283 seconds
-  Import took 0.013520 seconds .
+  Time since last request: 1322.599197 seconds.
+  path: Assets/UI
+  artifactKey: Guid(e1eaa48236850cb448736ca42bcc8cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI using Guid(e1eaa48236850cb448736ca42bcc8cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3471e3b0db859cd351212633b4445531') in 0.007385 seconds
+  Import took 0.010239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.854551 seconds.
+  path: Assets/UI/Darkforce.png
+  artifactKey: Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Darkforce.png using Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b7926697bd9e27e1eee1bf908b612b') in 0.094597 seconds
+  Import took 0.097398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.809055 seconds.
+  path: Assets/UI/Darkforce.png
+  artifactKey: Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Darkforce.png using Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59aceb391f230cf3c0d7ec10463f8d47') in 0.054326 seconds
+  Import took 0.056794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.450074 seconds.
+  path: Assets/Images/NeonShapes/PNG/BlueCircle.png
+  artifactKey: Guid(f743ae65363a58b4bb63d471b4978b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/BlueCircle.png using Guid(f743ae65363a58b4bb63d471b4978b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea389d629d13401e047a9f250b49f84') in 0.117815 seconds
+  Import took 0.120583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/SampleScenes/Menu/Sprites/MenuCornerTopRightSprite.png
+  artifactKey: Guid(2b592d40fd47980478920e3ed65b0985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleScenes/Menu/Sprites/MenuCornerTopRightSprite.png using Guid(2b592d40fd47980478920e3ed65b0985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad887c2eb04994dc56e6f83182c0b2d5') in 0.068082 seconds
+  Import took 0.070906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/FrostFlake_01.png
+  artifactKey: Guid(42af2cf083b70ea44b1cdc0a139f2388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/FrostFlake_01.png using Guid(42af2cf083b70ea44b1cdc0a139f2388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '491389594f090e9cc82292b1354fafaa') in 0.029149 seconds
+  Import took 0.031739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/SampleScenes/Textures/GUIReticle.png
+  artifactKey: Guid(c03c72978d15ecb4d91060d3a10d14f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleScenes/Textures/GUIReticle.png using Guid(c03c72978d15ecb4d91060d3a10d14f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1df1c6a6eddb3e023a3a0cfe484a441') in 0.021177 seconds
+  Import took 0.023844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Images/NeonShapes/PNG/GreenCircle.png
+  artifactKey: Guid(a35b151eea1c2de43a63764c264c1d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/GreenCircle.png using Guid(a35b151eea1c2de43a63764c264c1d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603dae1856acc0c5eb465b0787ed96e0') in 0.019700 seconds
+  Import took 0.022457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Arrow_crowd.png
+  artifactKey: Guid(9f922002032136c4687b8dced9bc624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Arrow_crowd.png using Guid(9f922002032136c4687b8dced9bc624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a41c3efeef7728d51d4c54de829b1a6') in 0.018939 seconds
+  Import took 0.021764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Blue_firework.png
+  artifactKey: Guid(df5153fca31c9bf47b2d36359b5dd373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Blue_firework.png using Guid(df5153fca31c9bf47b2d36359b5dd373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aebc504dca4e8b1c5802dc83a651b751') in 0.017662 seconds
+  Import took 0.020140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Blue_Hole.png
+  artifactKey: Guid(b3199ae29bf246642875fc68fab4595b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Blue_Hole.png using Guid(b3199ae29bf246642875fc68fab4595b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e1cebeb4a60767a502d6e404db575eb') in 0.021093 seconds
+  Import took 0.023725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/Glow_Ice_02.png
+  artifactKey: Guid(c442edba9f2ee6f4e8473e40f9c531e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/Glow_Ice_02.png using Guid(c442edba9f2ee6f4e8473e40f9c531e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96e7beb50554341de69b819725c1f6da') in 0.020780 seconds
+  Import took 0.023467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Images/NeonShapes/PNG/GreenSquare.png
+  artifactKey: Guid(0ba6eacafb5789b4b93c7a75aaeca5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/GreenSquare.png using Guid(0ba6eacafb5789b4b93c7a75aaeca5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08297114c32cdd7cd18f2052b6c70772') in 0.021607 seconds
+  Import took 0.024999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Blood_splash.png
+  artifactKey: Guid(137adc4b5a4bdb84587af37f8855a33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Blood_splash.png using Guid(137adc4b5a4bdb84587af37f8855a33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ef135870973644d786481f96b16530') in 0.018123 seconds
+  Import took 0.020581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/FlakesA1_01.png
+  artifactKey: Guid(a79f5eead5d7af84890da0dc31c19a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/FlakesA1_01.png using Guid(a79f5eead5d7af84890da0dc31c19a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0771f436234a40633dcd778413591b21') in 0.021026 seconds
+  Import took 0.023533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_blue_hit.png
+  artifactKey: Guid(188d00ffd2a18c341a38d8ed6b131b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_blue_hit.png using Guid(188d00ffd2a18c341a38d8ed6b131b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df9bd2cf0d48f4cd9153a050fed6173') in 0.016104 seconds
+  Import took 0.018757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_bluetorgue.png
+  artifactKey: Guid(db24189abde247144b83fb23e63c9464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_bluetorgue.png using Guid(db24189abde247144b83fb23e63c9464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '016ae823e10f679e741f8ce373f45cdd') in 0.017337 seconds
+  Import took 0.020161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Images/NeonShapes/PNG/BlueSquare.png
+  artifactKey: Guid(0ef1d9735665d7849afdc68d3ce045b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/BlueSquare.png using Guid(0ef1d9735665d7849afdc68d3ce045b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa7bd4700b7018e48d3d2e816a58d5fe') in 0.020023 seconds
+  Import took 0.022905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Images/NeonShapes/PNG/RedSquare.png
+  artifactKey: Guid(b2353d2543ffecb46ac5f9ff4c022bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/RedSquare.png using Guid(b2353d2543ffecb46ac5f9ff4c022bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5662620a66a2ae16d2d7f07324ed5e4') in 0.014842 seconds
+  Import took 0.017238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_bluecandle_once.png
+  artifactKey: Guid(fb75a98aad5d42149bf398e0bed37729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_bluecandle_once.png using Guid(fb75a98aad5d42149bf398e0bed37729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d0797317fc4809d09182763693d444') in 0.018241 seconds
+  Import took 0.020947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/SampleScenes/Menu/Sprites/LogoUnitySprite.png
+  artifactKey: Guid(7d6d5225d5a2b40e3959b66d13b6e29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleScenes/Menu/Sprites/LogoUnitySprite.png using Guid(7d6d5225d5a2b40e3959b66d13b6e29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff68d137d51c31fca811067bd6b5e65b') in 0.020199 seconds
+  Import took 0.023142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Images/NeonShapes/PNG/BlueCircle.png
+  artifactKey: Guid(f743ae65363a58b4bb63d471b4978b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/BlueCircle.png using Guid(f743ae65363a58b4bb63d471b4978b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea389d629d13401e047a9f250b49f84') in 0.011507 seconds
+  Import took 0.013947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Images/NeonShapes/PNG/RedCircle.png
+  artifactKey: Guid(eef18d33c7eb7c64cb92f40f54a334b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/NeonShapes/PNG/RedCircle.png using Guid(eef18d33c7eb7c64cb92f40f54a334b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e15fd966f4dac470eb785396bf4650f2') in 0.015311 seconds
+  Import took 0.017788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_astrostone.png
+  artifactKey: Guid(a19cebe0599724c469f757f6e0b2d9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_astrostone.png using Guid(a19cebe0599724c469f757f6e0b2d9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1216121c0304eca105320e907653ba63') in 0.018730 seconds
+  Import took 0.021606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.237195 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_chilly_kick.png
+  artifactKey: Guid(5e93a13d0aab81048b25143ba568ef1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_chilly_kick.png using Guid(5e93a13d0aab81048b25143ba568ef1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d00cecb24b0b30b429a0e632d16db81') in 0.025884 seconds
+  Import took 0.028543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_claydrain.png
+  artifactKey: Guid(aa0f991c64b8fcd4f9b052e24775c686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_claydrain.png using Guid(aa0f991c64b8fcd4f9b052e24775c686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db4ceb2fd217ab6b22337793150924a9') in 0.072889 seconds
+  Import took 0.075575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Cold_bark.png
+  artifactKey: Guid(e3d72b1724a89604fad7dc2c671426ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Cold_bark.png using Guid(e3d72b1724a89604fad7dc2c671426ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b484ce386fc375768410a9dcc9f74e07') in 0.064765 seconds
+  Import took 0.067388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_claydrain.png
+  artifactKey: Guid(aa0f991c64b8fcd4f9b052e24775c686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_claydrain.png using Guid(aa0f991c64b8fcd4f9b052e24775c686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db4ceb2fd217ab6b22337793150924a9') in 0.015740 seconds
+  Import took 0.018172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Cold_bark.png
+  artifactKey: Guid(e3d72b1724a89604fad7dc2c671426ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Cold_bark.png using Guid(e3d72b1724a89604fad7dc2c671426ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b484ce386fc375768410a9dcc9f74e07') in 0.008998 seconds
+  Import took 0.012161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_comb_bit.png
+  artifactKey: Guid(4cff4ef634be5d64e9dda2bee5118ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_comb_bit.png using Guid(4cff4ef634be5d64e9dda2bee5118ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed922463df47bdbcd4449e545be67a43') in 0.018523 seconds
+  Import took 0.021345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_desperate.png
+  artifactKey: Guid(3e79c5a2eb174e046a22b7ae22e3200b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_desperate.png using Guid(3e79c5a2eb174e046a22b7ae22e3200b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '869c2e0403074a0f664218a14f0fe51a') in 0.015925 seconds
+  Import took 0.018493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_divine.png
+  artifactKey: Guid(7b34caca00a1514468b8d9cc005a43fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_divine.png using Guid(7b34caca00a1514468b8d9cc005a43fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b822844440dd6e4524039f270bf1904') in 0.018583 seconds
+  Import took 0.021332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_elegent_beat.png
+  artifactKey: Guid(2a1265ae4655d044e9c1557405696861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_elegent_beat.png using Guid(2a1265ae4655d044e9c1557405696861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd5a0020e40c3b3221f842d972d1c73') in 0.018910 seconds
+  Import took 0.021494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_devilwake.png
+  artifactKey: Guid(676104ad271b0c241bee12c8409a1304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_devilwake.png using Guid(676104ad271b0c241bee12c8409a1304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '817215be6d1e78202d02c8b997247834') in 0.021046 seconds
+  Import took 0.024056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_essence_found.png
+  artifactKey: Guid(29ee0544a9e494645b9cc843ef664252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_essence_found.png using Guid(29ee0544a9e494645b9cc843ef664252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4689327748946965cbdc1a03d009237e') in 0.011086 seconds
+  Import took 0.013819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Combo_knock.png
+  artifactKey: Guid(e5f8e29c0eb39d74e9509b0469b5204c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Combo_knock.png using Guid(e5f8e29c0eb39d74e9509b0469b5204c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd94bd4d840a9e4798dd240dcc4af6a') in 0.017393 seconds
+  Import took 0.019978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011471 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_essence_found.png
+  artifactKey: Guid(29ee0544a9e494645b9cc843ef664252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_essence_found.png using Guid(29ee0544a9e494645b9cc843ef664252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4689327748946965cbdc1a03d009237e') in 0.010357 seconds
+  Import took 0.013400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.332648 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_evilcord_splash.png
+  artifactKey: Guid(5d2ab8663a3653b43a68add74a525717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_evilcord_splash.png using Guid(5d2ab8663a3653b43a68add74a525717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1140328932c137b20537f48ad639e396') in 0.028508 seconds
+  Import took 0.031893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000413 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_extreme_side.png
+  artifactKey: Guid(eeff49e051316944dad15296f8e68e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_extreme_side.png using Guid(eeff49e051316944dad15296f8e68e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abaf6a0eede1f43ece43a9bc2d1ce78') in 0.027291 seconds
+  Import took 0.029796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_mistery_hit.png
+  artifactKey: Guid(f485560d82f6f004a871dd2809e75063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_mistery_hit.png using Guid(f485560d82f6f004a871dd2809e75063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af3e6ff0d679e6f0156631002dc26e0') in 0.053389 seconds
+  Import took 0.056035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_rock_ball.png
+  artifactKey: Guid(06ff90616100c394da9a3a9d8864c459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_rock_ball.png using Guid(06ff90616100c394da9a3a9d8864c459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e206c3d0e313b283108cc04acbf7667a') in 0.062902 seconds
+  Import took 0.065602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_rubysun.png
+  artifactKey: Guid(88c47ee50e9dfe240b499f761f7eda42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_rubysun.png using Guid(88c47ee50e9dfe240b499f761f7eda42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a441669fe27e0cc5cf1bcd7e86ef23') in 0.067675 seconds
+  Import took 0.070157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_fire_furious.png
+  artifactKey: Guid(4867db53aa592a64a851c36645423699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_fire_furious.png using Guid(4867db53aa592a64a851c36645423699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0150371a54c73154b62ec601498ed66') in 0.049603 seconds
+  Import took 0.052242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_ray.png
+  artifactKey: Guid(33470548a8c102c45bec7658b3637d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_ray.png using Guid(33470548a8c102c45bec7658b3637d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd22eabb20476f29ecd744055f8d4af6f') in 0.020461 seconds
+  Import took 0.022999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_steel_attack.png
+  artifactKey: Guid(8cc7ca0e29ced7b4f84e8c4ef7deb28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_steel_attack.png using Guid(8cc7ca0e29ced7b4f84e8c4ef7deb28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbdf02a18b58b86b66d35646c312c9db') in 0.016745 seconds
+  Import took 0.019488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_royal_beat.png
+  artifactKey: Guid(764d67e6ce02924489784b286ab7653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_royal_beat.png using Guid(764d67e6ce02924489784b286ab7653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0850c027ea417cbcdc960b65ff2884df') in 0.019894 seconds
+  Import took 0.022420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_pet_hit.png
+  artifactKey: Guid(7e051d18bae47984299ed30a69f8bf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_pet_hit.png using Guid(7e051d18bae47984299ed30a69f8bf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38ade988e8535f40a488b3b46050cc42') in 0.018621 seconds
+  Import took 0.021406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_freeze.png
+  artifactKey: Guid(4c08ab37f63684943b7512f974ef85d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_freeze.png using Guid(4c08ab37f63684943b7512f974ef85d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9245d1dd8e25239767951ea7b162474b') in 0.017809 seconds
+  Import took 0.020580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_thurder.png
+  artifactKey: Guid(f9fa59c48bcaf314988f2c2caece74b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_thurder.png using Guid(f9fa59c48bcaf314988f2c2caece74b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e70ef05663c384ce0d73292477144c1a') in 0.016914 seconds
+  Import took 0.019933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_sparkle_stream.png
+  artifactKey: Guid(d79036c8f3ba7ca45970d9530c4dca90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_sparkle_stream.png using Guid(d79036c8f3ba7ca45970d9530c4dca90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd170887a50a86e53f7d4ca36964808') in 0.019758 seconds
+  Import took 0.022405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_rock_curricane.png
+  artifactKey: Guid(22ebb074f4a6be446b9e9a132ff9036d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_rock_curricane.png using Guid(22ebb074f4a6be446b9e9a132ff9036d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2ae211a7117a977c1b8402b69db5b8e') in 0.018548 seconds
+  Import took 0.021173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_simple_bomn.png
+  artifactKey: Guid(09afc7129c6400947ab194811d1e314b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_simple_bomn.png using Guid(09afc7129c6400947ab194811d1e314b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4653a6e75bd5d1c0da35d30bbe7be6ee') in 0.017639 seconds
+  Import took 0.020540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_spell03.png
+  artifactKey: Guid(b9c61c6896eff5b43ae44d047f49b31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_spell03.png using Guid(b9c61c6896eff5b43ae44d047f49b31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a88d639c5ab07ab1c265c41c5efbbb5') in 0.018103 seconds
+  Import took 0.020528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_sword_hit.png
+  artifactKey: Guid(db65b0b4a42d84b4b8b3c20216e956b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_sword_hit.png using Guid(db65b0b4a42d84b4b8b3c20216e956b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50f971ada2f1b2bb5b973d542bb02d6') in 0.016093 seconds
+  Import took 0.018560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_spell01.png
+  artifactKey: Guid(9c2654c6e93b84e4391bd17cb4054e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_spell01.png using Guid(9c2654c6e93b84e4391bd17cb4054e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31a05710b5b0ec2df443df88e588233') in 0.017862 seconds
+  Import took 0.020316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Thunder_rage.png
+  artifactKey: Guid(d1cd1b2ae3ff39744a111f9b8e46203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Thunder_rage.png using Guid(d1cd1b2ae3ff39744a111f9b8e46203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d61936949040358de8ec485005cb96b') in 0.020363 seconds
+  Import took 0.023226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_spell05.png
+  artifactKey: Guid(fccc7156f5a20d847b6f18880c73d76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_spell05.png using Guid(fccc7156f5a20d847b6f18880c73d76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b33b3cd0a76d0b3770282662a83fe81') in 0.020886 seconds
+  Import took 0.023662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_royal_hit.png
+  artifactKey: Guid(adfb16cdb2353684bbf44eb7e5b7128b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_royal_hit.png using Guid(adfb16cdb2353684bbf44eb7e5b7128b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5731caefb529e1a0e5b7f300fad344a') in 0.021806 seconds
+  Import took 0.024230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Thunder_horn.png
+  artifactKey: Guid(de226bd492b80a041899eee9937a2c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Thunder_horn.png using Guid(de226bd492b80a041899eee9937a2c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74f3881ab78f3d162386b2e3b80ac4a3') in 0.010503 seconds
+  Import took 0.013098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_noble_hit.png
+  artifactKey: Guid(4ec98da35265dc54f8f4a4d5609f90c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_noble_hit.png using Guid(4ec98da35265dc54f8f4a4d5609f90c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6157a509950cbacafd86be548cffaaff') in 0.020369 seconds
+  Import took 0.023068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_spell04.png
+  artifactKey: Guid(954cdace6e17b3d4890cbbbfe98ef2fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_spell04.png using Guid(954cdace6e17b3d4890cbbbfe98ef2fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33160160c77763d030b168ad36c3364a') in 0.017072 seconds
+  Import took 0.019767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Green_invade.png
+  artifactKey: Guid(05e2d6af00483bc42a42f768f4505213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Green_invade.png using Guid(05e2d6af00483bc42a42f768f4505213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c3e7de9da7ee9fe98c9a02b995d0d3') in 0.016499 seconds
+  Import took 0.019136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_cavalierattack.png
+  artifactKey: Guid(16a6a5271084d7742be0e0f1a9e217ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_cavalierattack.png using Guid(16a6a5271084d7742be0e0f1a9e217ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bba1b4203ce3b033219ad409d88ece0') in 0.011212 seconds
+  Import took 0.013674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Forward_forge.png
+  artifactKey: Guid(dd25e00ba744112468a156138bf652ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Forward_forge.png using Guid(dd25e00ba744112468a156138bf652ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842d18bcea8611948fca34ac529f4ff6') in 0.016531 seconds
+  Import took 0.019187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_technology.png
+  artifactKey: Guid(5b581be6bcf7ab44f8bcd0abd50e0652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_technology.png using Guid(5b581be6bcf7ab44f8bcd0abd50e0652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7086f2d57658def839c312466f8780') in 0.017388 seconds
+  Import took 0.020103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_stranger_light.png
+  artifactKey: Guid(f85ea78a8f8f76546a8d8affdc6d19aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_stranger_light.png using Guid(f85ea78a8f8f76546a8d8affdc6d19aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e54dc940c1e31b22f346c002aff1eb') in 0.016428 seconds
+  Import took 0.019860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_stone_emerge.png
+  artifactKey: Guid(2c041a4276078564d94a19dbbda2f0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_stone_emerge.png using Guid(2c041a4276078564d94a19dbbda2f0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcd242b68b256bc0014eccb9fe3ce087') in 0.019199 seconds
+  Import took 0.021649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_muddy.png
+  artifactKey: Guid(3f2c8d026ca336045a39ed53935bbcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_muddy.png using Guid(3f2c8d026ca336045a39ed53935bbcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e7660eb5a447c5566719ee60da3788b') in 0.015993 seconds
+  Import took 0.018620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_spell02.png
+  artifactKey: Guid(fed4337445ffcb6438005f1a27d01035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_spell02.png using Guid(fed4337445ffcb6438005f1a27d01035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1180448bfc4d4e7ecfe33b86f7795be7') in 0.016690 seconds
+  Import took 0.019259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_fullsight.png
+  artifactKey: Guid(85466f6da9352b54797861fa32f358de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_fullsight.png using Guid(85466f6da9352b54797861fa32f358de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55cf8964f45feafbb64bbb1dc9a1db61') in 0.020000 seconds
+  Import took 0.022582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_shoop_spot.png
+  artifactKey: Guid(7f44e5d4df72d7448af30e9e916a1009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_shoop_spot.png using Guid(7f44e5d4df72d7448af30e9e916a1009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9f2f12c3f5e6340356f5d98fb6841e') in 0.016539 seconds
+  Import took 0.019100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_land_snaze.png
+  artifactKey: Guid(88571f6f8e9dd9c40befc8de63c906fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_land_snaze.png using Guid(88571f6f8e9dd9c40befc8de63c906fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17f094cb72939f07ce1dbeb57dd2710') in 0.016540 seconds
+  Import took 0.018928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_somewhat.png
+  artifactKey: Guid(6cc9f2390267d6f47b3bfdc10c348ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_somewhat.png using Guid(6cc9f2390267d6f47b3bfdc10c348ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aca8cf17c1ab75d0480be074cb15148') in 0.018703 seconds
+  Import took 0.021253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Fallbreeze.png
+  artifactKey: Guid(e99675219e623d44ab929ed2ec4406c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Fallbreeze.png using Guid(e99675219e623d44ab929ed2ec4406c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b65b023aa57938f29d1d76a7e7a4469') in 0.016760 seconds
+  Import took 0.019844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_rock_monster.png
+  artifactKey: Guid(f86e2e3030ac3114390a64871088e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_rock_monster.png using Guid(f86e2e3030ac3114390a64871088e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77bfd46170fccf928b2e20b0bdef0895') in 0.016560 seconds
+  Import took 0.018999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/SnowFlakes_01.png
+  artifactKey: Guid(eaffc20b940751240bb1cde78f2b8aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/SnowFlakes_01.png using Guid(eaffc20b940751240bb1cde78f2b8aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27ead1c4f72d4ab9e1f6714103d57f4c') in 0.019918 seconds
+  Import took 0.022399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_wildblue.png
+  artifactKey: Guid(ab90daed9f50b844b8c80e67bb1ab96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_wildblue.png using Guid(ab90daed9f50b844b8c80e67bb1ab96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce165df2641d5a79174291662f5b81f') in 0.016468 seconds
+  Import took 0.019274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_X_chop.png
+  artifactKey: Guid(53085f18b2c38eb4e8539c23811c3347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_X_chop.png using Guid(53085f18b2c38eb4e8539c23811c3347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f05f9ea65acbeac655a995fff4b12bf') in 0.017972 seconds
+  Import took 0.020760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/SnowFlakes_02.png
+  artifactKey: Guid(9f1e3d00aa74453408c3f82b25a90ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vfx/Magic VFX/Magic VFX - Ice (FREE)/Models/Materials/SnowFlakes_02.png using Guid(9f1e3d00aa74453408c3f82b25a90ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bac677ef73cbc13b76ce468d6e337d3') in 0.022059 seconds
+  Import took 0.024911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_witch_ward.png
+  artifactKey: Guid(8d41c4d75ffb95449ad8cdbfefa74218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_witch_ward.png using Guid(8d41c4d75ffb95449ad8cdbfefa74218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ef671867b3011abe833430242afa3f') in 0.016244 seconds
+  Import took 0.018873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_sound_attack.png
+  artifactKey: Guid(119553e379b55eb47aa9ceca2a67cc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_sound_attack.png using Guid(119553e379b55eb47aa9ceca2a67cc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2845406a622c1f321360274c261b8936') in 0.019052 seconds
+  Import took 0.021874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Images/Tazo_2D/Icon/S_Explosive.png
+  artifactKey: Guid(caccc09442e90904d94b08c1ae00b653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Tazo_2D/Icon/S_Explosive.png using Guid(caccc09442e90904d94b08c1ae00b653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad84d7f12efbe784c37b48a6ec9055ee') in 0.013739 seconds
+  Import took 0.017622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.386950 seconds.
+  path: Assets/Terrain/Terrain.asset
+  artifactKey: Guid(7ddacb658aec61548be54f8564a86000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain.asset using Guid(7ddacb658aec61548be54f8564a86000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4d19ca98b53f370a5e01e55fa36fdb') in 0.052856 seconds
+  Import took 0.056354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Terrain/Tree9_5.prefab
+  artifactKey: Guid(1422c207f187aa74296b23b9ac597096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Tree9_5.prefab using Guid(1422c207f187aa74296b23b9ac597096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ae6c1a7cae70de7f6dfc8ffeedd1c8') in 0.366900 seconds
+  Import took 0.369298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Terrain/Tree9_4.prefab
+  artifactKey: Guid(6bd2a76c1073fa34f9d308c46d006fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Tree9_4.prefab using Guid(6bd2a76c1073fa34f9d308c46d006fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5579a18517a3d19cfa1aa41e7aa7d7') in 0.025777 seconds
+  Import took 0.028169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Terrain/Tree9_3.prefab
+  artifactKey: Guid(a6d72c343c39d6444b39193f4267e3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Tree9_3.prefab using Guid(a6d72c343c39d6444b39193f4267e3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45dd733c89edf17387f6e393611c8775') in 0.025582 seconds
+  Import took 0.028087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.242010 seconds.
+  path: Assets/UI/Darkforce.png
+  artifactKey: Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Darkforce.png using Guid(cfbea9b72cca7694486069e45eeb8e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388cf1c161a0302678cec3c990c30455') in 0.068299 seconds
+  Import took 0.071798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 442.251133 seconds.
+  path: Assets/UI/StoneButtonplay.png
+  artifactKey: Guid(542256a4b958ed34a999b5033255a518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneButtonplay.png using Guid(542256a4b958ed34a999b5033255a518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a8115f4e1101557109a97099cf8ac2') in 0.016714 seconds
+  Import took 0.019816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.711091 seconds.
+  path: Assets/UI/StoneButtonplay.png
+  artifactKey: Guid(542256a4b958ed34a999b5033255a518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneButtonplay.png using Guid(542256a4b958ed34a999b5033255a518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42afb0af1946e64dafab33ec7dae065c') in 0.056799 seconds
+  Import took 0.059461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 174.083870 seconds.
+  path: Assets/UI/menu1.png
+  artifactKey: Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/menu1.png using Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9bf8817beffe5e0dabe99a765de2e6e') in 0.010031 seconds
+  Import took 0.012794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.618218 seconds.
+  path: Assets/UI/menu1.png
+  artifactKey: Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/menu1.png using Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce848e7616053315cef6b722d1ec9bf4') in 0.016191 seconds
+  Import took 0.019035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007305 seconds.
+  path: Assets/UI/menu1.png
+  artifactKey: Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/menu1.png using Guid(e31fc95eb05b7144b85b1dd4e95a4e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce848e7616053315cef6b722d1ec9bf4') in 0.043479 seconds
+  Import took 0.046622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 135.055474 seconds.
+  path: Assets/UI/Menu.png
+  artifactKey: Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Menu.png using Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad56713baf09c8c5ac54664ea6e36eee') in 0.015843 seconds
+  Import took 0.018628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.825685 seconds.
+  path: Assets/UI/Menu.png
+  artifactKey: Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Menu.png using Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a52d9af7515463f0b21056686f284dce') in 0.016293 seconds
+  Import took 0.018928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019803 seconds.
+  path: Assets/UI/Menu.png
+  artifactKey: Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Menu.png using Guid(26008cbb3bbc37f4fb633e752576aa9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a52d9af7515463f0b21056686f284dce') in 0.071302 seconds
+  Import took 0.074428 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001526 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.859 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.8 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2157.
+Total: 1.947200 ms (FindLiveObjects: 0.177200 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.436200 ms  DeleteObjects: 0.284700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001198 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.783 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2160.
+Total: 2.302400 ms (FindLiveObjects: 0.192500 ms CreateObjectMapping: 0.058000 ms MarkObjects: 1.725200 ms  DeleteObjects: 0.325800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001243 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.791 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2163.
+Total: 2.046000 ms (FindLiveObjects: 0.173600 ms CreateObjectMapping: 0.053900 ms MarkObjects: 1.490600 ms  DeleteObjects: 0.326700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001247 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.807 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2166.
+Total: 3.930300 ms (FindLiveObjects: 0.288300 ms CreateObjectMapping: 0.113100 ms MarkObjects: 2.855400 ms  DeleteObjects: 0.671900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001220 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.776 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2169.
+Total: 2.273600 ms (FindLiveObjects: 0.243300 ms CreateObjectMapping: 0.073600 ms MarkObjects: 1.607600 ms  DeleteObjects: 0.347700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001192 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.783 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.1 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2172.
+Total: 2.042000 ms (FindLiveObjects: 0.172700 ms CreateObjectMapping: 0.055100 ms MarkObjects: 1.468900 ms  DeleteObjects: 0.344500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 505.694657 seconds.
+  path: Assets/UI/Untitled-1.png
+  artifactKey: Guid(787877d944e12e04e9a36aae11984418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Untitled-1.png using Guid(787877d944e12e04e9a36aae11984418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db5f7b56aa29a6c57f60b97aeb2d606') in 0.037373 seconds
+  Import took 0.040386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.885675 seconds.
+  path: Assets/UI/Untitled-1.png
+  artifactKey: Guid(787877d944e12e04e9a36aae11984418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Untitled-1.png using Guid(787877d944e12e04e9a36aae11984418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b00f2318cdc35257e330b22cad06b0c') in 0.047334 seconds
+  Import took 0.049871 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001333 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.2 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2176.
+Total: 2.368600 ms (FindLiveObjects: 0.183900 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.752000 ms  DeleteObjects: 0.374700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001311 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.821 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1580 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.2 MB.
+System memory in use after: 94.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2179.
+Total: 2.387100 ms (FindLiveObjects: 0.210000 ms CreateObjectMapping: 0.086000 ms MarkObjects: 1.612300 ms  DeleteObjects: 0.477100 ms)
 
