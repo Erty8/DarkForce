@@ -77,21 +77,21 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.13018353
+      - time: 0.4031002
         functionName: cannotMove
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.4689715
+      - time: 0.44188812
         functionName: basicAttack
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.49094236
+      - time: 0.46802568
         functionName: canMove
         data: 
         objectReferenceParameter: {instanceID: 0}

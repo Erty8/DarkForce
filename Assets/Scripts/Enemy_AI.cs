@@ -268,8 +268,16 @@ public class Enemy_AI : MonoBehaviour
     {
         walkbool = true;        
     }
+    public void cannotWalk()
+    {
+        walkbool = false;
+    }
     public void canRotate()
     {
         rotatebool = true;
+    }
+    public void cannotRotate()
+    {
+        rotatebool = false;
     }
 }

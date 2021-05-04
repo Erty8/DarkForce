@@ -32,9 +32,17 @@ public class EnemyAnimator : MonoBehaviour
     {
         aiScript.canWalk();
     }
+    void cannotWalk()
+    {
+        aiScript.canWalk();
+    }
     void canRotate()
     {
         aiScript.canRotate();
+    }
+    void cannotRotate()
+    {
+        aiScript.cannotRotate();
     }
     void spawnSpikes()
     {
