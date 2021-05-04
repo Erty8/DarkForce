@@ -9,7 +9,7 @@ public class BasicAttack : MonoBehaviour
     public float attackDamage = 20f;
     public float fireballtimeDamage = 0f;
     public float dmgforSeconds = 5f;
-    public float speed = 1.0f;
+    public float speed = 1.5f;
     float step;
     public Transform targetTransform;
     public static List<GameObject> enemies = new List<GameObject>();
@@ -23,7 +23,10 @@ public class BasicAttack : MonoBehaviour
     void Update()
     {
         float step = speed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        if (targetTransform != null) {
+            transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, step);
+        }
+        
         if (enemies.Count != 0)
         {
             //Debug.Log(damageCd);

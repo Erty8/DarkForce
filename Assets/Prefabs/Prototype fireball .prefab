@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1729651801896249426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.26, y: 1, z: 4.25}
-  m_LocalScale: {x: 0.8, y: 0.5, z: 6}
+  m_LocalScale: {x: 2.271525, y: 1.2657367, z: 6.351063}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729651801896249426}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1729651801896249424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+  destroySecond: 2
+  stopSecond: 0
 --- !u!108 &3783721409100631162
 Light:
   m_ObjectHideFlags: 0
@@ -189,3 +191,5 @@ MonoBehaviour:
   dmgPerSec: 5
   damageCd: 0
   fireballDamage: 20
+  fireballtimeDamage: 5
+  dmgforSeconds: 5
