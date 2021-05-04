@@ -5,20 +5,27 @@ using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Slider healthBar;
+    public Canvas healthBar;
+    public Slider healthBarSlider;
     public float health = 100f;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        healthBar.maxValue = health;
+        healthBarSlider.maxValue = health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.value = health;
+        healthBarSlider.value = health;
         
+    }
+       
+    private void LateUpdate()
+    {
+        //Health Bar not faced to the camera fix
+        healthBar.transform.LookAt(healthBar.transform.position + Camera.main.transform.rotation * Vector3.back, Camera.main.transform.rotation * Vector3.up);
     }
     public void takeDamage(float x)
     {

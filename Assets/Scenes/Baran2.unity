@@ -2352,6 +2352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealthBar: {fileID: 264291762}
   enemySlider: {fileID: 1746741249}
   health: 600
   anim: {fileID: 1261583378}
@@ -5109,7 +5110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793854ec623d87d4eb8cfc24947860e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1509706625}
+  healthBar: {fileID: 1849575902}
+  healthBarSlider: {fileID: 1509706625}
   health: 300
   anim: {fileID: 0}
 --- !u!54 &1853499906
@@ -5194,6 +5196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealthBar: {fileID: 644314174}
   enemySlider: {fileID: 752177202}
   health: 600
   anim: {fileID: 914409273}
