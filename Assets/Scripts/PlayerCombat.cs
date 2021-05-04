@@ -5,19 +5,25 @@ using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Slider healthBar;
+    public Canvas healthBar3D;
+    public Slider healthBarSlider2D;
+    public Slider healthBarSlider;
     public float health = 100f;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        healthBar.maxValue = health;
+        healthBarSlider.maxValue = health;
+        healthBarSlider2D.maxValue = health;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.value = health;
+        healthBarSlider.value = health;
+        healthBarSlider2D.value = health;
+
         if (health <= 0)
         {
             die();
@@ -27,11 +33,22 @@ public class PlayerCombat : MonoBehaviour
         }
 
     }
+       
+    private void LateUpdate()
+    {
+        //Health Bar not faced to the camera fix
+        healthBar3D.transform.LookAt(healthBar3D.transform.position + Camera.main.transform.rotation * Vector3.back, Camera.main.transform.rotation * Vector3.up);
+    }
     public void takeDamage(float x)
     {
         health -= x;
         //Debug.Log(health);
-        
+        if (health <=0 )
+        {
+            //anim.SetBool("death", true);
+            Invoke("destroy", 7f);
+            //Destroy(gameObject);
+        }
     }
     public void takedamageoverTime(float x, float y, float z)
     {
@@ -49,14 +66,14 @@ public class PlayerCombat : MonoBehaviour
         }
         yield return null;
     }
-    void destroy()
-    {
-        Destroy(gameObject);
-    }
     void die()
     {
         anim.SetBool("Death", true);
         //Invoke("destroy", 7f);
+    }
+    void destroy()
+    {
+        Destroy(gameObject);
     }
     
 }

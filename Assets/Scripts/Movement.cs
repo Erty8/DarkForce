@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
         attackingScript = GetComponent<Attacking>();
         animatorScript = GetComponent<PlayerAnimator>();
         inputScript = GetComponent<InputTargeting>();
-        inputScript.attackMovekey = attackMove;
+        //inputScript.attackMovekey = attackMove;
     }
 
     // Update is called once per frame

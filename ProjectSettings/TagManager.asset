@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Enemy
   - IceShield
+  - Fire
+  - Waypoint
   layers:
   - Default
   - TransparentFX

@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  destroySecond: 2
+  stopSecond: 0
 --- !u!114 &3564841501552186920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d00c7ea014d00408fca0011a2d93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgPerSec: 3
+  slowedSpeed: 1.25
+  hardenTime: 1.5
+  damageCd: 0
+  shatterDamage: 50
