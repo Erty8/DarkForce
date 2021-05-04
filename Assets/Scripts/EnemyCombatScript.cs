@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyCombatScript : MonoBehaviour
 {
+    public Canvas enemyHealthBar;
     public Slider enemySlider;
     public float health = 100f;
     private bool canbeDamaged = true;
@@ -22,6 +23,13 @@ public class EnemyCombatScript : MonoBehaviour
     {
         enemySlider.value = health;
         
+    }
+
+    
+    private void LateUpdate()
+    {
+        //Enemy Health Bar not faced to the camera fix    
+        enemyHealthBar.transform.LookAt(enemyHealthBar.transform.position + Camera.main.transform.rotation * Vector3.back, Camera.main.transform.rotation * Vector3.up);
     }
     public void takeDamage(float x)
     {
