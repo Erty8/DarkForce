@@ -316,13 +316,6 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.0242921
-        functionName: cannotRotate
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: 0.4131236
         functionName: spawnSpikes
         data: 
@@ -330,7 +323,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9450278
+      - time: 0.87979835
         functionName: canRotate
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -339,13 +332,6 @@ ModelImporter:
         messageOptions: 0
       - time: 0.98178506
         functionName: canWalk
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.014571949
-        functionName: cannotWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

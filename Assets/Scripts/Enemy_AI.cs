@@ -195,7 +195,7 @@ public class Enemy_AI : MonoBehaviour
             anim.SetBool("continueAttack", true);
         }
         //yield return new WaitUntil(() => attackCooldown == true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         anim.SetBool("attack", false);
         yield return new WaitUntil(() => attackIndex == 3);
         anim.SetBool("continueAttack", false);
