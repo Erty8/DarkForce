@@ -26,6 +26,7 @@ public class Enemy_AI : MonoBehaviour
     public float attackCd = 5f;
     float attacktimePassed;
     public float attackRange = 25f;
+    public static int attackIndex = 0; 
     float step;
     public float rotSpeed = 4f;
     public float abilityCD = 10f;
@@ -194,9 +195,11 @@ public class Enemy_AI : MonoBehaviour
             anim.SetBool("continueAttack", true);
         }
         //yield return new WaitUntil(() => attackCooldown == true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.2f);
         anim.SetBool("attack", false);
+        yield return new WaitUntil(() => attackIndex == 3);
         anim.SetBool("continueAttack", false);
+        attackIndex = 0;
         //anim.SetBool("attack", false);
 
     }

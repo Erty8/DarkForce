@@ -26,6 +26,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         //aiScript.test();
         aiScript.dealDamage();
+        Enemy_AI.attackIndex++;
     }
     void canWalk()
     {

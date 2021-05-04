@@ -92,30 +92,34 @@ public class Movement : MonoBehaviour
     }
     public void move()
     {
-        RaycastHit hit;
-        attackingScript.attackOnSight = false;
-        //anim.SetBool("Moving", true);
-        //Debug.Log(anim.GetFloat("Speed"));
-
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
+        if (canMove) 
         {
-            if (hit.collider.tag == "Floor")
+            RaycastHit hit;
+            attackingScript.attackOnSight = false;
+            //anim.SetBool("Moving", true);
+            //Debug.Log(anim.GetFloat("Speed"));
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
             {
-                agent.SetDestination(hit.point);
-                attackingScript.targetedEnemy = null;
-                agent.stoppingDistance = 0;
+                if (hit.collider.tag == "Floor")
+                {
+                    agent.SetDestination(hit.point);
+                    attackingScript.targetedEnemy = null;
+                    agent.stoppingDistance = 0;
 
-                Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3(hit.point.x,0,hit.point.z) 
-                    - transform.position);
-                float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
-                    rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
+                    Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3(hit.point.x, 0, hit.point.z)
+                        - transform.position);
+                    float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                        rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
 
-                transform.eulerAngles = new Vector3(0, rotationY, 0);
-                //Invoke("movingFalse", 0.5f);
-                
+                    transform.eulerAngles = new Vector3(0, rotationY, 0);
+                    //Invoke("movingFalse", 0.5f);
+
+                }
+
             }
-
         }
+        
        
     }
     private void OnCollisionExit(Collision collision)

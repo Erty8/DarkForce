@@ -10,6 +10,8 @@ public class Attacking : MonoBehaviour
     public HeroAttackType heroAttackType;
 
     [SerializeField] private Image attackRangeImage;
+    [SerializeField] private GameObject attackObject;
+    [SerializeField] private Transform ProjectileTransform;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
     public Animator anim;
@@ -155,7 +157,10 @@ public class Attacking : MonoBehaviour
     }
     public void basicAttack()
     {
-        targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+        Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
+        attackObject.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
+        attackObject.GetComponent<BasicAttack>().attackDamage = attackDamage;
+        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
     }
     void rangeIndicator()
     {

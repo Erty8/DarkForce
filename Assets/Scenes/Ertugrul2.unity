@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3875,7 +3875,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1853499907
 MonoBehaviour:
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   radius: 10
   speed: 4
   attackDamage: 10
-  attackCd: 2
+  attackCd: 4
   attackRange: 25
   rotSpeed: 4
   abilityCD: 15
@@ -4000,7 +4000,7 @@ MonoBehaviour:
   walkSpeed: 0
   speedVal: 0
   closestEnemy: {fileID: 0}
-  rotateSpeedMovement: 20
+  rotateSpeedMovement: 10
   rotateVelocity: 0
 --- !u!195 &1855380429
 NavMeshAgent:
