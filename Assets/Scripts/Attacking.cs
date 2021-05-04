@@ -65,7 +65,61 @@ public class Attacking : MonoBehaviour
                 
             }
         }
-        
+        if (targetedEnemy != null)
+        {
+            //distancetoEnemy = Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position);
+            if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) > attackRange)
+            {
+                //targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
+
+                moveScript.agent.SetDestination(targetedEnemy.transform.position);
+                moveScript.agent.stoppingDistance = attackRange;
+
+                Quaternion rotationToLookAt = Quaternion.LookRotation(targetedEnemy.transform.position - transform.position);
+                float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
+
+                transform.eulerAngles = new Vector3(0, rotationY, 0);
+            }
+            if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) <= attackRange)
+            {
+
+                if (heroAttackType == HeroAttackType.Ranged)
+                {
+                    Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+               (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+                    float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
+                    transform.eulerAngles = new Vector3(0, rotationY, 0);
+                    moveScript.agent.SetDestination(transform.position);
+
+                    if (damageCd == false)
+                    {
+
+                        //moveScript.agent.stoppingDistance = 0;
+
+                        //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToLookAt, rotateSpeedForAttack * Time.deltaTime);
+                        //Debug.Log("Hero basic attack");
+                        StartCoroutine(damageEnemies());
+                    }
+                }
+            }
+            else
+            {
+                if (heroAttackType == HeroAttackType.Melee)
+                {
+                    if (performMeleeAttack)
+                    {
+                        Debug.Log("A T T A C K");
+                    }
+                }
+            }
+
+        }
+        rangeIndicator();
+
     }
 
 
