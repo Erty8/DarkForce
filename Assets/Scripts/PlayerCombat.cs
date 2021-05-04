@@ -18,19 +18,20 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         healthBar.value = health;
-       
+        if (health <= 0)
+        {
+            die();
+            Movement.canMove = false;
+
+            //Destroy(gameObject);
+        }
+
     }
     public void takeDamage(float x)
     {
         health -= x;
         //Debug.Log(health);
-        if (health <=0 )
-        {
-            die();
-            Movement.canMove = false;
-            
-            //Destroy(gameObject);
-        }
+        
     }
     public void takedamageoverTime(float x, float y, float z)
     {
