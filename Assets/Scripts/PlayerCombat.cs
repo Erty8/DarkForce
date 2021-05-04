@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         healthBar.value = health;
-        
+       
     }
     public void takeDamage(float x)
     {
@@ -26,8 +26,9 @@ public class PlayerCombat : MonoBehaviour
         //Debug.Log(health);
         if (health <=0 )
         {
-            //anim.SetBool("death", true);
-            Invoke("destroy", 7f);
+            die();
+            Movement.canMove = false;
+            
             //Destroy(gameObject);
         }
     }
@@ -50,6 +51,11 @@ public class PlayerCombat : MonoBehaviour
     void destroy()
     {
         Destroy(gameObject);
+    }
+    void die()
+    {
+        anim.SetBool("Death", true);
+        //Invoke("destroy", 7f);
     }
     
 }

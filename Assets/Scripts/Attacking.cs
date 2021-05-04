@@ -12,6 +12,7 @@ public class Attacking : MonoBehaviour
     [SerializeField] private Image attackRangeImage;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
+    public Animator anim;
     public float attackRange;
     public float attackDamage;
     public float attackSpeed = 1f;
@@ -142,14 +143,19 @@ public class Attacking : MonoBehaviour
     
     IEnumerator damageEnemies()
     {
-        
-        targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+        anim.SetBool("Attack", true);
+        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
         
         damageCd = true;
         Debug.Log("damaged");
         yield return new WaitForSeconds(1/attackSpeed);
         damageCd = false;
+        anim.SetBool("Attack", false);
 
+    }
+    public void basicAttack()
+    {
+        targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
     }
     void rangeIndicator()
     {

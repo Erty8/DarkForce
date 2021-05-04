@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationEvents : MonoBehaviour
 {
     Abilities abilityScript;
+    Attacking attackScript;
     public AudioSource audioSource;
     public AudioClip leftFootClip;
     public AudioClip rightFootClip;
@@ -12,6 +13,7 @@ public class AnimationEvents : MonoBehaviour
     void Start()
     {
         abilityScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Abilities>();
+        attackScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Attacking>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,10 @@ public class AnimationEvents : MonoBehaviour
     {
         //Abilities.projectileLaunch = true;
         abilityScript.castFireball();
+    }
+    void basicAttack()
+    {
+        attackScript.basicAttack();
     }
     void projectileReady()
     {
