@@ -63,7 +63,7 @@ public class Abilities : MonoBehaviour
     public Image abilityImage4;
     public Image ultimateSkillshot;
     public float cooldown4 = 3f;
-    bool isCooldown4 = false;
+    bool isCooldown4 = true;
     public KeyCode ability4;
     public GameObject ultimateObject;
     public Transform ultimateTransform;
@@ -95,7 +95,7 @@ public class Abilities : MonoBehaviour
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
-        abilityImage4.fillAmount = 0;
+        abilityImage4.fillAmount = 1;
         skillshot.GetComponent<Image>().enabled = false;
         targetCircle.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;

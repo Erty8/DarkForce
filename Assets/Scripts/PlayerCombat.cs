@@ -19,7 +19,15 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         healthBarSlider.value = health;
-        
+
+        if (health <= 0)
+        {
+            die();
+            Movement.canMove = false;
+
+            //Destroy(gameObject);
+        }
+
     }
        
     private void LateUpdate()
@@ -53,6 +61,11 @@ public class PlayerCombat : MonoBehaviour
             
         }
         yield return null;
+    }
+    void die()
+    {
+        anim.SetBool("Death", true);
+        //Invoke("destroy", 7f);
     }
     void destroy()
     {
