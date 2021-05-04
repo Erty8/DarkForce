@@ -43,6 +43,14 @@ public class AnimationEvents : MonoBehaviour
         audioSource.clip = leftFootClip;
         audioSource.Play();
     }
+    void canMove()
+    {
+        Movement.canMove = true;
+    }
+    void cannotMove()
+    {
+        Movement.canMove = false;
+    }
     void rightFoot()
     {
         audioSource.clip = rightFootClip;

@@ -16,7 +16,7 @@ public class BasicAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(destroy());
     }
 
     // Update is called once per frame
@@ -67,6 +67,20 @@ public class BasicAttack : MonoBehaviour
         Debug.Log("damaged");
         yield return new WaitForSeconds(dmgPerSec);
         damageCd = false;
+
+    }
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (targetTransform == null)
+        {
+            Destroy(gameObject);
+        }
+        yield return new WaitForSeconds(0.2f);
+        if (targetTransform == null)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
