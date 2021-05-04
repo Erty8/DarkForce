@@ -26,6 +26,7 @@ public class Enemy_AI : MonoBehaviour
     public float attackCd = 5f;
     float attacktimePassed;
     public float attackRange = 25f;
+    public static int attackIndex = 0; 
     float step;
     public float rotSpeed = 4f;
     public float abilityCD = 10f;
@@ -34,6 +35,7 @@ public class Enemy_AI : MonoBehaviour
     public float walkSpeed;
     public float speedVal;
     public static bool walkbool = true;
+    public static bool rotatebool = true;
 
     float motionSmoothTime = .1f;
     float maxSpeed;
@@ -118,7 +120,7 @@ public class Enemy_AI : MonoBehaviour
             if (closestEnemy.tag == "Player")
             {
                 agent.stoppingDistance = attackRange;
-                if (walkbool)
+                if (rotatebool)
                 {
                     Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
                    (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
@@ -135,12 +137,14 @@ public class Enemy_AI : MonoBehaviour
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
                     agent.SetDestination(transform.position);
+                    rotatebool = false;
                     walkbool = false;
                     attackCooldown = true;
                 }
                 
                 else if ((Time.time - abilityTimePassed) > abilityCD)
                 {
+                    rotatebool = false;
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
                     walkbool = false;
@@ -176,21 +180,32 @@ public class Enemy_AI : MonoBehaviour
     IEnumerator attackBool()
     {
         anim.SetBool("attack", true);
+        
 
-        yield return new WaitForSeconds(1);
+        //
         yield return new WaitUntil(() => walkbool == true);
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
         {
+            anim.SetBool("continueAttack", false);
             anim.SetBool("attack", false);
         }
+        else
+        {
+            anim.SetBool("continueAttack", true);
+        }
         //yield return new WaitUntil(() => attackCooldown == true);
+        yield return new WaitForSeconds(1f);
         anim.SetBool("attack", false);
+        yield return new WaitUntil(() => attackIndex == 3);
+        anim.SetBool("continueAttack", false);
+        attackIndex = 0;
+        //anim.SetBool("attack", false);
 
     }
     IEnumerator randomizer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2.5f);
         attackRandomize = Random.Range(1, 3);
         anim.SetInteger("random", attackRandomize);
         //Debug.Log(attackRandomize);
@@ -230,12 +245,14 @@ public class Enemy_AI : MonoBehaviour
     public void castSpikes(float y, float z)
     {
         StartCoroutine(castspike(y, z));
+        
     }
     IEnumerator castspike(float y, float z)
     {
         //skillshotCanvas.gameObject.SetActive(true);
         for (int i = 0; i < y; i++)
         {
+            walkbool = false;
             Instantiate(spike, spike1Transform.transform.position, spike1Transform.transform.rotation);
             Instantiate(spike, spike2Transform.transform.position, spike2Transform.transform.rotation);
             Instantiate(spike, spike3Transform.transform.position, spike3Transform.transform.rotation);
@@ -250,5 +267,17 @@ public class Enemy_AI : MonoBehaviour
     public void canWalk()
     {
         walkbool = true;        
+    }
+    public void cannotWalk()
+    {
+        walkbool = false;
+    }
+    public void canRotate()
+    {
+        rotatebool = true;
+    }
+    public void cannotRotate()
+    {
+        rotatebool = false;
     }
 }

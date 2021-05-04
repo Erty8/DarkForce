@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 0f70014e40021124ead28488e29feb07
+  - enabled: 1
+    path: Assets/Scenes/Ertugrul2.unity
+    guid: 8a5fe8e3ad02b4b49a04dd0ebff21144
   m_configObjects: {}

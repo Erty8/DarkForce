@@ -10,8 +10,11 @@ public class Attacking : MonoBehaviour
     public HeroAttackType heroAttackType;
 
     [SerializeField] private Image attackRangeImage;
+    [SerializeField] private GameObject attackObject;
+    [SerializeField] private Transform ProjectileTransform;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
+    public Animator anim;
     public float attackRange;
     public float attackDamage;
     public float attackSpeed = 1f;
@@ -142,14 +145,30 @@ public class Attacking : MonoBehaviour
     
     IEnumerator damageEnemies()
     {
-        
-        targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+        anim.SetBool("Attack", true);
+        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
         
         damageCd = true;
         Debug.Log("damaged");
         yield return new WaitForSeconds(1/attackSpeed);
         damageCd = false;
+        anim.SetBool("Attack", false);
 
+    }
+    public void basicAttack()
+    {
+        
+        if (targetedEnemy != null) {
+            Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
+            attackObject.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
+        }
+        else
+        {
+            Destroy(attackObject);
+        }
+        
+        attackObject.GetComponent<BasicAttack>().attackDamage = attackDamage;
+        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
     }
     void rangeIndicator()
     {

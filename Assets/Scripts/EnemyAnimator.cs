@@ -26,10 +26,23 @@ public class EnemyAnimator : MonoBehaviour
     {
         //aiScript.test();
         aiScript.dealDamage();
+        Enemy_AI.attackIndex++;
     }
     void canWalk()
     {
         aiScript.canWalk();
+    }
+    void cannotWalk()
+    {
+        aiScript.canWalk();
+    }
+    void canRotate()
+    {
+        aiScript.canRotate();
+    }
+    void cannotRotate()
+    {
+        aiScript.cannotRotate();
     }
     void spawnSpikes()
     {
