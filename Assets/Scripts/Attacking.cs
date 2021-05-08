@@ -10,7 +10,7 @@ public class Attacking : MonoBehaviour
     public HeroAttackType heroAttackType;
 
     [SerializeField] private Image attackRangeImage;
-    [SerializeField] private GameObject attackObject;
+    public GameObject attackObject;
     [SerializeField] private Transform ProjectileTransform;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
