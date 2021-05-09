@@ -223,7 +223,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.87337536
+      - time: 0.9845361
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -273,7 +273,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9032709
+      - time: 0.97938144
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}

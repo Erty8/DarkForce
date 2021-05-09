@@ -357,7 +357,7 @@ public class Abilities : MonoBehaviour
         }
         if (isCooldown4)
         {
-            Debug.Log("ultimate cooldown");
+            //Debug.Log("ultimate cooldown");
             abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
             ultimateSkillshot.GetComponent<Image>().enabled = false;
             if (abilityImage4.fillAmount <= 0)

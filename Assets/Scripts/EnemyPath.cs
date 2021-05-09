@@ -31,6 +31,7 @@ public class EnemyPath : MonoBehaviour
     float _waitTimer;
 
     public Animator anim;
+    public Enemy_AI aiscript;
     public float speed;
     public float speedVal;
     public float motionSmoothTime = .1f;
@@ -42,6 +43,7 @@ public class EnemyPath : MonoBehaviour
     {
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        aiscript = gameObject.GetComponent<Enemy_AI>();
 
         if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {
@@ -64,7 +66,7 @@ public class EnemyPath : MonoBehaviour
 
         if (dist <= detectRange)
         {
-            if (Enemy_AI.walkbool) {
+            if (aiscript.walkbool) {
                 Vector3 targetVector = player.position;
                 _agent.SetDestination(targetVector);
             }
