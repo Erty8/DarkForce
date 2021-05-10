@@ -195,6 +195,31 @@ public class Enemy_AI : MonoBehaviour
             anim.SetBool("continueAttack", true);
         }
         //yield return new WaitUntil(() => attackCooldown == true);
+        
+        yield return new WaitUntil(() => attackIndex == 2);
+        anim.SetBool("continueAttack", false);
+        attackIndex = 0;
+        //anim.SetBool("attack", false);
+
+    }
+    /*IEnumerator attackBool()
+    {
+        anim.SetBool("attack", true);
+        
+
+        //
+        yield return new WaitUntil(() => walkbool == true);
+        if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
+        {
+            anim.SetBool("continueAttack", false);
+            anim.SetBool("attack", false);
+        }
+        else
+        {
+            anim.SetBool("continueAttack", true);
+        }
+        //yield return new WaitUntil(() => attackCooldown == true);
         yield return new WaitForSeconds(3f);
         anim.SetBool("attack", false);
         yield return new WaitUntil(() => attackIndex == 2);
@@ -202,7 +227,7 @@ public class Enemy_AI : MonoBehaviour
         attackIndex = 0;
         //anim.SetBool("attack", false);
 
-    }
+    }*/
     IEnumerator randomizer()
     {
         yield return new WaitForSeconds(2.5f);
@@ -239,6 +264,13 @@ public class Enemy_AI : MonoBehaviour
     public void dealDamage()
     {
         closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+        if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
+        {
+            anim.SetBool("continueAttack", false);
+            anim.SetBool("attack", false);
+        }
+        //anim.SetBool("attack", false);
         Debug.Log("Demon dealed " + attackDamage + " damage");
     }
    
