@@ -45,6 +45,7 @@ public class Enemy_AI : MonoBehaviour
     Quaternion EnemyRot;
     [SerializeField] GameObject closestEnemy = null;
     public float rotateSpeedMovement;
+    public float rotateSpeedAttack; 
     public float rotateVelocity;
     // Start is called before the first frame update
     void Start()
@@ -137,7 +138,7 @@ public class Enemy_AI : MonoBehaviour
                     Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
                     agent.SetDestination(transform.position);
-                    rotatebool = false;
+                    //rotatebool = false;
                     walkbool = false;
                     attackCooldown = true;
                 }
@@ -196,8 +197,8 @@ public class Enemy_AI : MonoBehaviour
         }
         //yield return new WaitUntil(() => attackCooldown == true);
         
-        yield return new WaitUntil(() => attackIndex == 2);
-        anim.SetBool("continueAttack", false);
+        //yield return new WaitUntil(() => attackIndex == 2);
+        //anim.SetBool("continueAttack", false);
         attackIndex = 0;
         //anim.SetBool("attack", false);
 
@@ -264,11 +265,21 @@ public class Enemy_AI : MonoBehaviour
     public void dealDamage()
     {
         closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+        Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+                  (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+        float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+    rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedAttack * (Time.deltaTime * 5));
+        transform.eulerAngles = new Vector3(0, rotationY, 0);
+        agent.SetDestination(transform.position);
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
         {
             anim.SetBool("continueAttack", false);
             anim.SetBool("attack", false);
+        }
+        else
+        {
+            anim.SetBool("continueAttack", true);
         }
         //anim.SetBool("attack", false);
         Debug.Log("Demon dealed " + attackDamage + " damage");
