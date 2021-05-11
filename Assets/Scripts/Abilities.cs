@@ -174,11 +174,11 @@ public class Abilities : MonoBehaviour
                 {
                     ultRefresh = true; 
                 }
-               
-                
+                               
             }
             
         }
+        
         if (ultRefresh&&ultimateIndex<3)
         {
             abilityImage4.fillAmount -= 1 / waitbetweenUltimates * Time.deltaTime;
@@ -215,9 +215,9 @@ public class Abilities : MonoBehaviour
             ultimatebool = false;
             StartCoroutine(animateFireball());
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            skillshot.GetComponent<Image>().enabled = false;
+            abilityImage1.fillAmount = 0;
 
-            isCooldown1 = true;
-            abilityImage1.fillAmount = 1;
             /*Quaternion rotationtoLookat = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationtoLookat.eulerAngles.y, ref moveScript.rotateVelocity, 0);
             transform.eulerAngles = new Vector3(0, rotationY, 0);
@@ -272,8 +272,9 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             //moveScript.agent.speed = 0;
             StartCoroutine(animateShatter());
-            isCooldown2 = true;
-            abilityImage2.fillAmount = 1;
+            //isCooldown2 = true;
+            abilityImage2.fillAmount = 0;
+            targetCircle.GetComponent<Image>().enabled = false;
         }
         if (targetCircle.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
             || Input.GetKey(ability1) || Input.GetKey(ability3) || Input.GetKey(ability4)))
@@ -340,12 +341,12 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = true;
             StartCoroutine(animateFireball());
-            ultimateCD();
+            /*ultimateCD();
             ultimateIndex++;
             Debug.Log(ultimateIndex);
-            ultimateCountdown += cooldownAfterSeconds;
+            ultimateCountdown += cooldownAfterSeconds;*/
             
-            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            
 
                       
         }
@@ -461,11 +462,21 @@ public class Abilities : MonoBehaviour
     {
         //projectileLaunch = true;
         if (!ultimatebool) 
-        { 
+        {
+            isCooldown1 = true;
+            abilityImage1.fillAmount = 1;
             Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation); 
         }
         else
         {
+            if (ultimateIndex == 0)
+            {
+                ultimateCD();
+            }
+            
+            ultimateIndex++;
+            Debug.Log(ultimateIndex);
+            ultimateCountdown += cooldownAfterSeconds;
             Instantiate(ultimateObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
         }
         
@@ -473,6 +484,8 @@ public class Abilities : MonoBehaviour
     public void castShatter()
     {
         Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
+        isCooldown2 = true;
+        abilityImage2.fillAmount = 1;
     }
     void ultimateCD()
     {
