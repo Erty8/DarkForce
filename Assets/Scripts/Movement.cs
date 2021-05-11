@@ -128,6 +128,7 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
+        if (collision.gameObject.tag !="floor")
         StartCoroutine(collisionFix());
     }
     IEnumerator velocityFix()

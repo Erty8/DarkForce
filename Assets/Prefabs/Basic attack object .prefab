@@ -53,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729651801896249426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -364,7 +364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2682453121764329955, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: simulationSpeed
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2682453121764329955, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2744236638652451632, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5154657901121176347, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_LocalScale.x

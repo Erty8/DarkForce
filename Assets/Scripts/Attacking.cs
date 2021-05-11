@@ -218,7 +218,7 @@ public class Attacking : MonoBehaviour
         }
         else
         {
-            Destroy(attackObject);
+            //Destroy(attackObject);
         }
         
         attackObject.GetComponent<BasicAttack>().attackDamage = attackDamage;
