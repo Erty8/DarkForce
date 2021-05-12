@@ -40,7 +40,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability2;
 
     public Canvas ability2Canvas;
-    public Image targetCircle;
+    public Image ability2Image;
     public Image rangeCircle;
     private Vector3 posUp;
     public float maxAbilitytoDistance;
@@ -97,7 +97,7 @@ public class Abilities : MonoBehaviour
         abilityImage3.fillAmount = 0;
         abilityImage4.fillAmount = 1;
         skillshot.GetComponent<Image>().enabled = false;
-        targetCircle.GetComponent<Image>().enabled = false;
+        ability2Image.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
         ultimateSkillshot.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -194,7 +194,7 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability1) && isCooldown1 == false)
         {
             skillshot.GetComponent<Image>().enabled = true;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
             
@@ -250,14 +250,14 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability2) && isCooldown2 == false)
         {
             
-            targetCircle.GetComponent<Image>().enabled = true;
+            ability2Image.GetComponent<Image>().enabled = true;
             rangeCircle.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 2");
             
             abilityImage2.fillAmount = 1;
         }
-        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
+        if (ability2Image.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
             emptyTransform.transform.position = ability2Transform.transform.position;
     
@@ -274,18 +274,18 @@ public class Abilities : MonoBehaviour
             StartCoroutine(animateShatter());
             //isCooldown2 = true;
             abilityImage2.fillAmount = 0;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
         }
-        if (targetCircle.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
+        if (ability2Image.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
             || Input.GetKey(ability1) || Input.GetKey(ability3) || Input.GetKey(ability4)))
         {
             abilityImage2.fillAmount = 0;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
         }
         if (isCooldown2)
         {
             abilityImage2.fillAmount -= 1 / cooldown2 * Time.deltaTime;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             if (abilityImage2.fillAmount <= 0)
             {
@@ -322,7 +322,7 @@ public class Abilities : MonoBehaviour
         {
             ultimateSkillshot.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
 
@@ -483,10 +483,17 @@ public class Abilities : MonoBehaviour
     }
     public void castShatter()
     {
+        Instantiate(shatterObject, emptyTransform.transform.position, emptyTransform.transform.rotation);
+        isCooldown2 = true;
+        abilityImage2.fillAmount = 1;
+    }
+    /*public void castShatter()
+    {
         Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
         isCooldown2 = true;
         abilityImage2.fillAmount = 1;
     }
+    */
     void ultimateCD()
     {
         ultimateCountdown -= Time.deltaTime;

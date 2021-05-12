@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'tr' Physical Memory: 16315 MB
+OS: 'Windows 10 Home; OS build 19042.964; Version 2009; 64bit' Language: 'tr' Physical Memory: 7549 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\Unity\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,215 +15,1078 @@ C:/Users/ertug/Documents/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54028
+49968
 Successfully changed project path to: C:/Users/ertug/Documents/GitHub/DarkForce
 C:/Users/ertug/Documents/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 40.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/ertug/Documents/GitHub/DarkForce/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
     Vendor:   
-    VRAM:     8171 MB
-    Driver:   27.20.15003.1004
+    VRAM:     3962 MB
+    Driver:   27.21.14.6611
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56248
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002876 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.119917 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.00 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 40.73 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.397 seconds
+- Completed reload, in  4.698 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001600 seconds.
+Registered in 0.055608 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.090 seconds
+- Completed reload, in  2.599 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1649 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 170.9 MB.
-System memory in use after: 170.7 MB.
+System memory in use before: 97.7 MB.
+System memory in use after: 97.4 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2117.
-Total: 2.464300 ms (FindLiveObjects: 0.227800 ms CreateObjectMapping: 0.044400 ms MarkObjects: 1.768700 ms  DeleteObjects: 0.422200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Models/FantasyMonster/Skeleton/Texture
-  artifactKey: Guid(d2113431c06aebd4d866077c8bef0521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Texture using Guid(d2113431c06aebd4d866077c8bef0521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b078c7c3f06e6806aa450c44f61a69f7') in 0.011255 seconds
-  Import took 0.014368 seconds .
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2107.
+Total: 2.917100 ms (FindLiveObjects: 0.382000 ms CreateObjectMapping: 0.093000 ms MarkObjects: 2.141400 ms  DeleteObjects: 0.299000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Models
-  artifactKey: Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3306e2ed812d5152c29f9484ff23336') in 0.010278 seconds
-  Import took 0.013390 seconds .
+  path: Assets/Particles/RockStun
+  artifactKey: Guid(84cabc2fdaec3cf4c9e6c85a4546e034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun using Guid(84cabc2fdaec3cf4c9e6c85a4546e034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792ef471702e5ca870297d64bc4ee22b') in 0.012143 seconds
+  Import took 0.016404 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Skeleton@Skin.FBX
-  artifactKey: Guid(5a35c5f0a89b9654d897ccd7c8f81bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Skeleton@Skin.FBX using Guid(5a35c5f0a89b9654d897ccd7c8f81bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c983b736eda208b1b5842d0f0a5bfe') in 0.313155 seconds
-  Import took 0.316672 seconds .
+  Time since last request: 0.000713 seconds.
+  path: Assets/Particles/RockStun/rock_albedo 1.tif
+  artifactKey: Guid(de3937c25db92cd4688856f0c4334bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/rock_albedo 1.tif using Guid(de3937c25db92cd4688856f0c4334bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135c09be6522a49822de1b13f08b1526') in 0.092448 seconds
+  Import took 0.095824 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character
-  artifactKey: Guid(445d236cfbad7214db73a7840269d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character using Guid(445d236cfbad7214db73a7840269d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926065832f23f3faf723159eab0d9491') in 0.008550 seconds
-  Import took 0.012841 seconds .
+  Time since last request: 0.000187 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '743ce32927185931c456fa2b03d98b17') in 0.023053 seconds
+  Import took 0.027937 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.149402 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Materials
-  artifactKey: Guid(2558d1ccebfaa894c80ee1331eb7335b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Materials using Guid(2558d1ccebfaa894c80ee1331eb7335b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0736f4db839573d2509d1728a75d32b') in 0.008932 seconds
-  Import took 0.012069 seconds .
+  Time since last request: 0.000240 seconds.
+  path: Assets/Particles/RockStun/Spikes.mat
+  artifactKey: Guid(826eda7364e0d214eb11551a048cacf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/Spikes.mat using Guid(826eda7364e0d214eb11551a048cacf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7e41b66a8b5317f28e9abb4cfca7f7') in 0.089311 seconds
+  Import took 0.093776 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.045775 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Materials/skeleton_D.mat
-  artifactKey: Guid(ed14df0368fe53543907335c0e3902c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Materials/skeleton_D.mat using Guid(ed14df0368fe53543907335c0e3902c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d08ac8624062c0f04adac596132a560') in 0.047003 seconds
-  Import took 0.050423 seconds .
+  Time since last request: 0.000205 seconds.
+  path: Assets/Particles/RockStun/Spikes.obj
+  artifactKey: Guid(d3e2a507a316ff04babbcfe00564cfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/Spikes.obj using Guid(d3e2a507a316ff04babbcfe00564cfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20eb667178f6e478dec7729beaaeb03e') in 0.089374 seconds
+  Import took 0.094055 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.367685 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani
-  artifactKey: Guid(eaa5b6b98ee00dc4ba9879e416310d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani using Guid(eaa5b6b98ee00dc4ba9879e416310d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a130ebee5b6ddc55f55de8f289d80d') in 0.010475 seconds
-  Import took 0.014121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.044165 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Attack.FBX
-  artifactKey: Guid(dfc15c633f0d98141920018f79a042a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Attack.FBX using Guid(dfc15c633f0d98141920018f79a042a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbeef53ae02aa4acda7eecd18cbe279') in 0.050089 seconds
-  Import took 0.054941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Skill.FBX
-  artifactKey: Guid(1e768688017709245aed3bb86453c364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Skill.FBX using Guid(1e768688017709245aed3bb86453c364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '512d0d2e578db7ec17e9d76c4f0b0f20') in 0.052394 seconds
-  Import took 0.055969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Death.FBX
-  artifactKey: Guid(a749f4485b342b7469956010abf2ab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Death.FBX using Guid(a749f4485b342b7469956010abf2ab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51eab9c3dbbe2793696c7005f4277969') in 0.050245 seconds
-  Import took 0.054036 seconds .
+  Time since last request: 0.000175 seconds.
+  path: Assets/Prefabs/Prototype fireball .prefab
+  artifactKey: Guid(5d63e822ba4951b4faab4d06c42603ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Prototype fireball .prefab using Guid(5d63e822ba4951b4faab4d06c42603ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f97eb252560a9d512df81090ee6176') in 0.044633 seconds
+  Import took 0.048521 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000194 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Run.FBX
-  artifactKey: Guid(f57ee821486cd7b488adf1063a8dd207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Run.FBX using Guid(f57ee821486cd7b488adf1063a8dd207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62a36b3672d196c0773237669e0d799') in 0.048892 seconds
-  Import took 0.052778 seconds .
+  path: Assets/Prefabs/Prototype Area Spell.prefab
+  artifactKey: Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Prototype Area Spell.prefab using Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a4763f15e9d4d414e058f725a58d40') in 0.035114 seconds
+  Import took 0.039680 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Idle.FBX
-  artifactKey: Guid(a5ea117a2b123564a83a2dbd1c9ea4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Idle.FBX using Guid(a5ea117a2b123564a83a2dbd1c9ea4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422788a0de638e9fed9ef550ea759c46') in 0.048165 seconds
-  Import took 0.051717 seconds .
+  Time since last request: 0.000218 seconds.
+  path: Assets/Particles/RockStun/RockTexture.mat
+  artifactKey: Guid(105da9c478575864ca3d49aaf45c0c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/RockTexture.mat using Guid(105da9c478575864ca3d49aaf45c0c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178dc12a0b47a87758736849c46b5ef0') in 0.022790 seconds
+  Import took 0.026506 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Damage.FBX
-  artifactKey: Guid(81d4af5a5190e3d4d88c97161d881bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Damage.FBX using Guid(81d4af5a5190e3d4d88c97161d881bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5102b0fd14564794be11dad2e90a2b0') in 0.048261 seconds
-  Import took 0.051223 seconds .
+  Time since last request: 0.000233 seconds.
+  path: Assets/Prefabs/Basic attack object .prefab
+  artifactKey: Guid(6e2419f533b70324581352284092c1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Basic attack object .prefab using Guid(6e2419f533b70324581352284092c1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70b9b3c4fb320607cab56de64207cd5') in 0.020539 seconds
+  Import took 0.025273 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Knockback.FBX
-  artifactKey: Guid(6e0b4a05932877a4b89fb3fb32c3e72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Knockback.FBX using Guid(6e0b4a05932877a4b89fb3fb32c3e72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad1bf9f4bd57148dfee83e45b9f96434') in 0.048371 seconds
-  Import took 0.052082 seconds .
+  Time since last request: 0.000227 seconds.
+  path: Assets/Particles/RockStun/rock_mask 1.tif
+  artifactKey: Guid(24ec03f2b2056bb49891ed249f71c87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/rock_mask 1.tif using Guid(24ec03f2b2056bb49891ed249f71c87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4317fd30c51c8540998c2adc8e525662') in 0.023766 seconds
+  Import took 0.027041 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Walk.FBX
-  artifactKey: Guid(188f1042b5ff4644389fad5df1f98d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Walk.FBX using Guid(188f1042b5ff4644389fad5df1f98d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced571e7ee0dc88a674e598501c61cc9') in 0.050749 seconds
-  Import took 0.054158 seconds .
+  Time since last request: 0.000206 seconds.
+  path: Assets/Particles/RockStun/default.prefab
+  artifactKey: Guid(40c3e7ac26ad71d4ab7305b44d053d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/default.prefab using Guid(40c3e7ac26ad71d4ab7305b44d053d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c606629ad94a10f01669500539177aa') in 0.018240 seconds
+  Import took 0.021677 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Stand.FBX
-  artifactKey: Guid(6f61bc53c41ba664fa527d3386ecfd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Stand.FBX using Guid(6f61bc53c41ba664fa527d3386ecfd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08284f7ed0b2fad0dc8baf0f12b4f39') in 0.048222 seconds
-  Import took 0.051433 seconds .
+  Time since last request: 0.000206 seconds.
+  path: Assets/Particles/RockStun/rock_normal 1.tif
+  artifactKey: Guid(72bf429656797a241a28fe5ab1010c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/rock_normal 1.tif using Guid(72bf429656797a241a28fe5ab1010c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3cf0a34aa03123cad5a8c891415752c') in 0.018080 seconds
+  Import took 0.021522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Particles/RockStun/RockTexture.png
+  artifactKey: Guid(4a2317ff061557e429f4230b098f7dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/RockTexture.png using Guid(4a2317ff061557e429f4230b098f7dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6eb9a1c6fac0dc0570ae26fdd8cf13') in 0.020237 seconds
+  Import took 0.023607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Particles/RockStun/RockTexture.mat
+  artifactKey: Guid(105da9c478575864ca3d49aaf45c0c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/RockTexture.mat using Guid(105da9c478575864ca3d49aaf45c0c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178dc12a0b47a87758736849c46b5ef0') in 0.014091 seconds
+  Import took 0.017444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c9f3da4a561798547a0c21281e04f8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c9f3da4a561798547a0c21281e04f8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a72035431678a641e7a84bc258531e1b') in 0.091160 seconds
+  Import took 0.094954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Particles/RockStun/SmallStone.obj
+  artifactKey: Guid(4f8157914a36b174c95d55fe834fa544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/SmallStone.obj using Guid(4f8157914a36b174c95d55fe834fa544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be87433e6497d97306d4bd18de09b93d') in 0.029336 seconds
+  Import took 0.033260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Particles/RockStun/smoke_PNG966.png
+  artifactKey: Guid(08ff1e0ae78d60146b2ede84614dfa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/smoke_PNG966.png using Guid(08ff1e0ae78d60146b2ede84614dfa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '944ff569f61f9e76b7534dc56b23772a') in 0.018057 seconds
+  Import took 0.022950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Particles/RockStun/Smoke.mat
+  artifactKey: Guid(8a2ee476dff17684186d395b9669c075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/Smoke.mat using Guid(8a2ee476dff17684186d395b9669c075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e9d7b013c79ef6861137d26104c332') in 0.020955 seconds
+  Import took 0.025315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.977035 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d9d9d0b8d950adbbd706e8240fc55ab') in 0.011675 seconds
+  Import took 0.016188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.640628 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db601f2095e444650139ca0de2c723b4') in 0.006273 seconds
+  Import took 0.010339 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002000 seconds.
+Registered in 0.001132 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.036 seconds
+- Completed reload, in  0.786 seconds
 Platform modules already initialized, skipping
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 184.6 MB.
-System memory in use after: 184.4 MB.
+System memory in use before: 97.3 MB.
+System memory in use after: 97.0 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2166.
-Total: 2.484200 ms (FindLiveObjects: 0.281600 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.782900 ms  DeleteObjects: 0.375800 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2161.
+Total: 2.215100 ms (FindLiveObjects: 0.320300 ms CreateObjectMapping: 0.044300 ms MarkObjects: 1.550700 ms  DeleteObjects: 0.297200 ms)
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 863.863286 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632a49282b0680ea4bbb64afa7efe3ec') in 0.056809 seconds
+  Import took 0.062422 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.806 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 97.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2164.
+Total: 2.875100 ms (FindLiveObjects: 0.307700 ms CreateObjectMapping: 0.046800 ms MarkObjects: 2.193500 ms  DeleteObjects: 0.324300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.320115 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121be79af0617520447c59ab79ee2100') in 0.039687 seconds
+  Import took 0.044352 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001127 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.747 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2167.
+Total: 2.961100 ms (FindLiveObjects: 0.330200 ms CreateObjectMapping: 0.071200 ms MarkObjects: 2.213600 ms  DeleteObjects: 0.343900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.406428 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5e23941e153928cf39d135fc10196b') in 0.033156 seconds
+  Import took 0.045578 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001213 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.781 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2170.
+Total: 2.693600 ms (FindLiveObjects: 0.386900 ms CreateObjectMapping: 0.059500 ms MarkObjects: 1.890800 ms  DeleteObjects: 0.353600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.894405 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947e1ec9948b0315cd5a195ae2512a9f') in 0.037731 seconds
+  Import took 0.041690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.371066 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b72f1d377e6b5acdcc06038e0f070343') in 0.007169 seconds
+  Import took 0.011553 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001307 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.724 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2173.
+Total: 2.452400 ms (FindLiveObjects: 0.322400 ms CreateObjectMapping: 0.044000 ms MarkObjects: 1.714100 ms  DeleteObjects: 0.370100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.336372 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2caf54cbfc73529c09f0f10a79908c') in 0.034101 seconds
+  Import took 0.045766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.565422 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be245838892c815aabe229a99d6c79f') in 0.006564 seconds
+  Import took 0.010580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.726364 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c69a49a4c2bf408c2d085d4ea11be2ba') in 0.006282 seconds
+  Import took 0.010610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.791793 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b1dfcf92df713ea8cb71a2878f5908') in 0.006607 seconds
+  Import took 0.010437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.342645 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71193724fae2d256213efce4d4b0f35e') in 0.006573 seconds
+  Import took 0.011494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.818104 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05b278fe63cbcf5a60fdd12f7e132c15') in 0.006075 seconds
+  Import took 0.010890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.200484 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c10c37ea2175211f1c70779305c35c11') in 0.006706 seconds
+  Import took 0.011549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.415468 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0790f6b7fbbf73706601de04688e696') in 0.006505 seconds
+  Import took 0.010493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.102879 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c339d4464bf631da9e4420fe9c97a93') in 0.006656 seconds
+  Import took 0.011708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.871535 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac35186eb9ee500862181c6905b5a9d') in 0.006367 seconds
+  Import took 0.011593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.227570 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25a16936add770b77f0ff3172e62a7e') in 0.007535 seconds
+  Import took 0.012787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.627642 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef61d7b5edf83a7d3586bd75b19524c4') in 0.007041 seconds
+  Import took 0.011324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.371754 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37202ef16b950a17305ea5a270d0ee4e') in 0.007173 seconds
+  Import took 0.011074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.206987 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb0934417c0c8370dac0ac201bd88a8') in 0.007076 seconds
+  Import took 0.012507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.180511 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bbf2a2530cbac18622f557981552e28') in 0.006578 seconds
+  Import took 0.010951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.806054 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2bedcded69a50658e72219c6a41fe0') in 0.006678 seconds
+  Import took 0.011534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.824256 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73ac4c6db2e0c588a2bd81e8e175bd3') in 0.007889 seconds
+  Import took 0.011918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.223769 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50fdde272139b7e05b4a1a13981defe3') in 0.006792 seconds
+  Import took 0.011151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.597605 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45a09b23ae946512e8afd12ee06be53') in 0.006008 seconds
+  Import took 0.009907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.835708 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4d0febcd2cd21581b3eeecfb6eaa25') in 0.007517 seconds
+  Import took 0.011394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.824261 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b0f4faceff1ccea5a9a3e7c84ac865') in 0.006710 seconds
+  Import took 0.010868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.971804 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13cb90a02d921165cf8d0671976968fa') in 0.006665 seconds
+  Import took 0.010415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.421940 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898c694bc48c315cee6546baf6e6840e') in 0.006858 seconds
+  Import took 0.012193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.916384 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cca7dc23f8eca9cc9d264b69af9681c0') in 0.007071 seconds
+  Import took 0.010764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.635757 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90248cf770f369c52a0ee76480c594a6') in 0.006645 seconds
+  Import took 0.011599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.884797 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e9f8c2a8d7c8e79846c868dc681da0') in 0.006464 seconds
+  Import took 0.009984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.003120 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87314807a0f2c79c4cb2f0a085c907e') in 0.006895 seconds
+  Import took 0.011851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.011144 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a2a5218ddbb89b3f6d354d8d1cdcd8d') in 0.007140 seconds
+  Import took 0.011204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.332325 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a46710b0ede30c87da20c1d768c800a') in 0.007503 seconds
+  Import took 0.012672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.071470 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ddb068ea405597e4c3fcdd526f7e469') in 0.007366 seconds
+  Import took 0.012550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.403106 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef57fd54eac04a1d8755b818c30ab70') in 0.006899 seconds
+  Import took 0.010236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.406983 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e75159139c980007687421091da3a3') in 0.006443 seconds
+  Import took 0.010129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.322801 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392fb40b0fd0effb4aa8c131027c1568') in 0.006263 seconds
+  Import took 0.009831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.324900 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a74d109ec04f470d101d38f51c75cc') in 0.006703 seconds
+  Import took 0.010443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.013358 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03564906024335ed632c5a13e49e46f3') in 0.007753 seconds
+  Import took 0.011814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.610731 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfa9043349a2edf603cc0e87838d7ade') in 0.007448 seconds
+  Import took 0.011609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.192297 seconds.
+  path: Assets/Particles/RockStun/PS_Stone.prefab
+  artifactKey: Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone.prefab using Guid(9e5d21f509f06004aa19f3a1df785c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d520ab4afd21d6706e4996174bc9c1b') in 0.006971 seconds
+  Import took 0.011293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 205.289333 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e9fc88e3d9f77327fa054fcce181e4') in 0.011351 seconds
+  Import took 0.016242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 250.424283 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb72ad69981a4b7891841465160b1813') in 0.009177 seconds
+  Import took 0.014678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.159601 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3700856db556f03a99127115069b913') in 0.006327 seconds
+  Import took 0.010261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.819405 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c9624a0269425349a242e4cf95f4014') in 0.006751 seconds
+  Import took 0.010780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 132.830686 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47abe1b36b01c07a302a1de59198af0e') in 0.010176 seconds
+  Import took 0.016595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.322163 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5637587af43c8ca3d47b1977e18ffb00') in 0.011332 seconds
+  Import took 0.016335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 65.081946 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eebca626c72ae456730f29074a3e33c0') in 0.007180 seconds
+  Import took 0.010778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.675940 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09619e13a32472a12fcae0123e45aee') in 0.006982 seconds
+  Import took 0.011462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.319159 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ccd2bb6441bf1579c9a2ed158d42cf9') in 0.008431 seconds
+  Import took 0.013331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.579473 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81944495518389c30984742a487a9cd2') in 0.007116 seconds
+  Import took 0.010639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.211623 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a93a4f685b22c0825f97e512d3d2f8') in 0.008811 seconds
+  Import took 0.013217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.205874 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aacee7b0a24d77becebf1a0f0915d45c') in 0.006990 seconds
+  Import took 0.010857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.611471 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e449071cbbba16ce6827634af5c6f6') in 0.007530 seconds
+  Import took 0.011691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.946693 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bb395089bc9ee86eacc82a7d2bc641') in 0.006798 seconds
+  Import took 0.011780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.162399 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c287aace79051765e8c55d092c1bee') in 0.007797 seconds
+  Import took 0.012164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.744590 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '200483c99ba1b343d64f803b0774ffca') in 0.006545 seconds
+  Import took 0.010571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.802005 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57781e2f8450fd1759a4c8e99ce30d77') in 0.007392 seconds
+  Import took 0.011697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.210715 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd435fd4922d2d505759649bc4caeae3') in 0.007937 seconds
+  Import took 0.012187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.999822 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ca089d68e8409b581640bb012f206d') in 0.007544 seconds
+  Import took 0.011587 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001336 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.749 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2176.
+Total: 2.152300 ms (FindLiveObjects: 0.245200 ms CreateObjectMapping: 0.044700 ms MarkObjects: 1.490900 ms  DeleteObjects: 0.369700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.902177 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e33d77e57360c1dc2cc3e28c6ac42f') in 0.034776 seconds
+  Import took 0.038425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.506792 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07a6e8eef61443bacf158091f219923') in 0.007805 seconds
+  Import took 0.012670 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001268 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.733 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2179.
+Total: 2.507300 ms (FindLiveObjects: 0.238500 ms CreateObjectMapping: 0.039600 ms MarkObjects: 1.863300 ms  DeleteObjects: 0.364500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.379847 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb25bfc9aa5e401facc86c1ae91bfc2f') in 0.035332 seconds
+  Import took 0.039037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.971939 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58baee40098c84361dcfdf4ebe25c29') in 0.007066 seconds
+  Import took 0.011071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.614478 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f88fef1d2132c003509482e9dc9f203') in 0.006645 seconds
+  Import took 0.011080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.431730 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '591594e3164c3f06cb313125a9294811') in 0.006679 seconds
+  Import took 0.011871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.599438 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59f953081db86573a95136a8cb05c1e') in 0.007572 seconds
+  Import took 0.011879 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002295 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.191 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2182.
+Total: 3.100800 ms (FindLiveObjects: 0.444700 ms CreateObjectMapping: 0.063400 ms MarkObjects: 2.189400 ms  DeleteObjects: 0.401300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001293 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.747 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2185.
+Total: 3.557800 ms (FindLiveObjects: 0.405700 ms CreateObjectMapping: 0.104000 ms MarkObjects: 2.630400 ms  DeleteObjects: 0.414700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.770248 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dffe63e2e04af88d9fd97bdb0b54fea6') in 0.028930 seconds
+  Import took 0.032536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.020500 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6f8834652be1b6e087c4a239d83c0c') in 0.006123 seconds
+  Import took 0.010105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 191.339551 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(434549f52dc908946a1bfea710a9ee6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(434549f52dc908946a1bfea710a9ee6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef6bd4a2ddb3c6df2bb4919af713772') in 0.007654 seconds
+  Import took 0.011693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.389638 seconds.
+  path: Assets/Models
+  artifactKey: Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3306e2ed812d5152c29f9484ff23336') in 0.014749 seconds
+  Import took 0.017604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.419785 seconds.
+  path: Assets/Images
+  artifactKey: Guid(48c35b5df0d4f0d4192b2ff3d1eff008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images using Guid(48c35b5df0d4f0d4192b2ff3d1eff008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3450eb67e5095936df27c7f7f57f915') in 0.015121 seconds
+  Import took 0.018324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.025864 seconds.
+  path: Assets/Animation
+  artifactKey: Guid(b6153c04f126dbb4dad03eadc0e6ce3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation using Guid(b6153c04f126dbb4dad03eadc0e6ce3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a5d64de795ea4bc5259cfd70cf8d0e9') in 0.007239 seconds
+  Import took 0.010646 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 83.301530 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7daf9621de4c8d9ef070acfaf42ad9f') in 0.020026 seconds
+  Import took 0.023856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003986 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7daf9621de4c8d9ef070acfaf42ad9f') in 0.002520 seconds
+  Import took 0.005656 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001436 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.759 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2188.
+Total: 2.415100 ms (FindLiveObjects: 0.274900 ms CreateObjectMapping: 0.047900 ms MarkObjects: 1.719200 ms  DeleteObjects: 0.370900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 382.935616 seconds.
+  path: Assets/Scripts/Abilities.cs
+  artifactKey: Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e8dc2a5023ff4931a2cd6dc18cb411') in 0.005493 seconds
+  Import took 0.008674 seconds .
+
