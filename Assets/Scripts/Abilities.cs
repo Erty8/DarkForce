@@ -14,7 +14,8 @@ public class Abilities : MonoBehaviour
     public Animator anim;
     //public NavMeshAgent agent;
     float oldSpeed;
-    public static bool projectileLaunch = false; 
+    public bool projectileLaunch = false; 
+    public bool shatterLaunch = false; 
 
     [Header ("Ability 1")]
     public Image abilityImage1;
@@ -48,6 +49,7 @@ public class Abilities : MonoBehaviour
     public GameObject emptyTransform;
     public GameObject shatterObject;
     Shatter shatterScript;
+    [SerializeField] Canvas shatterCanvas;
     
 
 
@@ -135,6 +137,7 @@ public class Abilities : MonoBehaviour
         transRot.eulerAngles = new Vector3(0, transRot.eulerAngles.y, transRot.eulerAngles.z);
         ability1Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
         ultimateCanvas.transform.rotation = Quaternion.Lerp(transRot, ultimateCanvas.transform.rotation, 0f);
+        shatterCanvas.transform.rotation = Quaternion.Lerp(transRot, ultimateCanvas.transform.rotation, 0f);
         //ability2 input
         var hitPosDir = (hit.point - transform.position).normalized;
         float distance = Vector3.Distance(hit.point, transform.position);
@@ -259,6 +262,7 @@ public class Abilities : MonoBehaviour
         }
         if (ability2Image.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
+            StartCoroutine(shatterTransform());
             emptyTransform.transform.position = ability2Transform.transform.position;
     
             //Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
@@ -427,6 +431,15 @@ public class Abilities : MonoBehaviour
         projectileLaunch = false;
 
     }
+    IEnumerator shatterTransform()
+    {
+        yield return new WaitUntil(() => shatterLaunch == true);
+
+        emptyProjectileTransform.transform.position = ability2Transform.transform.position;
+        emptyProjectileTransform.transform.rotation = shatterCanvas.transform.rotation;
+        shatterLaunch = false;
+
+    }
     /*IEnumerator projectileTransform()
     {
         
@@ -483,7 +496,7 @@ public class Abilities : MonoBehaviour
     }
     public void castShatter()
     {
-        Instantiate(shatterObject, emptyTransform.transform.position, emptyTransform.transform.rotation);
+        Instantiate(shatterObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
         isCooldown2 = true;
         abilityImage2.fillAmount = 1;
     }

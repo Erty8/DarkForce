@@ -1090,3 +1090,444 @@ Received Import Request.
 Start importing Assets/Scripts/Abilities.cs using Guid(0cf4b9da11f47c14c81b9b77f31feba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e8dc2a5023ff4931a2cd6dc18cb411') in 0.005493 seconds
   Import took 0.008674 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 628.949749 seconds.
+  path: Assets/Models/Elia Character/elia2.fbx
+  artifactKey: Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia2.fbx using Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db26e3e426a4d400a303eeca89f5dc1a') in 0.657774 seconds
+  Import took 0.663160 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001635 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 111.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2193.
+Total: 2.629900 ms (FindLiveObjects: 0.273500 ms CreateObjectMapping: 0.078600 ms MarkObjects: 1.974300 ms  DeleteObjects: 0.302100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.497797 seconds.
+  path: Assets/Scripts/AnimationEvents.cs
+  artifactKey: Guid(346dbbfb56ddfda47bf1831f8f4c2898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AnimationEvents.cs using Guid(346dbbfb56ddfda47bf1831f8f4c2898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '677a5450223a89e171dfefb446753aaa') in 0.009074 seconds
+  Import took 0.012682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.474995 seconds.
+  path: Assets/Models/Elia Character/elia2.fbx
+  artifactKey: Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia2.fbx using Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d64b0307700b01f3c147cf374ad29ed') in 0.511352 seconds
+  Import took 0.522939 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001145 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.737 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2197.
+Total: 2.998300 ms (FindLiveObjects: 0.775500 ms CreateObjectMapping: 0.111700 ms MarkObjects: 1.734400 ms  DeleteObjects: 0.374000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001190 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.769 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2200.
+Total: 2.790500 ms (FindLiveObjects: 0.329000 ms CreateObjectMapping: 0.043800 ms MarkObjects: 1.974700 ms  DeleteObjects: 0.440200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001173 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.768 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2203.
+Total: 2.703400 ms (FindLiveObjects: 0.510900 ms CreateObjectMapping: 0.095300 ms MarkObjects: 1.697200 ms  DeleteObjects: 0.397600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001113 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.740 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2206.
+Total: 2.440300 ms (FindLiveObjects: 0.284300 ms CreateObjectMapping: 0.050600 ms MarkObjects: 1.717600 ms  DeleteObjects: 0.386000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 822.951283 seconds.
+  path: Assets/Models/Elia Character/elia2.fbx
+  artifactKey: Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia2.fbx using Guid(a9345305ea327604cb4a9d2d6e9c7728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67ae8f66b530539aa18af09e69d605b7') in 0.464993 seconds
+  Import took 0.469658 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001129 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.744 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2210.
+Total: 2.794200 ms (FindLiveObjects: 0.385900 ms CreateObjectMapping: 0.086500 ms MarkObjects: 1.905900 ms  DeleteObjects: 0.414300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.567480 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '449c7c7cea19ea479bbdc88a6122d8cb') in 0.043845 seconds
+  Import took 0.048540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.135373 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53a76f167e6b7638806501ba03ec4f0') in 0.006105 seconds
+  Import took 0.010289 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001417 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.758 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2213.
+Total: 3.009100 ms (FindLiveObjects: 0.372300 ms CreateObjectMapping: 0.100100 ms MarkObjects: 2.134900 ms  DeleteObjects: 0.398700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.977113 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb9e21a703a2ba5d19388489c6bc866') in 0.031268 seconds
+  Import took 0.035042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027182 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb9e21a703a2ba5d19388489c6bc866') in 0.008217 seconds
+  Import took 0.012089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.164075 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a53d4f2fb116a814a523ae6a77354171') in 0.006870 seconds
+  Import took 0.010769 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001097 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.765 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2216.
+Total: 2.994700 ms (FindLiveObjects: 0.326700 ms CreateObjectMapping: 0.104700 ms MarkObjects: 2.187100 ms  DeleteObjects: 0.375200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.384501 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a63644598a52649b9b09164971e3226') in 0.030915 seconds
+  Import took 0.034668 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001146 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.764 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.8 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2219.
+Total: 2.669500 ms (FindLiveObjects: 0.345400 ms CreateObjectMapping: 0.080800 ms MarkObjects: 1.850100 ms  DeleteObjects: 0.386100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.300681 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2ddb1a0122b5ad0ff78049dd9ef13f') in 0.029672 seconds
+  Import took 0.034180 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001185 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.751 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.8 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2222.
+Total: 2.475400 ms (FindLiveObjects: 0.282500 ms CreateObjectMapping: 0.081500 ms MarkObjects: 1.728900 ms  DeleteObjects: 0.381000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.342130 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015a28f60c552b08818ed1c67fe765ec') in 0.031833 seconds
+  Import took 0.041634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.392223 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40add649f68fa8433287f1d67a0c157') in 0.007351 seconds
+  Import took 0.011229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.824461 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e7aa0a8399425014087a9427e76a6ed') in 0.007813 seconds
+  Import took 0.011935 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002982 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.742 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.8 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2225.
+Total: 3.133600 ms (FindLiveObjects: 0.478400 ms CreateObjectMapping: 0.120600 ms MarkObjects: 2.146500 ms  DeleteObjects: 0.386000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003882 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.767 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.8 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 2.905800 ms (FindLiveObjects: 0.536500 ms CreateObjectMapping: 0.062700 ms MarkObjects: 1.874200 ms  DeleteObjects: 0.430600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 410.156108 seconds.
+  path: Assets/Scenes/Baran_Profiles
+  artifactKey: Guid(0f7b4163718c697449ebaa0ead99a000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran_Profiles using Guid(0f7b4163718c697449ebaa0ead99a000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4aec00a35bff9599e1d97587cafaec') in 0.010174 seconds
+  Import took 0.014027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002860 seconds.
+  path: Assets/Scenes/Baran_Profiles
+  artifactKey: Guid(0f7b4163718c697449ebaa0ead99a000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran_Profiles using Guid(0f7b4163718c697449ebaa0ead99a000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4aec00a35bff9599e1d97587cafaec') in 0.002767 seconds
+  Import took 0.005638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.864078 seconds.
+  path: Assets/Scenes/Baran2
+  artifactKey: Guid(2caea3abb21d83042826c61a46ec876d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran2 using Guid(2caea3abb21d83042826c61a46ec876d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c445af8791cc78b17898b484e7622568') in 0.007572 seconds
+  Import took 0.010697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.517581 seconds.
+  path: Assets/Scenes/Baran1.unity
+  artifactKey: Guid(0d60297dc37127445bd93cba826ca774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran1.unity using Guid(0d60297dc37127445bd93cba826ca774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a142bf3496d0e4b617230ad2de9fa52') in 0.015755 seconds
+  Import took 0.018549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.383746 seconds.
+  path: Assets/Scenes/Ertugrul 3.unity
+  artifactKey: Guid(f7a79529eb4074d4790f3f21271c5ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ertugrul 3.unity using Guid(f7a79529eb4074d4790f3f21271c5ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f92dee4df51955623c2228f6df07d4bc') in 0.007256 seconds
+  Import took 0.010585 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
