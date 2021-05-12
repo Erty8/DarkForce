@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'tr' Physical Memory: 16315 MB
+OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'tr' Physical Memory: 7549 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\Unity\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,215 +15,199 @@ C:/Users/ertug/Documents/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54028
+49857
 Successfully changed project path to: C:/Users/ertug/Documents/GitHub/DarkForce
 C:/Users/ertug/Documents/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 42.60 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/ertug/Documents/GitHub/DarkForce/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
     Vendor:   
-    VRAM:     8171 MB
-    Driver:   27.20.15003.1004
+    VRAM:     3962 MB
+    Driver:   27.21.14.6611
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56248
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56088
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002876 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001773 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.00 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 37.05 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.397 seconds
+- Completed reload, in  0.984 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001600 seconds.
+Registered in 0.001141 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.090 seconds
+- Completed reload, in  0.823 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1649 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 170.9 MB.
-System memory in use after: 170.7 MB.
+System memory in use before: 97.8 MB.
+System memory in use after: 97.5 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2117.
-Total: 2.464300 ms (FindLiveObjects: 0.227800 ms CreateObjectMapping: 0.044400 ms MarkObjects: 1.768700 ms  DeleteObjects: 0.422200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Models/FantasyMonster/Skeleton/Texture
-  artifactKey: Guid(d2113431c06aebd4d866077c8bef0521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Texture using Guid(d2113431c06aebd4d866077c8bef0521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b078c7c3f06e6806aa450c44f61a69f7') in 0.011255 seconds
-  Import took 0.014368 seconds .
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2107.
+Total: 2.819700 ms (FindLiveObjects: 0.287000 ms CreateObjectMapping: 0.092100 ms MarkObjects: 2.136300 ms  DeleteObjects: 0.302400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Models
-  artifactKey: Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(f1e6a7217c669d64594e8bb0ee45a341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3306e2ed812d5152c29f9484ff23336') in 0.010278 seconds
-  Import took 0.013390 seconds .
+  path: Assets/Scenes/Baran2.unity
+  artifactKey: Guid(33d416b2047e5864a960612b109d4dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran2.unity using Guid(33d416b2047e5864a960612b109d4dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479cadcf8e0e9ac732500be5863f3f9f') in 0.021262 seconds
+  Import took 0.025276 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Skeleton@Skin.FBX
-  artifactKey: Guid(5a35c5f0a89b9654d897ccd7c8f81bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Skeleton@Skin.FBX using Guid(5a35c5f0a89b9654d897ccd7c8f81bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c983b736eda208b1b5842d0f0a5bfe') in 0.313155 seconds
-  Import took 0.316672 seconds .
+  Time since last request: 5.589003 seconds.
+  path: Assets/Scenes/Baran2 1.unity
+  artifactKey: Guid(7b835ad1421f85948a92aba4d940c67c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran2 1.unity using Guid(7b835ad1421f85948a92aba4d940c67c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e50c34a82df93fc4274849c305055c9') in 0.006880 seconds
+  Import took 0.011554 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character
-  artifactKey: Guid(445d236cfbad7214db73a7840269d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character using Guid(445d236cfbad7214db73a7840269d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926065832f23f3faf723159eab0d9491') in 0.008550 seconds
-  Import took 0.012841 seconds .
+  Time since last request: 14.117525 seconds.
+  path: Assets/Scenes/Ertugrul 3.unity
+  artifactKey: Guid(f7a79529eb4074d4790f3f21271c5ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ertugrul 3.unity using Guid(f7a79529eb4074d4790f3f21271c5ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9c4524debf628ffdd771b2b0cc690f') in 0.008118 seconds
+  Import took 0.013414 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.149402 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Materials
-  artifactKey: Guid(2558d1ccebfaa894c80ee1331eb7335b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Materials using Guid(2558d1ccebfaa894c80ee1331eb7335b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0736f4db839573d2509d1728a75d32b') in 0.008932 seconds
-  Import took 0.012069 seconds .
+  Time since last request: 1.829208 seconds.
+  path: Assets/Scenes/Cemre.unity
+  artifactKey: Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cemre.unity using Guid(4e4297711d9ea2b47accadf99b99dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3b1321bd15b57994e9dc5c239afcc90') in 0.008272 seconds
+  Import took 0.017283 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.045775 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Character/Materials/skeleton_D.mat
-  artifactKey: Guid(ed14df0368fe53543907335c0e3902c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Character/Materials/skeleton_D.mat using Guid(ed14df0368fe53543907335c0e3902c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d08ac8624062c0f04adac596132a560') in 0.047003 seconds
-  Import took 0.050423 seconds .
+  Time since last request: 18.391429 seconds.
+  path: Assets/Scenes/Ertugrul 3.unity
+  artifactKey: Guid(7b835ad1421f85948a92aba4d940c67c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ertugrul 3.unity using Guid(7b835ad1421f85948a92aba4d940c67c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba06628c68268258cc1d4a6f33f8e11') in 0.003041 seconds
+  Import took 0.013617 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.367685 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani
-  artifactKey: Guid(eaa5b6b98ee00dc4ba9879e416310d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani using Guid(eaa5b6b98ee00dc4ba9879e416310d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a130ebee5b6ddc55f55de8f289d80d') in 0.010475 seconds
-  Import took 0.014121 seconds .
+  Time since last request: 71.690202 seconds.
+  path: Assets/Scenes/Baran
+  artifactKey: Guid(a23e00a88972fb244ab3d6d680074f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran using Guid(a23e00a88972fb244ab3d6d680074f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927257f7f6e53b78c56aafe36b470c06') in 0.009140 seconds
+  Import took 0.018736 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.044165 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Attack.FBX
-  artifactKey: Guid(dfc15c633f0d98141920018f79a042a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Attack.FBX using Guid(dfc15c633f0d98141920018f79a042a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbeef53ae02aa4acda7eecd18cbe279') in 0.050089 seconds
-  Import took 0.054941 seconds .
+  Time since last request: 0.001156 seconds.
+  path: Assets/Scenes/Baran
+  artifactKey: Guid(a23e00a88972fb244ab3d6d680074f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran using Guid(a23e00a88972fb244ab3d6d680074f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927257f7f6e53b78c56aafe36b470c06') in 0.002121 seconds
+  Import took 0.005182 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Skill.FBX
-  artifactKey: Guid(1e768688017709245aed3bb86453c364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Skill.FBX using Guid(1e768688017709245aed3bb86453c364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '512d0d2e578db7ec17e9d76c4f0b0f20') in 0.052394 seconds
-  Import took 0.055969 seconds .
+  Time since last request: 1.530822 seconds.
+  path: Assets/Music/Darkforce 1.mp3
+  artifactKey: Guid(1ac6c6c06d464ab4babed98141891bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/Darkforce 1.mp3 using Guid(1ac6c6c06d464ab4babed98141891bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45f3db1aaed35c89b1255993f913b81b') in 0.123131 seconds
+  Import took 0.126475 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Death.FBX
-  artifactKey: Guid(a749f4485b342b7469956010abf2ab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Death.FBX using Guid(a749f4485b342b7469956010abf2ab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51eab9c3dbbe2793696c7005f4277969') in 0.050245 seconds
-  Import took 0.054036 seconds .
+  Time since last request: 1.950412 seconds.
+  path: Assets/Particles/Projectile/PS_projectile.prefab
+  artifactKey: Guid(b1a836688bf996a4089a25a5e2744de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/Projectile/PS_projectile.prefab using Guid(b1a836688bf996a4089a25a5e2744de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61a203446e9d600a4d3cf1db2ea713be') in 0.027296 seconds
+  Import took 0.031744 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Run.FBX
-  artifactKey: Guid(f57ee821486cd7b488adf1063a8dd207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Run.FBX using Guid(f57ee821486cd7b488adf1063a8dd207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62a36b3672d196c0773237669e0d799') in 0.048892 seconds
-  Import took 0.052778 seconds .
+  Time since last request: 18.687019 seconds.
+  path: Assets/Prefabs/AbilityCanvas.prefab
+  artifactKey: Guid(417589e6b81cfa947a9d9c5a15fd7d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AbilityCanvas.prefab using Guid(417589e6b81cfa947a9d9c5a15fd7d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae07d107bcfd1526873fccaebf520cf8') in 0.023067 seconds
+  Import took 0.026962 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Idle.FBX
-  artifactKey: Guid(a5ea117a2b123564a83a2dbd1c9ea4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Idle.FBX using Guid(a5ea117a2b123564a83a2dbd1c9ea4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422788a0de638e9fed9ef550ea759c46') in 0.048165 seconds
-  Import took 0.051717 seconds .
+  Time since last request: 0.000246 seconds.
+  path: Assets/Prefabs/Prototype Area Spell.prefab
+  artifactKey: Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Prototype Area Spell.prefab using Guid(5c4982fd2f0aef4409ddd75603d8e52d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451ab423b31f104ada083683100fce98') in 0.064871 seconds
+  Import took 0.069359 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Damage.FBX
-  artifactKey: Guid(81d4af5a5190e3d4d88c97161d881bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Damage.FBX using Guid(81d4af5a5190e3d4d88c97161d881bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5102b0fd14564794be11dad2e90a2b0') in 0.048261 seconds
-  Import took 0.051223 seconds .
+  Time since last request: 0.000209 seconds.
+  path: Assets/Prefabs/AbilityCanvas.prefab
+  artifactKey: Guid(417589e6b81cfa947a9d9c5a15fd7d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AbilityCanvas.prefab using Guid(417589e6b81cfa947a9d9c5a15fd7d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae07d107bcfd1526873fccaebf520cf8') in 0.006048 seconds
+  Import took 0.009210 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Knockback.FBX
-  artifactKey: Guid(6e0b4a05932877a4b89fb3fb32c3e72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Knockback.FBX using Guid(6e0b4a05932877a4b89fb3fb32c3e72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad1bf9f4bd57148dfee83e45b9f96434') in 0.048371 seconds
-  Import took 0.052082 seconds .
+  Time since last request: 109.746406 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a466f4b284340b5a597f6fe27658c7') in 0.010403 seconds
+  Import took 0.015245 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Walk.FBX
-  artifactKey: Guid(188f1042b5ff4644389fad5df1f98d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Walk.FBX using Guid(188f1042b5ff4644389fad5df1f98d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced571e7ee0dc88a674e598501c61cc9') in 0.050749 seconds
-  Import took 0.054158 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Stand.FBX
-  artifactKey: Guid(6f61bc53c41ba664fa527d3386ecfd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/FantasyMonster/Skeleton/Ani/Skeleton@Stand.FBX using Guid(6f61bc53c41ba664fa527d3386ecfd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08284f7ed0b2fad0dc8baf0f12b4f39') in 0.048222 seconds
-  Import took 0.051433 seconds .
+  Time since last request: 5.583562 seconds.
+  path: Assets/Particles/RockStun/PS_Stone 1.prefab
+  artifactKey: Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles/RockStun/PS_Stone 1.prefab using Guid(078242834ed79fc42bfc5a1bb97bcfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e9a99e6660b0b877b2bdbaab331b23f') in 0.007447 seconds
+  Import took 0.011217 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002000 seconds.
+Registered in 0.001131 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.036 seconds
+- Completed reload, in  0.752 seconds
 Platform modules already initialized, skipping
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1591 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 184.6 MB.
-System memory in use after: 184.4 MB.
+System memory in use before: 96.8 MB.
+System memory in use after: 96.6 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2166.
-Total: 2.484200 ms (FindLiveObjects: 0.281600 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.782900 ms  DeleteObjects: 0.375800 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2120.
+Total: 2.740000 ms (FindLiveObjects: 0.190100 ms CreateObjectMapping: 0.039900 ms MarkObjects: 2.226300 ms  DeleteObjects: 0.281500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

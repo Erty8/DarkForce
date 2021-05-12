@@ -60,6 +60,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability3;
     public GameObject iceShield;
     IceShield shieldScript;
+    public float shieldDuration = 5f;
 
     [Header("Ability 4")]
     public Image abilityImage4;
@@ -416,7 +417,7 @@ public class Abilities : MonoBehaviour
     IEnumerator castIceShield()
     {
         iceShield.gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(shieldDuration);
         iceShield.gameObject.SetActive(false);
 
     }

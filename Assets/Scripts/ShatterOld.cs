@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Shatter : MonoBehaviour
+public class ShatterOld : MonoBehaviour
 {
     public float dmgPerSec = 3f;
     public float slowedSpeed = 2f;
@@ -17,7 +17,8 @@ public class Shatter : MonoBehaviour
     public static List<GameObject> enemies = new List<GameObject>();
     public static List<GameObject> damagedEnemies = new List<GameObject>();
     public static List<GameObject> objects = new List<GameObject>();
-    
+    //public static List<float> speeds = new List<float>();
+    Dictionary<GameObject,float> speeds = new Dictionary<GameObject,float>();
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,16 @@ public class Shatter : MonoBehaviour
             enemies.Add(col.gameObject);
             //Debug.Log(enemies.Count);
         }
-       
+        if (col.gameObject.GetComponent<NavMeshAgent>() != null )
+        {
+            if (speeds.ContainsKey(col.gameObject) == false)
+            {
+                speeds.Add(col.gameObject, col.gameObject.GetComponent<NavMeshAgent>().speed);
+            }
+            
+            //speeds.Insert(speedIndex, col.gameObject.GetComponent<NavMeshAgent>().speed);
+            col.gameObject.GetComponent<NavMeshAgent>().speed = col.gameObject.GetComponent<NavMeshAgent>().speed/slowedSpeed;
+        }
         
 
     }
@@ -64,7 +74,16 @@ public class Shatter : MonoBehaviour
         {
             enemies.Remove(col.gameObject);
         }
-       
+        if (col.gameObject.GetComponent<NavMeshAgent>() != null)
+        {
+            if (speeds.ContainsKey(col.gameObject))
+            {
+                
+
+                col.gameObject.GetComponent<NavMeshAgent>().speed = speeds[col.gameObject];
+            }
+            
+        }
        
 
     }
@@ -75,7 +94,6 @@ public class Shatter : MonoBehaviour
             if (!damagedEnemies.Contains(gameObject)) 
             {
                 gameObject.GetComponent<EnemyCombatScript>().takeDamage(shatterDamage);
-                gameObject.GetComponentInChildren<Animator>().SetBool("takeHit", true);
                 damagedEnemies.Add(gameObject);
             }
             

@@ -10,6 +10,9 @@ public class PlayerCombat : MonoBehaviour
     public Slider healthBarSlider;
     public float health = 100f;
     public Animator anim;
+    public bool hasShield = false ;
+    public float shieldReduce = 2;
+    [SerializeField] GameObject iceShield;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         healthBarSlider.value = health;
         healthBarSlider2D.value = health;
 
@@ -41,8 +45,14 @@ public class PlayerCombat : MonoBehaviour
     }
     public void takeDamage(float x)
     {
-        health -= x;
-        //Debug.Log(health);
+        if (hasShield)
+        {
+            health -= (x / shieldReduce);
+        }
+        else
+        {
+            health -= x;           
+        }
         if (health <=0 )
         {
             //anim.SetBool("death", true);
@@ -75,5 +85,15 @@ public class PlayerCombat : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    
+    void shieldBool()
+    {
+        if (iceShield.activeInHierarchy == true)
+        {
+            hasShield = true;
+        }
+        else
+        {
+            hasShield = false;
+        }
+    }
 }

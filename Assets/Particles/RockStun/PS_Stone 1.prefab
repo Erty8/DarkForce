@@ -14749,6 +14749,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4107232857102934869}
+  - component: {fileID: 4981734943582854130}
+  - component: {fileID: 3172276928285984488}
+  - component: {fileID: 4068955575490816412}
   m_Layer: 0
   m_Name: PS_Stone 1
   m_TagString: Untagged
@@ -14764,13 +14767,59 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4107232857102934866}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.00000095367, y: -8.8175, z: 23.925}
-  m_LocalScale: {x: 0.047227226, y: 0.08737563, z: 0.07915353}
+  m_LocalPosition: {x: 0.0000033379, y: -8.8175, z: 23.677}
+  m_LocalScale: {x: 0.14506646, y: 0.08737563, z: 0.07915353}
   m_Children:
   - {fileID: 4107232856871150174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!136 &4981734943582854130
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107232857102934866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 88.203125
+  m_Height: 761.83575
+  m_Direction: 2
+  m_Center: {x: 15.144635, y: -58.38861, z: -97.68428}
+--- !u!114 &3172276928285984488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107232857102934866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d00c7ea014d00408fca0011a2d93ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgPerSec: 3
+  slowedSpeed: 2
+  hardenTime: 1.5
+  damageCd: 0
+  shatterDamage: 50
+--- !u!114 &4068955575490816412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107232857102934866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc33a639d3821489baf13546128c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  destroySecond: 5
+  stopSecond: 0
 --- !u!1 &4107232857254232901
 GameObject:
   m_ObjectHideFlags: 0
