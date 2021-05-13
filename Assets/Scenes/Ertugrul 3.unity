@@ -604,6 +604,14 @@ PrefabInstance:
       propertyPath: emptyProjectileTransform
       value: 
       objectReference: {fileID: 1560296260}
+    - target: {fileID: 1929814045, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.30942
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929814045, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.879
+      objectReference: {fileID: 0}
     - target: {fileID: 1929814046, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_Enabled
       value: 0

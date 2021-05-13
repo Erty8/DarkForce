@@ -20,6 +20,7 @@ public class Attacking : MonoBehaviour
     public float attackSpeed = 1f;
     public float rotateSpeedForAttack;
     bool damageCd = false;
+    bool enemyInRange = false;
     public bool attackOnSight;
     GameObject closestEnemy;
 
@@ -72,7 +73,7 @@ public class Attacking : MonoBehaviour
                 (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) > attackRange)
             {
                 //targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
-
+                enemyInRange = false;
                 moveScript.agent.SetDestination(targetedEnemy.transform.position);
                 moveScript.agent.stoppingDistance = attackRange;
 
@@ -85,9 +86,10 @@ public class Attacking : MonoBehaviour
             if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) <= attackRange)
             {
-
+                
                 if (heroAttackType == HeroAttackType.Ranged)
                 {
+                    enemyInRange = true;
                     Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
                     float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
@@ -95,15 +97,10 @@ public class Attacking : MonoBehaviour
                     transform.eulerAngles = new Vector3(0, rotationY, 0);
                     moveScript.agent.SetDestination(transform.position);
 
-                    if (damageCd == false)
-                    {
-
-                        //moveScript.agent.stoppingDistance = 0;
-
-                        //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToLookAt, rotateSpeedForAttack * Time.deltaTime);
-                        //Debug.Log("Hero basic attack");
+                    
+                        
                         StartCoroutine(damageEnemies());
-                    }
+                    
                 }
             }
             else
@@ -196,8 +193,17 @@ public class Attacking : MonoBehaviour
         
         
     }
-    
     IEnumerator damageEnemies()
+    {
+        anim.SetBool("Attack", true);
+        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+        
+        yield return new WaitUntil(()=>!enemyInRange);
+        
+        anim.SetBool("Attack", false);
+
+    }
+    /*IEnumerator damageEnemies()
     {
         anim.SetBool("Attack", true);
         //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
@@ -208,7 +214,7 @@ public class Attacking : MonoBehaviour
         damageCd = false;
         anim.SetBool("Attack", false);
 
-    }
+    }*/
     public void basicAttack()
     {
         
