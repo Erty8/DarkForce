@@ -589,6 +589,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4107232857102934866, guid: 078242834ed79fc42bfc5a1bb97bcfa0, type: 3}
     - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: teleportImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b581be6bcf7ab44f8bcd0abd50e0652, type: 3}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: ultimateImage
+      value: 
+      objectReference: {fileID: 2017830176}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: emptyTransform
       value: 
       objectReference: {fileID: 76874607}
@@ -596,6 +604,14 @@ PrefabInstance:
       propertyPath: fireballObject
       value: 
       objectReference: {fileID: 1729651801896249426, guid: 5d63e822ba4951b4faab4d06c42603ea, type: 3}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: teleportSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b581be6bcf7ab44f8bcd0abd50e0652, type: 3}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: ultimateSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de226bd492b80a041899eee9937a2c37, type: 3}
     - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: ability2Transform
       value: 
@@ -2977,7 +2993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caccc09442e90904d94b08c1ae00b653, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c041a4276078564d94a19dbbda2f0f8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3062,7 +3078,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caccc09442e90904d94b08c1ae00b653, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c041a4276078564d94a19dbbda2f0f8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

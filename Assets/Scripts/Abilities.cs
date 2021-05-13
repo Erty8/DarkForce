@@ -62,8 +62,11 @@ public class Abilities : MonoBehaviour
     IceShield shieldScript;
     public float shieldDuration = 5f;
 
-    [Header("Ability 4")]
+    [Header("Ability 4")] 
     public Image abilityImage4;
+    [SerializeField] Image ultimateImage;
+    [SerializeField] Sprite teleportSprite;
+    [SerializeField] Sprite ultimateSprite;
     public Image ultimateSkillshot;
     public float cooldown4 = 3f;
     bool isCooldown4 = false;
@@ -169,7 +172,7 @@ public class Abilities : MonoBehaviour
             {
                 
                 ultimateSkillshot.GetComponent<Image>().enabled = false;
-                
+                ultimateImage.sprite = ultimateSprite;
                 transform.position = 
                     new Vector3(GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.x,transform.position.y, GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.z);
                 //moveScript.agent.velocity = new Vector3(0, 0, 0);
@@ -199,6 +202,7 @@ public class Abilities : MonoBehaviour
             if (!isCooldown4)
             {
                 ultRefresh = true;
+                ultimateImage.sprite = ultimateSprite;
             }
         }
         if (ultRefresh&&ultimateIndex<3)
@@ -349,7 +353,7 @@ public class Abilities : MonoBehaviour
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
 
-            abilityImage4.fillAmount = 1;
+            //abilityImage4.fillAmount = 1;
         }
         if (ultimateSkillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
@@ -505,10 +509,10 @@ public class Abilities : MonoBehaviour
             {
                 ultimateCD();
             }
-            
+            ultimateImage.sprite = teleportSprite;
             ultimateIndex++;
             Debug.Log(ultimateIndex);
-            ultimateCountdown += cooldownAfterSeconds;
+            //ultimateCountdown += cooldownAfterSeconds;
             Instantiate(ultimateObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
         }
         
