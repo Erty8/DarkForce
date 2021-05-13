@@ -1733,6 +1733,14 @@ PrefabInstance:
       propertyPath: _patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 841028334}
+    - target: {fileID: 1942825391, guid: c1335652ee8011b42bc6520e8e234ac4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942825391, guid: c1335652ee8011b42bc6520e8e234ac4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.221
+      objectReference: {fileID: 0}
     - target: {fileID: 1283475651175476433, guid: c1335652ee8011b42bc6520e8e234ac4, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (1)

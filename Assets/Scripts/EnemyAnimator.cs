@@ -34,7 +34,8 @@ public class EnemyAnimator : MonoBehaviour
     }
     void cannotWalk()
     {
-        aiScript.canWalk();
+        aiScript.cannotWalk();
+        
     }
     void canRotate()
     {

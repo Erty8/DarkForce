@@ -66,7 +66,7 @@ public class Abilities : MonoBehaviour
     public Image abilityImage4;
     public Image ultimateSkillshot;
     public float cooldown4 = 3f;
-    bool isCooldown4 = true;
+    bool isCooldown4 = false;
     public KeyCode ability4;
     public GameObject ultimateObject;
     public Transform ultimateTransform;
@@ -76,6 +76,8 @@ public class Abilities : MonoBehaviour
     bool ultimatebool;
     bool teleport = false;
     bool ultRefresh;
+    bool ultimateActive;
+    bool ultimateDestroyed;
     public float cooldownAfterSeconds = 10f;
     public float waitbetweenUltimates = 1f;
     float ultimateCountdown ;
@@ -98,7 +100,7 @@ public class Abilities : MonoBehaviour
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
-        abilityImage4.fillAmount = 1;
+        abilityImage4.fillAmount = 0;
         skillshot.GetComponent<Image>().enabled = false;
         ability2Image.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
@@ -160,6 +162,7 @@ public class Abilities : MonoBehaviour
         if (GameObject.Find(ultimateObject.name + "(Clone)") != null)
         {
             teleport = true;
+            ultimateActive = true;
             
             //Debug.Log("can teleport");
             if (Input.GetKey(ability4))
@@ -173,16 +176,31 @@ public class Abilities : MonoBehaviour
                 moveScript.agent.SetDestination(transform.position);
                 moveScript.agent.stoppingDistance = 0;
                 Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
+                ultimateDestroyed = true;
                 StartCoroutine(teleportEnd());
-                if (!isCooldown4)
-                {
-                    ultRefresh = true; 
-                }
-                               
-            }
-            
+                //ultimateActive = false;
+                                  
+            }            
         }
-        
+        else
+        {
+            if (ultimateIndex >= 1 && ultimateIndex < 3) 
+            {
+                ultimateDestroyed = true;
+                StartCoroutine(teleportEnd());
+            }
+            if (!isCooldown4)
+            {
+                //ultRefresh = true;
+            }
+        }
+        if (ultimateDestroyed)
+        {
+            if (!isCooldown4)
+            {
+                ultRefresh = true;
+            }
+        }
         if (ultRefresh&&ultimateIndex<3)
         {
             abilityImage4.fillAmount -= 1 / waitbetweenUltimates * Time.deltaTime;

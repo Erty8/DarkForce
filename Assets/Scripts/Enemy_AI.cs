@@ -194,6 +194,7 @@ public class Enemy_AI : MonoBehaviour
         else
         {
             anim.SetBool("continueAttack", true);
+            walkbool = false;
         }
         //yield return new WaitUntil(() => attackCooldown == true);
         
@@ -309,11 +310,13 @@ public class Enemy_AI : MonoBehaviour
     }
     public void canWalk()
     {
-        walkbool = true;        
+        walkbool = true;
+        Debug.Log("canmove");
     }
     public void cannotWalk()
     {
         walkbool = false;
+        Debug.Log("cant move ");
     }
     public void canRotate()
     {

@@ -109,7 +109,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.0025773195
         functionName: cannotWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -139,6 +139,13 @@ ModelImporter:
         messageOptions: 0
       - time: 1
         functionName: canWalk
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.084323816
+        functionName: cannotWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -273,7 +280,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9536083
+      - time: 0.86597943
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -401,14 +408,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.10999874
-        functionName: canWalk
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

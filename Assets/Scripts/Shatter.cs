@@ -14,9 +14,9 @@ public class Shatter : MonoBehaviour
     bool hardened = false;
     bool noDamage = false;
     public float shatterDamage = 50f;
-    public static List<GameObject> enemies = new List<GameObject>();
-    public static List<GameObject> damagedEnemies = new List<GameObject>();
-    public static List<GameObject> objects = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> damagedEnemies = new List<GameObject>();
+    public List<GameObject> objects = new List<GameObject>();
     
 
     // Start is called before the first frame update
