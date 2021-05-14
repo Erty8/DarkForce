@@ -9,13 +9,19 @@ public class IceShield : MonoBehaviour
     public bool damageCd = false;
     public float shieldDamage = 20f;
     public float slowedSpeed = 2f;
+    public float shieldDuration = 5f;
     public static List<GameObject> enemies = new List<GameObject>();
     Dictionary<GameObject, float> speeds = new Dictionary<GameObject, float>();
     // Start is called before the first frame update
     void Start()
     {
+        
         //enemies.Clear();
         //damageCd = false;
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(destroyShield());
     }
 
     // Update is called once per frame
@@ -79,6 +85,15 @@ public class IceShield : MonoBehaviour
         yield return new WaitForSeconds(dmgPerSec);
         damageCd = false;
         
+    }
+    IEnumerator destroyShield()
+    {
+        yield return new WaitForSeconds(shieldDuration);
+        foreach (GameObject gameObject in enemies)
+        {
+            gameObject.GetComponent<NavMeshAgent>().speed = speeds[gameObject];            
+        }        
+        gameObject.SetActive(false);
     }
 
 }

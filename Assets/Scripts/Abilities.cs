@@ -448,7 +448,7 @@ public class Abilities : MonoBehaviour
     {
         iceShield.gameObject.SetActive(true);
         yield return new WaitForSeconds(shieldDuration);
-        iceShield.gameObject.SetActive(false);
+        //iceShield.gameObject.SetActive(false);
 
     }
 
