@@ -44,20 +44,28 @@ public class InputTargeting : MonoBehaviour
                         selectedHero.GetComponent<Attacking>().oldtargetedEnemy = hit.collider.gameObject;
                     }
                 }
-                    
+                if (hit.collider.GetComponent<Item>() != null)
+                {
+                    selectedHero.GetComponent<Attacking>().itemToPick = hit.collider.gameObject;
+                                                                                 
+                }
+
             }
 
             else if(hit.collider.gameObject.GetComponent<Targetable>() == null)
             {
                 
                 
-                selectedHero.GetComponent<Attacking>().targetedEnemy = null;
-                
-                
-                
+                selectedHero.GetComponent<Attacking>().targetedEnemy = null;                                                         
+            }
+            if (hit.collider.gameObject.GetComponent<Item>() == null)
+            {
+
+
+                selectedHero.GetComponent<Attacking>().itemToPick = null;
             }
         }
-        if (attackMovebool &&Input.GetMouseButtonDown(0))
+        if (attackMovebool && Input.GetMouseButtonDown(0))
         {
             
                 Debug.Log("attack move target");

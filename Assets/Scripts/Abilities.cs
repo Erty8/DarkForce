@@ -87,7 +87,10 @@ public class Abilities : MonoBehaviour
     public float waitbetweenUltimates = 1f;
     float ultimateCountdown ;
     int ultimateIndex = 0;
-    
+
+    [Header("Inventory")]
+    private Inventory inventory;
+
 
 
 
@@ -96,6 +99,7 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventory = new Inventory();
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
         shieldScript = GetComponent<IceShield>();
@@ -160,7 +164,7 @@ public class Abilities : MonoBehaviour
     {
         if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy==false)
         {
-            IceShield.enemies.Clear();
+            //IceShield.enemies.Clear();
             shieldScript.damageCd = false;
             //Debug.Log(IceShield.enemies.Count);
         }

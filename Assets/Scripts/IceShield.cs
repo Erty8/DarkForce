@@ -10,7 +10,7 @@ public class IceShield : MonoBehaviour
     public float shieldDamage = 20f;
     public float slowedSpeed = 2f;
     public float shieldDuration = 5f;
-    public static List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
     Dictionary<GameObject, float> speeds = new Dictionary<GameObject, float>();
     // Start is called before the first frame update
     void Start()
@@ -92,7 +92,8 @@ public class IceShield : MonoBehaviour
         foreach (GameObject gameObject in enemies)
         {
             gameObject.GetComponent<NavMeshAgent>().speed = speeds[gameObject];            
-        }        
+        }
+        enemies.Clear();
         gameObject.SetActive(false);
     }
 

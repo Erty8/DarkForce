@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Attacking : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Attacking : MonoBehaviour
     [SerializeField] private Transform ProjectileTransform;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
+    public GameObject itemToPick;
     public Animator anim;
     public float attackRange;
     public float attackDamage;
@@ -23,19 +25,28 @@ public class Attacking : MonoBehaviour
     bool enemyInRange = false;
     public bool attackOnSight;
     GameObject closestEnemy;
+    
 
     private Movement moveScript;
 
     public bool basicAtkIdle = false;
     public bool isHeroAlive;
     public bool performMeleeAttack = true;
-     
+    private NavMeshAgent agent;
 
-    
+    [Header ("Inventory")]
+    private Inventory inventory;
+    public bool itemPickup;
+    private Image inventoryImage;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         moveScript = GetComponent<Movement>();
+        inventory = GetComponent<Inventory>();
+        agent = GetComponent<NavMeshAgent>();
     }
     void FixedUpdate()
     {
@@ -66,6 +77,15 @@ public class Attacking : MonoBehaviour
                 
             }
         }
+        if (itemToPick != null)
+        {
+            moveScript.agent.SetDestination(itemToPick.transform.position);
+            moveScript.agent.stoppingDistance = 0;
+            Quaternion rotationToLookAt = Quaternion.LookRotation(itemToPick.transform.position - transform.position);
+            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+            rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
+            transform.eulerAngles = new Vector3(0, rotationY, 0);
+        }
         if (targetedEnemy != null)
         {
             //distancetoEnemy = Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position);
@@ -95,10 +115,7 @@ public class Attacking : MonoBehaviour
                     float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
                 rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
                     transform.eulerAngles = new Vector3(0, rotationY, 0);
-                    moveScript.agent.SetDestination(transform.position);
-
-                    
-                        
+                    moveScript.agent.SetDestination(transform.position);                                          
                         StartCoroutine(damageEnemies());
                     
                 }
@@ -192,6 +209,29 @@ public class Attacking : MonoBehaviour
         rangeIndicator();
         
         
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("Item"))
+        {
+            if (itemToPick == col.gameObject) 
+            {
+                for (int i = 0; i < inventory.itemSlots.Length; i++)
+                {
+                    if (!inventory.isfull[i])
+                    {                      
+                        inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
+                        inventory.isfull[i] = true;
+                        if (col.gameObject.GetComponent<Item>().type == Item.itemType.movementSpeed)
+                        {
+                            agent.speed++;
+                        }
+                        Destroy(col.gameObject);
+                        break;
+                    }
+                }
+            }
+        }
     }
     IEnumerator damageEnemies()
     {
