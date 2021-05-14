@@ -77,10 +77,12 @@ public class Abilities : MonoBehaviour
     Vector3 ultimatePosition;
     public Canvas ultimateCanvas;
     bool ultimatebool;
-    bool teleport = false;
+    bool canteleport = false;
     bool ultRefresh;
     bool ultimateActive;
     bool ultimateDestroyed;
+    bool teleportDestroy = false;
+    bool selfDestroy = false;
     public float cooldownAfterSeconds = 10f;
     public float waitbetweenUltimates = 1f;
     float ultimateCountdown ;
@@ -164,45 +166,51 @@ public class Abilities : MonoBehaviour
         }
         if (GameObject.Find(ultimateObject.name + "(Clone)") != null)
         {
-            teleport = true;
+            canteleport = true;
             ultimateActive = true;
-            
+            ultimateImage.sprite = teleportSprite;
             //Debug.Log("can teleport");
-            if (Input.GetKey(ability4))
+            if (Input.GetKeyDown(ability4)&&!teleportDestroy)
             {
                 
                 ultimateSkillshot.GetComponent<Image>().enabled = false;
-                ultimateImage.sprite = ultimateSprite;
+                //ultimateImage.sprite = ultimateSprite;
+                Debug.Log("ultimate sprite");
                 transform.position = 
                     new Vector3(GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.x,transform.position.y, GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.z);
                 //moveScript.agent.velocity = new Vector3(0, 0, 0);
                 moveScript.agent.SetDestination(transform.position);
                 moveScript.agent.stoppingDistance = 0;
                 Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
+                teleportDestroy = true;
                 ultimateDestroyed = true;
                 StartCoroutine(teleportEnd());
+                
                 //ultimateActive = false;
-                                  
+                if (!isCooldown4)
+                {
+                    abilityImage4.fillAmount = 1;
+                    ultRefresh = true;
+                }
+
             }            
         }
         else
         {
+            ultimateImage.sprite = ultimateSprite;
             if (ultimateIndex >= 1 && ultimateIndex < 3) 
             {
                 ultimateDestroyed = true;
                 StartCoroutine(teleportEnd());
             }
-            if (!isCooldown4)
-            {
-                //ultRefresh = true;
-            }
+            
         }
-        if (ultimateDestroyed)
+        if (ultimateDestroyed&&!teleportDestroy)
         {
             if (!isCooldown4)
             {
-                ultRefresh = true;
-                ultimateImage.sprite = ultimateSprite;
+                //ultRefresh = true;
+                //ultimateImage.sprite = ultimateSprite;
             }
         }
         if (ultRefresh&&ultimateIndex<3)
@@ -345,7 +353,7 @@ public class Abilities : MonoBehaviour
     {
 
         // cooldown system
-        if (Input.GetKey(ability4) && isCooldown4 == false&& teleport ==false)
+        if (Input.GetKey(ability4) && isCooldown4 == false&& canteleport ==false)
         {
             ultimateSkillshot.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
@@ -483,8 +491,10 @@ public class Abilities : MonoBehaviour
     {
 
         yield return new WaitForSeconds(waitbetweenUltimates);
-        teleport = false;
+        canteleport = false;
+        teleportDestroy = false;
         ultRefresh = false;
+        
 
     }
     IEnumerator ultIndexreset()
@@ -509,7 +519,7 @@ public class Abilities : MonoBehaviour
             {
                 ultimateCD();
             }
-            ultimateImage.sprite = teleportSprite;
+            //ultimateImage.sprite = teleportSprite;
             ultimateIndex++;
             Debug.Log(ultimateIndex);
             //ultimateCountdown += cooldownAfterSeconds;
