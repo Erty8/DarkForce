@@ -9,22 +9,33 @@ public class PlayerCombat : MonoBehaviour
     public Slider healthBarSlider2D;
     public Slider healthBarSlider;
     public float health = 100f;
+    public float maxhealth;
     public Animator anim;
     public bool hasShield = false ;
     public float shieldReduce = 2;
+    public float regenRate = 1;
+    public float healthPercentage;
     [SerializeField] GameObject iceShield;
     // Start is called before the first frame update
     void Start()
     {
-        healthBarSlider.maxValue = health;
-        healthBarSlider2D.maxValue = health;
+        maxhealth = health;
+        healthBarSlider.maxValue = maxhealth;
+        healthBarSlider2D.maxValue = maxhealth;
+        
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (health < maxhealth) {
+            health += regenRate * Time.deltaTime;
+        }
         
+        healthBarSlider.maxValue = maxhealth;
+        healthBarSlider2D.maxValue = maxhealth;
         healthBarSlider.value = health;
         healthBarSlider2D.value = health;
 
@@ -35,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
             //Destroy(gameObject);
         }
-
+        healthPercentage = health / maxhealth;
     }
        
     private void LateUpdate()

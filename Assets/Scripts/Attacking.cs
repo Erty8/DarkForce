@@ -222,10 +222,11 @@ public class Attacking : MonoBehaviour
                     {                      
                         inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
                         inventory.isfull[i] = true;
-                        if (col.gameObject.GetComponent<Item>().type == Item.itemType.movementSpeed)
+                        col.GetComponent<Item>().itemEffect(gameObject);
+                        /*if (col.gameObject.GetComponent<Item>().type == Item.itemType.movementSpeed)
                         {
-                            agent.speed++;
-                        }
+                            agent.speed += col.gameObject.GetComponent<Item>().itemLevel;
+                        }*/
                         Destroy(col.gameObject);
                         break;
                     }
