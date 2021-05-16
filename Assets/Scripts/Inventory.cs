@@ -7,13 +7,17 @@ public class Inventory : MonoBehaviour
     public bool[] isfull;
     public GameObject[] itemSlots;
     public GameObject[] potionSlots;
-    private List<Item> itemList;
+    public List<GameObject> itemList;
     public Inventory()
     {
-        itemList = new List<Item>();
+        itemList = new List<GameObject>();
     }
-    public void addItem(Item item)
+    public void addItem( int index, GameObject gameObject)
     {
-        itemList.Add(item);
+        itemList.Insert(index,gameObject);
+    }
+    public void dropItem(int index)
+    {
+        itemList.RemoveAt(index);
     }
 }

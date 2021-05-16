@@ -11,6 +11,8 @@ public class Abilities : MonoBehaviour
     //RaycastHit hit;
     [SerializeField] private LayerMask layermask;
     Movement moveScript;
+    public Attacking attacking;
+    public PlayerCombat playerCombat;
     public Animator anim;
     //public NavMeshAgent agent;
     float oldSpeed;
@@ -90,6 +92,9 @@ public class Abilities : MonoBehaviour
 
     [Header("Inventory")]
     private Inventory inventory;
+    public int potionCount;
+    public KeyCode potionKey;
+    public float potionDuration = 5f;
 
 
 
@@ -104,6 +109,7 @@ public class Abilities : MonoBehaviour
         moveScript = GetComponent<Movement>();
         shieldScript = GetComponent<IceShield>();
         shatterScript = GetComponent<Shatter>();
+        playerCombat = GetComponent<PlayerCombat>();
         oldSpeed = moveScript.agent.speed;
 
         abilityImage1.fillAmount = 0;
@@ -162,6 +168,7 @@ public class Abilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        potion();
         if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy==false)
         {
             //IceShield.enemies.Clear();
@@ -553,6 +560,25 @@ public class Abilities : MonoBehaviour
             isCooldown4 = true;
             abilityImage4.fillAmount = 1;
         }
+    }
+    public void potion()
+    {
+        if (Input.GetKeyDown(potionKey)&& potionCount>0)
+        {
+            StartCoroutine(usePotion());
+            potionCount--;
+            foreach (GameObject item in attacking.inventory.itemList )
+            {
+                Debug.Log(attacking.inventory.itemList.GetType());
+            }
+            
+        }
+    }
+    public IEnumerator usePotion()
+    {
+        playerCombat.potion = false;
+        yield return new WaitForSeconds(potionDuration);
+        playerCombat.potion = true;
     }
    
 

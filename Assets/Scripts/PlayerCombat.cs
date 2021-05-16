@@ -14,7 +14,10 @@ public class PlayerCombat : MonoBehaviour
     public bool hasShield = false ;
     public float shieldReduce = 2;
     public float regenRate = 1;
+    public float potionRegenRate = 10f;
     public float healthPercentage;
+    public bool potion = false;
+   
     [SerializeField] GameObject iceShield;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,15 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         if (health < maxhealth) {
-            health += regenRate * Time.deltaTime;
+            if (potion)
+            {
+                health += potionRegenRate * Time.deltaTime;
+            }
+            else
+            {
+                health += regenRate * Time.deltaTime;
+            }
+            
         }
         
         healthBarSlider.maxValue = maxhealth;

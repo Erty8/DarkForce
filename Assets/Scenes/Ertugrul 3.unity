@@ -565,6 +565,14 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: potionKey
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: potionCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: ability2Image
       value: 
       objectReference: {fileID: 1186881723}
@@ -1587,10 +1595,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b369d9c4a3a5349900201572a33626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 5
   amount: 1
   itemLevel: 1
-  random: 1
+  random: 0
   attackDamageSprite: {fileID: 21300000, guid: d31aa8412a4d374458c912d11686642a, type: 3}
   attackSpeedSprite: {fileID: 21300000, guid: 1c467e4d8975db74d93c99737e38c07f, type: 3}
   movementSpeedSprite: {fileID: 21300000, guid: ef630bd2e9341ec4e955ee2eedcf33d1, type: 3}
@@ -1847,6 +1855,7 @@ MonoBehaviour:
   isfull: 0000
   itemSlots: []
   potionSlots: []
+  itemList: []
 --- !u!1 &1507853273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,6 +3054,7 @@ MonoBehaviour:
   - {fileID: 1839602259}
   - {fileID: 1762153208}
   potionSlots: []
+  itemList: []
 --- !u!4 &2063285412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4644078700541783629, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}

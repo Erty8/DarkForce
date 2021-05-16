@@ -54,6 +54,7 @@ public class Item : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = attackSpeedSprite;
                 break;
             case (itemType.healthPotion):
+                gameObject.GetComponent<Image>().sprite = healthPotionSprite;
                 break;
             case (itemType.movementSpeed):
                 gameObject.GetComponent<Image>().sprite = movementSpeedSprite;
@@ -80,6 +81,7 @@ public class Item : MonoBehaviour
                 player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel/2f));
                 break;
             case (itemType.healthPotion):
+                player.GetComponent<Abilities>().potionCount += itemLevel;
                 break;
             case (itemType.movementSpeed):
                 player.GetComponent<NavMeshAgent>().speed += itemLevel;

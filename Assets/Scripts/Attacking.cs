@@ -25,8 +25,8 @@ public class Attacking : MonoBehaviour
     bool enemyInRange = false;
     public bool attackOnSight;
     GameObject closestEnemy;
-    
 
+    public Abilities abilityScript;
     private Movement moveScript;
 
     public bool basicAtkIdle = false;
@@ -35,7 +35,7 @@ public class Attacking : MonoBehaviour
     private NavMeshAgent agent;
 
     [Header ("Inventory")]
-    private Inventory inventory;
+    public Inventory inventory;
     public bool itemPickup;
     private Image inventoryImage;
 
@@ -47,6 +47,7 @@ public class Attacking : MonoBehaviour
         moveScript = GetComponent<Movement>();
         inventory = GetComponent<Inventory>();
         agent = GetComponent<NavMeshAgent>();
+        abilityScript = GetComponent<Abilities>();
     }
     void FixedUpdate()
     {
@@ -222,6 +223,11 @@ public class Attacking : MonoBehaviour
                     {                      
                         inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
                         inventory.isfull[i] = true;
+                        inventory.addItem(i,itemToPick);
+                        /*if(itemToPick.GetComponent<Item>().type == Item.itemType.healthPotion)
+                        {
+                            abilityScript.potionCount++;
+                        }*/
                         col.GetComponent<Item>().itemEffect(gameObject);
                         /*if (col.gameObject.GetComponent<Item>().type == Item.itemType.movementSpeed)
                         {
