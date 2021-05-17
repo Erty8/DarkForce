@@ -25,6 +25,10 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
+            if (Input.GetKeyDown((i+1).ToString()))
+            {
+                useActiveSkill(i);
+            }
            if (!isfull[i])
             {
                 //itemSlots[i].GetComponent<Image>().sprite = null;
@@ -68,6 +72,13 @@ public class Inventory : MonoBehaviour
         droppedItem.GetComponent<Item>().type = itemList[index].GetComponent<Item>().type;
         Destroy(itemList[index]);
         itemList.RemoveAt(index);        
+    }
+    public void useActiveSkill(int i)
+    {
+        if (itemList[i].GetComponent<Item>().type == Item.itemType.active)
+        {
+            Debug.Log("used active item");
+        }
     }
     public void usePotion()
     {

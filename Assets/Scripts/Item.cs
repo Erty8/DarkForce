@@ -18,6 +18,7 @@ public class Item : MonoBehaviour
         manaPotion
     }
     public itemType type;
+   
     public int amount = 1 ;
     public int itemLevel = 1;
     public bool random = true;
