@@ -34,11 +34,15 @@ public class Item : MonoBehaviour
         if (random)
         {
             type = (itemType)Random.Range(0, 7);
-            itemLevel = Random.Range(1, 4);
+            
             Debug.Log("item level= " + itemLevel);           
         }
-        sprites();
+        
 
+    }   
+    private void Update()
+    {
+        sprites();
     }
     void sprites()
     {

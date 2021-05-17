@@ -10,6 +10,17 @@ public class Inventory : MonoBehaviour
     public GameObject[] itemSlots;
     public GameObject[] potionSlots;
     public List<GameObject> itemList;
+    GameObject droppedItem;
+    void Start()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(test);
+            //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener;
+            itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(0); });
+            Debug.Log("slot buttons");
+        }
+    }
     private void Update()
     {
         for (int i = 0; i < itemSlots.Length; i++)
@@ -50,7 +61,12 @@ public class Inventory : MonoBehaviour
     }
     public void dropItem(int index)
     {
-        Instantiate(itemList[index]);
+        Debug.Log("item dropped");
+        itemList[index].SetActive(true);
+        droppedItem = Instantiate(itemList[index], transform.position, transform.rotation);
+        droppedItem.GetComponent<Item>().random = false;
+        droppedItem.GetComponent<Item>().type = itemList[index].GetComponent<Item>().type;
+        Destroy(itemList[index]);
         itemList.RemoveAt(index);        
     }
     public void usePotion()
@@ -67,4 +83,5 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    void test() { Debug.Log("test"); }
 }
