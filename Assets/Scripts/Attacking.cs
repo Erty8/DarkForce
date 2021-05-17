@@ -222,18 +222,12 @@ public class Attacking : MonoBehaviour
                     if (!inventory.isfull[i])
                     {                      
                         inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
-                        inventory.isfull[i] = true;
+                        //inventory.isfull[i] = true;
                         inventory.addItem(i,itemToPick);
-                        /*if(itemToPick.GetComponent<Item>().type == Item.itemType.healthPotion)
-                        {
-                            abilityScript.potionCount++;
-                        }*/
+                       
                         col.GetComponent<Item>().itemEffect(gameObject);
-                        /*if (col.gameObject.GetComponent<Item>().type == Item.itemType.movementSpeed)
-                        {
-                            agent.speed += col.gameObject.GetComponent<Item>().itemLevel;
-                        }*/
-                        Destroy(col.gameObject);
+                        
+                        //Destroy(col.gameObject);
                         break;
                     }
                 }

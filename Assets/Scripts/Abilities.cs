@@ -91,7 +91,7 @@ public class Abilities : MonoBehaviour
     int ultimateIndex = 0;
 
     [Header("Inventory")]
-    private Inventory inventory;
+    public Inventory inventory;
     public int potionCount;
     public KeyCode potionKey;
     public float potionDuration = 5f;
@@ -104,7 +104,7 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new Inventory();
+        inventory = GetComponent<Inventory>();
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
         shieldScript = GetComponent<IceShield>();
@@ -563,14 +563,13 @@ public class Abilities : MonoBehaviour
     }
     public void potion()
     {
+        
         if (Input.GetKeyDown(potionKey)&& potionCount>0)
         {
+            Debug.Log("used potion");
             StartCoroutine(usePotion());
             potionCount--;
-            foreach (GameObject item in attacking.inventory.itemList )
-            {
-                Debug.Log(attacking.inventory.itemList.GetType());
-            }
+            inventory.usePotion();
             
         }
     }
