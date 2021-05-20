@@ -4,20 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using System.Linq;
+using System;
 
 public class Item : MonoBehaviour
 {
     public enum itemType
-    {
-        active, 
+    {        
         damage,
         attackSpeed,
         movementSpeed,
         maxHealth,
         healthPotion,
-        manaPotion
+        active
+    }
+    public enum activeType
+    {
+        trap,
+        arena
     }
     public itemType type;
+    public activeType aType;
    
     public int amount = 1 ;
     public int itemLevel = 1;
@@ -28,18 +34,23 @@ public class Item : MonoBehaviour
     [SerializeField] Sprite healthPotionSprite;
     [SerializeField] Sprite manaPotionSprite;
     [SerializeField] Sprite maxHealthSprite;
+    [SerializeField] Sprite trapSprite;
+    [SerializeField] Sprite arenaSprite;
+
+    [SerializeField] GameObject trapObject;
+    [SerializeField] GameObject arenaObject;
     
     void Start()
     {
         
         if (random)
         {
-            type = (itemType)Random.Range(0, 7);
+            type = (itemType) UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length-1) ;
             
             Debug.Log("item level= " + itemLevel);           
         }
         
-
+        
     }   
     private void Update()
     {
@@ -48,10 +59,7 @@ public class Item : MonoBehaviour
     void sprites()
     {
         switch (type)   
-        {
-            case (itemType.active):
-                Debug.Log("active item");
-                break;
+        {            
             case (itemType.damage):
                 gameObject.GetComponent<Image>().sprite = attackDamageSprite;
                 break;
@@ -67,16 +75,17 @@ public class Item : MonoBehaviour
             case (itemType.maxHealth):
                 gameObject.GetComponent<Image>().sprite = maxHealthSprite;
                 break;
-
+            case (itemType.active):
+                activeSprite();
+                break;
         }
+        
     }
     public void itemEffect(GameObject player)
     {
         switch (type)
         {
-            case (itemType.active):
-                Debug.Log("active item");
-                break;
+            
             case (itemType.damage):
                 player.GetComponent<Attacking>().attackDamage += 5*itemLevel;
                 break;
@@ -96,6 +105,32 @@ public class Item : MonoBehaviour
                     (player.GetComponent<PlayerCombat>().maxhealth + 50 * itemLevel);
                 player.GetComponent<PlayerCombat>().maxhealth += 50 * itemLevel;
                            
+                break;
+        }
+    }
+    void activeSprite()
+    {
+        switch (aType)
+        {
+            case (activeType.trap):
+                gameObject.GetComponent<Image>().sprite = trapSprite;
+                break;
+            case (activeType.arena):
+                gameObject.GetComponent<Image>().sprite = arenaSprite;
+                break;
+
+        }                      
+    }
+    public void activeEffect()
+    {
+        switch (aType)
+        {
+            case (activeType.trap):
+                Instantiate(trapObject, transform.parent.position, transform.parent.rotation);
+                Debug.Log("trap placed");
+                break;
+            case (activeType.arena):
+                Instantiate(arenaObject, transform.parent.position, transform.parent.rotation);
                 break;
         }
     }

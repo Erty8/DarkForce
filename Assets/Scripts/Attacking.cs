@@ -221,10 +221,10 @@ public class Attacking : MonoBehaviour
                 {
                     if (!inventory.isfull[i])
                     {                      
-                        inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
+                        //inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
                         //inventory.isfull[i] = true;
                         inventory.addItem(i,itemToPick);
-                       
+                        col.transform.parent = gameObject.transform; 
                         col.GetComponent<Item>().itemEffect(gameObject);
                         
                         //Destroy(col.gameObject);

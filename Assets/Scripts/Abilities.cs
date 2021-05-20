@@ -259,7 +259,7 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = false;
             StartCoroutine(animateFireball());
-            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);2
             skillshot.GetComponent<Image>().enabled = false;
             abilityImage1.fillAmount = 0;
 

@@ -23,23 +23,8 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
+        
         for (int i = 0; i < itemSlots.Length; i++)
-        {
-            if (Input.GetKeyDown((i+1).ToString()))
-            {
-                useActiveSkill(i);
-            }
-           if (!isfull[i])
-            {
-                //itemSlots[i].GetComponent<Image>().sprite = null;
-            }
-           
-        }
-        /*for (int i = 1; i <= itemList.Count ; i++)
-        {
-            isfull[i] = true;           
-        }*/
-        for (int i = 0; i < itemSlots.Length  ; i++)
         {
             if (itemList.ElementAtOrDefault(i) == null)
             {
@@ -50,8 +35,23 @@ public class Inventory : MonoBehaviour
             {
                 isfull[i] = true;
             }
+
+            if (isfull[i])
+            {
+                itemSlots[i].GetComponent<Image>().sprite = itemList[i].gameObject.GetComponent<Image>().sprite;
+                if (Input.GetKeyDown((i + 1).ToString()))
+                {
+                    useActiveSkill(i);
+                }
+            }
             
+
         }
+        /*for (int i = 1; i <= itemList.Count ; i++)
+        {
+            isfull[i] = true;           
+        }*/
+        
     }
     public Inventory()
     {
@@ -69,14 +69,23 @@ public class Inventory : MonoBehaviour
         itemList[index].SetActive(true);
         droppedItem = Instantiate(itemList[index], transform.position, transform.rotation);
         droppedItem.GetComponent<Item>().random = false;
+        droppedItem.transform.localScale = new Vector3(6, 6, 6);
         droppedItem.GetComponent<Item>().type = itemList[index].GetComponent<Item>().type;
         Destroy(itemList[index]);
         itemList.RemoveAt(index);        
+    }
+    public void destroyItem(int index)
+    {
+        Debug.Log("item used");       
+        Destroy(itemList[index]);
+        itemList.RemoveAt(index);
     }
     public void useActiveSkill(int i)
     {
         if (itemList[i].GetComponent<Item>().type == Item.itemType.active)
         {
+            itemList[i].GetComponent<Item>().activeEffect();
+            destroyItem(i);
             Debug.Log("used active item");
         }
     }

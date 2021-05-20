@@ -7,6 +7,7 @@ public class Trap : MonoBehaviour
     public float trapDamage = 35;
     public float detectRange = 20;
     public float timeBeforeInvisible = 2f;
+    bool candamage;
     public List<GameObject> enemies = new List<GameObject>();
     GameObject closestEnemy;
     // Start is called before the first frame update
@@ -27,17 +28,21 @@ public class Trap : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
+        if (candamage)
         {
-            col.GetComponent<PlayerCombat>().takeDamage(trapDamage);
-            Destroy(gameObject);
+            if (col.tag == "Player")
+            {
+                col.GetComponent<PlayerCombat>().takeDamage(trapDamage);
+                Destroy(gameObject);
+            }
+            if (col.tag == "Enemy")
+            {
+                col.GetComponent<EnemyCombatScript>().takeDamage(trapDamage);
+                col.GetComponent<Animator>().SetBool("takeHit", true);
+                Destroy(gameObject);    
+            }
         }
-        if (col.tag == "Enemy")
-        {
-            col.GetComponent<EnemyCombatScript>().takeDamage(trapDamage);
-            col.GetComponent<Animator>().SetBool("takeHit", true);
-            Destroy(gameObject);
-        }
+        
     }
     void FindClosestEnemy()
     {
@@ -61,6 +66,7 @@ public class Trap : MonoBehaviour
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(timeBeforeInvisible);
+        candamage = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
 
     }
