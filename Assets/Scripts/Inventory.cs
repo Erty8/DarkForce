@@ -84,7 +84,7 @@ public class Inventory : MonoBehaviour
     {
         if (itemList[i].GetComponent<Item>().type == Item.itemType.active)
         {
-            itemList[i].GetComponent<Item>().activeEffect();
+            itemList[i].GetComponent<Item>().activeEffect(gameObject);
             destroyItem(i);
             Debug.Log("used active item");
         }

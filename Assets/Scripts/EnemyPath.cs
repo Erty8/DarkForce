@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyPath : MonoBehaviour
 {
 
-    private Transform player;
+    public Transform player;
     private float dist;
     public float detectRange;
 
@@ -58,6 +58,10 @@ public class EnemyPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (aiscript.summoned)
+        {
+
+        }
         speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;

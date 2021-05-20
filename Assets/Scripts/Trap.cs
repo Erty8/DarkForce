@@ -23,7 +23,13 @@ public class Trap : MonoBehaviour
         if (Vector3.Distance(closestEnemy.transform.position, transform.position) <= detectRange)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            StartCoroutine(invisible());
+            candamage = true;
+
+        }
+        else
+        {
+            candamage = false;
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
     private void OnTriggerEnter(Collider col)
@@ -68,6 +74,5 @@ public class Trap : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeInvisible);
         candamage = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
-
     }
 }

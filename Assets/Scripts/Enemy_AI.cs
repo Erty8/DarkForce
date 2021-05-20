@@ -19,6 +19,7 @@ public class Enemy_AI : MonoBehaviour
     public float radius = 10f;
     bool canAbility = true;
     bool attackCooldown = false;
+    public bool summoned;
     int attackRandomize;
     
     public float speed = 4f;
@@ -47,6 +48,8 @@ public class Enemy_AI : MonoBehaviour
     public float rotateSpeedMovement;
     public float rotateSpeedAttack; 
     public float rotateVelocity;
+
+    public EnemyPath pathScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +62,7 @@ public class Enemy_AI : MonoBehaviour
         rangeIndicator();
         maxSpeed = agent.speed;
         StartCoroutine(randomizer());
+        pathScript = GetComponent<EnemyPath>();
     }
 
     protected void LateUpdate()
@@ -69,6 +73,10 @@ public class Enemy_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (summoned)
+        {
+            pathScript.player = closestEnemy.transform;
+        }
         if (walkbool)
         {
 
@@ -96,6 +104,11 @@ public class Enemy_AI : MonoBehaviour
     {
         List<GameObject> enemies = new List<GameObject>();
         enemies.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        if (summoned)
+        {
+            enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+            enemies.Remove(gameObject);
+        }
         float distanceToClosestEnemy = Mathf.Infinity;
 
         foreach (GameObject currentEnemy in enemies)

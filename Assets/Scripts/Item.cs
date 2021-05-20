@@ -8,6 +8,21 @@ using System;
 
 public class Item : MonoBehaviour
 {
+    [SerializeField] Sprite attackDamageSprite;
+    [SerializeField] Sprite attackSpeedSprite;
+    [SerializeField] Sprite movementSpeedSprite;
+    [SerializeField] Sprite healthPotionSprite;
+    [SerializeField] Sprite manaPotionSprite;
+    [SerializeField] Sprite maxHealthSprite;
+    [SerializeField] Sprite trapSprite;
+    [SerializeField] Sprite maskSprite;
+    [SerializeField] Sprite demonSprite;
+
+    [SerializeField] GameObject trapObject;
+    [SerializeField] GameObject maskObject;
+    [SerializeField] GameObject demonObject;
+    public bool activeItem;
+
     public enum itemType
     {        
         damage,
@@ -20,7 +35,8 @@ public class Item : MonoBehaviour
     public enum activeType
     {
         trap,
-        arena
+        mask,
+        summonDemon
     }
     public itemType type;
     public activeType aType;
@@ -28,27 +44,23 @@ public class Item : MonoBehaviour
     public int amount = 1 ;
     public int itemLevel = 1;
     public bool random = true;
-    [SerializeField] Sprite attackDamageSprite;
-    [SerializeField] Sprite attackSpeedSprite;
-    [SerializeField] Sprite movementSpeedSprite;
-    [SerializeField] Sprite healthPotionSprite;
-    [SerializeField] Sprite manaPotionSprite;
-    [SerializeField] Sprite maxHealthSprite;
-    [SerializeField] Sprite trapSprite;
-    [SerializeField] Sprite arenaSprite;
-
-    [SerializeField] GameObject trapObject;
-    [SerializeField] GameObject arenaObject;
     
     void Start()
     {
-        
-        if (random)
+        if (!activeItem)
         {
-            type = (itemType) UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length-1) ;
-            
-            Debug.Log("item level= " + itemLevel);           
+            if (random)
+            {
+                type = (itemType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length - 1);
+
+                Debug.Log("item level= " + itemLevel);
+            }
         }
+        else
+        {
+            type = itemType.active;
+        }
+        
         
         
     }   
@@ -115,13 +127,16 @@ public class Item : MonoBehaviour
             case (activeType.trap):
                 gameObject.GetComponent<Image>().sprite = trapSprite;
                 break;
-            case (activeType.arena):
-                gameObject.GetComponent<Image>().sprite = arenaSprite;
+            case (activeType.mask):
+                gameObject.GetComponent<Image>().sprite = maskSprite;
+                break;
+            case (activeType.summonDemon):
+                gameObject.GetComponent<Image>().sprite = demonSprite;
                 break;
 
         }                      
     }
-    public void activeEffect()
+    public void activeEffect(GameObject player)
     {
         switch (aType)
         {
@@ -129,8 +144,13 @@ public class Item : MonoBehaviour
                 Instantiate(trapObject, transform.parent.position, transform.parent.rotation);
                 Debug.Log("trap placed");
                 break;
-            case (activeType.arena):
-                Instantiate(arenaObject, transform.parent.position, transform.parent.rotation);
+            case (activeType.mask):
+                Instantiate(maskObject);
+                maskObject.GetComponent<Orbit>().target = player.transform;
+                break;
+            case (activeType.summonDemon):
+                Instantiate(demonObject, transform.parent.position, transform.parent.rotation);
+                demonObject.GetComponent<Enemy_AI>().summoned = true;
                 break;
         }
     }
