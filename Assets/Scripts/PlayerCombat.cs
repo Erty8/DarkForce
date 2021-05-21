@@ -73,7 +73,8 @@ public class PlayerCombat : MonoBehaviour
     }
     void destroy()
     {
-        Destroy(gameObject);
+        
+        Destroy(gameObject);        
     }
     
 }

@@ -196,7 +196,7 @@ public class Abilities : MonoBehaviour
             skillshot.GetComponent<Image>().enabled = true;
             targetCircle.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
-            Debug.Log("Used ability 1");
+            //Debug.Log("Used ability 1");
             
             abilityImage1.fillAmount = 1;
         }
@@ -253,7 +253,7 @@ public class Abilities : MonoBehaviour
             targetCircle.GetComponent<Image>().enabled = true;
             rangeCircle.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
-            Debug.Log("Used ability 2");
+            //Debug.Log("Used ability 2");
             
             abilityImage2.fillAmount = 1;
         }
@@ -298,7 +298,7 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKey(ability3) && isCooldown3 == false)
         {
-            Debug.Log("Used ability 3");
+            //Debug.Log("Used ability 3");
             StartCoroutine(castIceShield());
             isCooldown3 = true;
             abilityImage3.fillAmount = 1;
@@ -323,7 +323,7 @@ public class Abilities : MonoBehaviour
             skillshot.GetComponent<Image>().enabled = false;
             targetCircle.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
-            Debug.Log("Used ability 1");
+            //Debug.Log("Used ability 1");
 
             abilityImage4.fillAmount = 1;
         }
@@ -342,7 +342,7 @@ public class Abilities : MonoBehaviour
             StartCoroutine(animateFireball());
             ultimateCD();
             ultimateIndex++;
-            Debug.Log(ultimateIndex);
+            //Debug.Log(ultimateIndex);
             ultimateCountdown += cooldownAfterSeconds;
             
             //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
@@ -357,7 +357,7 @@ public class Abilities : MonoBehaviour
         }
         if (isCooldown4)
         {
-            Debug.Log("ultimate cooldown");
+            //Debug.Log("ultimate cooldown");
             abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
             ultimateSkillshot.GetComponent<Image>().enabled = false;
             if (abilityImage4.fillAmount <= 0)
@@ -376,7 +376,7 @@ public class Abilities : MonoBehaviour
     }
     IEnumerator animateFireball()
     {
-        Debug.Log("animated fireball");
+        //Debug.Log("animated fireball");
         //canSkillshot = false;
         anim.SetBool("Fireball", true);
 
@@ -387,7 +387,7 @@ public class Abilities : MonoBehaviour
     }
     IEnumerator animateShatter()
     {
-        Debug.Log("animated shatter");
+        //Debug.Log("animated shatter");
         //canSkillshot = false;
         anim.SetBool("Shatter", true);
 
@@ -477,7 +477,7 @@ public class Abilities : MonoBehaviour
     void ultimateCD()
     {
         ultimateCountdown -= Time.deltaTime;
-        Debug.Log(ultimateCountdown);
+        //Debug.Log(ultimateCountdown);
         if (ultimateCountdown == 0)
         {
             isCooldown4 = true;

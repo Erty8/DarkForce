@@ -147,7 +147,7 @@ public class Movement : MonoBehaviour
         //agent.updateRotation = false;
         yield return new WaitForSeconds(0.1f);
         GetComponent<Rigidbody>().isKinematic = false;
-        Debug.Log("collision fix");
+        //Debug.Log("collision fix");
         
     }
 }

@@ -134,7 +134,7 @@ public class Enemy_AI : MonoBehaviour
                 {
                     attackCooldown = false;
                     attacktimePassed = Time.time;
-                    Debug.Log("Enemy attacked");
+                    //Debug.Log("Enemy attacked");
                     StartCoroutine(attackBool());
                     agent.SetDestination(transform.position);
                     rotatebool = false;
@@ -168,7 +168,7 @@ public class Enemy_AI : MonoBehaviour
     {
         anim.SetBool("ability", true);
         canAbility = false;
-        Debug.Log("enemy ability casted");
+        //Debug.Log("enemy ability casted");
         yield return new WaitForSeconds(1f);
         agent.SetDestination(transform.position);
         anim.SetBool("ability", false);
@@ -239,7 +239,7 @@ public class Enemy_AI : MonoBehaviour
     public void dealDamage()
     {
         closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
-        Debug.Log("Demon dealed " + attackDamage + " damage");
+        //Debug.Log("Demon dealed " + attackDamage + " damage");
     }
    
     public void castSpikes(float y, float z)
@@ -257,7 +257,7 @@ public class Enemy_AI : MonoBehaviour
             Instantiate(spike, spike2Transform.transform.position, spike2Transform.transform.rotation);
             Instantiate(spike, spike3Transform.transform.position, spike3Transform.transform.rotation);
 
-            Debug.Log("enemy spikes launched");
+            //Debug.Log("enemy spikes launched");
             yield return new WaitForSeconds(z);
 
         }

@@ -29,7 +29,7 @@ public class Shatter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         if (enemies.Count != 0)
         {
             

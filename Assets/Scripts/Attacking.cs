@@ -203,7 +203,7 @@ public class Attacking : MonoBehaviour
         //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
         
         damageCd = true;
-        Debug.Log("damaged");
+        //Debug.Log("damaged");
         yield return new WaitForSeconds(1/attackSpeed);
         damageCd = false;
         anim.SetBool("Attack", false);
@@ -218,7 +218,7 @@ public class Attacking : MonoBehaviour
         }
         else
         {
-            Destroy(attackObject);
+            Destroy(Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation));
         }
         
         attackObject.GetComponent<BasicAttack>().attackDamage = attackDamage;
