@@ -44,14 +44,16 @@ public class Item : MonoBehaviour
     public int amount = 1 ;
     public int itemLevel = 1;
     public bool random = true;
+    public bool isActive;
     
     void Start()
     {
-        if (!activeItem)
+        if (!isActive)
         {
             if (random)
             {
                 type = (itemType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length - 1);
+                aType = (activeType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(activeType)).Length);
 
                 Debug.Log("item level= " + itemLevel);
             }

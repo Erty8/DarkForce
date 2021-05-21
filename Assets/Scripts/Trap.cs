@@ -19,18 +19,25 @@ public class Trap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindClosestEnemy(); 
-        if (Vector3.Distance(closestEnemy.transform.position, transform.position) <= detectRange)
-        {
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
-            candamage = true;
+        FindClosestEnemy();  
+        if (candamage)
+        {         
+            
+                if (Vector3.Distance(closestEnemy.transform.position, transform.position) <= detectRange)
+                {
+                    gameObject.GetComponent<MeshRenderer>().enabled = true;
+                    candamage = true;
 
+                }
+                else
+                {
+                    
+                    gameObject.GetComponent<MeshRenderer>().enabled = false;
+                }
+                
+                       
         }
-        else
-        {
-            candamage = false;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-        }
+        
     }
     private void OnTriggerEnter(Collider col)
     {

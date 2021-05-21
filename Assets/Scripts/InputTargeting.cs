@@ -8,7 +8,8 @@ public class InputTargeting : MonoBehaviour
     public GameObject selectedHero;
     public bool heroPlayer;
     RaycastHit hit;
-    Movement movementScript;
+
+    //Movement movementScript;
     bool attackMovebool;
     public KeyCode attackMovekey;
 
@@ -17,13 +18,18 @@ public class InputTargeting : MonoBehaviour
     void Start()
     {
         selectedHero = GameObject.FindGameObjectWithTag("Player");
-        movementScript = GetComponent<Movement>();
+        //movementScript = GetComponent<Movement>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (hit.collider == null)
+        {
+            //Debug.Log("null");
+        }
         if (Input.GetKey(attackMovekey))
         {
             attackMovebool = true;
