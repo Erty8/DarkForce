@@ -1425,7 +1425,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &901681483
+--- !u!114 &901681472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1434,13 +1434,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7802410209899265409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
+  m_Script: {fileID: 11500000, guid: be3c4fac7166a954c8bf51801d2b6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealthBar: {fileID: 2102345392}
-  enemySlider: {fileID: 2013076156}
-  health: 600
+  player: {fileID: 0}
+  detectRange: 60
+  _agent: {fileID: 901681475}
+  _destination: {fileID: 0}
+  _patrolWaiting: 1
+  _totalWaitTime: 5
+  _switchProbablity: 0.2
+  _patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   anim: {fileID: 1839762871}
+  aiscript: {fileID: 0}
+  speed: 0
+  speedVal: 0
+  motionSmoothTime: 0.1
 --- !u!114 &901681474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,7 +1475,7 @@ MonoBehaviour:
   spikeWaveCount: 3
   timeBetweenSpikeWaves: 1
   radius: 10
-  summoned: 0
+  summoned: 1
   speed: 4
   attackDamage: 13
   attackCd: 4
@@ -1481,6 +1492,7 @@ MonoBehaviour:
   rotateSpeedMovement: 10
   rotateSpeedAttack: 0.5
   rotateVelocity: 0
+  pathScript: {fileID: 0}
 --- !u!195 &901681475
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1503,7 +1515,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &901681472
+--- !u!114 &901681483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1512,23 +1524,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7802410209899265409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be3c4fac7166a954c8bf51801d2b6d60, type: 3}
+  m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRange: 60
-  _agent: {fileID: 901681475}
-  _destination: {fileID: 0}
-  _patrolWaiting: 1
-  _totalWaitTime: 5
-  _switchProbablity: 0.2
-  _patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  enemyHealthBar: {fileID: 2102345392}
+  enemySlider: {fileID: 2013076156}
+  health: 600
   anim: {fileID: 1839762871}
-  aiscript: {fileID: 0}
-  speed: 0
-  speedVal: 0
-  motionSmoothTime: 0.1
 --- !u!1001 &7802410209189653171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2073,6 +2075,10 @@ PrefabInstance:
     - target: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292088, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_Size.x

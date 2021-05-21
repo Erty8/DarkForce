@@ -73,10 +73,9 @@ public class Enemy_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (summoned)
-        {
-            pathScript.player = closestEnemy.transform;
-        }
+        
+        
+        
         if (walkbool)
         {
 
@@ -118,6 +117,7 @@ public class Enemy_AI : MonoBehaviour
             {
                 distanceToClosestEnemy = distanceToEnemy;
                 closestEnemy = currentEnemy;
+                pathScript.player = closestEnemy.transform;
             }
         }
         //transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, step);
@@ -131,7 +131,7 @@ public class Enemy_AI : MonoBehaviour
         {
             //walkbool = false;
                         
-            if (closestEnemy.tag == "Player")
+            //if (closestEnemy.tag == "Player")
             {
                 agent.stoppingDistance = attackRange;
                 if (rotatebool)
@@ -278,7 +278,15 @@ public class Enemy_AI : MonoBehaviour
     }
     public void dealDamage()
     {
-        closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+        if (closestEnemy.gameObject.GetComponent<PlayerCombat>() == true)
+        {
+            closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+        }
+        if (closestEnemy.gameObject.GetComponent<EnemyCombatScript>() == true)
+        {
+            closestEnemy.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+        }
+        //closestEnemy.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
         Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
                   (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
         float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,

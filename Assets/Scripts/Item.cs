@@ -58,7 +58,12 @@ public class Item : MonoBehaviour
         }
         else
         {
-            type = itemType.active;
+            if (random)
+            {
+                type = itemType.active;
+                aType = (activeType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(activeType)).Length);
+            }
+           
         }
         
         
@@ -149,7 +154,8 @@ public class Item : MonoBehaviour
                 maskObject.GetComponent<Orbit>().target = player.transform;
                 break;
             case (activeType.summonDemon):
-                Instantiate(demonObject, transform.parent.position, transform.parent.rotation);
+                Instantiate(demonObject, transform.parent.position, transform.parent.rotation);           
+                demonObject.tag = "Player";
                 demonObject.GetComponent<Enemy_AI>().summoned = true;
                 break;
         }
