@@ -14,6 +14,10 @@ public class EnemyCombatScript : MonoBehaviour
     private bool canbeDamaged = true;
     float maxhealth;
     public Animator anim;
+
+    //Bool that is used to fix "surfing" after death in EnemyPath script
+    public bool isAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +55,7 @@ public class EnemyCombatScript : MonoBehaviour
         }
         if (health <=0 )
         {
+            isAlive = false;
             anim.SetBool("death", true);
             Invoke("destroy", 7f);
             
