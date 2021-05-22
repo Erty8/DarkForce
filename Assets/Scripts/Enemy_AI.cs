@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class Enemy_AI : MonoBehaviour
 {
+    EnemyCombatScript enemyCombatScript;    
+    
     [SerializeField] GameObject spike;
     [SerializeField] Transform spike1Transform;
     [SerializeField] Transform spike2Transform;
@@ -49,6 +51,9 @@ public class Enemy_AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        enemyCombatScript = GetComponent<EnemyCombatScript>();
+        
         attacktimePassed = -attackCd;
         
         position = transform.position;
@@ -112,8 +117,9 @@ public class Enemy_AI : MonoBehaviour
     public void Attack()
     {
         
+        //Attacking after health = 0 bug fixed 
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
-                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange)
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange && enemyCombatScript.isAlive)
         {
             //walkbool = false;
                         
