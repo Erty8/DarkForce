@@ -109,6 +109,20 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.0025773195
+        functionName: cannotWalk
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.12467182
+        functionName: cannotRotate
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.38957167
         functionName: recover
         data: 
@@ -116,29 +130,22 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.027679766
-        functionName: cannotWalk
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.12724914
-        functionName: cannotRotate
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.81865793
+      - time: 0.92690533
         functionName: canRotate
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9889096
+      - time: 1
         functionName: canWalk
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.084323816
+        functionName: cannotWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -216,14 +223,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.8003553
+      - time: 0.6560254
         functionName: canRotate
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.87337536
+      - time: 0.89690727
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -266,14 +273,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.8146415
+      - time: 0.7502085
         functionName: canRotate
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9032709
+      - time: 0.86597943
         functionName: canWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -332,6 +339,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.98178506
         functionName: canWalk
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: cannotWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

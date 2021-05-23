@@ -9,18 +9,44 @@ public class PlayerCombat : MonoBehaviour
     public Slider healthBarSlider2D;
     public Slider healthBarSlider;
     public float health = 100f;
+    public float maxhealth;
     public Animator anim;
+    public bool hasShield = false ;
+    public float shieldReduce = 2;
+    public float regenRate = 1;
+    public float potionRegenRate = 10f;
+    public float healthPercentage;
+    public bool potion = false;
+   
+    [SerializeField] GameObject iceShield;
     // Start is called before the first frame update
     void Start()
     {
-        healthBarSlider.maxValue = health;
-        healthBarSlider2D.maxValue = health;
+        maxhealth = health;
+        healthBarSlider.maxValue = maxhealth;
+        healthBarSlider2D.maxValue = maxhealth;
+        
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (health < maxhealth) {
+            if (potion)
+            {
+                health += potionRegenRate * Time.deltaTime;
+            }
+            else
+            {
+                health += regenRate * Time.deltaTime;
+            }
+            
+        }
+        
+        healthBarSlider.maxValue = maxhealth;
+        healthBarSlider2D.maxValue = maxhealth;
         healthBarSlider.value = health;
         healthBarSlider2D.value = health;
 
@@ -31,7 +57,7 @@ public class PlayerCombat : MonoBehaviour
 
             //Destroy(gameObject);
         }
-
+        healthPercentage = health / maxhealth;
     }
        
     private void LateUpdate()
@@ -41,8 +67,14 @@ public class PlayerCombat : MonoBehaviour
     }
     public void takeDamage(float x)
     {
-        health -= x;
-        //Debug.Log(health);
+        if (hasShield)
+        {
+            health -= (x / shieldReduce);
+        }
+        else
+        {
+            health -= x;           
+        }
         if (health <=0 )
         {
             //anim.SetBool("death", true);
@@ -75,5 +107,15 @@ public class PlayerCombat : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    
+    void shieldBool()
+    {
+        if (iceShield.activeInHierarchy == true)
+        {
+            hasShield = true;
+        }
+        else
+        {
+            hasShield = false;
+        }
+    }
 }

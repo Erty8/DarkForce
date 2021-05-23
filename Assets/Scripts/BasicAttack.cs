@@ -24,7 +24,9 @@ public class BasicAttack : MonoBehaviour
     {
         float step = speed * Time.deltaTime; // calculate distance to move
         if (targetTransform != null) {
-            transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3
+                (targetTransform.position.x,transform.position.y,targetTransform.position.z), step);
+            //transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, step);
         }
         
         if (enemies.Count != 0)

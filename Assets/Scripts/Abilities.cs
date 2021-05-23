@@ -11,10 +11,13 @@ public class Abilities : MonoBehaviour
     //RaycastHit hit;
     [SerializeField] private LayerMask layermask;
     Movement moveScript;
+    public Attacking attacking;
+    public PlayerCombat playerCombat;
     public Animator anim;
     //public NavMeshAgent agent;
     float oldSpeed;
-    public static bool projectileLaunch = false; 
+    public bool projectileLaunch = false; 
+    public bool shatterLaunch = false; 
 
     [Header ("Ability 1")]
     public Image abilityImage1;
@@ -40,7 +43,7 @@ public class Abilities : MonoBehaviour
     public KeyCode ability2;
 
     public Canvas ability2Canvas;
-    public Image targetCircle;
+    public Image ability2Image;
     public Image rangeCircle;
     private Vector3 posUp;
     public float maxAbilitytoDistance;
@@ -48,6 +51,7 @@ public class Abilities : MonoBehaviour
     public GameObject emptyTransform;
     public GameObject shatterObject;
     Shatter shatterScript;
+    [SerializeField] Canvas shatterCanvas;
     
 
 
@@ -58,12 +62,16 @@ public class Abilities : MonoBehaviour
     public KeyCode ability3;
     public GameObject iceShield;
     IceShield shieldScript;
+    public float shieldDuration = 5f;
 
-    [Header("Ability 4")]
+    [Header("Ability 4")] 
     public Image abilityImage4;
+    [SerializeField] Image ultimateImage;
+    [SerializeField] Sprite teleportSprite;
+    [SerializeField] Sprite ultimateSprite;
     public Image ultimateSkillshot;
     public float cooldown4 = 3f;
-    bool isCooldown4 = true;
+    bool isCooldown4 = false;
     public KeyCode ability4;
     public GameObject ultimateObject;
     public Transform ultimateTransform;
@@ -71,13 +79,23 @@ public class Abilities : MonoBehaviour
     Vector3 ultimatePosition;
     public Canvas ultimateCanvas;
     bool ultimatebool;
-    bool teleport = false;
+    bool canteleport = false;
     bool ultRefresh;
+    bool ultimateActive;
+    bool ultimateDestroyed;
+    bool teleportDestroy = false;
+    bool selfDestroy = false;
     public float cooldownAfterSeconds = 10f;
     public float waitbetweenUltimates = 1f;
     float ultimateCountdown ;
     int ultimateIndex = 0;
-    
+
+    [Header("Inventory")]
+    public Inventory inventory;
+    public int potionCount;
+    public KeyCode potionKey;
+    public float potionDuration = 5f;
+
 
 
 
@@ -86,18 +104,20 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventory = GetComponent<Inventory>();
         //shatterTransform = emptyTransform.transform;
         moveScript = GetComponent<Movement>();
         shieldScript = GetComponent<IceShield>();
         shatterScript = GetComponent<Shatter>();
+        playerCombat = GetComponent<PlayerCombat>();
         oldSpeed = moveScript.agent.speed;
 
         abilityImage1.fillAmount = 0;
         abilityImage2.fillAmount = 0;
         abilityImage3.fillAmount = 0;
-        abilityImage4.fillAmount = 1;
+        abilityImage4.fillAmount = 0;
         skillshot.GetComponent<Image>().enabled = false;
-        targetCircle.GetComponent<Image>().enabled = false;
+        ability2Image.GetComponent<Image>().enabled = false;
         rangeCircle.GetComponent<Image>().enabled = false;
         ultimateSkillshot.GetComponent<Image>().enabled = false;
         pControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -135,6 +155,7 @@ public class Abilities : MonoBehaviour
         transRot.eulerAngles = new Vector3(0, transRot.eulerAngles.y, transRot.eulerAngles.z);
         ability1Canvas.transform.rotation = Quaternion.Lerp(transRot, ability1Canvas.transform.rotation, 0f);
         ultimateCanvas.transform.rotation = Quaternion.Lerp(transRot, ultimateCanvas.transform.rotation, 0f);
+        shatterCanvas.transform.rotation = Quaternion.Lerp(transRot, ultimateCanvas.transform.rotation, 0f);
         //ability2 input
         var hitPosDir = (hit.point - transform.position).normalized;
         float distance = Vector3.Distance(hit.point, transform.position);
@@ -147,37 +168,61 @@ public class Abilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        potion();
         if (gameObject.transform.Find("Ice Shield").gameObject.activeInHierarchy==false)
         {
-            IceShield.enemies.Clear();
+            //IceShield.enemies.Clear();
             shieldScript.damageCd = false;
             //Debug.Log(IceShield.enemies.Count);
         }
         if (GameObject.Find(ultimateObject.name + "(Clone)") != null)
         {
-            teleport = true;
-            
+            canteleport = true;
+            ultimateActive = true;
+            ultimateImage.sprite = teleportSprite;
             //Debug.Log("can teleport");
-            if (Input.GetKey(ability4))
+            if (Input.GetKeyDown(ability4)&&!teleportDestroy)
             {
                 
                 ultimateSkillshot.GetComponent<Image>().enabled = false;
-                
+                //ultimateImage.sprite = ultimateSprite;
+                Debug.Log("ultimate sprite");
                 transform.position = 
                     new Vector3(GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.x,transform.position.y, GameObject.Find(ultimateObject.name + "(Clone)").gameObject.transform.position.z);
                 //moveScript.agent.velocity = new Vector3(0, 0, 0);
                 moveScript.agent.SetDestination(transform.position);
                 moveScript.agent.stoppingDistance = 0;
                 Destroy(GameObject.Find(ultimateObject.name + "(Clone)").gameObject);
+                teleportDestroy = true;
+                ultimateDestroyed = true;
                 StartCoroutine(teleportEnd());
+                
+                //ultimateActive = false;
                 if (!isCooldown4)
                 {
-                    ultRefresh = true; 
+                    abilityImage4.fillAmount = 1;
+                    ultRefresh = true;
                 }
-               
-                
+
+            }            
+        }
+        else
+        {
+            ultimateImage.sprite = ultimateSprite;
+            if (ultimateIndex >= 1 && ultimateIndex < 3) 
+            {
+                ultimateDestroyed = true;
+                StartCoroutine(teleportEnd());
             }
             
+        }
+        if (ultimateDestroyed&&!teleportDestroy)
+        {
+            if (!isCooldown4)
+            {
+                //ultRefresh = true;
+                //ultimateImage.sprite = ultimateSprite;
+            }
         }
         if (ultRefresh&&ultimateIndex<3)
         {
@@ -194,7 +239,7 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability1) && isCooldown1 == false)
         {
             skillshot.GetComponent<Image>().enabled = true;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
             
@@ -214,10 +259,10 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = false;
             StartCoroutine(animateFireball());
-            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);2
+            skillshot.GetComponent<Image>().enabled = false;
+            abilityImage1.fillAmount = 0;
 
-            isCooldown1 = true;
-            abilityImage1.fillAmount = 1;
             /*Quaternion rotationtoLookat = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationtoLookat.eulerAngles.y, ref moveScript.rotateVelocity, 0);
             transform.eulerAngles = new Vector3(0, rotationY, 0);
@@ -250,15 +295,16 @@ public class Abilities : MonoBehaviour
         if (Input.GetKey(ability2) && isCooldown2 == false)
         {
             
-            targetCircle.GetComponent<Image>().enabled = true;
+            ability2Image.GetComponent<Image>().enabled = true;
             rangeCircle.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 2");
             
             abilityImage2.fillAmount = 1;
         }
-        if (targetCircle.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
+        if (ability2Image.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
+            StartCoroutine(shatterTransform());
             emptyTransform.transform.position = ability2Transform.transform.position;
     
             //Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
@@ -272,19 +318,20 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             //moveScript.agent.speed = 0;
             StartCoroutine(animateShatter());
-            isCooldown2 = true;
-            abilityImage2.fillAmount = 1;
+            //isCooldown2 = true;
+            abilityImage2.fillAmount = 0;
+            ability2Image.GetComponent<Image>().enabled = false;
         }
-        if (targetCircle.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
+        if (ability2Image.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
             || Input.GetKey(ability1) || Input.GetKey(ability3) || Input.GetKey(ability4)))
         {
             abilityImage2.fillAmount = 0;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
         }
         if (isCooldown2)
         {
             abilityImage2.fillAmount -= 1 / cooldown2 * Time.deltaTime;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             if (abilityImage2.fillAmount <= 0)
             {
@@ -317,15 +364,15 @@ public class Abilities : MonoBehaviour
     {
 
         // cooldown system
-        if (Input.GetKey(ability4) && isCooldown4 == false&& teleport ==false)
+        if (Input.GetKey(ability4) && isCooldown4 == false&& canteleport ==false)
         {
             ultimateSkillshot.GetComponent<Image>().enabled = true;
             skillshot.GetComponent<Image>().enabled = false;
-            targetCircle.GetComponent<Image>().enabled = false;
+            ability2Image.GetComponent<Image>().enabled = false;
             rangeCircle.GetComponent<Image>().enabled = false;
             Debug.Log("Used ability 1");
 
-            abilityImage4.fillAmount = 1;
+            //abilityImage4.fillAmount = 1;
         }
         if (ultimateSkillshot.GetComponent<Image>().enabled == true && Input.GetMouseButton(0))
         {
@@ -340,12 +387,12 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = true;
             StartCoroutine(animateFireball());
-            ultimateCD();
+            /*ultimateCD();
             ultimateIndex++;
             Debug.Log(ultimateIndex);
-            ultimateCountdown += cooldownAfterSeconds;
+            ultimateCountdown += cooldownAfterSeconds;*/
             
-            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);
+            
 
                       
         }
@@ -357,7 +404,7 @@ public class Abilities : MonoBehaviour
         }
         if (isCooldown4)
         {
-            Debug.Log("ultimate cooldown");
+            //Debug.Log("ultimate cooldown");
             abilityImage4.fillAmount -= 1 / cooldown4 * Time.deltaTime;
             ultimateSkillshot.GetComponent<Image>().enabled = false;
             if (abilityImage4.fillAmount <= 0)
@@ -411,8 +458,8 @@ public class Abilities : MonoBehaviour
     IEnumerator castIceShield()
     {
         iceShield.gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        iceShield.gameObject.SetActive(false);
+        yield return new WaitForSeconds(shieldDuration);
+        //iceShield.gameObject.SetActive(false);
 
     }
 
@@ -424,6 +471,15 @@ public class Abilities : MonoBehaviour
         emptyProjectileTransform.transform.position = ability1Transform.transform.position;
         emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
         projectileLaunch = false;
+
+    }
+    IEnumerator shatterTransform()
+    {
+        yield return new WaitUntil(() => shatterLaunch == true);
+
+        emptyProjectileTransform.transform.position = ability2Transform.transform.position;
+        emptyProjectileTransform.transform.rotation = shatterCanvas.transform.rotation;
+        shatterLaunch = false;
 
     }
     /*IEnumerator projectileTransform()
@@ -446,8 +502,10 @@ public class Abilities : MonoBehaviour
     {
 
         yield return new WaitForSeconds(waitbetweenUltimates);
-        teleport = false;
+        canteleport = false;
+        teleportDestroy = false;
         ultRefresh = false;
+        
 
     }
     IEnumerator ultIndexreset()
@@ -461,19 +519,38 @@ public class Abilities : MonoBehaviour
     {
         //projectileLaunch = true;
         if (!ultimatebool) 
-        { 
+        {
+            isCooldown1 = true;
+            abilityImage1.fillAmount = 1;
             Instantiate(fireballObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation); 
         }
         else
         {
+            if (ultimateIndex == 0)
+            {
+                ultimateCD();
+            }
+            //ultimateImage.sprite = teleportSprite;
+            ultimateIndex++;
+            Debug.Log(ultimateIndex);
+            //ultimateCountdown += cooldownAfterSeconds;
             Instantiate(ultimateObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
         }
         
     }
     public void castShatter()
     {
-        Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(shatterObject, emptyProjectileTransform.transform.position, emptyProjectileTransform.transform.rotation);
+        isCooldown2 = true;
+        abilityImage2.fillAmount = 1;
     }
+    /*public void castShatter()
+    {
+        Instantiate(shatterObject, emptyTransform.transform.position, Quaternion.Euler(0, 0, 0));
+        isCooldown2 = true;
+        abilityImage2.fillAmount = 1;
+    }
+    */
     void ultimateCD()
     {
         ultimateCountdown -= Time.deltaTime;
@@ -483,6 +560,24 @@ public class Abilities : MonoBehaviour
             isCooldown4 = true;
             abilityImage4.fillAmount = 1;
         }
+    }
+    public void potion()
+    {
+        
+        if (Input.GetKeyDown(potionKey)&& potionCount>0)
+        {
+            Debug.Log("used potion");
+            StartCoroutine(usePotion());
+            potionCount--;
+            inventory.usePotion();
+            
+        }
+    }
+    public IEnumerator usePotion()
+    {
+        playerCombat.potion = false;
+        yield return new WaitForSeconds(potionDuration);
+        playerCombat.potion = true;
     }
    
 

@@ -9,6 +9,7 @@ TagManager:
   - IceShield
   - Fire
   - Waypoint
+  - Item
   layers:
   - Default
   - TransparentFX

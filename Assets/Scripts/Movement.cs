@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     [SerializeField] public KeyCode attackMove;
     //public Canvas attackRangeCanvas;
     public Image attackRangeImage;
-    public static bool attackMovebool ;
+    public bool attackMovebool ;
     
 
     // Start is called before the first frame update
@@ -75,7 +75,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Attack", false);
         }
 
-        if (Input.GetKey(attackMove))
+        if (!attackMovebool && Input.GetKey(attackMove))
         {
             attackMovebool = true;
             attackRangeImage.GetComponent<Image>().enabled = true;
@@ -88,6 +88,10 @@ public class Movement : MonoBehaviour
             attackingScript.attackOnSight = true;
             //Debug.Log("attack move");
             attackMovebool = false;
+        }
+        else if (attackMovebool&& (Input.GetMouseButton(1))){
+            attackMovebool = false;
+            attackRangeImage.GetComponent<Image>().enabled = false;
         }
     }
     public void move()
@@ -124,7 +128,11 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        StartCoroutine(collisionFix());
+        if (collision.gameObject.tag != "Floor")
+        {
+            StartCoroutine(collisionFix());
+        }
+        
     }
     IEnumerator velocityFix()
     {

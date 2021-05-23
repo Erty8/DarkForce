@@ -32,7 +32,11 @@ public class AnimationEvents : MonoBehaviour
     }
     void projectileReady()
     {
-        Abilities.projectileLaunch = true;
+        abilityScript.projectileLaunch = true;
+    }
+    void shatterReady()
+    {
+        abilityScript.shatterLaunch = true;
     }
     void castShatter()
     {

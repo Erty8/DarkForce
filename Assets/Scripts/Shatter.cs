@@ -14,11 +14,10 @@ public class Shatter : MonoBehaviour
     bool hardened = false;
     bool noDamage = false;
     public float shatterDamage = 50f;
-    public static List<GameObject> enemies = new List<GameObject>();
-    public static List<GameObject> damagedEnemies = new List<GameObject>();
-    public static List<GameObject> objects = new List<GameObject>();
-    //public static List<float> speeds = new List<float>();
-    Dictionary<GameObject,float> speeds = new Dictionary<GameObject,float>();
+    public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> damagedEnemies = new List<GameObject>();
+    public List<GameObject> objects = new List<GameObject>();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,7 @@ public class Shatter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         if (enemies.Count != 0)
         {
             
@@ -52,16 +51,7 @@ public class Shatter : MonoBehaviour
             enemies.Add(col.gameObject);
             //Debug.Log(enemies.Count);
         }
-        if (col.gameObject.GetComponent<NavMeshAgent>() != null )
-        {
-            if (speeds.ContainsKey(col.gameObject) == false)
-            {
-                speeds.Add(col.gameObject, col.gameObject.GetComponent<NavMeshAgent>().speed);
-            }
-            
-            //speeds.Insert(speedIndex, col.gameObject.GetComponent<NavMeshAgent>().speed);
-            col.gameObject.GetComponent<NavMeshAgent>().speed = col.gameObject.GetComponent<NavMeshAgent>().speed/slowedSpeed;
-        }
+       
         
 
     }
@@ -74,16 +64,7 @@ public class Shatter : MonoBehaviour
         {
             enemies.Remove(col.gameObject);
         }
-        if (col.gameObject.GetComponent<NavMeshAgent>() != null)
-        {
-            if (speeds.ContainsKey(col.gameObject))
-            {
-                
-
-                col.gameObject.GetComponent<NavMeshAgent>().speed = speeds[col.gameObject];
-            }
-            
-        }
+       
        
 
     }
@@ -94,6 +75,7 @@ public class Shatter : MonoBehaviour
             if (!damagedEnemies.Contains(gameObject)) 
             {
                 gameObject.GetComponent<EnemyCombatScript>().takeDamage(shatterDamage);
+                gameObject.GetComponentInChildren<Animator>().SetBool("takeHit", true);
                 damagedEnemies.Add(gameObject);
             }
             

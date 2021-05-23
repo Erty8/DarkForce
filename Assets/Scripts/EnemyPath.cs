@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyPath : MonoBehaviour
 {
 
-    private Transform player;
+    public Transform player;
     private float dist;
     public float detectRange;
 
@@ -31,6 +31,7 @@ public class EnemyPath : MonoBehaviour
     float _waitTimer;
 
     public Animator anim;
+    public Enemy_AI aiscript;
     public float speed;
     public float speedVal;
     public float motionSmoothTime = .1f;
@@ -42,6 +43,7 @@ public class EnemyPath : MonoBehaviour
     {
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        aiscript = gameObject.GetComponent<Enemy_AI>();
 
         if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {
@@ -56,6 +58,10 @@ public class EnemyPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (aiscript.summoned)
+        {
+
+        }
         speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;
@@ -64,7 +70,7 @@ public class EnemyPath : MonoBehaviour
 
         if (dist <= detectRange)
         {
-            if (Enemy_AI.walkbool) {
+            if (aiscript.walkbool) {
                 Vector3 targetVector = player.position;
                 _agent.SetDestination(targetVector);
             }

@@ -26,7 +26,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         //aiScript.test();
         aiScript.dealDamage();
-        Enemy_AI.attackIndex++;
+        aiScript.attackIndex++;
     }
     void canWalk()
     {
@@ -34,7 +34,8 @@ public class EnemyAnimator : MonoBehaviour
     }
     void cannotWalk()
     {
-        aiScript.canWalk();
+        aiScript.cannotWalk();
+        
     }
     void canRotate()
     {
