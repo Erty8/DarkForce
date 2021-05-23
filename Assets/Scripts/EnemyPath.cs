@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyPath : MonoBehaviour
 {
-
-    public Transform player;
+    EnemyCombatScript enemyCombatScript;    
+    
+    private Transform player;
     private float dist;
     public float detectRange;
 
@@ -31,7 +32,6 @@ public class EnemyPath : MonoBehaviour
     float _waitTimer;
 
     public Animator anim;
-    public Enemy_AI aiscript;
     public float speed;
     public float speedVal;
     public float motionSmoothTime = .1f;
@@ -41,9 +41,10 @@ public class EnemyPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyCombatScript = GetComponent<EnemyCombatScript>();      
+        
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        aiscript = gameObject.GetComponent<Enemy_AI>();
 
         if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {
@@ -58,56 +59,58 @@ public class EnemyPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (aiscript.summoned)
-        {
-
-        }
         speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;
         //SetDestination();
         dist = Vector3.Distance(player.position, transform.position);
 
-        if (dist <= detectRange)
+        if (enemyCombatScript.isAlive)
         {
-            if (aiscript.walkbool) {
-                Vector3 targetVector = player.position;
-                _agent.SetDestination(targetVector);
-            }
-            
-        }
-        else
-        {
-            if (_travelling && _agent.remainingDistance <= 1f)
+            if (dist <= detectRange)
             {
-                _travelling = false;
-
-                if (_patrolWaiting)
+                if (Enemy_AI.walkbool)
                 {
-                    _waiting = true;
-                    _waitTimer = 0f;
+                    Vector3 targetVector = player.position;
+                    _agent.SetDestination(targetVector);
+                }
 
-                }
-                else
-                {
-                    ChangePatrolPoint();
-                    SetDestination();
-                }
             }
-
-            if (_waiting)
+            else
             {
-                _waitTimer += Time.deltaTime;
-                if (_waitTimer >= _totalWaitTime)
+                if (_travelling && _agent.remainingDistance <= 1f)
                 {
-                    _waiting = false;
+                    _travelling = false;
 
-                    ChangePatrolPoint();
-                    SetDestination();
+                    if (_patrolWaiting)
+                    {
+                        _waiting = true;
+                        _waitTimer = 0f;
+
+                    }
+                    else
+                    {
+                        ChangePatrolPoint();
+                        SetDestination();
+                    }
                 }
 
+                if (_waiting)
+                {
+                    _waitTimer += Time.deltaTime;
+                    if (_waitTimer >= _totalWaitTime)
+                    {
+                        _waiting = false;
+
+                        ChangePatrolPoint();
+                        SetDestination();
+                    }
+
+                }
             }
         }
+      
+        
 
     }
 

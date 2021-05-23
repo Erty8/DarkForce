@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AI;
 
 public class Attacking : MonoBehaviour
 {
@@ -15,39 +14,27 @@ public class Attacking : MonoBehaviour
     [SerializeField] private Transform ProjectileTransform;
     public GameObject targetedEnemy = null;
     public GameObject oldtargetedEnemy = null;
-    public GameObject itemToPick;
     public Animator anim;
     public float attackRange;
     public float attackDamage;
     public float attackSpeed = 1f;
     public float rotateSpeedForAttack;
     bool damageCd = false;
-    bool enemyInRange = false;
     public bool attackOnSight;
     GameObject closestEnemy;
 
-    public Abilities abilityScript;
     private Movement moveScript;
 
     public bool basicAtkIdle = false;
     public bool isHeroAlive;
     public bool performMeleeAttack = true;
-    private NavMeshAgent agent;
+     
 
-    [Header ("Inventory")]
-    public Inventory inventory;
-    public bool itemPickup;
-    private Image inventoryImage;
-
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
         moveScript = GetComponent<Movement>();
-        inventory = GetComponent<Inventory>();
-        agent = GetComponent<NavMeshAgent>();
-        abilityScript = GetComponent<Abilities>();
     }
     void FixedUpdate()
     {
@@ -78,15 +65,6 @@ public class Attacking : MonoBehaviour
                 
             }
         }
-        if (itemToPick != null)
-        {
-            moveScript.agent.SetDestination(itemToPick.transform.position);
-            moveScript.agent.stoppingDistance = 0;
-            Quaternion rotationToLookAt = Quaternion.LookRotation(itemToPick.transform.position - transform.position);
-            float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
-            rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
-            transform.eulerAngles = new Vector3(0, rotationY, 0);
-        }
         if (targetedEnemy != null)
         {
             //distancetoEnemy = Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position);
@@ -94,7 +72,7 @@ public class Attacking : MonoBehaviour
                 (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) > attackRange)
             {
                 //targetedEnemy.transform.Find("Selected").gameObject.SetActive(true);
-                enemyInRange = false;
+
                 moveScript.agent.SetDestination(targetedEnemy.transform.position);
                 moveScript.agent.stoppingDistance = attackRange;
 
@@ -107,18 +85,25 @@ public class Attacking : MonoBehaviour
             if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z)) <= attackRange)
             {
-                
+
                 if (heroAttackType == HeroAttackType.Ranged)
                 {
-                    enemyInRange = true;
                     Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
                (targetedEnemy.transform.position.x, 0, targetedEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
                     float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
                 rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
                     transform.eulerAngles = new Vector3(0, rotationY, 0);
-                    moveScript.agent.SetDestination(transform.position);                                          
+                    moveScript.agent.SetDestination(transform.position);
+
+                    if (damageCd == false)
+                    {
+
+                        //moveScript.agent.stoppingDistance = 0;
+
+                        //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToLookAt, rotateSpeedForAttack * Time.deltaTime);
+                        //Debug.Log("Hero basic attack");
                         StartCoroutine(damageEnemies());
-                    
+                    }
                 }
             }
             else
@@ -211,51 +196,19 @@ public class Attacking : MonoBehaviour
         
         
     }
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("Item"))
-        {
-            if (itemToPick == col.gameObject) 
-            {
-                for (int i = 0; i < inventory.itemSlots.Length; i++)
-                {
-                    if (!inventory.isfull[i])
-                    {                      
-                        //inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
-                        //inventory.isfull[i] = true;
-                        inventory.addItem(i,itemToPick);
-                        col.transform.parent = gameObject.transform; 
-                        col.GetComponent<Item>().itemEffect(gameObject);
-                        
-                        //Destroy(col.gameObject);
-                        break;
-                    }
-                }
-            }
-        }
-    }
+    
     IEnumerator damageEnemies()
     {
         anim.SetBool("Attack", true);
         //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
         
-        yield return new WaitUntil(()=>!enemyInRange);
-        
-        anim.SetBool("Attack", false);
-
-    }
-    /*IEnumerator damageEnemies()
-    {
-        anim.SetBool("Attack", true);
-        //targetedEnemy.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
-        
         damageCd = true;
-        Debug.Log("damaged");
+        //Debug.Log("damaged");
         yield return new WaitForSeconds(1/attackSpeed);
         damageCd = false;
         anim.SetBool("Attack", false);
 
-    }*/
+    }
     public void basicAttack()
     {
         
@@ -265,7 +218,7 @@ public class Attacking : MonoBehaviour
         }
         else
         {
-            //Destroy(attackObject);
+            Destroy(Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation));
         }
         
         attackObject.GetComponent<BasicAttack>().attackDamage = attackDamage;

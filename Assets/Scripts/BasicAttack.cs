@@ -13,6 +13,9 @@ public class BasicAttack : MonoBehaviour
     float step;
     public Transform targetTransform;
     public static List<GameObject> enemies = new List<GameObject>();
+
+    public DamageIndicator damageIndicatorScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,10 @@ public class BasicAttack : MonoBehaviour
         {
             col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
             col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage,dmgforSeconds,1f);
+
+            //W.I.P. damage indicators
+            //damageIndicatorScript.SpawnDamageIndicator();
+
             Destroy(gameObject);
         }
 
