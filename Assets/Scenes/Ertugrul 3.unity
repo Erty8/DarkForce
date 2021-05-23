@@ -4803,7 +4803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503267202693358076, guid: ef806d4b969928445824269bef0061fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6503267202693358077, guid: ef806d4b969928445824269bef0061fe, type: 3}
       propertyPath: trapDamage
@@ -5161,6 +5161,10 @@ PrefabInstance:
     - target: {fileID: 1186651259, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 15.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1343189343, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_Name
