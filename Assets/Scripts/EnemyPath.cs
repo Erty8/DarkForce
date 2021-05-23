@@ -5,9 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyPath : MonoBehaviour
 {
-    EnemyCombatScript enemyCombatScript;    
-    
-    private Transform player;
+
+    public Transform player;
     private float dist;
     public float detectRange;
 
@@ -32,6 +31,7 @@ public class EnemyPath : MonoBehaviour
     float _waitTimer;
 
     public Animator anim;
+    public Enemy_AI aiscript;
     public float speed;
     public float speedVal;
     public float motionSmoothTime = .1f;
@@ -41,10 +41,9 @@ public class EnemyPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyCombatScript = GetComponent<EnemyCombatScript>();      
-        
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        aiscript = gameObject.GetComponent<Enemy_AI>();
 
         if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {
@@ -59,58 +58,56 @@ public class EnemyPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (aiscript.summoned)
+        {
+
+        }
         speed = new Vector3(_agent.velocity.x, 0, _agent.velocity.z).magnitude / _agent.speed;
         anim.SetFloat("Speed", speed, motionSmoothTime, Time.deltaTime);
         speedVal = speed * motionSmoothTime * Time.deltaTime;
         //SetDestination();
         dist = Vector3.Distance(player.position, transform.position);
 
-        if (enemyCombatScript.isAlive)
+        if (dist <= detectRange)
         {
-            if (dist <= detectRange)
-            {
-                if (Enemy_AI.walkbool)
-                {
-                    Vector3 targetVector = player.position;
-                    _agent.SetDestination(targetVector);
-                }
-
+            if (aiscript.walkbool) {
+                Vector3 targetVector = player.position;
+                _agent.SetDestination(targetVector);
             }
-            else
+            
+        }
+        else
+        {
+            if (_travelling && _agent.remainingDistance <= 1f)
             {
-                if (_travelling && _agent.remainingDistance <= 1f)
+                _travelling = false;
+
+                if (_patrolWaiting)
                 {
-                    _travelling = false;
-
-                    if (_patrolWaiting)
-                    {
-                        _waiting = true;
-                        _waitTimer = 0f;
-
-                    }
-                    else
-                    {
-                        ChangePatrolPoint();
-                        SetDestination();
-                    }
-                }
-
-                if (_waiting)
-                {
-                    _waitTimer += Time.deltaTime;
-                    if (_waitTimer >= _totalWaitTime)
-                    {
-                        _waiting = false;
-
-                        ChangePatrolPoint();
-                        SetDestination();
-                    }
+                    _waiting = true;
+                    _waitTimer = 0f;
 
                 }
+                else
+                {
+                    ChangePatrolPoint();
+                    SetDestination();
+                }
+            }
+
+            if (_waiting)
+            {
+                _waitTimer += Time.deltaTime;
+                if (_waitTimer >= _totalWaitTime)
+                {
+                    _waiting = false;
+
+                    ChangePatrolPoint();
+                    SetDestination();
+                }
+
             }
         }
-      
-        
 
     }
 

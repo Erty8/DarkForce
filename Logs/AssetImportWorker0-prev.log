@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home Single Language; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16296 MB
+OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'tr' Physical Memory: 7549 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,310 +11,147 @@ C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
+C:/Users/ertug/Documents/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62312
-Successfully changed project path to: C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
-C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
+50161
+Successfully changed project path to: C:/Users/ertug/Documents/GitHub/DarkForce
+C:/Users/ertug/Documents/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 71.60 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 43.09 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce/Assets
+[Subsystems] Discovering subsystems at path C:/Users/ertug/Documents/GitHub/DarkForce/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
     Vendor:   
-    VRAM:     4055 MB
-    Driver:   27.21.14.6089
+    VRAM:     3962 MB
+    Driver:   27.21.14.6611
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002930 seconds.
+Registered in 0.001735 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 96.26 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 39.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.938 seconds
+- Completed reload, in  1.008 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002824 seconds.
+Registered in 0.001518 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.493 seconds
+- Completed reload, in  0.835 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1698 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 176.9 MB.
-System memory in use after: 176.6 MB.
+Unloading 1670 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.0 MB.
+System memory in use after: 112.7 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2171.
-Total: 3.663900 ms (FindLiveObjects: 0.297500 ms CreateObjectMapping: 0.191000 ms MarkObjects: 2.457000 ms  DeleteObjects: 0.717100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab
-  artifactKey: Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab using Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3aa520e51e2cd65c78f1aeaef92c56') in 0.208770 seconds
-  Import took 0.213931 seconds .
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2136.
+Total: 3.856100 ms (FindLiveObjects: 0.273700 ms CreateObjectMapping: 0.056600 ms MarkObjects: 3.110200 ms  DeleteObjects: 0.413800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.mat
-  artifactKey: Guid(ba472f899ce2e4f4d816c20f967d92b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.mat using Guid(ba472f899ce2e4f4d816c20f967d92b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e3da7cc1bfd0ef073d77888996701f') in 0.080416 seconds
-  Import took 0.087197 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlti.obj
-  artifactKey: Guid(32eae842256b4bb418133c6d995e123c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlti.obj using Guid(32eae842256b4bb418133c6d995e123c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac635fce506f57ab0ecb60f477e8dd5a') in 0.133089 seconds
-  Import took 0.138821 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000387 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlty.vfx
-  artifactKey: Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlty.vfx using Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ac25895659706102f101523265e1aa1') in 0.015052 seconds
-  Import took 0.020418 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.646389 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.shadergraph
-  artifactKey: Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.shadergraph using Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3fc127f3496f470b4d2b7104f13fc1') in 0.007374 seconds
-  Import took 0.013023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.780869 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaPoint2.pcache
-  artifactKey: Guid(bb896e26e2a425a4499aa08b9a11de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaPoint2.pcache using Guid(bb896e26e2a425a4499aa08b9a11de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb7b01f67667781508f2f70cf72ca4b') in 0.020325 seconds
-  Import took 0.024701 seconds .
+  path: Assets/Prefabs/Active Items/Trap Plane.prefab
+  artifactKey: Guid(131d31451f8a1cd4398113fbc9aff09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Active Items/Trap Plane.prefab using Guid(131d31451f8a1cd4398113fbc9aff09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e558217bc0f9ed999f2d66981c9178c') in 0.121915 seconds
+  Import took 0.127909 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004815 seconds.
+Registered in 0.001228 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 85.42 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.544 seconds
+- Completed reload, in  0.770 seconds
 Platform modules already initialized, skipping
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 214.6 MB.
-System memory in use after: 214.2 MB.
+Unloading 1597 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.7 MB.
+System memory in use after: 110.4 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3526.
-Total: 5.824100 ms (FindLiveObjects: 0.667600 ms CreateObjectMapping: 0.327300 ms MarkObjects: 3.761100 ms  DeleteObjects: 1.065600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 189.554175 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaPoint2.pcache
-  artifactKey: Guid(bb896e26e2a425a4499aa08b9a11de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaPoint2.pcache using Guid(bb896e26e2a425a4499aa08b9a11de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c307c958db8bfd69d3a38ea2a1001be') in 0.079284 seconds
-  Import took 0.089185 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab
-  artifactKey: Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab using Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c080ba795346f5c588f0e1d2d3de6f5') in 0.079627 seconds
-  Import took 0.090288 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000423 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlty.vfx
-  artifactKey: Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlty.vfx using Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17bef95974ba3d5570b1f3355013673d') in 0.015105 seconds
-  Import took 0.024723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.576124 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.shadergraph
-  artifactKey: Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.shadergraph using Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94c596e1e44f449028094eb1274a372') in 0.045314 seconds
-  Import took 0.060961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 48.094862 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.shadergraph
-  artifactKey: Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.shadergraph using Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '315f240d1d80c7a8f3c647509df3dc9d') in 0.008799 seconds
-  Import took 0.020087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 147.595898 seconds.
-  path: Assets/Samples/Visual Effect Graph/10.3.2/VisualEffectGraph Additions
-  artifactKey: Guid(542966aed3ac7194cb3968a4d653e02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Visual Effect Graph/10.3.2/VisualEffectGraph Additions using Guid(542966aed3ac7194cb3968a4d653e02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d10a011f5713a157b3471cb16d12ad0') in 0.018107 seconds
-  Import took 0.027665 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.308552 seconds.
-  path: Assets/Samples/Visual Effect Graph/10.3.2/OutputEvent Helpers
-  artifactKey: Guid(f92fadf7e28392149bf17b17f9b3392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Visual Effect Graph/10.3.2/OutputEvent Helpers using Guid(f92fadf7e28392149bf17b17f9b3392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f056d385c0f4978da012e5f392fef93') in 0.031723 seconds
-  Import took 0.044578 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.704061 seconds.
-  path: Assets/Prefabs/UI
-  artifactKey: Guid(bd4765941df4b5a419d7fcf0437bdc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI using Guid(bd4765941df4b5a419d7fcf0437bdc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9901c69b9971b70e005f51eb82562e2f') in 0.023888 seconds
-  Import took 0.037081 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.090807 seconds.
-  path: Assets/Prefabs/UI
-  artifactKey: Guid(bd4765941df4b5a419d7fcf0437bdc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI using Guid(bd4765941df4b5a419d7fcf0437bdc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9901c69b9971b70e005f51eb82562e2f') in 0.006617 seconds
-  Import took 0.017197 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2148.
+Total: 2.728000 ms (FindLiveObjects: 0.299600 ms CreateObjectMapping: 0.080900 ms MarkObjects: 2.065400 ms  DeleteObjects: 0.280200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002934 seconds.
+Registered in 0.001314 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.723 seconds
+- Completed reload, in  0.763 seconds
 Platform modules already initialized, skipping
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2965 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 215.4 MB.
-System memory in use after: 214.9 MB.
+Unloading 1597 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.7 MB.
+System memory in use after: 110.5 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3549.
-Total: 6.357700 ms (FindLiveObjects: 0.736900 ms CreateObjectMapping: 0.479800 ms MarkObjects: 4.017900 ms  DeleteObjects: 1.120700 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2151.
+Total: 2.674600 ms (FindLiveObjects: 0.340500 ms CreateObjectMapping: 0.052700 ms MarkObjects: 1.925500 ms  DeleteObjects: 0.354000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010654 seconds.
+Registered in 0.001203 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.448 seconds
+- Completed reload, in  0.740 seconds
 Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Nature/SpeedTree7': dependency 'BillboardShader' shader 'Universal Render Pipeline/Nature/SpeedTree7 Billboard' not found
-Shader 'Universal Render Pipeline/Baked Lit': fallback shader 'Universal Render Pipeline/Unlit' not found
-Shader 'Universal Render Pipeline/Simple Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
-Shader 'Universal Render Pipeline/Terrain/Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
-Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'AddPassShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)' not found
-Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' not found
-Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapGenShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen)' not found
-Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
-Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 240.8 MB.
-System memory in use after: 237.0 MB.
+Unloading 1597 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.7 MB.
+System memory in use after: 110.5 MB.
 
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 3957.
-Total: 8.859600 ms (FindLiveObjects: 0.989700 ms CreateObjectMapping: 0.727300 ms MarkObjects: 3.814200 ms  DeleteObjects: 3.325300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 610.187843 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.mat
-  artifactKey: Guid(ba472f899ce2e4f4d816c20f967d92b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.mat using Guid(ba472f899ce2e4f4d816c20f967d92b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08180efde26045092f6e0248259a978f') in 0.256836 seconds
-  Import took 0.267196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab
-  artifactKey: Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlti Variant.prefab using Guid(f300feb85e6279943a68e1fadf163d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b15ec0fb47736f9d80b363a92ae26d89') in 0.062853 seconds
-  Import took 0.075573 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000280 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlti.obj
-  artifactKey: Guid(32eae842256b4bb418133c6d995e123c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlti.obj using Guid(32eae842256b4bb418133c6d995e123c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aae7c538df74139c3a47f08ad43a3f3') in 0.093163 seconds
-  Import took 0.102794 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaUlty.vfx
-  artifactKey: Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaUlty.vfx using Guid(b1ebbf75a03dc0d49931b0497ea72a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aae2ee8a824b08dad8fba13ad4f494f') in 0.013581 seconds
-  Import took 0.022321 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.065523 seconds.
-  path: Assets/Prefabs/UltiParticle/EliaShader.shadergraph
-  artifactKey: Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UltiParticle/EliaShader.shadergraph using Guid(f415ac8e9c514884ab81aa57bdd58335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1650de4a899668d487e239a86f40d8c7') in 0.010984 seconds
-  Import took 0.020299 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2154.
+Total: 2.098600 ms (FindLiveObjects: 0.257600 ms CreateObjectMapping: 0.039600 ms MarkObjects: 1.446300 ms  DeleteObjects: 0.354200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
