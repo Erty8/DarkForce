@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class EnemyPath : MonoBehaviour
 {
 
+    EnemyCombatScript enemyCombatScript;
+    
     public Transform player;
     private float dist;
     public float detectRange;
@@ -41,6 +43,7 @@ public class EnemyPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyCombatScript = GetComponent<EnemyCombatScript>();        
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         aiscript = gameObject.GetComponent<Enemy_AI>();
@@ -68,7 +71,7 @@ public class EnemyPath : MonoBehaviour
         //SetDestination();
         dist = Vector3.Distance(player.position, transform.position);
 
-        if (dist <= detectRange)
+        if (dist <= detectRange && enemyCombatScript.isAlive)
         {
             if (aiscript.walkbool) {
                 Vector3 targetVector = player.position;
