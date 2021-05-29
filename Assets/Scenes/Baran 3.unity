@@ -7001,6 +7001,10 @@ PrefabInstance:
       value: 15.472
       objectReference: {fileID: 0}
     - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2063285412}
+    - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: _destination
       value: 
       objectReference: {fileID: 2063285412}
@@ -7016,6 +7020,14 @@ PrefabInstance:
       propertyPath: abilityCD
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: XP_ManagerScript
+      value: 
+      objectReference: {fileID: 2063285402}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

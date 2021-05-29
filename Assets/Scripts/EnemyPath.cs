@@ -71,45 +71,51 @@ public class EnemyPath : MonoBehaviour
         //SetDestination();
         dist = Vector3.Distance(player.position, transform.position);
 
-        if (dist <= detectRange && enemyCombatScript.isAlive)
+        //Movement after death fixed
+        if (enemyCombatScript.isAlive)
         {
-            if (aiscript.walkbool) {
-                Vector3 targetVector = player.position;
-                _agent.SetDestination(targetVector);
-            }
-            
-        }
-        else
-        {
-            if (_travelling && _agent.remainingDistance <= 1f)
+            if (dist <= detectRange)
             {
-                _travelling = false;
-
-                if (_patrolWaiting)
+                if (aiscript.walkbool)
                 {
-                    _waiting = true;
-                    _waitTimer = 0f;
+                    Vector3 targetVector = player.position;
+                    _agent.SetDestination(targetVector);
+                }
 
-                }
-                else
-                {
-                    ChangePatrolPoint();
-                    SetDestination();
-                }
             }
-
-            if (_waiting)
+            else
             {
-                _waitTimer += Time.deltaTime;
-                if (_waitTimer >= _totalWaitTime)
+                if (_travelling && _agent.remainingDistance <= 1f)
                 {
-                    _waiting = false;
+                    _travelling = false;
 
-                    ChangePatrolPoint();
-                    SetDestination();
+                    if (_patrolWaiting)
+                    {
+                        _waiting = true;
+                        _waitTimer = 0f;
+
+                    }
+                    else
+                    {
+                        ChangePatrolPoint();
+                        SetDestination();
+                    }
                 }
 
+                if (_waiting)
+                {
+                    _waitTimer += Time.deltaTime;
+                    if (_waitTimer >= _totalWaitTime)
+                    {
+                        _waiting = false;
+
+                        ChangePatrolPoint();
+                        SetDestination();
+                    }
+
+                }
             }
+
         }
 
     }
