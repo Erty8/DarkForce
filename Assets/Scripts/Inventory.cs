@@ -15,9 +15,23 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
+            
+            if (i == 0)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(0); });
+            }
+            if (i == 1)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(1); });
+            }
+            if (i == 2)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(2); });
+            }
+
             //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(test);
             //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener;
-            itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(0); });
+
             Debug.Log("slot buttons");
         }
     }
@@ -71,6 +85,7 @@ public class Inventory : MonoBehaviour
         droppedItem.GetComponent<Item>().random = false;
         droppedItem.transform.localScale = new Vector3(6, 6, 6);
         droppedItem.GetComponent<Item>().type = itemList[index].GetComponent<Item>().type;
+        itemList[index].GetComponent<Item>().itemDropEffect(gameObject);
         Destroy(itemList[index]);
         itemList.RemoveAt(index);        
     }

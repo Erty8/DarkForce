@@ -127,6 +127,33 @@ public class Item : MonoBehaviour
                 break;
         }
     }
+    public void itemDropEffect(GameObject player)
+    {
+        switch (type)
+        {
+
+            case (itemType.damage):
+                player.GetComponent<Attacking>().attackDamage -= 5 * itemLevel;
+                break;
+            case (itemType.attackSpeed):
+                //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
+                player.GetComponentInChildren<Animator>().SetFloat("Attack Speed",
+                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel / 2f));
+                break;
+            case (itemType.healthPotion):
+                player.GetComponent<Abilities>().potionCount -= itemLevel;
+                break;
+            case (itemType.movementSpeed):
+                player.GetComponent<NavMeshAgent>().speed -= itemLevel;
+                break;
+            case (itemType.maxHealth):
+                player.GetComponent<PlayerCombat>().health = player.GetComponent<PlayerCombat>().healthPercentage *
+                    (player.GetComponent<PlayerCombat>().maxhealth - 50 * itemLevel);
+                player.GetComponent<PlayerCombat>().maxhealth -= 50 * itemLevel;
+
+                break;
+        }
+    }
     void activeSprite()
     {
         switch (aType)
