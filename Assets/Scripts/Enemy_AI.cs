@@ -21,7 +21,7 @@ public class Enemy_AI : MonoBehaviour
     public float radius = 10f;
     bool canAbility = true;
     bool attackCooldown = false;
-    public bool summoned;
+    public bool summoned = false;
     int attackRandomize;
     
     public float speed = 4f;
@@ -160,9 +160,9 @@ public class Enemy_AI : MonoBehaviour
                     attackCooldown = true;
                 }
                 
-                else if ((Time.time - abilityTimePassed) > abilityCD)
+                if ((Time.time - abilityTimePassed) > abilityCD)
                 {
-                    rotatebool = false;
+                    //rotatebool = false;
                     abilityTimePassed = Time.time;
                     StartCoroutine(castAbility());
                     walkbool = false;

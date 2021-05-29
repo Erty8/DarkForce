@@ -14,6 +14,8 @@ public class EnemyCombatScript : MonoBehaviour
     private bool canbeDamaged = true;
     float maxhealth;
     public Animator anim;
+    public Enemy_AI aiScript;
+    public float summonDuration = 15f;
 
     //Bool that is used to fix "surfing" after death in EnemyPath script
     public bool isAlive = true;
@@ -23,6 +25,11 @@ public class EnemyCombatScript : MonoBehaviour
     {
         enemySlider.maxValue = health;
         maxhealth = health;
+        aiScript = GetComponent<Enemy_AI>();
+        if (aiScript.summoned)
+        {
+            StartCoroutine(summonedDie());
+        }
     }
 
     // Update is called once per frame
@@ -83,8 +90,18 @@ public class EnemyCombatScript : MonoBehaviour
     }
     void destroy()
     {
-        XP_ManagerScript.ShouldGainXP();
+        if (!aiScript.summoned)
+        {
+            XP_ManagerScript.ShouldGainXP();
+        }       
         Destroy(gameObject);
+    }
+    IEnumerator summonedDie()
+    {
+        yield return new WaitForSeconds(summonDuration);
+        isAlive = false;
+        anim.SetBool("death", true);
+        Invoke("destroy", 7f);
     }
     
 }

@@ -1527,10 +1527,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  XP_ManagerScript: {fileID: 0}
   enemyHealthBar: {fileID: 2102345392}
   enemySlider: {fileID: 2013076156}
   health: 600
   anim: {fileID: 1839762871}
+  aiScript: {fileID: 0}
+  summonDuration: 10
+  isAlive: 1
 --- !u!1001 &7802410209189653171
 PrefabInstance:
   m_ObjectHideFlags: 0
