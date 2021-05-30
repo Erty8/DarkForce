@@ -706,3 +706,76 @@ System memory in use after: 165.8 MB.
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3568.
 Total: 3.682400 ms (FindLiveObjects: 0.514500 ms CreateObjectMapping: 0.120700 ms MarkObjects: 2.336900 ms  DeleteObjects: 0.708700 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002287 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.903 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2919 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 165.8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3571.
+Total: 3.624100 ms (FindLiveObjects: 0.458100 ms CreateObjectMapping: 0.125500 ms MarkObjects: 2.362700 ms  DeleteObjects: 0.675800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 906.421177 seconds.
+  path: Assets/Models/Elia Character/elia3.fbx
+  artifactKey: Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia3.fbx using Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c571805bb60d631ecedbcedac0ac5c6c') in 0.268540 seconds
+  Import took 0.274525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.030412 seconds.
+  path: Assets/Models/Elia Character/elia3.fbx
+  artifactKey: Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia3.fbx using Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c571805bb60d631ecedbcedac0ac5c6c') in 0.226179 seconds
+  Import took 0.232700 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001975 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.960 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2919 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.3 MB.
+System memory in use after: 165.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3575.
+Total: 3.834400 ms (FindLiveObjects: 0.466700 ms CreateObjectMapping: 0.090700 ms MarkObjects: 2.632400 ms  DeleteObjects: 0.642600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.867431 seconds.
+  path: Assets/Models/Elia Character/elia3.fbx
+  artifactKey: Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Elia Character/elia3.fbx using Guid(5168bd238a8c8a042abc278acb5895c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7085cdd44c3c87c48e7aabae60d7473') in 0.284499 seconds
+  Import took 0.292181 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
