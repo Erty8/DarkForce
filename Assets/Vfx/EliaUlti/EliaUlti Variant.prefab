@@ -219,12 +219,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7635826562936255635, guid: 32eae842256b4bb418133c6d995e123c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 32eae842256b4bb418133c6d995e123c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ba472f899ce2e4f4d816c20f967d92b3, type: 2}
     - target: {fileID: 919132149155446097, guid: 32eae842256b4bb418133c6d995e123c, type: 3}
       propertyPath: m_Name
-      value: EliaUlti
+      value: EliaUlti Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 32eae842256b4bb418133c6d995e123c, type: 3}
       propertyPath: m_LocalScale.x
