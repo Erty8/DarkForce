@@ -334,7 +334,7 @@ public class Enemy_AI : MonoBehaviour
     public void canWalk()
     {
         walkbool = true;
-        Debug.Log("canmove");
+        //Debug.Log("canmove");
     }
     public void cannotWalk()
     {
