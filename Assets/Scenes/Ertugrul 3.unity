@@ -1158,7 +1158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4644078700541783630, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_Speed
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4644078700541783631, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: anim
@@ -2521,7 +2521,6 @@ MonoBehaviour:
   trapObject: {fileID: 0}
   maskObject: {fileID: 0}
   demonObject: {fileID: 0}
-  activeItem: 0
   type: 1
   aType: 0
   amount: 1
@@ -3567,7 +3566,6 @@ MonoBehaviour:
   trapObject: {fileID: 0}
   maskObject: {fileID: 0}
   demonObject: {fileID: 0}
-  activeItem: 0
   type: 1
   aType: 0
   amount: 1
@@ -6980,6 +6978,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: loot
+      value: 
+      objectReference: {fileID: 7351659160239791229, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
+    - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: XP_ManagerScript
       value: 
       objectReference: {fileID: 2063285402}
@@ -7045,7 +7047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265418, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 346.9
+      value: 319.45
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265418, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_LocalPosition.y

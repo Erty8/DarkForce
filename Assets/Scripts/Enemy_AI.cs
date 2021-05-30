@@ -77,12 +77,10 @@ public class Enemy_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        
-        if (walkbool)
+               
+        if (!walkbool)
         {
-
+            agent.SetDestination(transform.position);
         }
         step = speed * Time.deltaTime;
         FindClosestEnemy();

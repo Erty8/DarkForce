@@ -14804,7 +14804,7 @@ MonoBehaviour:
   slowedSpeed: 2
   hardenTime: 1.5
   damageCd: 0
-  shatterDamage: 50
+  shatterDamage: 70
   enemies: []
   damagedEnemies: []
   objects: []

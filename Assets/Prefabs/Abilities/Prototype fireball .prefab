@@ -190,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3f26ca318d40a4e900f0533a6a35c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgPerSec: 5
+  dmgPerSec: 7
   damageCd: 0
-  fireballDamage: 20
-  fireballtimeDamage: 5
+  fireballDamage: 40
+  fireballtimeDamage: 8
   dmgforSeconds: 5
 --- !u!82 &-4786414727009241615
 AudioSource:

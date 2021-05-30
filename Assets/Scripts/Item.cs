@@ -21,7 +21,7 @@ public class Item : MonoBehaviour
     [SerializeField] GameObject trapObject;
     [SerializeField] GameObject maskObject;
     [SerializeField] GameObject demonObject;
-    public bool activeItem;
+    //public bool activeItem;
 
     public enum itemType
     {        
@@ -55,7 +55,7 @@ public class Item : MonoBehaviour
                 type = (itemType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length - 1);
                 aType = (activeType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(activeType)).Length);
 
-                Debug.Log("item level= " + itemLevel);
+                //Debug.Log("item level= " + itemLevel);
             }
         }
         else

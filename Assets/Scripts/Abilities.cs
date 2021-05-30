@@ -494,6 +494,7 @@ public class Abilities : MonoBehaviour
     {
 
         yield return new WaitForSeconds(cooldownAfterSeconds);
+        isCooldown4 = true;
         
         
 
