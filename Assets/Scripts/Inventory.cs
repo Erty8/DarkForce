@@ -103,6 +103,12 @@ public class Inventory : MonoBehaviour
             destroyItem(i);
             Debug.Log("used active item");
         }
+        else if (itemList[i].GetComponent<Item>().type == Item.itemType.healthPotion)
+        {
+            usePotion();
+            //destroyItem(i);
+            Debug.Log("used active item");
+        }
     }
     public void usePotion()
     {

@@ -111,13 +111,13 @@ public class Item : MonoBehaviour
             case (itemType.attackSpeed):
                 //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
                 player.GetComponentInChildren<Animator>().SetFloat("Attack Speed",
-                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel/2f));
+                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel/3f));
                 break;
             case (itemType.healthPotion):
                 player.GetComponent<Abilities>().potionCount += itemLevel;
                 break;
             case (itemType.movementSpeed):
-                player.GetComponent<NavMeshAgent>().speed += itemLevel;
+                player.GetComponent<NavMeshAgent>().speed += 2*itemLevel;
                 break;
             case (itemType.maxHealth):
                 player.GetComponent<PlayerCombat>().health = player.GetComponent<PlayerCombat>().healthPercentage*
@@ -138,13 +138,13 @@ public class Item : MonoBehaviour
             case (itemType.attackSpeed):
                 //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
                 player.GetComponentInChildren<Animator>().SetFloat("Attack Speed",
-                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel / 2f));
+                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") - (itemLevel / 3f));
                 break;
             case (itemType.healthPotion):
                 player.GetComponent<Abilities>().potionCount -= itemLevel;
                 break;
             case (itemType.movementSpeed):
-                player.GetComponent<NavMeshAgent>().speed -= itemLevel;
+                player.GetComponent<NavMeshAgent>().speed -= 2*itemLevel;
                 break;
             case (itemType.maxHealth):
                 player.GetComponent<PlayerCombat>().health = player.GetComponent<PlayerCombat>().healthPercentage *
