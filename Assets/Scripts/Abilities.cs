@@ -495,6 +495,7 @@ public class Abilities : MonoBehaviour
 
         yield return new WaitForSeconds(cooldownAfterSeconds);
         isCooldown4 = true;
+        abilityImage4.fillAmount = 1;
         
         
 
@@ -529,7 +530,8 @@ public class Abilities : MonoBehaviour
         {
             if (ultimateIndex == 0)
             {
-                ultimateCD();
+                StartCoroutine(ultimateCooldown());
+                //ultimateCD();
             }
             //ultimateImage.sprite = teleportSprite;
             ultimateIndex++;

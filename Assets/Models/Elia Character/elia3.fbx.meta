@@ -156,7 +156,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.057780042
+      - time: 0.10778004
         functionName: projectileReady
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -199,7 +199,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.052715514
+      - time: 0.07864144
         functionName: shatterReady
         data: 
         objectReferenceParameter: {instanceID: 0}
