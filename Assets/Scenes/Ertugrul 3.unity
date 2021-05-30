@@ -6478,38 +6478,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7351659160239791174, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d2985de4f27bfa340a12c3ef95d47167, type: 2}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: aType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: random
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: maskSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2531e15fe967a354d9d28c9cfc1d71ca, type: 3}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: trapObject
-      value: 
-      objectReference: {fileID: 4604777199828283141, guid: 131d31451f8a1cd4398113fbc9aff09f, type: 3}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: demonObject
-      value: 
-      objectReference: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
-    - target: {fileID: 7351659160239791226, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
-      propertyPath: demonSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 31af4c11b0228d142b71af2d3940bbcb, type: 3}
     - target: {fileID: 7351659160239791229, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
       propertyPath: m_Name
       value: Active Item

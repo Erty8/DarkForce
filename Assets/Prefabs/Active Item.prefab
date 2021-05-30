@@ -160,11 +160,11 @@ MonoBehaviour:
   manaPotionSprite: {fileID: 0}
   maxHealthSprite: {fileID: 21300000, guid: 1ff18920df7230a4dbc8e9e75c4ed7e5, type: 3}
   trapSprite: {fileID: 21300000, guid: 4ba18157414453c40b17c669e4ddbfbf, type: 3}
-  maskSprite: {fileID: 0}
-  demonSprite: {fileID: 0}
-  trapObject: {fileID: 6503267202693358076, guid: ef806d4b969928445824269bef0061fe, type: 3}
+  maskSprite: {fileID: 21300000, guid: 2531e15fe967a354d9d28c9cfc1d71ca, type: 3}
+  demonSprite: {fileID: 21300000, guid: 31af4c11b0228d142b71af2d3940bbcb, type: 3}
+  trapObject: {fileID: 4604777199828283141, guid: 131d31451f8a1cd4398113fbc9aff09f, type: 3}
   maskObject: {fileID: 1856082227326292881, guid: e44b111fc9bb2ad49a15ba7212b11959, type: 3}
-  demonObject: {fileID: 0}
+  demonObject: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
   type: 5
   aType: 0
   amount: 1

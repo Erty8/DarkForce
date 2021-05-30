@@ -1527,6 +1527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loot: {fileID: 0}
   XP_ManagerScript: {fileID: 0}
   enemyHealthBar: {fileID: 2102345392}
   enemySlider: {fileID: 2013076156}
