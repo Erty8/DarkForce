@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 0f70014e40021124ead28488e29feb07
   - enabled: 1
-    path: Assets/Scenes/Baran2.unity
-    guid: 33d416b2047e5864a960612b109d4dc8
+    path: Assets/Scenes/Demo.unity
+    guid: 04323d4992c24db48a9899b1a5a1467a
   m_configObjects: {}

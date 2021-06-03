@@ -189,4 +189,10 @@ public class Item : MonoBehaviour
                 break;
         }
     }
+    IEnumerator spawnMask(GameObject player)
+    {
+        Instantiate(maskObject,player.transform.position,player.transform.rotation);      
+        yield return new WaitForSeconds(0.1f);
+        maskObject.GetComponent<Orbit>().target = player.transform;
+    }
 }

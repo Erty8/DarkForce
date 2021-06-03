@@ -576,6 +576,17 @@ public class Abilities : MonoBehaviour
             
         }
     }
+    public void numPotion()
+    {
+
+        
+            Debug.Log("used potion");
+            StartCoroutine(usePotion());
+            potionCount--;
+            inventory.usePotion();
+
+        
+    }
     public IEnumerator usePotion()
     {
         playerCombat.potion = false;

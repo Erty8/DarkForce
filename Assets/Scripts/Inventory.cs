@@ -11,8 +11,11 @@ public class Inventory : MonoBehaviour
     public GameObject[] potionSlots;
     public List<GameObject> itemList;
     GameObject droppedItem;
+    public Abilities abilityScript;
     void Start()
     {
+        abilityScript = GetComponent<Abilities>();
+
         for (int i = 0; i < itemSlots.Length; i++)
         {
             

@@ -112,7 +112,7 @@ public class EnemyCombatScript : MonoBehaviour
         yield return new WaitForSeconds(summonDuration);
         isAlive = false;
         anim.SetBool("death", true);
-        //Invoke("destroy", 7f);
+        Invoke("destroy", 3f);
     }
     
 }
