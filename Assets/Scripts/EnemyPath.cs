@@ -43,10 +43,10 @@ public class EnemyPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyCombatScript = GetComponent<EnemyCombatScript>();        
+        enemyCombatScript = GetComponent<EnemyCombatScript>();                      
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        aiscript = gameObject.GetComponent<Enemy_AI>();
+        aiscript = GetComponent<Enemy_AI>();
 
         if (_patrolPoints != null && _patrolPoints.Count >= 2)
         {

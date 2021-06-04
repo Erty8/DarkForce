@@ -6,6 +6,12 @@ using UnityEngine.AI;
 
 public class Enemy_AI : MonoBehaviour
 {
+    public enum type
+    {
+        demon,
+        kobold
+    }
+    public type enemyType;
     EnemyCombatScript enemyCombatScript;
 
     [SerializeField] GameObject spike;
@@ -52,6 +58,7 @@ public class Enemy_AI : MonoBehaviour
     public float rotateVelocity;
 
     public EnemyPath pathScript;
+    
     // Start is called before the first frame update
     void Start()
     {

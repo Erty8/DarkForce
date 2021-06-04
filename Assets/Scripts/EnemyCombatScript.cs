@@ -53,16 +53,15 @@ public class EnemyCombatScript : MonoBehaviour
         //anim.SetBool("takeHit", true);
         //Debug.Log(health);
         
-        if (health <= maxhealth/2 &&canbeDamaged)
+        /*if (health <= maxhealth/2 &&canbeDamaged)
         {
    
             anim.SetBool("takeHit", true);
             anim.SetBool("attack", false);
             StartCoroutine(cannotbeDamaged());
-            aiScript.walkbool = false;
-            
-                     
-        }
+            aiScript.walkbool = false;                                
+        }*/
+
         if (health <=0 )
         {
             isAlive = false;

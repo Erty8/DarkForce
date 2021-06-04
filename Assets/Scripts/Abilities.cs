@@ -259,7 +259,7 @@ public class Abilities : MonoBehaviour
             moveScript.agent.stoppingDistance = 0;
             ultimatebool = false;
             StartCoroutine(animateFireball());
-            //Instantiate(ability1object, ability1Transform.transform.position, ability1Transform.transform.rotation);2
+            
             skillshot.GetComponent<Image>().enabled = false;
             abilityImage1.fillAmount = 0;
 
@@ -268,9 +268,7 @@ public class Abilities : MonoBehaviour
             transform.eulerAngles = new Vector3(0, rotationY, 0);
             moveScript.agent.SetDestination(transform.position);
             moveScript.agent.stoppingDistance = 0;*/
-            //GameObject projectileObject = Instantiate(ability1object);
-            //projectileObject.transform.position = ability1Transform.transform.position;
-            //Instantiate(ability1object, ability1Transform.transform.position, Quaternion.Euler(-90, Quaternion.identity.y, -ability1Canvas.transform.eulerAngles.y));
+           
 
         }
         if (skillshot.GetComponent<Image>().enabled == true && (Input.GetMouseButton(1)
@@ -307,7 +305,7 @@ public class Abilities : MonoBehaviour
             StartCoroutine(shatterTransform());
             emptyTransform.transform.position = ability2Transform.transform.position;
     
-            //Instantiate(ability2object, ability2Transform.transform.position, Quaternion.Euler(0, 0, 0));
+            
             Quaternion rotationToLookAt = Quaternion.LookRotation(position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToLookAt.eulerAngles.y,
             ref moveScript.rotateVelocity, 0);
@@ -468,7 +466,15 @@ public class Abilities : MonoBehaviour
     {
         yield return new WaitUntil(() => projectileLaunch == true);
         
-        emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+        if (ultimatebool)
+        {
+            emptyProjectileTransform.transform.position = ultimateTransform.transform.position;
+        }
+        else
+        {
+            emptyProjectileTransform.transform.position = ability1Transform.transform.position;
+        }
+        
         emptyProjectileTransform.transform.rotation = ability1Canvas.transform.rotation;
         projectileLaunch = false;
 
