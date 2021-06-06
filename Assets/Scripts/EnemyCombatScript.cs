@@ -17,6 +17,7 @@ public class EnemyCombatScript : MonoBehaviour
     public Enemy_AI aiScript;
     public float summonDuration = 15f;
     bool lootSpawned = false;
+    public bool hasLoot = true;
 
     //Bool that is used to fix "surfing" after death in EnemyPath script
     public bool isAlive = true;
@@ -96,7 +97,7 @@ public class EnemyCombatScript : MonoBehaviour
         if (!aiScript.summoned)
         {
             XP_ManagerScript.ShouldGainXP();
-            if (!lootSpawned)
+            if (!lootSpawned&&hasLoot)
             {
                 Instantiate(loot, transform.position, transform.rotation);
                 lootSpawned = true;

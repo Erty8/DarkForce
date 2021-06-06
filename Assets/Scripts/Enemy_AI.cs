@@ -68,9 +68,14 @@ public class Enemy_AI : MonoBehaviour
         
         position = transform.position;
         //skillshotCanvas = this.transform.Find("Skillshot Canvas").gameObject;
-        skillshotCanvas.SetActive(false);
+        if (enemyType == type.demon)
+        {
+            skillshotCanvas.SetActive(false);
+            rangeIndicator();
+        }
+       
         //attackRangeImage = gameobject.transform.Find("Range Canvas").transform.Find("Attack Range");
-        rangeIndicator();
+        
         maxSpeed = agent.speed;
         StartCoroutine(randomizer());
         pathScript = GetComponent<EnemyPath>();
