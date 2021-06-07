@@ -11,13 +11,30 @@ public class Inventory : MonoBehaviour
     public GameObject[] potionSlots;
     public List<GameObject> itemList;
     GameObject droppedItem;
+    public Abilities abilityScript;
     void Start()
     {
+        abilityScript = GetComponent<Abilities>();
+
         for (int i = 0; i < itemSlots.Length; i++)
         {
+            
+            if (i == 0)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(0); });
+            }
+            if (i == 1)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(1); });
+            }
+            if (i == 2)
+            {
+                itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(2); });
+            }
+
             //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(test);
             //itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener;
-            itemSlots[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { dropItem(0); });
+
             Debug.Log("slot buttons");
         }
     }
@@ -71,6 +88,7 @@ public class Inventory : MonoBehaviour
         droppedItem.GetComponent<Item>().random = false;
         droppedItem.transform.localScale = new Vector3(6, 6, 6);
         droppedItem.GetComponent<Item>().type = itemList[index].GetComponent<Item>().type;
+        itemList[index].GetComponent<Item>().itemDropEffect(gameObject);
         Destroy(itemList[index]);
         itemList.RemoveAt(index);        
     }
@@ -86,6 +104,12 @@ public class Inventory : MonoBehaviour
         {
             itemList[i].GetComponent<Item>().activeEffect(gameObject);
             destroyItem(i);
+            Debug.Log("used active item");
+        }
+        else if (itemList[i].GetComponent<Item>().type == Item.itemType.healthPotion)
+        {
+            usePotion();
+            //destroyItem(i);
             Debug.Log("used active item");
         }
     }

@@ -21,7 +21,7 @@ public class Item : MonoBehaviour
     [SerializeField] GameObject trapObject;
     [SerializeField] GameObject maskObject;
     [SerializeField] GameObject demonObject;
-    public bool activeItem;
+    //public bool activeItem;
 
     public enum itemType
     {        
@@ -55,7 +55,7 @@ public class Item : MonoBehaviour
                 type = (itemType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(itemType)).Length - 1);
                 aType = (activeType)UnityEngine.Random.Range(0, Enum.GetNames(typeof(activeType)).Length);
 
-                Debug.Log("item level= " + itemLevel);
+                //Debug.Log("item level= " + itemLevel);
             }
         }
         else
@@ -111,19 +111,46 @@ public class Item : MonoBehaviour
             case (itemType.attackSpeed):
                 //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
                 player.GetComponentInChildren<Animator>().SetFloat("Attack Speed",
-                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel/2f));
+                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") + (itemLevel/3f));
                 break;
             case (itemType.healthPotion):
                 player.GetComponent<Abilities>().potionCount += itemLevel;
                 break;
             case (itemType.movementSpeed):
-                player.GetComponent<NavMeshAgent>().speed += itemLevel;
+                player.GetComponent<NavMeshAgent>().speed += 2*itemLevel;
                 break;
             case (itemType.maxHealth):
                 player.GetComponent<PlayerCombat>().health = player.GetComponent<PlayerCombat>().healthPercentage*
                     (player.GetComponent<PlayerCombat>().maxhealth + 50 * itemLevel);
                 player.GetComponent<PlayerCombat>().maxhealth += 50 * itemLevel;
                            
+                break;
+        }
+    }
+    public void itemDropEffect(GameObject player)
+    {
+        switch (type)
+        {
+
+            case (itemType.damage):
+                player.GetComponent<Attacking>().attackDamage -= 5 * itemLevel;
+                break;
+            case (itemType.attackSpeed):
+                //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
+                player.GetComponentInChildren<Animator>().SetFloat("Attack Speed",
+                player.GetComponentInChildren<Animator>().GetFloat("Attack Speed") - (itemLevel / 3f));
+                break;
+            case (itemType.healthPotion):
+                player.GetComponent<Abilities>().potionCount -= itemLevel;
+                break;
+            case (itemType.movementSpeed):
+                player.GetComponent<NavMeshAgent>().speed -= 2*itemLevel;
+                break;
+            case (itemType.maxHealth):
+                player.GetComponent<PlayerCombat>().health = player.GetComponent<PlayerCombat>().healthPercentage *
+                    (player.GetComponent<PlayerCombat>().maxhealth - 50 * itemLevel);
+                player.GetComponent<PlayerCombat>().maxhealth -= 50 * itemLevel;
+
                 break;
         }
     }
@@ -161,5 +188,11 @@ public class Item : MonoBehaviour
                 demonObject.GetComponent<Enemy_AI>().summoned = true;
                 break;
         }
+    }
+    IEnumerator spawnMask(GameObject player)
+    {
+        Instantiate(maskObject,player.transform.position,player.transform.rotation);      
+        yield return new WaitForSeconds(0.1f);
+        maskObject.GetComponent<Orbit>().target = player.transform;
     }
 }

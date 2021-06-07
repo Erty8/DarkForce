@@ -1997,7 +1997,7 @@ GameObject:
   - component: {fileID: 817922179}
   - component: {fileID: 817922178}
   m_Layer: 5
-  m_Name: Level Up Button (3)
+  m_Name: Template Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2161,7 +2161,7 @@ GameObject:
   - component: {fileID: 843242588}
   - component: {fileID: 843242589}
   m_Layer: 7
-  m_Name: Slider (1)
+  m_Name: HP Bar Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4514,7 +4514,7 @@ GameObject:
   - component: {fileID: 1732784348}
   - component: {fileID: 1732784349}
   m_Layer: 7
-  m_Name: Slider (2)
+  m_Name: XP Bar Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5337,13 +5337,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCombatScript: {fileID: 2063285404}
   basicAttackScript: {fileID: -8636553460368975147, guid: 6e2419f533b70324581352284092c1cd, type: 3}
-  levelUpButton: {fileID: 0}
-  gainHealth: {fileID: 0}
-  gainAttackDmg: {fileID: 0}
-  XP_Reach: 0
-  playerLevel: 0
+  levelUpButton: {fileID: 790594608}
+  gainHealth: {fileID: 2128470904}
+  gainAttackDmg: {fileID: 2108498667}
+  XP_Reach: 50
+  playerLevel: 1
   level_Modifier: 15
-  XP_Bar: {fileID: 0}
+  XP_Bar: {fileID: 1732784349}
 --- !u!114 &2063285404 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1853499905, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
@@ -5606,7 +5606,7 @@ GameObject:
   - component: {fileID: 2108498670}
   - component: {fileID: 2108498669}
   m_Layer: 5
-  m_Name: Level Up Button (2)
+  m_Name: Gain Attack Damage Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5739,7 +5739,7 @@ GameObject:
   - component: {fileID: 2128470907}
   - component: {fileID: 2128470906}
   m_Layer: 5
-  m_Name: Level Up Button (1)
+  m_Name: Gain Health Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7001,6 +7001,10 @@ PrefabInstance:
       value: 15.472
       objectReference: {fileID: 0}
     - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2063285412}
+    - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: _destination
       value: 
       objectReference: {fileID: 2063285412}
@@ -7016,6 +7020,14 @@ PrefabInstance:
       propertyPath: abilityCD
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: XP_ManagerScript
+      value: 
+      objectReference: {fileID: 2063285402}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

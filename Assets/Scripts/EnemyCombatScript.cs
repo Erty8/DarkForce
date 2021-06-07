@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyCombatScript : MonoBehaviour
 {
-
+    [SerializeField] GameObject loot;
     public XPManager XP_ManagerScript;
     
     public Canvas enemyHealthBar;
@@ -14,6 +14,10 @@ public class EnemyCombatScript : MonoBehaviour
     private bool canbeDamaged = true;
     float maxhealth;
     public Animator anim;
+    public Enemy_AI aiScript;
+    public float summonDuration = 15f;
+    bool lootSpawned = false;
+    public bool hasLoot = true;
 
     //Bool that is used to fix "surfing" after death in EnemyPath script
     public bool isAlive = true;
@@ -23,6 +27,12 @@ public class EnemyCombatScript : MonoBehaviour
     {
         enemySlider.maxValue = health;
         maxhealth = health;
+        aiScript = GetComponent<Enemy_AI>();
+        if (aiScript.summoned)
+        {
+            Debug.Log("summoned");
+            StartCoroutine(summonedDie());
+        }
     }
 
     // Update is called once per frame
@@ -44,19 +54,20 @@ public class EnemyCombatScript : MonoBehaviour
         //anim.SetBool("takeHit", true);
         //Debug.Log(health);
         
-        if (health <= maxhealth/2 &&canbeDamaged)
+        /*if (health <= maxhealth/2 &&canbeDamaged)
         {
    
             anim.SetBool("takeHit", true);
+            anim.SetBool("attack", false);
             StartCoroutine(cannotbeDamaged());
-            
-                     
-        }
+            aiScript.walkbool = false;                                
+        }*/
+
         if (health <=0 )
         {
             isAlive = false;
             anim.SetBool("death", true);
-            Invoke("destroy", 7f);
+            Invoke("destroy", 5f);
             //Destroy(gameObject);
         }
     }
@@ -70,7 +81,7 @@ public class EnemyCombatScript : MonoBehaviour
         {
             takeDamage(x);
             
-            Debug.Log("damage over time");
+            //Debug.Log("damage over time");
             yield return new WaitForSeconds(z);
             
         }
@@ -83,8 +94,25 @@ public class EnemyCombatScript : MonoBehaviour
     }
     void destroy()
     {
-        XP_ManagerScript.ShouldGainXP();
+        if (!aiScript.summoned)
+        {
+            XP_ManagerScript.ShouldGainXP();
+            if (!lootSpawned&&hasLoot)
+            {
+                Instantiate(loot, transform.position, transform.rotation);
+                lootSpawned = true;
+                Debug.Log("loot spawned");
+            }            
+            
+        }       
         Destroy(gameObject);
+    }
+    IEnumerator summonedDie()
+    {
+        yield return new WaitForSeconds(summonDuration);
+        isAlive = false;
+        anim.SetBool("death", true);
+        Invoke("destroy", 3f);
     }
     
 }

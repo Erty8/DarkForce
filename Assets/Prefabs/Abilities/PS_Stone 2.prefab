@@ -9859,7 +9859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4107232856871150175}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -32.8, y: -0, z: -0}
+  m_LocalPosition: {x: -32.8, y: -59, z: -0}
   m_LocalScale: {x: 6.167357, y: 3, z: 5}
   m_Children:
   - {fileID: 4107232856105739457}
@@ -14804,7 +14804,7 @@ MonoBehaviour:
   slowedSpeed: 2
   hardenTime: 1.5
   damageCd: 0
-  shatterDamage: 50
+  shatterDamage: 70
   enemies: []
   damagedEnemies: []
   objects: []
