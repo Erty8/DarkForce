@@ -28,6 +28,16 @@ public class EnemyAnimator : MonoBehaviour
         aiScript.dealDamage();
         aiScript.attackIndex++;
     }
+    void melee()
+    {
+        Debug.Log("melee");
+        aiScript.meleeDamage();     
+    }
+    void throwSpear()
+    {
+        Debug.Log("spear");
+        aiScript.throwSpear();
+    }
     void canWalk()
     {
         aiScript.canWalk();
