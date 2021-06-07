@@ -2598,7 +2598,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0.8931041, a: 1}
   m_Intensity: 200
-  m_Range: 5000
+  m_Range: 500
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5195,8 +5195,8 @@ MonoBehaviour:
   summoned: 0
   speed: 4
   attackDamage: 10
-  attackCd: 5
-  attackRange: 30
+  attackCd: 2
+  attackRange: 35
   meleeRange: 10
   attackIndex: 0
   rotSpeed: 4
@@ -9330,6 +9330,10 @@ PrefabInstance:
     - target: {fileID: 901681474, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: abilityCD
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 901681474, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: meleeRange
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: loot
