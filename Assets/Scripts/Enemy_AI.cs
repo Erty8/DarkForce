@@ -63,6 +63,10 @@ public class Enemy_AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (enemyType == type.demon)
+        {
+            meleeRange = 0;
+        }
         enemyCombatScript = GetComponent<EnemyCombatScript>();
         
         attacktimePassed = -attackCd;
@@ -140,8 +144,40 @@ public class Enemy_AI : MonoBehaviour
     }
     public void Attack()
     {
+         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= meleeRange && enemyCombatScript.isAlive)
+        {
+            if (enemyType == type.kobold)
+            {
+                agent.stoppingDistance = meleeRange;
+                if (rotatebool)
+                {
+                    Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
+                   (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+                    float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
+                rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
+                    transform.eulerAngles = new Vector3(0, rotationY, 0);
+                    agent.SetDestination(transform.position);
+                }
+                //if (canAbility) { StartCoroutine(castAbility()); }
+                if ((Time.time - attacktimePassed) > attackCd)
+                {
+                    attackCooldown = false;
+                    attacktimePassed = Time.time;
+                    Debug.Log("Melee attack");
+                    StartCoroutine(meleeBool());
+                    
+                    agent.SetDestination(transform.position);
+                    //rotatebool = false;
+                    walkbool = false;
+                    attackCooldown = true;
+                }
+
+            }
+
+        }
         //Attacking after health = 0 bug fixed 
-        if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
+        else if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
                 (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= attackRange && enemyCombatScript.isAlive)
         {
             //walkbool = false;
@@ -183,45 +219,7 @@ public class Enemy_AI : MonoBehaviour
                 
             }
         }
-        else if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
-                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) <= meleeRange && enemyCombatScript.isAlive)
-        {
-            if (enemyType == type.kobold)
-            {
-                agent.stoppingDistance = meleeRange;
-                if (rotatebool)
-                {
-                    Quaternion rotationToLookAt = Quaternion.LookRotation(new Vector3
-                   (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
-                    float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
-                rotationToLookAt.eulerAngles.y, ref rotateVelocity, rotateSpeedMovement * (Time.deltaTime * 5));
-                    transform.eulerAngles = new Vector3(0, rotationY, 0);
-                    agent.SetDestination(transform.position);
-                }
-                //if (canAbility) { StartCoroutine(castAbility()); }
-                if ((Time.time - attacktimePassed) > attackCd)
-                {
-                    attackCooldown = false;
-                    attacktimePassed = Time.time;
-                    Debug.Log("Melee attack");
-                    StartCoroutine(attackBool());
-                    agent.SetDestination(transform.position);
-                    //rotatebool = false;
-                    walkbool = false;
-                    attackCooldown = true;
-                }
-
-                if ((Time.time - abilityTimePassed) > abilityCD)
-                {
-                    //rotatebool = false;
-                    abilityTimePassed = Time.time;
-                    StartCoroutine(castAbility());
-                    walkbool = false;
-                }
-
-            }
-            
-        }
+       
         else
         {
             if (walkbool)
@@ -277,13 +275,13 @@ public class Enemy_AI : MonoBehaviour
     IEnumerator meleeBool()
     {
         anim.SetBool("melee", true);
+        anim.SetBool("attack", false);
         walkbool = false;
-
 
         //
         yield return new WaitUntil(() => walkbool == true);
         if (Vector3.Distance(new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z), new Vector3
-                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > attackRange)
+                (closestEnemy.transform.position.x, 0, closestEnemy.transform.position.z)) > meleeRange)
         {
             anim.SetBool("continueAttack", false);
             anim.SetBool("melee", false);
@@ -419,6 +417,7 @@ public class Enemy_AI : MonoBehaviour
         {
             anim.SetBool("continueAttack", false);
             anim.SetBool("attack", false);
+            anim.SetBool("melee", false);
         }
         else
         {
