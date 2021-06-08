@@ -660,9 +660,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: loot
+      value: 
+      objectReference: {fileID: 2911293366432398578, guid: 0cdbde7c94da68e4192875c9306826e3, type: 3}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: hasLoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: XP_ManagerScript
+      value: 
+      objectReference: {fileID: 2063285402}
     - target: {fileID: 4425733993014153534, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
       propertyPath: detectRange
-      value: 70
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
@@ -733,6 +745,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: loot
+      value: 
+      objectReference: {fileID: 2911293366432398578, guid: 0cdbde7c94da68e4192875c9306826e3, type: 3}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: hasLoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: XP_ManagerScript
+      value: 
+      objectReference: {fileID: 2063285402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
 --- !u!1 &145124112
@@ -1449,7 +1473,7 @@ PrefabInstance:
     - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: ultimateObject
       value: 
-      objectReference: {fileID: 8668845699299625283, guid: 3f6272c730ff72748887a81ae79cdf8d, type: 3}
+      objectReference: {fileID: 3936181000891744501, guid: d9628330aec4b1644b5ab22c24581a9c, type: 3}
     - target: {fileID: 1853499907, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: ultimateSprite
       value: 
@@ -1598,6 +1622,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 761341694}
+    - target: {fileID: 4644078700541783631, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: layermask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5526617305883754308, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3016,6 +3044,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1580609485522222000, guid: 29c4029044cb3884ebb1386425993d08, type: 3}
   m_PrefabInstance: {fileID: 1580609484081749273}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &947211808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947211799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e683524c48574f443a2bdc2553c4599b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &947211809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4546,8 +4586,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4818,8 +4858,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6314,6 +6354,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: loot
+      value: 
+      objectReference: {fileID: 2911293366432398578, guid: 0cdbde7c94da68e4192875c9306826e3, type: 3}
+    - target: {fileID: 4425733993014153530, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
+      propertyPath: XP_ManagerScript
+      value: 
+      objectReference: {fileID: 2063285402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8feda4ad09d34c54795e18f97fc703dc, type: 3}
 --- !u!1 &1715828787
@@ -7520,15 +7568,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520be6be51be4a84e8ba7300e8357ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerCombatScript: {fileID: 2063285404}
   basicAttackScript: {fileID: -8636553460368975147, guid: 6e2419f533b70324581352284092c1cd, type: 3}
-  levelUpButton: {fileID: 0}
-  gainHealth: {fileID: 0}
-  gainAttackDmg: {fileID: 0}
-  XP_Reach: 0
-  playerLevel: 0
+  levelUpButton: {fileID: 790594608}
+  gainHealth: {fileID: 2128470904}
+  gainAttackDmg: {fileID: 2108498667}
+  XP_Reach: 50
+  playerLevel: 1
   level_Modifier: 15
-  XP_Bar: {fileID: 0}
+  XP_Bar: {fileID: 1732784349}
 --- !u!114 &2063285404 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1853499905, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
@@ -7766,7 +7815,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2063285402}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1186651257, guid: 54639e4802bbfb6458b319d310732dde, type: 3}

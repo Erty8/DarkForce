@@ -15,7 +15,10 @@ public class Buttons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            StartCoroutine(loadScene());
+        }
     }
     public void startGame()
     {
