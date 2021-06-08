@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'tr' Physical Memory: 7549 MB
+OS: 'Windows 10 Home Single Language; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16296 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,175 +11,109 @@ C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/ertug/Documents/GitHub/DarkForce
+C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62126
-Successfully changed project path to: C:/Users/ertug/Documents/GitHub/DarkForce
-C:/Users/ertug/Documents/GitHub/DarkForce
+59228
+Successfully changed project path to: C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
+C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 70.72 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 146.37 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/ertug/Documents/GitHub/DarkForce/Assets
+[Subsystems] Discovering subsystems at path C:/Users/baran/OneDrive/Belgeler/GitHub/DarkForce/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
     Vendor:   
-    VRAM:     3962 MB
-    Driver:   27.21.14.6663
+    VRAM:     4055 MB
+    Driver:   27.21.14.6089
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56040
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001769 seconds.
+Registered in 0.002680 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 281.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.220 seconds
+- Completed reload, in  2.838 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002368 seconds.
+Registered in 0.007260 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 73.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 313.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.072 seconds
+- Completed reload, in  2.361 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 259.7 MB.
-System memory in use after: 259.6 MB.
+Unloading 3512 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 252.9 MB.
+System memory in use after: 252.8 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3991.
-Total: 3.499700 ms (FindLiveObjects: 0.678700 ms CreateObjectMapping: 0.224900 ms MarkObjects: 2.284100 ms  DeleteObjects: 0.309400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbde044757de97ae2140bdc8d68f74fe') in 0.241507 seconds
-  Import took 0.249612 seconds .
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3989.
+Total: 4.310100 ms (FindLiveObjects: 0.502400 ms CreateObjectMapping: 0.393100 ms MarkObjects: 2.794000 ms  DeleteObjects: 0.619400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.353736 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886b4a8bfef41c3b88d22c815cfe3a77') in 0.023971 seconds
-  Import took 0.031106 seconds .
+  path: Assets/Scenes/Ertugrul 4.unity
+  artifactKey: Guid(8c853a5e432a3844dbbe51d031575001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Ertugrul 4.unity using Guid(8c853a5e432a3844dbbe51d031575001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '815cc305a9781c87076e9ee081dfeeb0') in 0.111163 seconds
+  Import took 0.136775 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001313 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886b4a8bfef41c3b88d22c815cfe3a77') in 0.018079 seconds
-  Import took 0.024722 seconds .
+  Time since last request: 8.901777 seconds.
+  path: Assets/Scenes/Baran 4.unity
+  artifactKey: Guid(8c853a5e432a3844dbbe51d031575001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran 4.unity using Guid(8c853a5e432a3844dbbe51d031575001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99e0223177a5d1e4ae8cb3255458cb96') in 0.011654 seconds
+  Import took 0.020980 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.420742 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090611bc152adf3f5cb14021f3f6e6dd') in 0.028970 seconds
-  Import took 0.036264 seconds .
+  Time since last request: 23919.970587 seconds.
+  path: Assets/Scenes/Demo.unity
+  artifactKey: Guid(04323d4992c24db48a9899b1a5a1467a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Demo.unity using Guid(04323d4992c24db48a9899b1a5a1467a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a8e6c9f864a4d65fc94d8ae12529e9') in 0.051961 seconds
+  Import took 0.227999 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.130057 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0df155dbbe8c8080cb924141faa0d65') in 0.018971 seconds
-  Import took 0.025449 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002004 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.327 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3314 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 251.9 MB.
-System memory in use after: 251.8 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4045.
-Total: 6.126300 ms (FindLiveObjects: 0.454200 ms CreateObjectMapping: 0.116100 ms MarkObjects: 4.881800 ms  DeleteObjects: 0.672000 ms)
+  Time since last request: 9.325333 seconds.
+  path: Assets/Scenes/Baran 3.unity
+  artifactKey: Guid(7fec3bbf4e6ffb84ab6af8f1a9642174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran 3.unity using Guid(7fec3bbf4e6ffb84ab6af8f1a9642174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5fd6525c1e16d694656bce55565822') in 0.027040 seconds
+  Import took 0.043822 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.136262 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea594603f6d5f627678be3feeba16168') in 0.135269 seconds
-  Import took 0.143237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007742 seconds.
-  path: Assets/Prefabs/Enemy Objects/Spear.prefab
-  artifactKey: Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy Objects/Spear.prefab using Guid(966c73792ae4bda4caf659fef0faffca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea594603f6d5f627678be3feeba16168') in 0.017503 seconds
-  Import took 0.023426 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001899 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.266 seconds
-Platform modules already initialized, skipping
-Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.25 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3314 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 252.1 MB.
-System memory in use after: 252.0 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4085.
-Total: 5.118100 ms (FindLiveObjects: 1.025100 ms CreateObjectMapping: 0.131000 ms MarkObjects: 3.452800 ms  DeleteObjects: 0.504800 ms)
+  Time since last request: 0.001739 seconds.
+  path: Assets/Scenes/Baran 3.unity
+  artifactKey: Guid(7fec3bbf4e6ffb84ab6af8f1a9642174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Baran 3.unity using Guid(7fec3bbf4e6ffb84ab6af8f1a9642174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5fd6525c1e16d694656bce55565822') in 0.009620 seconds
+  Import took 0.025243 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
