@@ -43,6 +43,14 @@ public class Inventory : MonoBehaviour
         
         for (int i = 0; i < itemSlots.Length; i++)
         {
+            if (isfull[i] == false)
+            {
+                itemSlots[i].GetComponent<Image>().enabled = false;
+            }
+            else
+            {
+                itemSlots[i].GetComponent<Image>().enabled = true;
+            }
             if (itemList.ElementAtOrDefault(i) == null)
             {
                 isfull[i] = false;

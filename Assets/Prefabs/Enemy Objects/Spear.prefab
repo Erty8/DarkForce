@@ -52,7 +52,7 @@ MonoBehaviour:
   attackDamage: 15
   fireballtimeDamage: 0
   dmgforSeconds: 5
-  speed: 10
+  speed: 8
   canDamagePlayers: 0
   canDamageEnemies: 1
   targetTransform: {fileID: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cc33a639d3821489baf13546128c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 70
   destroySecond: 3
   stopSecond: 0
 --- !u!136 &528235259491358326

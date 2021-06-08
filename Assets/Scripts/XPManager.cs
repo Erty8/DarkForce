@@ -6,12 +6,16 @@ using TMPro;
 
 public class XPManager : MonoBehaviour
 {
+    public GameObject player;
     public PlayerCombat playerCombatScript;
     public BasicAttack basicAttackScript;
 
     public GameObject levelUpButton;
     public GameObject gainHealth;
     public GameObject gainAttackDmg;
+
+    //[SerializeField] TextMeshProUGUI healthText;
+    //[SerializeField] TextMeshPro attackText;
 
 
     public int XP_Reach;
@@ -119,10 +123,12 @@ public class XPManager : MonoBehaviour
     {
 
         gainHealth.SetActive(true);
-        gainHealth.GetComponentInChildren<Text>().text = "Gain +" + boost * 2 + " Health";
+        //healthText.text = ("Gain +" + boost * 2 + " Health");
+        gainHealth.GetComponentInChildren<TextMeshProUGUI>().text = "Gain +" + boost * 2 + " Health";
 
         gainAttackDmg.SetActive(true);
-        gainAttackDmg.GetComponentInChildren<Text>().text = "Gain +" + boost + " Attack Damage";
+        //attackText.text = "Gain +" + boost + " Attack Damage";
+        gainAttackDmg.GetComponentInChildren<TextMeshProUGUI>().text = "Gain +" + boost + " Attack Damage";
 
         levelUpButton.SetActive(false);
 
@@ -131,17 +137,20 @@ public class XPManager : MonoBehaviour
 
     public void GainHealth()
     {
-
-        playerCombatScript.takeDamage(-boost * 2);
+        Debug.Log("chosed health");
+        playerCombatScript.health = playerCombatScript.healthPercentage *
+                   (playerCombatScript.maxhealth + boost*2);
+        playerCombatScript.maxhealth += boost*2;
+        //playerCombatScript.takeDamage(-boost * 2);
 
         CloseBoost();
     }
 
     public void GainAttackDmg()
     {
-
-        basicAttackScript.attackDamage += boost;
-
+        Debug.Log("chosed dmg");
+        player.GetComponent<Attacking>().attackDamage += boost;
+        //basicAttackScript.attackDamage += boost;
         CloseBoost();
     }
 

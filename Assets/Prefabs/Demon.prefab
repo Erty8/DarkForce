@@ -1478,7 +1478,7 @@ MonoBehaviour:
   spikeWaveCount: 3
   timeBetweenSpikeWaves: 1
   radius: 10
-  summoned: 0
+  summoned: 1
   speed: 4
   attackDamage: 13
   attackCd: 4
@@ -2088,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292088, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_Size.x
