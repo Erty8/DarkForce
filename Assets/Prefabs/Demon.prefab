@@ -33,7 +33,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 2, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &22667402
@@ -162,13 +162,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150696334}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: -0.33, y: 0.185, z: 1.14}
+  m_LocalRotation: {x: 0.13409658, y: -0.086362556, z: 0.011731937, w: 0.98712814}
+  m_LocalPosition: {x: -0.32999873, y: 0.0803, z: 1.1437136}
   m_LocalScale: {x: 0.1, y: 0.045697, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7802410209899265418}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.472, y: -10, z: 0}
 --- !u!33 &150696330
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0}
-  m_SizeDelta: {x: 4, y: 4}
+  m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &755333535
 CanvasRenderer:
@@ -690,13 +690,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845346539}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0.25, y: 0.196, z: 1.17}
+  m_LocalRotation: {x: 0.13409658, y: 0.086362556, z: -0.011731937, w: 0.98712814}
+  m_LocalPosition: {x: 0.25000012, y: 0.080823995, z: 1.1672333}
   m_LocalScale: {x: 0.1, y: 0.045697, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7802410209899265418}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.472, y: 10, z: 0}
 --- !u!33 &845346535
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -846,13 +846,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186651258}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: -0.04, y: 0.196, z: 1.2}
+  m_LocalRotation: {x: 0.13460883, y: -0, z: -0, w: 0.9908988}
+  m_LocalPosition: {x: -0.039999302, y: 0.084587865, z: 1.1962831}
   m_LocalScale: {x: 0.1, y: 0.045697, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7802410209899265418}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.472, y: 0, z: 0}
 --- !u!33 &1186651254
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1003,7 +1003,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338398525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2013076157}
@@ -1011,7 +1011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9, y: -0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1338398520
@@ -1070,7 +1070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1343189340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1177076152}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
@@ -1290,7 +1290,7 @@ GameObject:
   - component: {fileID: 2102345395}
   - component: {fileID: 2102345394}
   m_Layer: 7
-  m_Name: Health
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1464,25 +1464,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61a4f26df1b32b4f8a76e4a3e763386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 0
   spike: {fileID: 1729651801896249426, guid: a5ba5019f0627f548ae825a052cf059f, type: 3}
   spike1Transform: {fileID: 845346536}
   spike2Transform: {fileID: 1186651259}
   spike3Transform: {fileID: 150696335}
+  skillshotCanvas: {fileID: 686121765}
+  spearObject: {fileID: 0}
+  spearTransform: {fileID: 0}
   anim: {fileID: 1839762871}
   attackRangeImage: {fileID: 1240349383}
-  skillshotCanvas: {fileID: 686121765}
   agent: {fileID: 901681475}
   spikeWaveCount: 3
   timeBetweenSpikeWaves: 1
   radius: 10
-  summoned: 1
+  summoned: 0
   speed: 4
   attackDamage: 13
   attackCd: 4
   attackRange: 20
+  meleeRange: 0
   attackIndex: 0
   rotSpeed: 4
-  abilityCD: 15
+  abilityCD: 7
   abilityCastTime: 2
   walkSpeed: 0
   speedVal: 0
@@ -1527,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6676cc7be01efa46af4af9e0c5f258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 0}
+  loot: {fileID: 7351659160239791229, guid: 51aebfb283db81049ba05783fc8e5cc8, type: 3}
   XP_ManagerScript: {fileID: 0}
   enemyHealthBar: {fileID: 2102345392}
   enemySlider: {fileID: 2013076156}
@@ -1535,6 +1539,7 @@ MonoBehaviour:
   anim: {fileID: 1839762871}
   aiScript: {fileID: 0}
   summonDuration: 10
+  hasLoot: 1
   isAlive: 1
 --- !u!1001 &7802410209189653171
 PrefabInstance:
@@ -2083,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292086, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292088, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_Size.x
@@ -2139,7 +2144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292093, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 346.9
+      value: 365.13
       objectReference: {fileID: 0}
     - target: {fileID: 1879755763918292093, guid: 5648984259483654a96bd7c875cbd823, type: 3}
       propertyPath: m_LocalPosition.y
