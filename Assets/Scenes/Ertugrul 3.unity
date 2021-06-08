@@ -1484,10 +1484,26 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 4644078700541783630, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644078700541783630, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644078700541783630, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_Acceleration
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4644078700541783631, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 761341694}
+    - target: {fileID: 4644078700541783631, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: layermask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5526617305883754308, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_IsActive
       value: 0

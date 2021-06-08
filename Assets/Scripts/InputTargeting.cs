@@ -53,7 +53,10 @@ public class InputTargeting : MonoBehaviour
                 if (hit.collider.GetComponent<Item>() != null)
                 {
                     selectedHero.GetComponent<Attacking>().itemToPick = hit.collider.gameObject;
-                                                                                 
+                    selectedHero.GetComponent<Attacking>().agent.SetDestination 
+                        (new Vector3 (hit.point.x,selectedHero.transform.position.y,hit.point.z));
+
+
                 }
 
             }
