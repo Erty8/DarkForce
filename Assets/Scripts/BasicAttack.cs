@@ -10,7 +10,8 @@ public class BasicAttack : MonoBehaviour
     public float fireballtimeDamage = 0f;
     public float dmgforSeconds = 5f;
     public float speed = 1.5f;
-    public bool damagePlayers = false;
+    public bool canDamagePlayers = false;
+    public bool canDamageEnemies = true;
     float step;
     public Transform targetTransform;
     public GameObject targetObject;
@@ -53,13 +54,17 @@ public class BasicAttack : MonoBehaviour
         
         if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false && col.gameObject != self)
         {
-            col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
-            col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage,dmgforSeconds,1f);
-            Destroy(gameObject);
+            if (canDamageEnemies)
+            {
+                col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+                col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage, dmgforSeconds, 1f);
+                Destroy(gameObject);
+            }
+            
         }
         else if (col.gameObject.tag == "Player" && enemies.Contains(col.gameObject) == false && col.gameObject != self)
         {
-            if (damagePlayers)
+            if (canDamagePlayers)
             {
                 col.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
                 //col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage, dmgforSeconds, 1f);
