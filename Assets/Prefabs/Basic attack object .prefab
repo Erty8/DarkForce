@@ -196,7 +196,10 @@ MonoBehaviour:
   fireballtimeDamage: 0
   dmgforSeconds: 5
   speed: 1
+  damagePlayers: 0
   targetTransform: {fileID: 0}
+  targetObject: {fileID: 0}
+  self: {fileID: 0}
 --- !u!1001 &7177641045319130519
 PrefabInstance:
   m_ObjectHideFlags: 0

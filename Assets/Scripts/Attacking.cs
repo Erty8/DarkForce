@@ -260,8 +260,8 @@ public class Attacking : MonoBehaviour
     {
         
         if (targetedEnemy != null) {
-            Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
-            attackObject.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
+            GameObject basicAttack = Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
+            basicAttack.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
         }
         else
         {

@@ -13,14 +13,18 @@ public class Enemy_AI : MonoBehaviour
     }
     public type enemyType;
     EnemyCombatScript enemyCombatScript;
-
+    [Header ("Demon")]
     [SerializeField] GameObject spike;
     [SerializeField] Transform spike1Transform;
     [SerializeField] Transform spike2Transform;
     [SerializeField] Transform spike3Transform;
+    [SerializeField] public GameObject skillshotCanvas;
+    [Header("Kobold")]
+    [SerializeField] GameObject spearObject;
+    [SerializeField] Transform spearTransform;
     [SerializeField] Animator anim;
     [SerializeField] Image attackRangeImage;
-    [SerializeField] public GameObject skillshotCanvas; 
+    
     [SerializeField] NavMeshAgent agent; 
     public float spikeWaveCount = 3f;
     public float timeBetweenSpikeWaves = 1f;
@@ -428,7 +432,10 @@ public class Enemy_AI : MonoBehaviour
     }
     public void throwSpear()
     {
-        
+        GameObject spear = Instantiate(spearObject, spearTransform.position, transform.rotation);
+        spear.GetComponent<BasicAttack>().targetObject = closestEnemy;
+        spear.GetComponent<BasicAttack>().damagePlayers = true;
+        spear.GetComponent<BasicAttack>().self = gameObject;
     }
 
     public void castSpikes(float y, float z)
