@@ -8,6 +8,7 @@ public class Trap : MonoBehaviour
     public float detectRange = 20;
     public float timeBeforeInvisible = 2f;
     bool candamage;
+    bool ready = false;
     public List<GameObject> enemies = new List<GameObject>();
     GameObject closestEnemy;
     // Start is called before the first frame update
@@ -20,10 +21,11 @@ public class Trap : MonoBehaviour
     void Update()
     {
         FindClosestEnemy();  
-        if (candamage)
+        if (ready)
         {         
             
-                if (Vector3.Distance(closestEnemy.transform.position, transform.position) <= detectRange)
+                if (Vector3.Distance(new Vector3 (closestEnemy.transform.position.x,transform.position.y,closestEnemy.transform.position.z)
+                    , transform.position) <= detectRange)
                 {
                     gameObject.GetComponent<MeshRenderer>().enabled = true;
                     candamage = true;
@@ -33,6 +35,8 @@ public class Trap : MonoBehaviour
                 {
                     
                     gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    candamage = false;
+                
                 }
                 
                        
@@ -51,7 +55,7 @@ public class Trap : MonoBehaviour
             if (col.tag == "Enemy")
             {
                 col.GetComponent<EnemyCombatScript>().takeDamage(trapDamage);
-                col.GetComponent<Animator>().SetBool("takeHit", true);
+                col.GetComponentInChildren<Animator>().SetBool("takeHit", true);
                 Destroy(gameObject);    
             }
         }
@@ -61,6 +65,7 @@ public class Trap : MonoBehaviour
     {
         List<GameObject> enemies = new List<GameObject>();
         enemies.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         float distanceToClosestEnemy = Mathf.Infinity;
 
         foreach (GameObject currentEnemy in enemies)
@@ -79,7 +84,7 @@ public class Trap : MonoBehaviour
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(timeBeforeInvisible);
-        candamage = true;
+        ready = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }
