@@ -94,7 +94,7 @@ public class Abilities : MonoBehaviour
     public Inventory inventory;
     public int potionCount;
     public KeyCode potionKey;
-    public float potionDuration = 5f;
+    public float potionDuration = 10f;
 
 
 
@@ -588,16 +588,16 @@ public class Abilities : MonoBehaviour
         
             Debug.Log("used potion");
             StartCoroutine(usePotion());
-            potionCount--;
+            //potionCount--;
             inventory.usePotion();
 
         
     }
     public IEnumerator usePotion()
     {
-        playerCombat.potion = false;
-        yield return new WaitForSeconds(potionDuration);
         playerCombat.potion = true;
+        yield return new WaitForSeconds(potionDuration);
+        playerCombat.potion = false;
     }
    
 
