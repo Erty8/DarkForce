@@ -4261,21 +4261,29 @@ PrefabInstance:
       propertyPath: _patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 841028334}
+    - target: {fileID: 901681474, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: summoned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901681474, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: abilityCD
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 901681483, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: XP_ManagerScript
       value: 
       objectReference: {fileID: 2063285402}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1177076152, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_Name
@@ -4283,7 +4291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7802410209899265409, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: m_TagString

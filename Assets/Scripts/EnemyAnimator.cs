@@ -22,11 +22,23 @@ public class EnemyAnimator : MonoBehaviour
     {
         anim.SetBool("takeHit", false);
     }
+    void idle()
+    {
+        anim.SetBool("idle", true);
+    }
+    void idleEnd()
+    {
+        anim.SetBool("idle", false);
+    }
     void attack()
     {
         //aiScript.test();
         aiScript.dealDamage();
         aiScript.attackIndex++;
+    }
+    void abilityCasted()
+    {
+        anim.SetBool("ability", false);
     }
     void melee()
     {

@@ -97,6 +97,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.8723921
+        functionName: idleEnd
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -200,6 +207,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.24348398
         functionName: canWalk
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9657187
+        functionName: idle
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
