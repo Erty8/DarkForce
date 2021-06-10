@@ -5,6 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private LayerMask layermask;
     public NavMeshAgent agent;
     public Animator anim;
     PlayerAnimator animatorScript;
@@ -103,7 +104,7 @@ public class Movement : MonoBehaviour
             //anim.SetBool("Moving", true);
             //Debug.Log(anim.GetFloat("Speed"));
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity,layermask))
             {
                 if (hit.collider.tag == "Floor")
                 {
@@ -147,6 +148,10 @@ public class Movement : MonoBehaviour
             //agent.updateRotation = true;
         }
         fixVelocity = true;
+    }
+    public void collisionFixStarter()
+    {
+        StartCoroutine(collisionFix());
     }
     IEnumerator collisionFix()
     {

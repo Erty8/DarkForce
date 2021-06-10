@@ -10,8 +10,12 @@ public class BasicAttack : MonoBehaviour
     public float fireballtimeDamage = 0f;
     public float dmgforSeconds = 5f;
     public float speed = 1.5f;
+    public bool canDamagePlayers = false;
+    public bool canDamageEnemies = true;
     float step;
     public Transform targetTransform;
+    public GameObject targetObject;
+    public GameObject self; 
     public static List<GameObject> enemies = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,12 @@ public class BasicAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // for non players
+        if (targetObject != null)
+        {
+            targetTransform = targetObject.transform;
+        }
+        
         float step = speed * Time.deltaTime; // calculate distance to move
         if (targetTransform != null) {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3
@@ -42,11 +52,25 @@ public class BasicAttack : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         
-        if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false)
+        if (col.gameObject.tag == "Enemy" && enemies.Contains(col.gameObject) == false && col.gameObject != self)
         {
-            col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
-            col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage,dmgforSeconds,1f);
-            Destroy(gameObject);
+            if (canDamageEnemies)
+            {
+                col.gameObject.GetComponent<EnemyCombatScript>().takeDamage(attackDamage);
+                col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage, dmgforSeconds, 1f);
+                Destroy(gameObject);
+            }
+            
+        }
+        else if (col.gameObject.tag == "Player" && enemies.Contains(col.gameObject) == false && col.gameObject != self)
+        {
+            if (canDamagePlayers)
+            {
+                col.gameObject.GetComponent<PlayerCombat>().takeDamage(attackDamage);
+                //col.gameObject.GetComponent<EnemyCombatScript>().takedamageoverTime(fireballtimeDamage, dmgforSeconds, 1f);
+                Destroy(gameObject);
+            }
+            
         }
 
     }

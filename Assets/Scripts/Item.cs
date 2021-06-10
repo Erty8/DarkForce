@@ -179,8 +179,9 @@ public class Item : MonoBehaviour
                 Debug.Log("trap placed");
                 break;
             case (activeType.mask):
-                Instantiate(maskObject);
-                maskObject.GetComponent<Orbit>().target = player.transform;
+                GameObject mask = Instantiate(maskObject);
+                mask.GetComponent<Orbit>().target = player.transform;
+                //maskObject.GetComponent<Orbit>().target = player.transform;
                 break;
             case (activeType.summonDemon):
                 Instantiate(demonObject, transform.parent.position, transform.parent.rotation);           

@@ -13,7 +13,7 @@ public class Ultimate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(effectObject,transform.position,transform.rotation);
+        //Instantiate(effectObject,transform.position,transform.rotation);
         visualEffect = effectObject.GetComponent<VisualEffect>();
         //visualEffect = GetComponentInChildren<VisualEffect>();
         visualEffect.Stop();

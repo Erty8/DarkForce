@@ -32,7 +32,7 @@ public class Attacking : MonoBehaviour
     public bool basicAtkIdle = false;
     public bool isHeroAlive;
     public bool performMeleeAttack = true;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     [Header ("Inventory")]
     public Inventory inventory;
@@ -80,8 +80,8 @@ public class Attacking : MonoBehaviour
         }
         if (itemToPick != null)
         {
-            moveScript.agent.SetDestination(itemToPick.transform.position);
-            moveScript.agent.stoppingDistance = 0;
+            //moveScript.agent.SetDestination(itemToPick.transform.position);
+            //moveScript.agent.stoppingDistance = 0;
             Quaternion rotationToLookAt = Quaternion.LookRotation(itemToPick.transform.position - transform.position);
             float rotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
             rotationToLookAt.eulerAngles.y, ref moveScript.rotateVelocity, rotateSpeedForAttack * (Time.deltaTime * 5));
@@ -224,7 +224,12 @@ public class Attacking : MonoBehaviour
                         //inventory.itemSlots[i].GetComponent<Image>().sprite = col.gameObject.GetComponent<Image>().sprite;                      
                         //inventory.isfull[i] = true;
                         inventory.addItem(i,itemToPick);
-                        col.transform.parent = gameObject.transform; 
+                        
+                        
+                        //agent.SetDestination(transform.position);
+                        
+                        //moveScript.collisionFixStarter();
+                        col.transform.parent = gameObject.transform;
                         col.GetComponent<Item>().itemEffect(gameObject);
                         
                         //Destroy(col.gameObject);
@@ -260,8 +265,8 @@ public class Attacking : MonoBehaviour
     {
         
         if (targetedEnemy != null) {
-            Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
-            attackObject.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
+            GameObject basicAttack = Instantiate(attackObject, ProjectileTransform.transform.position, ProjectileTransform.transform.rotation);
+            basicAttack.GetComponent<BasicAttack>().targetTransform = targetedEnemy.transform;
         }
         else
         {
