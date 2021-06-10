@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8375606476937122063}
   - component: {fileID: 5702503492694497661}
   - component: {fileID: 528235259491358326}
-  m_Layer: 0
+  - component: {fileID: 1409030764799085530}
+  m_Layer: 2
   m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,11 +83,24 @@ CapsuleCollider:
   m_GameObject: {fileID: 462115120517124672}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.9015789
+  m_Enabled: 0
+  m_Radius: 0.73599815
   m_Height: 11.773285
   m_Direction: 2
-  m_Center: {x: 0.031902313, y: -0.011220932, z: -2.6198578}
+  m_Center: {x: 0.031902313, y: -0.17680168, z: -2.6198578}
+--- !u!65 &1409030764799085530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462115120517124672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2256165, y: 8.770176, z: 11.396576}
+  m_Center: {x: 0.022583008, y: -0.17415047, z: -3.7174835}
 --- !u!1 &1502262682295068729
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +113,7 @@ GameObject:
   - component: {fileID: 8853055099328968183}
   - component: {fileID: 6839777238138050327}
   - component: {fileID: 6247778652068270008}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +207,7 @@ GameObject:
   - component: {fileID: 383412756474231202}
   - component: {fileID: 3280037260277170408}
   - component: {fileID: 2062845044942890108}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8927269847765740185}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: -11.8, z: 1}
+  m_LocalPosition: {x: 0, y: -11.8, z: 4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 946340777803565306}

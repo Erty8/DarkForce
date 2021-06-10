@@ -432,7 +432,7 @@ public class Enemy_AI : MonoBehaviour
     }
     public void throwSpear()
     {
-        GameObject spear = Instantiate(spearObject, spearTransform.position, transform.rotation);
+        GameObject spear = Instantiate(spearObject, spearTransform.position, spearTransform.rotation);
         spear.GetComponent<BasicAttack>().targetObject = closestEnemy;
         spear.GetComponent<BasicAttack>().canDamagePlayers = true;
         spear.GetComponent<BasicAttack>().canDamageEnemies = false;
