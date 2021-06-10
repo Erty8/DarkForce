@@ -32,9 +32,9 @@ public class InputTargeting : MonoBehaviour
         }
         if (Input.GetKey(attackMovekey))
         {
+
             attackMovebool = true;
             
-
         }
 
         //Debug.Log(Input.GetMouseButtonDown(0));
