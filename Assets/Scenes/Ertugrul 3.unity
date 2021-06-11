@@ -1544,6 +1544,10 @@ PrefabInstance:
       value: Ult transform
       objectReference: {fileID: 0}
     - target: {fileID: 333672353, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0914402
+      objectReference: {fileID: 0}
+    - target: {fileID: 333672353, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.15
       objectReference: {fileID: 0}
@@ -1555,6 +1559,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.41
       objectReference: {fileID: 0}
+    - target: {fileID: 333672355, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 333672356, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 1639243124, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1
