@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5168bd238a8c8a042abc278acb5895c8, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5168bd238a8c8a042abc278acb5895c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1470,7 +1470,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 467100947}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: startGame
+        m_MethodName: reloadCurrentScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1543,6 +1543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ult transform
       objectReference: {fileID: 0}
+    - target: {fileID: 333672352, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 333672353, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.0914402
@@ -1576,8 +1580,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1853499905, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 761341694}
+    - target: {fileID: 1853499905, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: health
-      value: 350
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1853499905, guid: afa9ccc119c4dec4e9bbf8b01f6a2acf, type: 3}
       propertyPath: healthBar
@@ -2425,7 +2433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2063285412}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &890611283
 Light:
@@ -4485,7 +4493,7 @@ RectTransform:
   m_Children:
   - {fileID: 1186881722}
   m_Father: {fileID: 2063285412}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

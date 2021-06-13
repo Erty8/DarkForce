@@ -196,7 +196,8 @@ MonoBehaviour:
   fireballtimeDamage: 0
   dmgforSeconds: 5
   speed: 1
-  damagePlayers: 0
+  canDamagePlayers: 0
+  canDamageEnemies: 1
   targetTransform: {fileID: 0}
   targetObject: {fileID: 0}
   self: {fileID: 0}
@@ -427,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5154657901121176347, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 5154657901121176347, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -435,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5154657901121176347, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7408504562827618751, guid: b1a836688bf996a4089a25a5e2744de0, type: 3}
       propertyPath: m_Materials.Array.size

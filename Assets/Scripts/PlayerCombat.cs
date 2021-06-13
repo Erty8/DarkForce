@@ -17,7 +17,9 @@ public class PlayerCombat : MonoBehaviour
     public float potionRegenRate = 10f;
     public float healthPercentage;
     public bool potion = false;
-   
+    Canvas pauseCanvas;
+    Canvas feedbackCanvas;
+    [SerializeField] GameObject resumeButton;
     [SerializeField] GameObject iceShield;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,9 @@ public class PlayerCombat : MonoBehaviour
         maxhealth = health;
         healthBarSlider.maxValue = maxhealth;
         healthBarSlider2D.maxValue = maxhealth;
-        
+        pauseCanvas = GameObject.Find("Pause").gameObject.GetComponent<Canvas>();
+        resumeButton = GameObject.Find("Resume");
+        feedbackCanvas = GameObject.Find("FeedbackCanvas").gameObject.GetComponent<Canvas>();
 
 
     }
@@ -52,9 +56,9 @@ public class PlayerCombat : MonoBehaviour
 
         if (health <= 0)
         {
-            die();
+            die();           
             Movement.canMove = false;
-
+            
             //Destroy(gameObject);
         }
         healthPercentage = health / maxhealth;
@@ -101,6 +105,7 @@ public class PlayerCombat : MonoBehaviour
     void die()
     {
         anim.SetBool("Death", true);
+        StartCoroutine(gameoverScreen());
         //Invoke("destroy", 7f);
     }
     void destroy()
@@ -117,5 +122,13 @@ public class PlayerCombat : MonoBehaviour
         {
             hasShield = false;
         }
+    }
+    IEnumerator gameoverScreen()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("gameover");
+        pauseCanvas.enabled = true;
+        resumeButton.SetActive(false);
+        feedbackCanvas.enabled = true;
     }
 }
