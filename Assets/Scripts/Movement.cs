@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     public float rotateSpeedMovement;
     public float rotateVelocity;
     bool fixVelocity = true;
-    public static bool canMove = true;
+    public bool canMove = true;
 
     private Attacking attackingScript;
     [SerializeField] public KeyCode attackMove;

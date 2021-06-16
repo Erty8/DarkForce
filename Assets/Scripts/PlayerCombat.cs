@@ -21,6 +21,7 @@ public class PlayerCombat : MonoBehaviour
     Canvas feedbackCanvas;
     [SerializeField] GameObject resumeButton;
     [SerializeField] GameObject iceShield;
+    public Movement moveScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerCombat : MonoBehaviour
         pauseCanvas = GameObject.Find("Pause").gameObject.GetComponent<Canvas>();
         resumeButton = GameObject.Find("Resume");
         feedbackCanvas = GameObject.Find("FeedbackCanvas").gameObject.GetComponent<Canvas>();
+        moveScript = GetComponent<Movement>();
 
 
     }
@@ -57,7 +59,7 @@ public class PlayerCombat : MonoBehaviour
         if (health <= 0)
         {
             die();           
-            Movement.canMove = false;
+            moveScript.canMove = false;
             
             //Destroy(gameObject);
         }

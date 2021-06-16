@@ -6,6 +6,7 @@ public class AnimationEvents : MonoBehaviour
 {
     Abilities abilityScript;
     Attacking attackScript;
+    public Movement moveScript;
     public AudioSource audioSource;
     public AudioClip leftFootClip;
     public AudioClip rightFootClip;
@@ -14,6 +15,7 @@ public class AnimationEvents : MonoBehaviour
     {
         abilityScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Abilities>();
         attackScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Attacking>();
+        moveScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -49,11 +51,11 @@ public class AnimationEvents : MonoBehaviour
     }
     void canMove()
     {
-        Movement.canMove = true;
+        moveScript.canMove = true;
     }
     void cannotMove()
     {
-        Movement.canMove = false;
+        moveScript.canMove = false;
     }
     void rightFoot()
     {

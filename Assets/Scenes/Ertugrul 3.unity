@@ -2230,6 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346dbbfb56ddfda47bf1831f8f4c2898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveScript: {fileID: 0}
   audioSource: {fileID: 761341698}
   leftFootClip: {fileID: 8300000, guid: d7a730a5490226547ab2b8405d654799, type: 3}
   rightFootClip: {fileID: 8300000, guid: 47eed000b5530a44985a56f3e65ab874, type: 3}
