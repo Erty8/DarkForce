@@ -18,6 +18,7 @@ public class EnemyCombatScript : MonoBehaviour
     public float summonDuration = 15f;
     bool lootSpawned = false;
     public bool hasLoot = true;
+    public EnemyPath pathScript;
 
     //Bool that is used to fix "surfing" after death in EnemyPath script
     public bool isAlive = true;
@@ -25,6 +26,7 @@ public class EnemyCombatScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pathScript = GetComponent<EnemyPath>();
         enemySlider.maxValue = health;
         maxhealth = health;
         aiScript = GetComponent<Enemy_AI>();
@@ -50,6 +52,7 @@ public class EnemyCombatScript : MonoBehaviour
     }
     public void takeDamage(float x)
     {
+        StartCoroutine(alertStart());
         health -= x;
         //anim.SetBool("takeHit", true);
         //Debug.Log(health);
@@ -114,5 +117,12 @@ public class EnemyCombatScript : MonoBehaviour
         anim.SetBool("death", true);
         Invoke("destroy", 3f);
     }
-    
+    IEnumerator alertStart()
+    {
+        pathScript.alerted = true;
+        yield return new WaitForSeconds(2f);
+        pathScript.alerted = false;
+
+    }
+
 }

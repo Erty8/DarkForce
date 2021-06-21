@@ -5288,6 +5288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2063285412}
     - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
+      propertyPath: maxDetectRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 901681472, guid: 54639e4802bbfb6458b319d310732dde, type: 3}
       propertyPath: _patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1118323551}

@@ -11,7 +11,8 @@ public class EnemyPath : MonoBehaviour
     public Transform player;
     private float dist;
     public float detectRange;
-
+    public float maxDetectRange;
+    float minDetectRange;
     [SerializeField]
     NavMeshAgent _agent;
     [SerializeField]
@@ -31,6 +32,7 @@ public class EnemyPath : MonoBehaviour
     bool _waiting;
     bool _patrolForawrd;
     float _waitTimer;
+    public bool alerted;
 
     public Animator anim;
     public Enemy_AI aiscript;
@@ -43,6 +45,7 @@ public class EnemyPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        minDetectRange = detectRange;
         enemyCombatScript = GetComponent<EnemyCombatScript>();                      
         _agent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -61,6 +64,14 @@ public class EnemyPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (alerted)
+        {
+            detectRange = maxDetectRange;
+        }
+        else
+        {
+            detectRange = minDetectRange;
+        }
         if (aiscript.summoned)
         {
 
