@@ -117,6 +117,7 @@ public class Inventory : MonoBehaviour
         else if (itemList[i].GetComponent<Item>().type == Item.itemType.healthPotion)
         {
             usePotion();
+            abilityScript.numPotion();
             //destroyItem(i);
             Debug.Log("used active item");
         }

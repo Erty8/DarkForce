@@ -106,7 +106,7 @@ public class Item : MonoBehaviour
         {
             
             case (itemType.damage):
-                player.GetComponent<Attacking>().attackDamage += 5*itemLevel;
+                player.GetComponent<Attacking>().attackDamage += 8*itemLevel;
                 break;
             case (itemType.attackSpeed):
                 //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);
@@ -133,7 +133,7 @@ public class Item : MonoBehaviour
         {
 
             case (itemType.damage):
-                player.GetComponent<Attacking>().attackDamage -= 5 * itemLevel;
+                player.GetComponent<Attacking>().attackDamage -= 8 * itemLevel;
                 break;
             case (itemType.attackSpeed):
                 //player.GetComponent<Attacking>().anim.SetFloat("Attack Speed",2);

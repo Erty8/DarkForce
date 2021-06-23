@@ -244,7 +244,7 @@ public class Enemy_AI : MonoBehaviour
         Debug.Log("enemy ability casted");
         yield return new WaitForSeconds(1f);
         agent.SetDestination(transform.position);
-        anim.SetBool("ability", false);
+        //anim.SetBool("ability", false);
         yield return new WaitForSeconds(abilityCD-1f);
         canAbility = true;
         //yield return new WaitForSeconds(abilityCD);
@@ -432,7 +432,7 @@ public class Enemy_AI : MonoBehaviour
     }
     public void throwSpear()
     {
-        GameObject spear = Instantiate(spearObject, spearTransform.position, transform.rotation);
+        GameObject spear = Instantiate(spearObject, spearTransform.position, spearTransform.rotation);
         spear.GetComponent<BasicAttack>().targetObject = closestEnemy;
         spear.GetComponent<BasicAttack>().canDamagePlayers = true;
         spear.GetComponent<BasicAttack>().canDamageEnemies = false;
