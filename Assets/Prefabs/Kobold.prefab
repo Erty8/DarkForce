@@ -668,12 +668,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   detectRange: 55
+  maxDetectRange: 0
   _agent: {fileID: 4425733993014153535}
   _destination: {fileID: 0}
   _patrolWaiting: 0
   _totalWaitTime: 3
   _switchProbablity: 0.2
   _patrolPoints: []
+  alerted: 0
   anim: {fileID: 4425733992689989385}
   aiscript: {fileID: 4425733993014153533}
   speed: 0
@@ -745,6 +747,7 @@ MonoBehaviour:
   aiScript: {fileID: 0}
   summonDuration: 15
   hasLoot: 1
+  pathScript: {fileID: 0}
   isAlive: 1
 --- !u!114 &4425733993014153529
 MonoBehaviour:
@@ -947,15 +950,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.17487752, g: 1, b: 0.107547104, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: df2fd04bda5fb3e4db67e9386b6a78c5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1319,13 +1322,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4425733992960493968}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.043619405, z: 0, w: 0.9990483}
   m_LocalPosition: {x: 1.61, y: 7.89, z: 2.7600098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4242923988769189572}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -5, z: 0}
 --- !u!1 &4425733993033023234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1355,7 @@ RectTransform:
   m_GameObject: {fileID: 4425733993033023234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 0.678008, z: 1}
   m_Children:
   - {fileID: 4425733993145688124}
   - {fileID: 4425733992868150681}
@@ -1412,7 +1415,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 94.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1474,15 +1477,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4853f2931928d99418a7dd1defff2d08, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

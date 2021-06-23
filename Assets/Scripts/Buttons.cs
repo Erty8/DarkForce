@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Buttons : MonoBehaviour
 {
     [SerializeField] Canvas pauseCanvas; 
     [SerializeField] Canvas feedbackCanvas; 
+    [SerializeField] AudioMixer mixer;
+    [SerializeField] Canvas settingsCanvas;
     bool paused = false;
+    List<GameObject> soundObjects = new List<GameObject>();
     Scene currentScene;
     // Start is called before the first frame update
     void Start()
     {
-        
+        settingsCanvas = GameObject.Find("Settings Canvas").GetComponent<Canvas>();
         pauseCanvas = GameObject.Find("Pause").gameObject.GetComponent<Canvas>();
         feedbackCanvas = GameObject.Find("FeedbackCanvas").gameObject.GetComponent<Canvas>();
         currentScene = SceneManager.GetActiveScene();
+        var sources = FindObjectsOfType<AudioSource>();
+        foreach(AudioSource source in sources)
+        {
+            //source.outputAudioMixerGroup = mixer;
+        }
 
 
     }
@@ -70,6 +79,18 @@ public class Buttons : MonoBehaviour
     public void hideButton()
     {
         gameObject.SetActive(false);
+    }
+    public void adjustSound(float sliderValue)
+    {
+        mixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
+    }
+    public void openSettings()
+    {
+        settingsCanvas.enabled = true;
+    }
+    public void closeSettings()
+    {
+        settingsCanvas.enabled = false;
     }
     IEnumerator loadScene()
     {
