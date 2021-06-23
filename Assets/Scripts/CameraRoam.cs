@@ -18,6 +18,7 @@ public class CameraRoam : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
+        
 
         //UP
         if(Input.mousePosition.y >= Screen.height - screenSizeThickness)
@@ -52,7 +53,7 @@ public class CameraRoam : MonoBehaviour
         
         //RIGHT
         
-        if (Input.mousePosition.x >= Screen.height - screenSizeThickness)
+        if (Input.mousePosition.x >= Screen.width - screenSizeThickness)
         {
             pos.z -= camSpeeed * Time.deltaTime;
 
