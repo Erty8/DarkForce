@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  destroySecond: 2
+  stopSecond: 0
 --- !u!108 &3783721409100631162
 Light:
   m_ObjectHideFlags: 0
@@ -187,6 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgPerSec: 1
-  spikeDamage: 10
+  spikeDamage: 15
   spikebleedDamage: 2
   dmgforSeconds: 5

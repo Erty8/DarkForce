@@ -111,6 +111,7 @@ public class Buttons : MonoBehaviour
     IEnumerator menu()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+        Time.timeScale = 1;
         while (!asyncLoad.isDone)
         {
             yield return null;
